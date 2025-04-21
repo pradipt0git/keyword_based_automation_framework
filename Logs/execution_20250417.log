@@ -1,0 +1,1754 @@
+2025-04-17 01:00:47,581 - INFO - Successfully created report at: Reports\20250417_010047\report_20250417_010047.xlsx
+2025-04-17 01:00:47,582 - INFO - Report created at: Reports\20250417_010047\report_20250417_010047.xlsx
+2025-04-17 01:00:47,583 - INFO - Execution folder: Reports\20250417_010047
+2025-04-17 01:00:52,733 - INFO - Executing: open_url on None with value https://tcm-growthv2.hgr.tcmstunner.com/hub/login
+2025-04-17 01:00:56,496 - INFO - Opened URL: https://tcm-growthv2.hgr.tcmstunner.com/hub/login
+2025-04-17 01:00:56,496 - INFO - Executing: set_value on //*[@id="email"] with value sales@tcmstunner.com
+2025-04-17 01:00:58,795 - INFO - Set value 'sales@tcmstunner.com' to element: //*[@id="email"]
+2025-04-17 01:00:58,795 - INFO - Executing: set_value on //*[@id="password"] with value DevAdmin@TCM#2024
+2025-04-17 01:00:59,402 - INFO - Set value 'DevAdmin@TCM#2024' to element: //*[@id="password"]
+2025-04-17 01:00:59,403 - INFO - Executing: set_value on //*[@id="remember-me"] with value True
+2025-04-17 01:00:59,940 - INFO - Set value 'True' to element: //*[@id="remember-me"]
+2025-04-17 01:00:59,942 - INFO - Executing: element_click on /html/body/div/section/main/div/div/form/button with value None
+2025-04-17 01:01:41,240 - INFO - Clicked element: /html/body/div/section/main/div/div/form/button
+2025-04-17 01:01:44,727 - INFO - Browser closed and cleanup completed
+2025-04-17 01:12:04,993 - INFO - Successfully created report at: Reports\20250417_011204\report_20250417_011204.xlsx
+2025-04-17 01:12:04,994 - INFO - Report created at: Reports\20250417_011204\report_20250417_011204.xlsx
+2025-04-17 01:12:04,994 - INFO - Execution folder: Reports\20250417_011204
+2025-04-17 01:12:07,463 - INFO - Executing: open_url on None with value https://tcm-growthv2.hgr.tcmstunner.com/hub/login
+2025-04-17 01:12:10,262 - INFO - Opened URL: https://tcm-growthv2.hgr.tcmstunner.com/hub/login
+2025-04-17 01:12:10,263 - INFO - Executing: set_value on //*[@id="email"] with value sales@tcmstunner.com
+2025-04-17 01:12:12,266 - INFO - Set value 'sales@tcmstunner.com' to element: //*[@id="email"]
+2025-04-17 01:12:12,267 - INFO - Executing: set_value on //*[@id="password"] with value DevAdmin@TCM#2024
+2025-04-17 01:12:12,763 - INFO - Set value 'DevAdmin@TCM#2024' to element: //*[@id="password"]
+2025-04-17 01:12:12,763 - INFO - Executing: set_value on //*[@id="remember-me"] with value True
+2025-04-17 01:12:12,927 - INFO - Set value 'True' to element: //*[@id="remember-me"]
+2025-04-17 01:12:12,928 - INFO - Executing: element_click on /html/body/div/section/main/div/div/form/button with value None
+2025-04-17 01:12:13,062 - INFO - Clicked element: /html/body/div/section/main/div/div/form/button
+2025-04-17 01:12:16,125 - INFO - Browser closed and cleanup completed
+2025-04-17 01:20:05,024 - INFO - Successfully created report at: Reports\20250417_012005\report_20250417_012005.xlsx
+2025-04-17 01:20:05,025 - INFO - Report created at: Reports\20250417_012005\report_20250417_012005.xlsx
+2025-04-17 01:20:05,025 - INFO - Execution folder: Reports\20250417_012005
+2025-04-17 01:20:07,470 - INFO - Executing: open_url on None with value https://tcm-growthv2.hgr.tcmstunner.com/hub/login
+2025-04-17 01:20:10,366 - INFO - Opened URL: https://tcm-growthv2.hgr.tcmstunner.com/hub/login
+2025-04-17 01:20:10,367 - INFO - Executing: set_value on //*[@id="email"] with value sales@tcmstunner.com
+2025-04-17 01:20:12,451 - INFO - Set value 'sales@tcmstunner.com' to element: //*[@id="email"]
+2025-04-17 01:20:12,451 - INFO - Executing: set_value on //*[@id="password"] with value DevAdmin@TCM#2024
+2025-04-17 01:20:12,992 - INFO - Set value 'DevAdmin@TCM#2024' to element: //*[@id="password"]
+2025-04-17 01:20:12,993 - INFO - Executing: set_value on //*[@id="remember-me"] with value True
+2025-04-17 01:20:13,315 - INFO - Set value 'True' to element: //*[@id="remember-me"]
+2025-04-17 01:20:13,316 - INFO - Executing: element_click on /html/body/div/section/main/div/div/form/button with value None
+2025-04-17 01:20:13,636 - INFO - Clicked element: /html/body/div/section/main/div/div/form/button
+2025-04-17 01:20:13,638 - ERROR - Error processing testcases: 'test_step_status'
+2025-04-17 01:21:24,950 - INFO - Successfully created report at: Reports\20250417_012124\report_20250417_012124.xlsx
+2025-04-17 01:21:24,951 - INFO - Report created at: Reports\20250417_012124\report_20250417_012124.xlsx
+2025-04-17 01:21:24,951 - INFO - Execution folder: Reports\20250417_012124
+2025-04-17 01:21:27,429 - INFO - Executing: open_url on None with value https://tcm-growthv2.hgr.tcmstunner.com/hub/login
+2025-04-17 01:21:28,792 - INFO - Opened URL: https://tcm-growthv2.hgr.tcmstunner.com/hub/login
+2025-04-17 01:21:28,793 - INFO - Executing: set_value on //*[@id="email"] with value sales@tcmstunner.com
+2025-04-17 01:21:28,797 - ERROR - Failed to set value: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=135.0.7049.85)
+Stacktrace:
+	GetHandleVerifier [0x00007FF6CAB65355+78597]
+	GetHandleVerifier [0x00007FF6CAB653B0+78688]
+	(No symbol) [0x00007FF6CA9191AA]
+	(No symbol) [0x00007FF6CA8F1B63]
+	(No symbol) [0x00007FF6CA99EB6E]
+	(No symbol) [0x00007FF6CA9BEBB2]
+	(No symbol) [0x00007FF6CA996EC3]
+	(No symbol) [0x00007FF6CA9603F8]
+	(No symbol) [0x00007FF6CA961163]
+	GetHandleVerifier [0x00007FF6CAE0EF0D+2870973]
+	GetHandleVerifier [0x00007FF6CAE096B8+2848360]
+	GetHandleVerifier [0x00007FF6CAE26993+2967875]
+	GetHandleVerifier [0x00007FF6CAB8019A+188746]
+	GetHandleVerifier [0x00007FF6CAB8847F+222255]
+	GetHandleVerifier [0x00007FF6CAB6D2D4+111236]
+	GetHandleVerifier [0x00007FF6CAB6D482+111666]
+	GetHandleVerifier [0x00007FF6CAB535A9+5465]
+	BaseThreadInitThunk [0x00007FFCE01F259D+29]
+	RtlUserThreadStart [0x00007FFCE152AF38+40]
+
+2025-04-17 01:21:28,800 - ERROR - Error executing action: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=135.0.7049.85)
+Stacktrace:
+	GetHandleVerifier [0x00007FF6CAB65355+78597]
+	GetHandleVerifier [0x00007FF6CAB653B0+78688]
+	(No symbol) [0x00007FF6CA9191AA]
+	(No symbol) [0x00007FF6CA8F1B63]
+	(No symbol) [0x00007FF6CA99EB6E]
+	(No symbol) [0x00007FF6CA9BEBB2]
+	(No symbol) [0x00007FF6CA996EC3]
+	(No symbol) [0x00007FF6CA9603F8]
+	(No symbol) [0x00007FF6CA961163]
+	GetHandleVerifier [0x00007FF6CAE0EF0D+2870973]
+	GetHandleVerifier [0x00007FF6CAE096B8+2848360]
+	GetHandleVerifier [0x00007FF6CAE26993+2967875]
+	GetHandleVerifier [0x00007FF6CAB8019A+188746]
+	GetHandleVerifier [0x00007FF6CAB8847F+222255]
+	GetHandleVerifier [0x00007FF6CAB6D2D4+111236]
+	GetHandleVerifier [0x00007FF6CAB6D482+111666]
+	GetHandleVerifier [0x00007FF6CAB535A9+5465]
+	BaseThreadInitThunk [0x00007FFCE01F259D+29]
+	RtlUserThreadStart [0x00007FFCE152AF38+40]
+
+2025-04-17 01:21:28,824 - ERROR - Failed to capture screenshot: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=135.0.7049.85)
+Stacktrace:
+	GetHandleVerifier [0x00007FF6CAB65355+78597]
+	GetHandleVerifier [0x00007FF6CAB653B0+78688]
+	(No symbol) [0x00007FF6CA9191AA]
+	(No symbol) [0x00007FF6CA8F1B63]
+	(No symbol) [0x00007FF6CA99EB6E]
+	(No symbol) [0x00007FF6CA9BEBB2]
+	(No symbol) [0x00007FF6CA996EC3]
+	(No symbol) [0x00007FF6CA9603F8]
+	(No symbol) [0x00007FF6CA961163]
+	GetHandleVerifier [0x00007FF6CAE0EF0D+2870973]
+	GetHandleVerifier [0x00007FF6CAE096B8+2848360]
+	GetHandleVerifier [0x00007FF6CAE26993+2967875]
+	GetHandleVerifier [0x00007FF6CAB8019A+188746]
+	GetHandleVerifier [0x00007FF6CAB8847F+222255]
+	GetHandleVerifier [0x00007FF6CAB6D2D4+111236]
+	GetHandleVerifier [0x00007FF6CAB6D482+111666]
+	GetHandleVerifier [0x00007FF6CAB535A9+5465]
+	BaseThreadInitThunk [0x00007FFCE01F259D+29]
+	RtlUserThreadStart [0x00007FFCE152AF38+40]
+
+2025-04-17 01:21:28,828 - ERROR - Error processing testcases: cannot access local variable 'rel_path' where it is not associated with a value
+2025-04-17 01:22:48,035 - INFO - Successfully created report at: Reports\20250417_012248\report_20250417_012248.xlsx
+2025-04-17 01:22:48,035 - INFO - Report created at: Reports\20250417_012248\report_20250417_012248.xlsx
+2025-04-17 01:22:48,035 - INFO - Execution folder: Reports\20250417_012248
+2025-04-17 01:22:50,023 - INFO - Executing: open_url on None with value https://tcm-growthv2.hgr.tcmstunner.com/hub/login
+2025-04-17 01:22:52,317 - INFO - Opened URL: https://tcm-growthv2.hgr.tcmstunner.com/hub/login
+2025-04-17 01:22:52,317 - INFO - Executing: set_value on //*[@id="email"] with value sales@tcmstunner.com
+2025-04-17 01:22:54,322 - INFO - Set value 'sales@tcmstunner.com' to element: //*[@id="email"]
+2025-04-17 01:22:54,323 - INFO - Executing: set_value on //*[@id="password"] with value DevAdmin@TCM#2024
+2025-04-17 01:22:54,960 - INFO - Set value 'DevAdmin@TCM#2024' to element: //*[@id="password"]
+2025-04-17 01:22:54,962 - INFO - Executing: set_value on //*[@id="remember-me"] with value True
+2025-04-17 01:22:55,292 - INFO - Set value 'True' to element: //*[@id="remember-me"]
+2025-04-17 01:22:55,293 - INFO - Executing: element_click on /html/body/div/section/main/div/div/form/button with value None
+2025-04-17 01:22:55,426 - INFO - Clicked element: /html/body/div/section/main/div/div/form/button
+2025-04-17 01:22:55,426 - ERROR - Error processing testcases: 'test_step_status'
+2025-04-17 01:27:57,733 - INFO - Successfully created report at: Reports\20250417_012757\report_20250417_012757.xlsx
+2025-04-17 01:27:57,734 - INFO - Report created at: Reports\20250417_012757\report_20250417_012757.xlsx
+2025-04-17 01:27:57,734 - INFO - Execution folder: Reports\20250417_012757
+2025-04-17 01:28:00,092 - INFO - Executing: open_url on None with value https://tcm-growthv2.hgr.tcmstunner.com/hub/login
+2025-04-17 01:28:02,716 - INFO - Opened URL: https://tcm-growthv2.hgr.tcmstunner.com/hub/login
+2025-04-17 01:28:02,716 - INFO - Executing: set_value on //*[@id="email"] with value sales@tcmstunner.com
+2025-04-17 01:28:03,302 - INFO - Set value 'sales@tcmstunner.com' to element: //*[@id="email"]
+2025-04-17 01:28:03,303 - INFO - Executing: set_value on //*[@id="password"] with value DevAdmin@TCM#2024
+2025-04-17 01:28:05,142 - INFO - Set value 'DevAdmin@TCM#2024' to element: //*[@id="password"]
+2025-04-17 01:28:05,143 - INFO - Executing: set_value on //*[@id="remember-me"] with value True
+2025-04-17 01:28:05,329 - INFO - Set value 'True' to element: //*[@id="remember-me"]
+2025-04-17 01:28:05,329 - INFO - Executing: element_click on /html/body/div/section/main/div/div/form/button with value None
+2025-04-17 01:28:05,463 - INFO - Clicked element: /html/body/div/section/main/div/div/form/button
+2025-04-17 01:28:05,478 - ERROR - Error processing testcases: 'status'
+2025-04-17 01:33:24,094 - INFO - Successfully created report at: Reports\20250417_013324\report_20250417_013324.xlsx
+2025-04-17 01:33:24,094 - INFO - Report created at: Reports\20250417_013324\report_20250417_013324.xlsx
+2025-04-17 01:33:24,094 - INFO - Execution folder: Reports\20250417_013324
+2025-04-17 01:33:26,080 - INFO - Executing: open_url on None with value https://tcm-growthv2.hgr.tcmstunner.com/hub/login
+2025-04-17 01:33:28,838 - INFO - Opened URL: https://tcm-growthv2.hgr.tcmstunner.com/hub/login
+2025-04-17 01:33:28,839 - INFO - Executing: set_value on //*[@id="email"] with value sales@tcmstunner.com
+2025-04-17 01:33:30,951 - INFO - Set value 'sales@tcmstunner.com' to element: //*[@id="email"]
+2025-04-17 01:33:30,951 - INFO - Executing: set_value on //*[@id="password"] with value DevAdmin@TCM#2024
+2025-04-17 01:33:31,686 - INFO - Set value 'DevAdmin@TCM#2024' to element: //*[@id="password"]
+2025-04-17 01:33:31,687 - INFO - Executing: set_value on //*[@id="remember-me"] with value True
+2025-04-17 01:33:32,115 - INFO - Set value 'True' to element: //*[@id="remember-me"]
+2025-04-17 01:33:32,116 - INFO - Executing: element_click on /html/body/div/section/main/div/div/form/button with value None
+2025-04-17 01:33:32,451 - INFO - Clicked element: /html/body/div/section/main/div/div/form/button
+2025-04-17 01:33:35,354 - INFO - Browser closed and cleanup completed
+2025-04-17 10:45:31,372 - INFO - Successfully created report at: Reports\20250417_104531\report_20250417_104531.xlsx
+2025-04-17 10:45:31,374 - INFO - Report created at: Reports\20250417_104531\report_20250417_104531.xlsx
+2025-04-17 10:45:31,374 - INFO - Execution folder: Reports\20250417_104531
+2025-04-17 10:46:16,977 - INFO - Executing: open_url on None with value https://tcm-growthv2.hgr.tcmstunner.com/hub/login
+2025-04-17 10:46:18,668 - INFO - Opened URL: https://tcm-growthv2.hgr.tcmstunner.com/hub/login
+2025-04-17 10:46:18,668 - INFO - Executing: set_value on //*[@id="email"] with value sales@tcmstunner.com
+2025-04-17 10:46:19,130 - INFO - Set value 'sales@tcmstunner.com' to element: //*[@id="email"]
+2025-04-17 10:46:19,131 - INFO - Executing: set_value on //*[@id="password"] with value DevAdmin@TCM#2024
+2025-04-17 10:46:19,365 - INFO - Set value 'DevAdmin@TCM#2024' to element: //*[@id="password"]
+2025-04-17 10:46:19,366 - INFO - Executing: set_value on //*[@id="remember-me"] with value True
+2025-04-17 10:46:19,457 - INFO - Set value 'True' to element: //*[@id="remember-me"]
+2025-04-17 10:46:19,458 - INFO - Executing: element_click on /html/body/div/section/main/div/div/form/button with value None
+2025-04-17 10:46:19,551 - INFO - Clicked element: /html/body/div/section/main/div/div/form/button
+2025-04-17 10:46:23,733 - INFO - Browser closed and cleanup completed
+2025-04-17 10:57:25,764 - INFO - Successfully created report at: Reports\20250417_105725\report_20250417_105725.xlsx
+2025-04-17 10:57:25,765 - INFO - Report created at: Reports\20250417_105725\report_20250417_105725.xlsx
+2025-04-17 10:57:25,765 - INFO - Execution folder: Reports\20250417_105725
+2025-04-17 10:57:28,393 - INFO - Executing: open_url on None with value https://tcm-growthv2.hgr.tcmstunner.com/hub/login
+2025-04-17 10:57:30,282 - INFO - Opened URL: https://tcm-growthv2.hgr.tcmstunner.com/hub/login
+2025-04-17 10:57:30,282 - INFO - Executing: set_value on //*[@id="email"] with value sales@tcmstunner.com
+2025-04-17 10:57:30,699 - INFO - Set value 'sales@tcmstunner.com' to element: //*[@id="email"]
+2025-04-17 10:57:30,700 - INFO - Executing: set_value on //*[@id="password"] with value DevAdmin@TCM#2024
+2025-04-17 10:57:30,896 - INFO - Set value 'DevAdmin@TCM#2024' to element: //*[@id="password"]
+2025-04-17 10:57:30,897 - INFO - Executing: set_value on //*[@id="remember-me"] with value True
+2025-04-17 10:57:30,979 - INFO - Set value 'True' to element: //*[@id="remember-me"]
+2025-04-17 10:57:30,980 - INFO - Executing: element_click on /html/body/div/section/main/div/div/form/button with value None
+2025-04-17 10:57:31,056 - INFO - Clicked element: /html/body/div/section/main/div/div/form/button
+2025-04-17 10:57:35,457 - INFO - Browser closed and cleanup completed
+2025-04-17 10:59:19,123 - INFO - Successfully created report at: Reports\20250417_105919\report_20250417_105919.xlsx
+2025-04-17 10:59:19,124 - INFO - Report created at: Reports\20250417_105919\report_20250417_105919.xlsx
+2025-04-17 10:59:19,125 - INFO - Execution folder: Reports\20250417_105919
+2025-04-17 10:59:20,628 - INFO - Executing: open_url on None with value https://tcm-growthv2.hgr.tcmstunner.com/hub/login
+2025-04-17 10:59:22,352 - INFO - Opened URL: https://tcm-growthv2.hgr.tcmstunner.com/hub/login
+2025-04-17 10:59:22,353 - INFO - Executing: set_value on //*[@id="email"] with value sales@tcmstunner.com
+2025-04-17 10:59:22,650 - INFO - Set value 'sales@tcmstunner.com' to element: //*[@id="email"]
+2025-04-17 10:59:22,650 - INFO - Executing: set_value on //*[@id="password"] with value DevAdmin@TCM#2024
+2025-04-17 10:59:22,865 - INFO - Set value 'DevAdmin@TCM#2024' to element: //*[@id="password"]
+2025-04-17 10:59:22,866 - INFO - Executing: set_value on //*[@id="remember-me"] with value True
+2025-04-17 10:59:22,946 - INFO - Set value 'True' to element: //*[@id="remember-me"]
+2025-04-17 10:59:22,946 - INFO - Executing: element_click on /html/body/div/section/main/div/div/form/button with value None
+2025-04-17 10:59:22,998 - INFO - Clicked element: /html/body/div/section/main/div/div/form/button
+2025-04-17 10:59:25,726 - INFO - Browser closed and cleanup completed
+2025-04-17 11:14:38,410 - INFO - Successfully created report at: Reports\20250417_111438\report_20250417_111438.xlsx
+2025-04-17 11:14:38,411 - INFO - Report created at: Reports\20250417_111438\report_20250417_111438.xlsx
+2025-04-17 11:14:38,412 - INFO - Execution folder: Reports\20250417_111438
+2025-04-17 11:14:41,549 - INFO - Executing: open_url on None with value https://tcm-growthv2.hgr.tcmstunner.com/hub/login
+2025-04-17 11:14:43,476 - INFO - Opened URL: https://tcm-growthv2.hgr.tcmstunner.com/hub/login
+2025-04-17 11:14:43,477 - INFO - Executing: set_value on //*[@id="email"] with value sales@tcmstunner.com
+2025-04-17 11:14:43,979 - INFO - Set value 'sales@tcmstunner.com' to element: //*[@id="email"]
+2025-04-17 11:14:43,979 - INFO - Executing: set_value on //*[@id="password"] with value DevAdmin@TCM#2024
+2025-04-17 11:14:44,157 - INFO - Set value 'DevAdmin@TCM#2024' to element: //*[@id="password"]
+2025-04-17 11:14:44,157 - INFO - Executing: set_value on //*[@id="remember-me"] with value True
+2025-04-17 11:14:44,250 - INFO - Set value 'True' to element: //*[@id="remember-me"]
+2025-04-17 11:14:44,251 - INFO - Executing: element_click on /html/body/div/section/main/div/div/form/button with value None
+2025-04-17 11:14:44,320 - INFO - Clicked element: /html/body/div/section/main/div/div/form/button
+2025-04-17 11:14:48,623 - INFO - Browser closed and cleanup completed
+2025-04-17 11:58:01,824 - INFO - Successfully created report at: Reports\20250417_115801\report_20250417_115801.xlsx
+2025-04-17 11:58:01,825 - INFO - Report created at: Reports\20250417_115801\report_20250417_115801.xlsx
+2025-04-17 11:58:01,825 - INFO - Execution folder: Reports\20250417_115801
+2025-04-17 11:58:01,825 - ERROR - Error processing testcases: 'RobustReporting' object has no attribute 'start_execution_log'
+2025-04-17 12:03:35,027 - INFO - Successfully created report at: Reports\20250417_120334\report_20250417_120334.xlsx
+2025-04-17 12:03:35,029 - INFO - Report created at: Reports\20250417_120334\report_20250417_120334.xlsx
+2025-04-17 12:03:35,030 - INFO - Execution folder: Reports\20250417_120334
+2025-04-17 12:03:38,704 - INFO - Executing: open_url on None with value https://tcm-growthv2.hgr.tcmstunner.com/hub/login
+2025-04-17 12:03:38,705 - ERROR - Error processing testcases: 'RobustReporting' object has no attribute 'log_execution'
+2025-04-17 12:05:31,285 - INFO - Successfully created report at: Reports\20250417_120531\report_20250417_120531.xlsx
+2025-04-17 12:05:31,285 - INFO - Report created at: Reports\20250417_120531\report_20250417_120531.xlsx
+2025-04-17 12:05:31,285 - INFO - Execution folder: Reports\20250417_120531
+2025-04-17 12:05:33,021 - INFO - Executing: open_url on None with value https://tcm-growthv2.hgr.tcmstunner.com/hub/login
+2025-04-17 12:05:33,022 - INFO - open_url
+2025-04-17 12:05:34,706 - INFO - Opened URL: https://tcm-growthv2.hgr.tcmstunner.com/hub/login
+2025-04-17 12:05:34,706 - INFO - Executing: set_value on //*[@id="email"] with value sales@tcmstunner.com
+2025-04-17 12:05:34,707 - INFO - set_value for //*[@id="email"]
+2025-04-17 12:05:35,165 - INFO - Set value 'sales@tcmstunner.com' to element: //*[@id="email"]
+2025-04-17 12:05:35,166 - INFO - Executing: set_value on //*[@id="password"] with value DevAdmin@TCM#2024
+2025-04-17 12:05:35,167 - INFO - set_value for //*[@id="password"]
+2025-04-17 12:05:35,360 - INFO - Set value 'DevAdmin@TCM#2024' to element: //*[@id="password"]
+2025-04-17 12:05:35,361 - INFO - Executing: set_value on //*[@id="remember-me"] with value True
+2025-04-17 12:05:35,361 - INFO - set_value for //*[@id="remember-me"]
+2025-04-17 12:05:35,450 - INFO - Set value 'True' to element: //*[@id="remember-me"]
+2025-04-17 12:05:35,451 - INFO - Executing: element_click on /html/body/div/section/main/div/div/form/button with value None
+2025-04-17 12:05:35,451 - INFO - element_click for /html/body/div/section/main/div/div/form/button
+2025-04-17 12:05:35,534 - INFO - Clicked element: /html/body/div/section/main/div/div/form/button
+2025-04-17 12:05:39,740 - INFO - Browser closed and cleanup completed
+2025-04-17 12:13:15,276 - INFO - Successfully created report at: Reports\20250417_121315\report_20250417_121315.xlsx
+2025-04-17 12:13:15,277 - INFO - Report created at: Reports\20250417_121315\report_20250417_121315.xlsx
+2025-04-17 12:13:15,278 - INFO - Execution folder: Reports\20250417_121315
+2025-04-17 12:13:18,101 - INFO - Executing: open_url on None with value https://tcm-growthv2.hgr.tcmstunner.com/hub/login
+2025-04-17 12:13:19,836 - INFO - Opened URL: https://tcm-growthv2.hgr.tcmstunner.com/hub/login
+2025-04-17 12:13:19,837 - INFO - Executing: set_value on //*[@id="email"] with value sales@tcmstunner.com
+2025-04-17 12:13:20,269 - INFO - Set value 'sales@tcmstunner.com' to element: //*[@id="email"]
+2025-04-17 12:13:20,270 - INFO - Executing: set_value on //*[@id="password"] with value DevAdmin@TCM#2024
+2025-04-17 12:13:20,475 - INFO - Set value 'DevAdmin@TCM#2024' to element: //*[@id="password"]
+2025-04-17 12:13:20,476 - INFO - Executing: set_value on //*[@id="remember-me"] with value True
+2025-04-17 12:13:20,573 - INFO - Set value 'True' to element: //*[@id="remember-me"]
+2025-04-17 12:13:20,574 - INFO - Executing: element_click on /html/body/div/section/main/div/div/form/button with value None
+2025-04-17 12:13:20,639 - INFO - Clicked element: /html/body/div/section/main/div/div/form/button
+2025-04-17 12:13:24,891 - INFO - Browser closed and cleanup completed
+2025-04-17 12:21:55,546 - INFO - Successfully created report at: Reports\20250417_122155\report_20250417_122155.xlsx
+2025-04-17 12:21:55,548 - INFO - Report created at: Reports\20250417_122155\report_20250417_122155.xlsx
+2025-04-17 12:21:55,548 - INFO - Execution folder: Reports\20250417_122155
+2025-04-17 12:21:57,453 - INFO - Executing: open_url on None with value https://tcm-growthv2.hgr.tcmstunner.com/hub/login
+2025-04-17 12:21:59,469 - INFO - Opened URL: https://tcm-growthv2.hgr.tcmstunner.com/hub/login
+2025-04-17 12:21:59,470 - INFO - Executing: set_value on //*[@id="email"] with value sales@tcmstunner.com
+2025-04-17 12:21:59,899 - INFO - Set value 'sales@tcmstunner.com' to element: //*[@id="email"]
+2025-04-17 12:21:59,899 - INFO - Executing: set_value on //*[@id="password"] with value DevAdmin@TCM#2024
+2025-04-17 12:22:00,073 - INFO - Set value 'DevAdmin@TCM#2024' to element: //*[@id="password"]
+2025-04-17 12:22:00,074 - INFO - Executing: set_value on //*[@id="remember-me"] with value True
+2025-04-17 12:22:00,151 - INFO - Set value 'True' to element: //*[@id="remember-me"]
+2025-04-17 12:22:00,151 - INFO - Executing: element_click on /html/body/div/section/main/div/div/form/button with value None
+2025-04-17 12:22:00,212 - INFO - Clicked element: /html/body/div/section/main/div/div/form/button
+2025-04-17 12:22:03,133 - INFO - Browser closed and cleanup completed
+2025-04-17 12:26:17,578 - INFO - Successfully created report at: Reports\20250417_122617\report_20250417_122617.xlsx
+2025-04-17 12:26:17,579 - INFO - Report created at: Reports\20250417_122617\report_20250417_122617.xlsx
+2025-04-17 12:26:17,579 - INFO - Execution folder: Reports\20250417_122617
+2025-04-17 12:26:19,613 - INFO - Executing: open_url on None with value https://tcm-growthv2.hgr.tcmstunner.com/hub/login
+2025-04-17 12:26:21,343 - INFO - Opened URL: https://tcm-growthv2.hgr.tcmstunner.com/hub/login
+2025-04-17 12:26:21,344 - INFO - Executing: set_value on //*[@id="email"] with value sales@tcmstunner.com
+2025-04-17 12:26:21,771 - INFO - Set value 'sales@tcmstunner.com' to element: //*[@id="email"]
+2025-04-17 12:26:21,771 - INFO - Executing: set_value on //*[@id="password"] with value DevAdmin@TCM#2024
+2025-04-17 12:26:22,021 - INFO - Set value 'DevAdmin@TCM#2024' to element: //*[@id="password"]
+2025-04-17 12:26:22,022 - INFO - Executing: set_value on //*[@id="remember-me"] with value True
+2025-04-17 12:26:22,117 - INFO - Set value 'True' to element: //*[@id="remember-me"]
+2025-04-17 12:26:22,118 - INFO - Executing: element_click on /html/body/div/section/main/div/div/form/button with value None
+2025-04-17 12:26:22,206 - INFO - Clicked element: /html/body/div/section/main/div/div/form/button
+2025-04-17 12:26:25,328 - INFO - Browser closed and cleanup completed
+2025-04-17 12:27:20,292 - INFO - Successfully created report at: Reports\20250417_122720\report_20250417_122720.xlsx
+2025-04-17 12:27:20,293 - INFO - Report created at: Reports\20250417_122720\report_20250417_122720.xlsx
+2025-04-17 12:27:20,293 - INFO - Execution folder: Reports\20250417_122720
+2025-04-17 12:27:21,805 - INFO - Executing: open_url on None with value https://tcm-growthv2.hgr.tcmstunner.com/hub/login
+2025-04-17 12:27:23,859 - INFO - Opened URL: https://tcm-growthv2.hgr.tcmstunner.com/hub/login
+2025-04-17 12:27:23,859 - INFO - Executing: set_value on //*[@id="email"] with value sales@tcmstunner.com
+2025-04-17 12:27:24,189 - INFO - Set value 'sales@tcmstunner.com' to element: //*[@id="email"]
+2025-04-17 12:27:24,189 - INFO - Executing: set_value on //*[@id="password"] with value DevAdmin@TCM#2024
+2025-04-17 12:27:24,419 - INFO - Set value 'DevAdmin@TCM#2024' to element: //*[@id="password"]
+2025-04-17 12:27:24,420 - INFO - Executing: set_value on //*[@id="remember-me"] with value True
+2025-04-17 12:27:24,528 - INFO - Set value 'True' to element: //*[@id="remember-me"]
+2025-04-17 12:27:24,529 - INFO - Executing: element_click on /html/body/div/section/main/div/div/form/button with value None
+2025-04-17 12:27:24,609 - INFO - Clicked element: /html/body/div/section/main/div/div/form/button
+2025-04-17 12:27:27,698 - INFO - Browser closed and cleanup completed
+2025-04-17 12:49:27,357 - INFO - Successfully created report at: Reports\20250417_124927\report_20250417_124927.xlsx
+2025-04-17 12:49:27,358 - INFO - Report created at: Reports\20250417_124927\report_20250417_124927.xlsx
+2025-04-17 12:49:27,358 - INFO - Execution folder: Reports\20250417_124927
+2025-04-17 12:49:31,118 - INFO - Executing: open_url on None with value https://tcm-growthv2.hgr.tcmstunner.com/hub/login
+2025-04-17 12:49:32,752 - INFO - Opened URL: https://tcm-growthv2.hgr.tcmstunner.com/hub/login
+2025-04-17 12:49:32,752 - INFO - Executing: set_value on //*[@id="email"] with value sales@tcmstunner.com
+2025-04-17 12:49:33,222 - INFO - Set value 'sales@tcmstunner.com' to element: //*[@id="email"]
+2025-04-17 12:49:33,222 - INFO - Executing: set_value on //*[@id="password"] with value DevAdmin@TCM#2024
+2025-04-17 12:49:33,453 - INFO - Set value 'DevAdmin@TCM#2024' to element: //*[@id="password"]
+2025-04-17 12:49:33,454 - INFO - Executing: set_value on //*[@id="remember-me"] with value True
+2025-04-17 12:49:33,568 - INFO - Set value 'True' to element: //*[@id="remember-me"]
+2025-04-17 12:49:33,569 - INFO - Executing: element_click on /html/body/div/section/main/div/div/form/button with value None
+2025-04-17 12:49:33,652 - INFO - Clicked element: /html/body/div/section/main/div/div/form/button
+2025-04-17 12:49:35,301 - ERROR - Error processing testcases: 'field_name'
+2025-04-17 12:51:52,525 - INFO - Successfully created report at: Reports\20250417_125152\report_20250417_125152.xlsx
+2025-04-17 12:51:52,526 - INFO - Report created at: Reports\20250417_125152\report_20250417_125152.xlsx
+2025-04-17 12:51:52,527 - INFO - Execution folder: Reports\20250417_125152
+2025-04-17 12:51:54,056 - INFO - Executing: open_url on None with value https://tcm-growthv2.hgr.tcmstunner.com/hub/login
+2025-04-17 12:51:55,876 - INFO - Opened URL: https://tcm-growthv2.hgr.tcmstunner.com/hub/login
+2025-04-17 12:51:55,876 - INFO - Executing: set_value on //*[@id="email"] with value sales@tcmstunner.com
+2025-04-17 12:51:56,387 - INFO - Set value 'sales@tcmstunner.com' to element: //*[@id="email"]
+2025-04-17 12:51:56,388 - INFO - Executing: set_value on //*[@id="password"] with value DevAdmin@TCM#2024
+2025-04-17 12:51:56,635 - INFO - Set value 'DevAdmin@TCM#2024' to element: //*[@id="password"]
+2025-04-17 12:51:56,636 - INFO - Executing: set_value on //*[@id="remember-me"] with value True
+2025-04-17 12:51:56,746 - INFO - Set value 'True' to element: //*[@id="remember-me"]
+2025-04-17 12:51:56,747 - INFO - Executing: element_click on /html/body/div/section/main/div/div/form/button with value None
+2025-04-17 12:51:56,854 - INFO - Clicked element: /html/body/div/section/main/div/div/form/button
+2025-04-17 12:51:57,128 - ERROR - Error processing testcases: 'action'
+2025-04-17 12:53:12,029 - INFO - Successfully created report at: Reports\20250417_125311\report_20250417_125311.xlsx
+2025-04-17 12:53:12,030 - INFO - Report created at: Reports\20250417_125311\report_20250417_125311.xlsx
+2025-04-17 12:53:12,032 - INFO - Execution folder: Reports\20250417_125311
+2025-04-17 12:53:13,745 - INFO - Executing: open_url on None with value https://tcm-growthv2.hgr.tcmstunner.com/hub/login
+2025-04-17 12:53:15,309 - INFO - Opened URL: https://tcm-growthv2.hgr.tcmstunner.com/hub/login
+2025-04-17 12:53:15,310 - INFO - Executing: set_value on //*[@id="email"] with value sales@tcmstunner.com
+2025-04-17 12:53:15,622 - INFO - Set value 'sales@tcmstunner.com' to element: //*[@id="email"]
+2025-04-17 12:53:15,622 - INFO - Executing: set_value on //*[@id="password"] with value DevAdmin@TCM#2024
+2025-04-17 12:53:15,824 - INFO - Set value 'DevAdmin@TCM#2024' to element: //*[@id="password"]
+2025-04-17 12:53:15,824 - INFO - Executing: set_value on //*[@id="remember-me"] with value True
+2025-04-17 12:53:15,906 - INFO - Set value 'True' to element: //*[@id="remember-me"]
+2025-04-17 12:53:15,906 - INFO - Executing: element_click on /html/body/div/section/main/div/div/form/button with value None
+2025-04-17 12:53:15,984 - INFO - Clicked element: /html/body/div/section/main/div/div/form/button
+2025-04-17 12:53:18,924 - INFO - Browser closed and cleanup completed
+2025-04-17 12:55:09,560 - INFO - Successfully created report at: Reports\20250417_125509\report_20250417_125509.xlsx
+2025-04-17 12:55:09,562 - INFO - Report created at: Reports\20250417_125509\report_20250417_125509.xlsx
+2025-04-17 12:55:09,563 - INFO - Execution folder: Reports\20250417_125509
+2025-04-17 12:55:12,617 - INFO - Executing: open_url on None with value https://tcm-growthv2.hgr.tcmstunner.com/hub/login
+2025-04-17 12:55:14,145 - INFO - Opened URL: https://tcm-growthv2.hgr.tcmstunner.com/hub/login
+2025-04-17 12:55:14,145 - INFO - Executing: set_value on //*[@id="email"] with value sales@tcmstunner.com
+2025-04-17 12:55:14,562 - INFO - Set value 'sales@tcmstunner.com' to element: //*[@id="email"]
+2025-04-17 12:55:14,563 - INFO - Executing: set_value on //*[@id="password"] with value DevAdmin@TCM#2024
+2025-04-17 12:55:14,821 - INFO - Set value 'DevAdmin@TCM#2024' to element: //*[@id="password"]
+2025-04-17 12:55:14,822 - INFO - Executing: set_value on //*[@id="remember-me"] with value True
+2025-04-17 12:55:14,938 - INFO - Set value 'True' to element: //*[@id="remember-me"]
+2025-04-17 12:55:14,938 - INFO - Executing: element_click on /html/body/div/section/main/div/div/form/button with value None
+2025-04-17 12:55:15,022 - INFO - Clicked element: /html/body/div/section/main/div/div/form/button
+2025-04-17 13:01:11,779 - INFO - Successfully created report at: Reports\20250417_130111\report_20250417_130111.xlsx
+2025-04-17 13:01:11,780 - INFO - Report created at: Reports\20250417_130111\report_20250417_130111.xlsx
+2025-04-17 13:01:11,780 - INFO - Execution folder: Reports\20250417_130111
+2025-04-17 13:01:13,346 - INFO - Executing: open_url on None with value https://tcm-growthv2.hgr.tcmstunner.com/hub/login
+2025-04-17 13:01:15,093 - INFO - Opened URL: https://tcm-growthv2.hgr.tcmstunner.com/hub/login
+2025-04-17 13:01:15,093 - INFO - Executing: set_value on //*[@id="email"] with value sales@tcmstunner.com
+2025-04-17 13:01:15,462 - INFO - Set value 'sales@tcmstunner.com' to element: //*[@id="email"]
+2025-04-17 13:01:15,463 - INFO - Executing: set_value on //*[@id="password"] with value DevAdmin@TCM#2024
+2025-04-17 13:01:15,748 - INFO - Set value 'DevAdmin@TCM#2024' to element: //*[@id="password"]
+2025-04-17 13:01:15,749 - INFO - Executing: set_value on //*[@id="remember-me"] with value True
+2025-04-17 13:01:15,876 - INFO - Set value 'True' to element: //*[@id="remember-me"]
+2025-04-17 13:01:15,877 - INFO - Executing: element_click on /html/body/div/section/main/div/div/form/button with value None
+2025-04-17 13:01:15,986 - INFO - Clicked element: /html/body/div/section/main/div/div/form/button
+2025-04-17 13:08:58,408 - INFO - Successfully created report at: Reports\20250417_130858\report_20250417_130858.xlsx
+2025-04-17 13:08:58,409 - INFO - Report created at: Reports\20250417_130858\report_20250417_130858.xlsx
+2025-04-17 13:08:58,410 - INFO - Execution folder: Reports\20250417_130858
+2025-04-17 13:09:00,677 - INFO - Executing: open_url on None with value https://tcm-growthv2.hgr.tcmstunner.com/hub/login
+2025-04-17 13:09:02,713 - INFO - Opened URL: https://tcm-growthv2.hgr.tcmstunner.com/hub/login
+2025-04-17 13:09:02,713 - INFO - Executing: set_value on //*[@id="email"] with value sales@tcmstunner.com
+2025-04-17 13:09:03,035 - INFO - Set value 'sales@tcmstunner.com' to element: //*[@id="email"]
+2025-04-17 13:09:03,036 - INFO - Executing: set_value on //*[@id="password"] with value DevAdmin@TCM#2024
+2025-04-17 13:09:03,233 - INFO - Set value 'DevAdmin@TCM#2024' to element: //*[@id="password"]
+2025-04-17 13:09:03,233 - INFO - Executing: set_value on //*[@id="remember-me"] with value True
+2025-04-17 13:09:03,339 - INFO - Set value 'True' to element: //*[@id="remember-me"]
+2025-04-17 13:09:03,340 - INFO - Executing: element_click on /html/body/div/section/main/div/div/form/button with value None
+2025-04-17 13:09:03,431 - INFO - Clicked element: /html/body/div/section/main/div/div/form/button
+2025-04-17 13:10:55,604 - INFO - Browser closed and cleanup completed
+2025-04-17 13:15:30,341 - INFO - Successfully created report at: Reports\20250417_131530\report_20250417_131530.xlsx
+2025-04-17 13:15:30,342 - INFO - Report created at: Reports\20250417_131530\report_20250417_131530.xlsx
+2025-04-17 13:15:30,342 - INFO - Execution folder: Reports\20250417_131530
+2025-04-17 13:15:32,049 - INFO - Executing: open_url on None with value https://tcm-growthv2.hgr.tcmstunner.com/hub/login
+2025-04-17 13:15:33,398 - INFO - Opened URL: https://tcm-growthv2.hgr.tcmstunner.com/hub/login
+2025-04-17 13:15:33,399 - INFO - Executing: set_value on //*[@id="email"] with value sales@tcmstunner.com
+2025-04-17 13:15:33,753 - INFO - Set value 'sales@tcmstunner.com' to element: //*[@id="email"]
+2025-04-17 13:15:33,754 - INFO - Executing: set_value on //*[@id="password"] with value DevAdmin@TCM#2024
+2025-04-17 13:15:33,989 - INFO - Set value 'DevAdmin@TCM#2024' to element: //*[@id="password"]
+2025-04-17 13:15:33,989 - INFO - Executing: set_value on //*[@id="remember-me"] with value True
+2025-04-17 13:15:34,100 - INFO - Set value 'True' to element: //*[@id="remember-me"]
+2025-04-17 13:15:34,100 - INFO - Executing: element_click on /html/body/div/section/main/div/div/form/button with value None
+2025-04-17 13:15:34,178 - INFO - Clicked element: /html/body/div/section/main/div/div/form/button
+2025-04-17 15:26:00,722 - INFO - Successfully created report at: Reports\20250417_152600\report_20250417_152600.xlsx
+2025-04-17 15:26:00,723 - INFO - Report created at: Reports\20250417_152600\report_20250417_152600.xlsx
+2025-04-17 15:26:00,724 - INFO - Execution folder: Reports\20250417_152600
+2025-04-17 15:26:05,317 - INFO - Executing: open_url on None with value https://tcm-growthv2.hgr.tcmstunner.com/hub/login
+2025-04-17 15:26:07,228 - INFO - Opened URL: https://tcm-growthv2.hgr.tcmstunner.com/hub/login
+2025-04-17 15:26:07,229 - INFO - Executing: set_value on //*[@id="email"] with value sales@tcmstunner.com
+2025-04-17 15:26:07,630 - INFO - Set value 'sales@tcmstunner.com' to element: //*[@id="email"]
+2025-04-17 15:26:07,630 - INFO - Executing: set_value on //*[@id="password"] with value DevAdmin@TCM#2024
+2025-04-17 15:26:07,838 - INFO - Set value 'DevAdmin@TCM#2024' to element: //*[@id="password"]
+2025-04-17 15:26:07,838 - INFO - Executing: set_value on //*[@id="remember-me"] with value True
+2025-04-17 15:26:07,929 - INFO - Set value 'True' to element: //*[@id="remember-me"]
+2025-04-17 15:26:07,930 - INFO - Executing: element_click on /html/body/div/section/main/div/div/form/button with value None
+2025-04-17 15:26:08,008 - INFO - Clicked element: /html/body/div/section/main/div/div/form/button
+2025-04-17 15:26:12,156 - INFO - Browser closed and cleanup completed
+2025-04-17 15:27:00,848 - INFO - Successfully created report at: Reports\20250417_152700\report_20250417_152700.xlsx
+2025-04-17 15:27:00,849 - INFO - Report created at: Reports\20250417_152700\report_20250417_152700.xlsx
+2025-04-17 15:27:00,849 - INFO - Execution folder: Reports\20250417_152700
+2025-04-17 15:27:02,165 - INFO - Executing: open_url on None with value https://tcm-growthv2.hgr.tcmstunner.com/hub/login
+2025-04-17 15:27:04,459 - INFO - Opened URL: https://tcm-growthv2.hgr.tcmstunner.com/hub/login
+2025-04-17 15:27:04,460 - INFO - Executing: set_value on //*[@id="email"] with value sales@tcmstunner.com
+2025-04-17 15:27:04,832 - INFO - Set value 'sales@tcmstunner.com' to element: //*[@id="email"]
+2025-04-17 15:27:04,833 - INFO - Executing: set_value on //*[@id="password"] with value DevAdmin@TCM#2024
+2025-04-17 15:27:05,059 - INFO - Set value 'DevAdmin@TCM#2024' to element: //*[@id="password"]
+2025-04-17 15:27:05,059 - INFO - Executing: set_value on //*[@id="remember-me"] with value True
+2025-04-17 15:27:05,148 - INFO - Set value 'True' to element: //*[@id="remember-me"]
+2025-04-17 15:27:05,148 - INFO - Executing: element_click on /html/body/div/section/main/div/div/form/button with value None
+2025-04-17 15:27:05,221 - INFO - Clicked element: /html/body/div/section/main/div/div/form/button
+2025-04-17 15:27:08,060 - INFO - Browser closed and cleanup completed
+2025-04-17 15:41:05,264 - INFO - Successfully created report at: Reports\20250417_154105\report_20250417_154105.xlsx
+2025-04-17 15:41:05,265 - INFO - Report created at: Reports\20250417_154105\report_20250417_154105.xlsx
+2025-04-17 15:41:05,265 - INFO - Execution folder: Reports\20250417_154105
+2025-04-17 15:41:08,880 - INFO - Executing: open_url on None with value https://github.com/
+2025-04-17 15:41:11,744 - INFO - Opened URL: https://github.com/
+2025-04-17 15:41:11,745 - INFO - Executing: element_click on //a[contains(text(), 'Sign in')] with value None
+2025-04-17 15:41:11,796 - ERROR - Failed to click element //a[contains(text(), 'Sign in')]: Message: element not interactable
+  (Session info: chrome=135.0.7049.95)
+Stacktrace:
+	GetHandleVerifier [0x00007FF747105355+78597]
+	GetHandleVerifier [0x00007FF7471053B0+78688]
+	(No symbol) [0x00007FF746EB8FDC]
+	(No symbol) [0x00007FF746F1061D]
+	(No symbol) [0x00007FF746F02204]
+	(No symbol) [0x00007FF746F370EA]
+	(No symbol) [0x00007FF746F01AB6]
+	(No symbol) [0x00007FF746F37300]
+	(No symbol) [0x00007FF746F5F2BB]
+	(No symbol) [0x00007FF746F36EC3]
+	(No symbol) [0x00007FF746F003F8]
+	(No symbol) [0x00007FF746F01163]
+	GetHandleVerifier [0x00007FF7473AEF0D+2870973]
+	GetHandleVerifier [0x00007FF7473A96B8+2848360]
+	GetHandleVerifier [0x00007FF7473C6993+2967875]
+	GetHandleVerifier [0x00007FF74712019A+188746]
+	GetHandleVerifier [0x00007FF74712847F+222255]
+	GetHandleVerifier [0x00007FF74710D2D4+111236]
+	GetHandleVerifier [0x00007FF74710D482+111666]
+	GetHandleVerifier [0x00007FF7470F35A9+5465]
+	BaseThreadInitThunk [0x00007FF8250B259D+29]
+	RtlUserThreadStart [0x00007FF825AEAF38+40]
+
+2025-04-17 15:41:11,797 - INFO - Executing: set_value on //*[@id="login_field"] with value pradipta.7845@gmail.com
+2025-04-17 15:41:21,819 - ERROR - Failed to set value: Element not found: //*[@id="login_field"]
+2025-04-17 15:41:21,820 - ERROR - Error executing action: Element not found: //*[@id="login_field"]
+2025-04-17 15:41:21,988 - INFO - Screenshot saved to: Reports\20250417_154105\Screenshots\step_4_154121.png
+2025-04-17 15:41:21,989 - INFO - Screenshot path saved to report: Screenshots\step_4_154121.png
+2025-04-17 15:41:21,989 - INFO - Executing: set_value on //*[@id="password"] with value Welcome2jan@2025
+2025-04-17 15:41:32,308 - ERROR - Failed to set value: Element not found: //*[@id="password"]
+2025-04-17 15:41:32,308 - ERROR - Error executing action: Element not found: //*[@id="password"]
+2025-04-17 15:41:32,455 - INFO - Screenshot saved to: Reports\20250417_154105\Screenshots\step_5_154132.png
+2025-04-17 15:41:32,456 - INFO - Screenshot path saved to report: Screenshots\step_5_154132.png
+2025-04-17 15:41:32,456 - INFO - Executing: element_click on //input[@type='submit' and @value='Sign in'] with value None
+2025-04-17 15:41:42,771 - ERROR - Failed to click element //input[@type='submit' and @value='Sign in']: Element not found: //input[@type='submit' and @value='Sign in']
+2025-04-17 15:41:42,772 - INFO - Executing: element_click on //button[@aria-label='Open user navigation menu'] with value None
+2025-04-17 15:41:53,078 - ERROR - Failed to click element //button[@aria-label='Open user navigation menu']: Element not found: //button[@aria-label='Open user navigation menu']
+2025-04-17 15:41:57,061 - INFO - Browser closed and cleanup completed
+2025-04-17 15:46:56,464 - INFO - Successfully created report at: Reports\20250417_154656\report_20250417_154656.xlsx
+2025-04-17 15:46:56,466 - INFO - Report created at: Reports\20250417_154656\report_20250417_154656.xlsx
+2025-04-17 15:46:56,467 - INFO - Execution folder: Reports\20250417_154656
+2025-04-17 15:46:57,821 - INFO - Executing: open_url on None with value https://github.com/
+2025-04-17 15:47:00,319 - INFO - Opened URL: https://github.com/
+2025-04-17 15:47:00,320 - INFO - Executing: element_click on //a[contains(text(), 'Sign in')] with value None
+2025-04-17 15:47:39,180 - ERROR - Failed to click element //a[contains(text(), 'Sign in')]: Message: element not interactable
+  (Session info: chrome=135.0.7049.95)
+Stacktrace:
+	GetHandleVerifier [0x00007FF747105355+78597]
+	GetHandleVerifier [0x00007FF7471053B0+78688]
+	(No symbol) [0x00007FF746EB8FDC]
+	(No symbol) [0x00007FF746F1061D]
+	(No symbol) [0x00007FF746F02204]
+	(No symbol) [0x00007FF746F370EA]
+	(No symbol) [0x00007FF746F01AB6]
+	(No symbol) [0x00007FF746F37300]
+	(No symbol) [0x00007FF746F5F2BB]
+	(No symbol) [0x00007FF746F36EC3]
+	(No symbol) [0x00007FF746F003F8]
+	(No symbol) [0x00007FF746F01163]
+	GetHandleVerifier [0x00007FF7473AEF0D+2870973]
+	GetHandleVerifier [0x00007FF7473A96B8+2848360]
+	GetHandleVerifier [0x00007FF7473C6993+2967875]
+	GetHandleVerifier [0x00007FF74712019A+188746]
+	GetHandleVerifier [0x00007FF74712847F+222255]
+	GetHandleVerifier [0x00007FF74710D2D4+111236]
+	GetHandleVerifier [0x00007FF74710D482+111666]
+	GetHandleVerifier [0x00007FF7470F35A9+5465]
+	BaseThreadInitThunk [0x00007FF8250B259D+29]
+	RtlUserThreadStart [0x00007FF825AEAF38+40]
+
+2025-04-17 16:26:05,358 - INFO - Successfully created report at: Reports\20250417_162605\report_20250417_162605.xlsx
+2025-04-17 16:26:05,359 - INFO - Report created at: Reports\20250417_162605\report_20250417_162605.xlsx
+2025-04-17 16:26:05,359 - INFO - Execution folder: Reports\20250417_162605
+2025-04-17 16:26:09,774 - INFO - Executing: open_url on None with value https://github.com/
+2025-04-17 16:26:12,190 - INFO - Opened URL: https://github.com/
+2025-04-17 16:26:12,190 - ERROR - Error executing action: cannot unpack non-iterable bool object
+2025-04-17 16:26:12,313 - INFO - Screenshot saved to: Reports\20250417_162605\Screenshots\step_2_162612.png
+2025-04-17 16:26:12,313 - INFO - Screenshot path saved to report: Screenshots\step_2_162612.png
+2025-04-17 16:26:12,313 - INFO - Executing: element_click on //a[contains(text(), 'Sign in')] with value None
+2025-04-17 16:26:12,579 - ERROR - Failed to click element //a[contains(text(), 'Sign in')]: Message: element not interactable
+  (Session info: chrome=135.0.7049.95)
+Stacktrace:
+	GetHandleVerifier [0x00007FF747105355+78597]
+	GetHandleVerifier [0x00007FF7471053B0+78688]
+	(No symbol) [0x00007FF746EB8FDC]
+	(No symbol) [0x00007FF746F1061D]
+	(No symbol) [0x00007FF746F02204]
+	(No symbol) [0x00007FF746F370EA]
+	(No symbol) [0x00007FF746F01AB6]
+	(No symbol) [0x00007FF746F37300]
+	(No symbol) [0x00007FF746F5F2BB]
+	(No symbol) [0x00007FF746F36EC3]
+	(No symbol) [0x00007FF746F003F8]
+	(No symbol) [0x00007FF746F01163]
+	GetHandleVerifier [0x00007FF7473AEF0D+2870973]
+	GetHandleVerifier [0x00007FF7473A96B8+2848360]
+	GetHandleVerifier [0x00007FF7473C6993+2967875]
+	GetHandleVerifier [0x00007FF74712019A+188746]
+	GetHandleVerifier [0x00007FF74712847F+222255]
+	GetHandleVerifier [0x00007FF74710D2D4+111236]
+	GetHandleVerifier [0x00007FF74710D482+111666]
+	GetHandleVerifier [0x00007FF7470F35A9+5465]
+	BaseThreadInitThunk [0x00007FF8250B259D+29]
+	RtlUserThreadStart [0x00007FF825AEAF38+40]
+
+2025-04-17 16:26:12,713 - INFO - Screenshot saved to: Reports\20250417_162605\Screenshots\step_3_162612.png
+2025-04-17 16:26:12,714 - INFO - Screenshot path saved to report: Screenshots\step_3_162612.png
+2025-04-17 16:26:12,714 - INFO - Executing: set_value on //*[@id="login_field"] with value pradipta.7845@gmail.com
+2025-04-17 16:26:22,728 - ERROR - Failed to set value: Element not found: //*[@id="login_field"]
+2025-04-17 16:26:22,907 - INFO - Screenshot saved to: Reports\20250417_162605\Screenshots\step_4_162622.png
+2025-04-17 16:26:22,908 - INFO - Screenshot path saved to report: Screenshots\step_4_162622.png
+2025-04-17 16:26:22,908 - INFO - Executing: set_value on //*[@id="password"] with value Welcome2jan@2025
+2025-04-17 16:26:33,334 - ERROR - Failed to set value: Element not found: //*[@id="password"]
+2025-04-17 16:26:33,619 - INFO - Screenshot saved to: Reports\20250417_162605\Screenshots\step_5_162633.png
+2025-04-17 16:26:33,620 - INFO - Screenshot path saved to report: Screenshots\step_5_162633.png
+2025-04-17 16:26:33,621 - INFO - Executing: element_click on //input[@type='submit' and @value='Sign in'] with value None
+2025-04-17 16:26:44,076 - ERROR - Failed to click element //input[@type='submit' and @value='Sign in']: Element not found: //input[@type='submit' and @value='Sign in']
+2025-04-17 16:26:44,346 - INFO - Screenshot saved to: Reports\20250417_162605\Screenshots\step_6_162644.png
+2025-04-17 16:26:44,348 - INFO - Screenshot path saved to report: Screenshots\step_6_162644.png
+2025-04-17 16:26:44,349 - INFO - Executing: element_click on //button[@aria-label='Open user navigation menu'] with value None
+2025-04-17 16:26:54,357 - ERROR - Failed to click element //button[@aria-label='Open user navigation menu']: Element not found: //button[@aria-label='Open user navigation menu']
+2025-04-17 16:26:54,715 - INFO - Screenshot saved to: Reports\20250417_162605\Screenshots\step_7_162654.png
+2025-04-17 16:26:54,715 - INFO - Screenshot path saved to report: Screenshots\step_7_162654.png
+2025-04-17 16:26:59,190 - INFO - Browser closed and cleanup completed
+2025-04-17 16:34:28,819 - INFO - Successfully created report at: Reports\20250417_163428\report_20250417_163428.xlsx
+2025-04-17 16:34:28,819 - INFO - Report created at: Reports\20250417_163428\report_20250417_163428.xlsx
+2025-04-17 16:34:28,820 - INFO - Execution folder: Reports\20250417_163428
+2025-04-17 16:34:32,416 - INFO - Executing: open_url on None with value https://github.com/
+2025-04-17 16:34:34,809 - INFO - Opened URL: https://github.com/
+2025-04-17 16:34:34,809 - INFO - Executing: element_click on //a[contains(text(), 'Sign in')] with value None
+2025-04-17 16:34:34,882 - ERROR - Failed to click element //a[contains(text(), 'Sign in')]: Message: element not interactable
+  (Session info: chrome=135.0.7049.95)
+Stacktrace:
+	GetHandleVerifier [0x00007FF747105355+78597]
+	GetHandleVerifier [0x00007FF7471053B0+78688]
+	(No symbol) [0x00007FF746EB8FDC]
+	(No symbol) [0x00007FF746F1061D]
+	(No symbol) [0x00007FF746F02204]
+	(No symbol) [0x00007FF746F370EA]
+	(No symbol) [0x00007FF746F01AB6]
+	(No symbol) [0x00007FF746F37300]
+	(No symbol) [0x00007FF746F5F2BB]
+	(No symbol) [0x00007FF746F36EC3]
+	(No symbol) [0x00007FF746F003F8]
+	(No symbol) [0x00007FF746F01163]
+	GetHandleVerifier [0x00007FF7473AEF0D+2870973]
+	GetHandleVerifier [0x00007FF7473A96B8+2848360]
+	GetHandleVerifier [0x00007FF7473C6993+2967875]
+	GetHandleVerifier [0x00007FF74712019A+188746]
+	GetHandleVerifier [0x00007FF74712847F+222255]
+	GetHandleVerifier [0x00007FF74710D2D4+111236]
+	GetHandleVerifier [0x00007FF74710D482+111666]
+	GetHandleVerifier [0x00007FF7470F35A9+5465]
+	BaseThreadInitThunk [0x00007FF8250B259D+29]
+	RtlUserThreadStart [0x00007FF825AEAF38+40]
+
+2025-04-17 16:34:35,153 - INFO - Screenshot saved to: Reports\20250417_163428\Screenshots\step_3_163434.png
+2025-04-17 16:34:35,154 - INFO - Screenshot path saved to report: Screenshots\step_3_163434.png
+2025-04-17 16:34:35,154 - INFO - Executing: set_value on //*[@id="login_field"] with value pradipta.7845@gmail.com
+2025-04-17 16:34:45,206 - ERROR - Failed to set value: Element not found: //*[@id="login_field"]
+2025-04-17 16:34:45,353 - INFO - Screenshot saved to: Reports\20250417_163428\Screenshots\step_4_163445.png
+2025-04-17 16:34:45,353 - INFO - Screenshot path saved to report: Screenshots\step_4_163445.png
+2025-04-17 16:34:45,354 - INFO - Executing: set_value on //*[@id="password"] with value Welcome2jan@2025
+2025-04-17 16:34:55,706 - ERROR - Failed to set value: Element not found: //*[@id="password"]
+2025-04-17 16:34:55,851 - INFO - Screenshot saved to: Reports\20250417_163428\Screenshots\step_5_163455.png
+2025-04-17 16:34:55,852 - INFO - Screenshot path saved to report: Screenshots\step_5_163455.png
+2025-04-17 16:34:55,852 - INFO - Executing: element_click on //input[@type='submit' and @value='Sign in'] with value None
+2025-04-17 16:35:06,188 - ERROR - Failed to click element //input[@type='submit' and @value='Sign in']: Element not found: //input[@type='submit' and @value='Sign in']
+2025-04-17 16:35:06,321 - INFO - Screenshot saved to: Reports\20250417_163428\Screenshots\step_6_163506.png
+2025-04-17 16:35:06,322 - INFO - Screenshot path saved to report: Screenshots\step_6_163506.png
+2025-04-17 16:35:06,323 - INFO - Executing: element_click on //button[@aria-label='Open user navigation menu'] with value None
+2025-04-17 16:35:16,666 - ERROR - Failed to click element //button[@aria-label='Open user navigation menu']: Element not found: //button[@aria-label='Open user navigation menu']
+2025-04-17 16:35:16,812 - INFO - Screenshot saved to: Reports\20250417_163428\Screenshots\step_7_163516.png
+2025-04-17 16:35:16,813 - INFO - Screenshot path saved to report: Screenshots\step_7_163516.png
+2025-04-17 16:35:20,929 - INFO - Browser closed and cleanup completed
+2025-04-17 17:05:50,995 - INFO - Successfully created report at: Reports\20250417_170550\report_20250417_170550.xlsx
+2025-04-17 17:05:50,995 - INFO - Report created at: Reports\20250417_170550\report_20250417_170550.xlsx
+2025-04-17 17:05:50,995 - INFO - Execution folder: Reports\20250417_170550
+2025-04-17 17:05:53,623 - INFO - Executing: open_url on None with value https://github.com/
+2025-04-17 17:05:55,966 - INFO - Opened URL: https://github.com/
+2025-04-17 17:05:55,967 - INFO - Executing: element_click on //a[contains(text(), 'Sign in')] with value None
+2025-04-17 17:05:56,022 - ERROR - Failed to click element //a[contains(text(), 'Sign in')]: Message: element not interactable
+  (Session info: chrome=135.0.7049.95)
+Stacktrace:
+	GetHandleVerifier [0x00007FF747105355+78597]
+	GetHandleVerifier [0x00007FF7471053B0+78688]
+	(No symbol) [0x00007FF746EB8FDC]
+	(No symbol) [0x00007FF746F1061D]
+	(No symbol) [0x00007FF746F02204]
+	(No symbol) [0x00007FF746F370EA]
+	(No symbol) [0x00007FF746F01AB6]
+	(No symbol) [0x00007FF746F37300]
+	(No symbol) [0x00007FF746F5F2BB]
+	(No symbol) [0x00007FF746F36EC3]
+	(No symbol) [0x00007FF746F003F8]
+	(No symbol) [0x00007FF746F01163]
+	GetHandleVerifier [0x00007FF7473AEF0D+2870973]
+	GetHandleVerifier [0x00007FF7473A96B8+2848360]
+	GetHandleVerifier [0x00007FF7473C6993+2967875]
+	GetHandleVerifier [0x00007FF74712019A+188746]
+	GetHandleVerifier [0x00007FF74712847F+222255]
+	GetHandleVerifier [0x00007FF74710D2D4+111236]
+	GetHandleVerifier [0x00007FF74710D482+111666]
+	GetHandleVerifier [0x00007FF7470F35A9+5465]
+	BaseThreadInitThunk [0x00007FF8250B259D+29]
+	RtlUserThreadStart [0x00007FF825AEAF38+40]
+
+2025-04-17 17:05:56,150 - INFO - Screenshot saved to: Reports\20250417_170550\Screenshots\step_3_170556.png
+2025-04-17 17:05:56,151 - INFO - Screenshot path saved to report: Screenshots\step_3_170556.png
+2025-04-17 17:05:56,151 - INFO - Executing: set_value on //*[@id="login_field"] with value pradipta.7845@gmail.com
+2025-04-17 17:06:06,167 - ERROR - Failed to set value: Element not found: //*[@id="login_field"]
+2025-04-17 17:06:06,392 - INFO - Screenshot saved to: Reports\20250417_170550\Screenshots\step_4_170606.png
+2025-04-17 17:06:06,392 - INFO - Screenshot path saved to report: Screenshots\step_4_170606.png
+2025-04-17 17:06:06,392 - INFO - Executing: set_value on //*[@id="password"] with value Welcome2jan@2025
+2025-04-17 17:06:16,736 - ERROR - Failed to set value: Element not found: //*[@id="password"]
+2025-04-17 17:06:17,006 - INFO - Screenshot saved to: Reports\20250417_170550\Screenshots\step_5_170616.png
+2025-04-17 17:06:17,007 - INFO - Screenshot path saved to report: Screenshots\step_5_170616.png
+2025-04-17 17:06:17,008 - INFO - Executing: element_click on //input[@type='submit' and @value='Sign in'] with value None
+2025-04-17 17:06:27,388 - ERROR - Failed to click element //input[@type='submit' and @value='Sign in']: Element not found: //input[@type='submit' and @value='Sign in']
+2025-04-17 17:06:27,653 - INFO - Screenshot saved to: Reports\20250417_170550\Screenshots\step_6_170627.png
+2025-04-17 17:06:27,654 - INFO - Screenshot path saved to report: Screenshots\step_6_170627.png
+2025-04-17 17:06:27,655 - INFO - Executing: element_click on //button[@aria-label='Open user navigation menu'] with value None
+2025-04-17 17:06:37,992 - ERROR - Failed to click element //button[@aria-label='Open user navigation menu']: Element not found: //button[@aria-label='Open user navigation menu']
+2025-04-17 17:06:38,138 - INFO - Screenshot saved to: Reports\20250417_170550\Screenshots\step_7_170637.png
+2025-04-17 17:06:38,139 - INFO - Screenshot path saved to report: Screenshots\step_7_170637.png
+2025-04-17 17:06:42,329 - INFO - Browser closed and cleanup completed
+2025-04-17 17:19:24,225 - INFO - Successfully created report at: Reports\20250417_171924\report_20250417_171924.xlsx
+2025-04-17 17:19:24,225 - INFO - Report created at: Reports\20250417_171924\report_20250417_171924.xlsx
+2025-04-17 17:19:24,225 - INFO - Execution folder: Reports\20250417_171924
+2025-04-17 17:19:26,505 - INFO - Executing: open_url on None with value https://github.com/
+2025-04-17 17:19:28,212 - INFO - Opened URL: https://github.com/
+2025-04-17 17:19:28,214 - INFO - Executing: element_click on //a[contains(text(), 'Sign in')] with value None
+2025-04-17 17:19:28,566 - ERROR - Failed to click element //a[contains(text(), 'Sign in')]: Message: element not interactable
+  (Session info: chrome=135.0.7049.95)
+Stacktrace:
+	GetHandleVerifier [0x00007FF747105355+78597]
+	GetHandleVerifier [0x00007FF7471053B0+78688]
+	(No symbol) [0x00007FF746EB8FDC]
+	(No symbol) [0x00007FF746F1061D]
+	(No symbol) [0x00007FF746F02204]
+	(No symbol) [0x00007FF746F370EA]
+	(No symbol) [0x00007FF746F01AB6]
+	(No symbol) [0x00007FF746F37300]
+	(No symbol) [0x00007FF746F5F2BB]
+	(No symbol) [0x00007FF746F36EC3]
+	(No symbol) [0x00007FF746F003F8]
+	(No symbol) [0x00007FF746F01163]
+	GetHandleVerifier [0x00007FF7473AEF0D+2870973]
+	GetHandleVerifier [0x00007FF7473A96B8+2848360]
+	GetHandleVerifier [0x00007FF7473C6993+2967875]
+	GetHandleVerifier [0x00007FF74712019A+188746]
+	GetHandleVerifier [0x00007FF74712847F+222255]
+	GetHandleVerifier [0x00007FF74710D2D4+111236]
+	GetHandleVerifier [0x00007FF74710D482+111666]
+	GetHandleVerifier [0x00007FF7470F35A9+5465]
+	BaseThreadInitThunk [0x00007FF8250B259D+29]
+	RtlUserThreadStart [0x00007FF825AEAF38+40]
+
+2025-04-17 17:19:28,907 - INFO - Screenshot saved to: Reports\20250417_171924\Screenshots\step_3_171928.png
+2025-04-17 17:19:28,908 - INFO - Screenshot path saved to report: Screenshots\step_3_171928.png
+2025-04-17 17:19:28,909 - INFO - Executing: set_value on //*[@id="login_field"] with value pradipta.7845@gmail.com
+2025-04-17 17:19:39,246 - ERROR - Failed to set value: Element not found: //*[@id="login_field"]
+2025-04-17 17:19:39,388 - INFO - Screenshot saved to: Reports\20250417_171924\Screenshots\step_4_171939.png
+2025-04-17 17:19:39,389 - INFO - Screenshot path saved to report: Screenshots\step_4_171939.png
+2025-04-17 17:19:39,391 - INFO - Executing: set_value on //*[@id="password"] with value Welcome2jan@2025
+2025-04-17 17:19:49,692 - ERROR - Failed to set value: Element not found: //*[@id="password"]
+2025-04-17 17:19:49,831 - INFO - Screenshot saved to: Reports\20250417_171924\Screenshots\step_5_171949.png
+2025-04-17 17:19:49,832 - INFO - Screenshot path saved to report: Screenshots\step_5_171949.png
+2025-04-17 17:19:49,834 - INFO - Executing: element_click on //input[@type='submit' and @value='Sign in'] with value None
+2025-04-17 17:20:00,143 - ERROR - Failed to click element //input[@type='submit' and @value='Sign in']: Element not found: //input[@type='submit' and @value='Sign in']
+2025-04-17 17:20:00,297 - INFO - Screenshot saved to: Reports\20250417_171924\Screenshots\step_6_172000.png
+2025-04-17 17:20:00,297 - INFO - Screenshot path saved to report: Screenshots\step_6_172000.png
+2025-04-17 17:20:00,299 - INFO - Executing: element_click on //button[@aria-label='Open user navigation menu'] with value None
+2025-04-17 17:20:10,620 - ERROR - Failed to click element //button[@aria-label='Open user navigation menu']: Element not found: //button[@aria-label='Open user navigation menu']
+2025-04-17 17:20:10,759 - INFO - Screenshot saved to: Reports\20250417_171924\Screenshots\step_7_172010.png
+2025-04-17 17:20:10,760 - INFO - Screenshot path saved to report: Screenshots\step_7_172010.png
+2025-04-17 17:20:14,725 - INFO - Browser closed and cleanup completed
+2025-04-17 17:26:22,241 - INFO - Successfully created report at: Reports\20250417_172622\report_20250417_172622.xlsx
+2025-04-17 17:26:22,241 - INFO - Report created at: Reports\20250417_172622\report_20250417_172622.xlsx
+2025-04-17 17:26:22,242 - INFO - Execution folder: Reports\20250417_172622
+2025-04-17 17:26:25,092 - INFO - Executing: open_url on None with value https://github.com/
+2025-04-17 17:26:27,671 - INFO - Opened URL: https://github.com/
+2025-04-17 17:26:27,672 - INFO - Executing: element_click on //a[contains(text(), 'Sign in')] with value None
+2025-04-17 17:26:27,741 - ERROR - Failed to click element //a[contains(text(), 'Sign in')]: Message: element not interactable
+  (Session info: chrome=135.0.7049.95)
+Stacktrace:
+	GetHandleVerifier [0x00007FF747105355+78597]
+	GetHandleVerifier [0x00007FF7471053B0+78688]
+	(No symbol) [0x00007FF746EB8FDC]
+	(No symbol) [0x00007FF746F1061D]
+	(No symbol) [0x00007FF746F02204]
+	(No symbol) [0x00007FF746F370EA]
+	(No symbol) [0x00007FF746F01AB6]
+	(No symbol) [0x00007FF746F37300]
+	(No symbol) [0x00007FF746F5F2BB]
+	(No symbol) [0x00007FF746F36EC3]
+	(No symbol) [0x00007FF746F003F8]
+	(No symbol) [0x00007FF746F01163]
+	GetHandleVerifier [0x00007FF7473AEF0D+2870973]
+	GetHandleVerifier [0x00007FF7473A96B8+2848360]
+	GetHandleVerifier [0x00007FF7473C6993+2967875]
+	GetHandleVerifier [0x00007FF74712019A+188746]
+	GetHandleVerifier [0x00007FF74712847F+222255]
+	GetHandleVerifier [0x00007FF74710D2D4+111236]
+	GetHandleVerifier [0x00007FF74710D482+111666]
+	GetHandleVerifier [0x00007FF7470F35A9+5465]
+	BaseThreadInitThunk [0x00007FF8250B259D+29]
+	RtlUserThreadStart [0x00007FF825AEAF38+40]
+
+2025-04-17 17:26:28,040 - INFO - Screenshot saved to: Reports\20250417_172622\Screenshots\step_3_172627.png
+2025-04-17 17:26:28,041 - INFO - Screenshot path saved to report: Screenshots\step_3_172627.png
+2025-04-17 17:26:28,042 - INFO - Executing: set_value on //*[@id="login_field"] with value pradipta.7845@gmail.com
+2025-04-17 17:26:38,060 - ERROR - Failed to set value: Element not found: //*[@id="login_field"]
+2025-04-17 17:26:38,280 - INFO - Screenshot saved to: Reports\20250417_172622\Screenshots\step_4_172638.png
+2025-04-17 17:26:38,281 - INFO - Screenshot path saved to report: Screenshots\step_4_172638.png
+2025-04-17 17:26:38,282 - INFO - Executing: set_value on //*[@id="password"] with value Welcome2jan@2025
+2025-04-17 17:26:48,312 - ERROR - Failed to set value: Element not found: //*[@id="password"]
+2025-04-17 17:26:48,597 - INFO - Screenshot saved to: Reports\20250417_172622\Screenshots\step_5_172648.png
+2025-04-17 17:26:48,598 - INFO - Screenshot path saved to report: Screenshots\step_5_172648.png
+2025-04-17 17:26:48,599 - INFO - Executing: element_click on //input[@type='submit' and @value='Sign in'] with value None
+2025-04-17 17:26:59,089 - ERROR - Failed to click element //input[@type='submit' and @value='Sign in']: Element not found: //input[@type='submit' and @value='Sign in']
+2025-04-17 17:26:59,373 - INFO - Screenshot saved to: Reports\20250417_172622\Screenshots\step_6_172659.png
+2025-04-17 17:26:59,375 - INFO - Screenshot path saved to report: Screenshots\step_6_172659.png
+2025-04-17 17:26:59,377 - INFO - Executing: element_click on //button[@aria-label='Open user navigation menu'] with value None
+2025-04-17 17:27:09,842 - ERROR - Failed to click element //button[@aria-label='Open user navigation menu']: Element not found: //button[@aria-label='Open user navigation menu']
+2025-04-17 17:27:10,114 - INFO - Screenshot saved to: Reports\20250417_172622\Screenshots\step_7_172709.png
+2025-04-17 17:27:10,115 - INFO - Screenshot path saved to report: Screenshots\step_7_172709.png
+2025-04-17 17:27:13,406 - INFO - Browser closed and cleanup completed
+2025-04-17 17:30:15,725 - INFO - Successfully created report at: Reports\20250417_173015\report_20250417_173015.xlsx
+2025-04-17 17:30:15,726 - INFO - Report created at: Reports\20250417_173015\report_20250417_173015.xlsx
+2025-04-17 17:30:15,726 - INFO - Execution folder: Reports\20250417_173015
+2025-04-17 17:30:18,235 - INFO - Executing: open_url on None with value https://github.com/
+2025-04-17 17:30:20,499 - INFO - Opened URL: https://github.com/
+2025-04-17 17:30:20,501 - INFO - Executing: element_click on //a[contains(text(), 'Sign in')] with value None
+2025-04-17 17:30:20,572 - ERROR - Failed to click element //a[contains(text(), 'Sign in')]: Message: element not interactable
+  (Session info: chrome=135.0.7049.95)
+Stacktrace:
+	GetHandleVerifier [0x00007FF747105355+78597]
+	GetHandleVerifier [0x00007FF7471053B0+78688]
+	(No symbol) [0x00007FF746EB8FDC]
+	(No symbol) [0x00007FF746F1061D]
+	(No symbol) [0x00007FF746F02204]
+	(No symbol) [0x00007FF746F370EA]
+	(No symbol) [0x00007FF746F01AB6]
+	(No symbol) [0x00007FF746F37300]
+	(No symbol) [0x00007FF746F5F2BB]
+	(No symbol) [0x00007FF746F36EC3]
+	(No symbol) [0x00007FF746F003F8]
+	(No symbol) [0x00007FF746F01163]
+	GetHandleVerifier [0x00007FF7473AEF0D+2870973]
+	GetHandleVerifier [0x00007FF7473A96B8+2848360]
+	GetHandleVerifier [0x00007FF7473C6993+2967875]
+	GetHandleVerifier [0x00007FF74712019A+188746]
+	GetHandleVerifier [0x00007FF74712847F+222255]
+	GetHandleVerifier [0x00007FF74710D2D4+111236]
+	GetHandleVerifier [0x00007FF74710D482+111666]
+	GetHandleVerifier [0x00007FF7470F35A9+5465]
+	BaseThreadInitThunk [0x00007FF8250B259D+29]
+	RtlUserThreadStart [0x00007FF825AEAF38+40]
+
+2025-04-17 17:30:20,847 - INFO - Screenshot saved to: Reports\20250417_173015\Screenshots\step_3_173020.png
+2025-04-17 17:30:20,848 - INFO - Screenshot path saved to report: Screenshots\step_3_173020.png
+2025-04-17 17:30:20,849 - ERROR - Error processing testcases: cannot access local variable 'e' where it is not associated with a value
+2025-04-17 17:32:34,025 - INFO - Successfully created report at: Reports\20250417_173233\report_20250417_173233.xlsx
+2025-04-17 17:32:34,026 - INFO - Report created at: Reports\20250417_173233\report_20250417_173233.xlsx
+2025-04-17 17:32:34,027 - INFO - Execution folder: Reports\20250417_173233
+2025-04-17 17:32:35,382 - INFO - Executing: open_url on None with value https://github.com/
+2025-04-17 17:32:37,574 - INFO - Opened URL: https://github.com/
+2025-04-17 17:32:37,575 - INFO - Executing: element_click on //a[contains(text(), 'Sign in')] with value None
+2025-04-17 17:32:37,622 - ERROR - Failed to click element //a[contains(text(), 'Sign in')]: Message: element not interactable
+  (Session info: chrome=135.0.7049.95)
+Stacktrace:
+	GetHandleVerifier [0x00007FF747105355+78597]
+	GetHandleVerifier [0x00007FF7471053B0+78688]
+	(No symbol) [0x00007FF746EB8FDC]
+	(No symbol) [0x00007FF746F1061D]
+	(No symbol) [0x00007FF746F02204]
+	(No symbol) [0x00007FF746F370EA]
+	(No symbol) [0x00007FF746F01AB6]
+	(No symbol) [0x00007FF746F37300]
+	(No symbol) [0x00007FF746F5F2BB]
+	(No symbol) [0x00007FF746F36EC3]
+	(No symbol) [0x00007FF746F003F8]
+	(No symbol) [0x00007FF746F01163]
+	GetHandleVerifier [0x00007FF7473AEF0D+2870973]
+	GetHandleVerifier [0x00007FF7473A96B8+2848360]
+	GetHandleVerifier [0x00007FF7473C6993+2967875]
+	GetHandleVerifier [0x00007FF74712019A+188746]
+	GetHandleVerifier [0x00007FF74712847F+222255]
+	GetHandleVerifier [0x00007FF74710D2D4+111236]
+	GetHandleVerifier [0x00007FF74710D482+111666]
+	GetHandleVerifier [0x00007FF7470F35A9+5465]
+	BaseThreadInitThunk [0x00007FF8250B259D+29]
+	RtlUserThreadStart [0x00007FF825AEAF38+40]
+
+2025-04-17 17:32:37,917 - INFO - Screenshot saved to: Reports\20250417_173233\Screenshots\step_3_173237.png
+2025-04-17 17:32:37,918 - INFO - Screenshot path saved to report: Screenshots\step_3_173237.png
+2025-04-17 17:32:37,918 - INFO - Executing: set_value on //*[@id="login_field"] with value pradipta.7845@gmail.com
+2025-04-17 17:32:47,972 - ERROR - Failed to set value: Element not found: //*[@id="login_field"]
+2025-04-17 17:32:48,153 - INFO - Screenshot saved to: Reports\20250417_173233\Screenshots\step_4_173247.png
+2025-04-17 17:32:48,154 - INFO - Screenshot path saved to report: Screenshots\step_4_173247.png
+2025-04-17 17:32:48,155 - INFO - Executing: set_value on //*[@id="password"] with value Welcome2jan@2025
+2025-04-17 17:32:58,664 - ERROR - Failed to set value: Element not found: //*[@id="password"]
+2025-04-17 17:32:58,855 - INFO - Screenshot saved to: Reports\20250417_173233\Screenshots\step_5_173258.png
+2025-04-17 17:32:58,857 - INFO - Screenshot path saved to report: Screenshots\step_5_173258.png
+2025-04-17 17:32:58,857 - INFO - Executing: element_click on //input[@type='submit' and @value='Sign in'] with value None
+2025-04-17 17:33:08,884 - ERROR - Failed to click element //input[@type='submit' and @value='Sign in']: Element not found: //input[@type='submit' and @value='Sign in']
+2025-04-17 17:33:09,107 - INFO - Screenshot saved to: Reports\20250417_173233\Screenshots\step_6_173308.png
+2025-04-17 17:33:09,108 - INFO - Screenshot path saved to report: Screenshots\step_6_173308.png
+2025-04-17 17:33:09,109 - INFO - Executing: element_click on //button[@aria-label='Open user navigation menu'] with value None
+2025-04-17 17:33:19,585 - ERROR - Failed to click element //button[@aria-label='Open user navigation menu']: Element not found: //button[@aria-label='Open user navigation menu']
+2025-04-17 17:33:19,775 - INFO - Screenshot saved to: Reports\20250417_173233\Screenshots\step_7_173319.png
+2025-04-17 17:33:19,776 - INFO - Screenshot path saved to report: Screenshots\step_7_173319.png
+2025-04-17 17:33:24,562 - INFO - Browser closed and cleanup completed
+2025-04-17 17:37:12,931 - INFO - Successfully created report at: Reports\20250417_173712\report_20250417_173712.xlsx
+2025-04-17 17:37:12,932 - INFO - Report created at: Reports\20250417_173712\report_20250417_173712.xlsx
+2025-04-17 17:37:12,933 - INFO - Execution folder: Reports\20250417_173712
+2025-04-17 17:37:14,268 - INFO - Executing: open_url on None with value https://github.com/
+2025-04-17 17:37:17,850 - INFO - Opened URL: https://github.com/
+2025-04-17 17:37:17,850 - INFO - Executing: element_click on //a[contains(text(), 'Sign in')] with value None
+2025-04-17 17:37:17,913 - ERROR - Failed to click element //a[contains(text(), 'Sign in')]: Message: element not interactable
+  (Session info: chrome=135.0.7049.95)
+Stacktrace:
+	GetHandleVerifier [0x00007FF747105355+78597]
+	GetHandleVerifier [0x00007FF7471053B0+78688]
+	(No symbol) [0x00007FF746EB8FDC]
+	(No symbol) [0x00007FF746F1061D]
+	(No symbol) [0x00007FF746F02204]
+	(No symbol) [0x00007FF746F370EA]
+	(No symbol) [0x00007FF746F01AB6]
+	(No symbol) [0x00007FF746F37300]
+	(No symbol) [0x00007FF746F5F2BB]
+	(No symbol) [0x00007FF746F36EC3]
+	(No symbol) [0x00007FF746F003F8]
+	(No symbol) [0x00007FF746F01163]
+	GetHandleVerifier [0x00007FF7473AEF0D+2870973]
+	GetHandleVerifier [0x00007FF7473A96B8+2848360]
+	GetHandleVerifier [0x00007FF7473C6993+2967875]
+	GetHandleVerifier [0x00007FF74712019A+188746]
+	GetHandleVerifier [0x00007FF74712847F+222255]
+	GetHandleVerifier [0x00007FF74710D2D4+111236]
+	GetHandleVerifier [0x00007FF74710D482+111666]
+	GetHandleVerifier [0x00007FF7470F35A9+5465]
+	BaseThreadInitThunk [0x00007FF8250B259D+29]
+	RtlUserThreadStart [0x00007FF825AEAF38+40]
+
+2025-04-17 17:37:18,198 - INFO - Screenshot saved to: Reports\20250417_173712\Screenshots\step_3_173717.png
+2025-04-17 17:37:18,199 - INFO - Screenshot path saved to report: Screenshots\step_3_173717.png
+2025-04-17 17:37:18,200 - INFO - Executing: set_value on //*[@id="login_field"] with value pradipta.7845@gmail.com
+2025-04-17 17:37:28,220 - ERROR - Failed to set value: Element not found: //*[@id="login_field"]
+2025-04-17 17:37:28,420 - INFO - Screenshot saved to: Reports\20250417_173712\Screenshots\step_4_173728.png
+2025-04-17 17:37:28,423 - INFO - Screenshot path saved to report: Screenshots\step_4_173728.png
+2025-04-17 17:37:28,423 - INFO - Executing: set_value on //*[@id="password"] with value Welcome2jan@2025
+2025-04-17 17:37:38,891 - ERROR - Failed to set value: Element not found: //*[@id="password"]
+2025-04-17 17:37:39,052 - INFO - Screenshot saved to: Reports\20250417_173712\Screenshots\step_5_173738.png
+2025-04-17 17:37:39,055 - INFO - Screenshot path saved to report: Screenshots\step_5_173738.png
+2025-04-17 17:37:39,056 - INFO - Executing: element_click on //input[@type='submit' and @value='Sign in'] with value None
+2025-04-17 17:37:49,516 - ERROR - Failed to click element //input[@type='submit' and @value='Sign in']: Element not found: //input[@type='submit' and @value='Sign in']
+2025-04-17 17:37:49,699 - INFO - Screenshot saved to: Reports\20250417_173712\Screenshots\step_6_173749.png
+2025-04-17 17:37:49,700 - INFO - Screenshot path saved to report: Screenshots\step_6_173749.png
+2025-04-17 17:37:49,702 - INFO - Executing: element_click on //button[@aria-label='Open user navigation menu'] with value None
+2025-04-17 17:38:00,202 - ERROR - Failed to click element //button[@aria-label='Open user navigation menu']: Element not found: //button[@aria-label='Open user navigation menu']
+2025-04-17 17:38:00,422 - INFO - Screenshot saved to: Reports\20250417_173712\Screenshots\step_7_173800.png
+2025-04-17 17:38:00,422 - INFO - Screenshot path saved to report: Screenshots\step_7_173800.png
+2025-04-17 17:38:04,385 - INFO - Browser closed and cleanup completed
+2025-04-17 17:40:12,282 - INFO - Successfully created report at: Reports\20250417_174012\report_20250417_174012.xlsx
+2025-04-17 17:40:12,282 - INFO - Report created at: Reports\20250417_174012\report_20250417_174012.xlsx
+2025-04-17 17:40:12,283 - INFO - Execution folder: Reports\20250417_174012
+2025-04-17 17:40:13,620 - INFO - Executing: open_url on None with value https://github.com/
+2025-04-17 17:40:15,684 - INFO - Opened URL: https://github.com/
+2025-04-17 17:40:15,685 - INFO - Executing: element_click on //a[contains(text(), 'Sign in')] with value None
+2025-04-17 17:40:15,734 - ERROR - Failed to click element //a[contains(text(), 'Sign in')]: Message: element not interactable
+  (Session info: chrome=135.0.7049.95)
+Stacktrace:
+	GetHandleVerifier [0x00007FF747105355+78597]
+	GetHandleVerifier [0x00007FF7471053B0+78688]
+	(No symbol) [0x00007FF746EB8FDC]
+	(No symbol) [0x00007FF746F1061D]
+	(No symbol) [0x00007FF746F02204]
+	(No symbol) [0x00007FF746F370EA]
+	(No symbol) [0x00007FF746F01AB6]
+	(No symbol) [0x00007FF746F37300]
+	(No symbol) [0x00007FF746F5F2BB]
+	(No symbol) [0x00007FF746F36EC3]
+	(No symbol) [0x00007FF746F003F8]
+	(No symbol) [0x00007FF746F01163]
+	GetHandleVerifier [0x00007FF7473AEF0D+2870973]
+	GetHandleVerifier [0x00007FF7473A96B8+2848360]
+	GetHandleVerifier [0x00007FF7473C6993+2967875]
+	GetHandleVerifier [0x00007FF74712019A+188746]
+	GetHandleVerifier [0x00007FF74712847F+222255]
+	GetHandleVerifier [0x00007FF74710D2D4+111236]
+	GetHandleVerifier [0x00007FF74710D482+111666]
+	GetHandleVerifier [0x00007FF7470F35A9+5465]
+	BaseThreadInitThunk [0x00007FF8250B259D+29]
+	RtlUserThreadStart [0x00007FF825AEAF38+40]
+
+2025-04-17 17:40:15,987 - INFO - Screenshot saved to: Reports\20250417_174012\Screenshots\step_3_174015.png
+2025-04-17 17:40:15,987 - INFO - Screenshot path saved to report: Screenshots\step_3_174015.png
+2025-04-17 17:40:15,987 - INFO - Executing: set_value on //*[@id="login_field"] with value pradipta.7845@gmail.com
+2025-04-17 17:40:26,470 - ERROR - Failed to set value: Element not found: //*[@id="login_field"]
+2025-04-17 17:40:26,630 - INFO - Screenshot saved to: Reports\20250417_174012\Screenshots\step_4_174026.png
+2025-04-17 17:40:26,631 - INFO - Screenshot path saved to report: Screenshots\step_4_174026.png
+2025-04-17 17:40:26,632 - INFO - Executing: set_value on //*[@id="password"] with value Welcome2jan@2025
+2025-04-17 17:40:36,950 - ERROR - Failed to set value: Element not found: //*[@id="password"]
+2025-04-17 17:40:37,092 - INFO - Screenshot saved to: Reports\20250417_174012\Screenshots\step_5_174036.png
+2025-04-17 17:40:37,094 - INFO - Screenshot path saved to report: Screenshots\step_5_174036.png
+2025-04-17 17:40:37,094 - INFO - Executing: element_click on //input[@type='submit' and @value='Sign in'] with value None
+2025-04-17 17:40:47,415 - ERROR - Failed to click element //input[@type='submit' and @value='Sign in']: Element not found: //input[@type='submit' and @value='Sign in']
+2025-04-17 17:40:47,555 - INFO - Screenshot saved to: Reports\20250417_174012\Screenshots\step_6_174047.png
+2025-04-17 17:40:47,559 - INFO - Screenshot path saved to report: Screenshots\step_6_174047.png
+2025-04-17 17:40:47,560 - INFO - Executing: element_click on //button[@aria-label='Open user navigation menu'] with value None
+2025-04-17 17:40:57,924 - ERROR - Failed to click element //button[@aria-label='Open user navigation menu']: Element not found: //button[@aria-label='Open user navigation menu']
+2025-04-17 17:40:58,059 - INFO - Screenshot saved to: Reports\20250417_174012\Screenshots\step_7_174057.png
+2025-04-17 17:40:58,060 - INFO - Screenshot path saved to report: Screenshots\step_7_174057.png
+2025-04-17 17:41:01,912 - INFO - Browser closed and cleanup completed
+2025-04-17 17:44:57,063 - INFO - Successfully created report at: Reports\20250417_174456\report_20250417_174456.xlsx
+2025-04-17 17:44:57,064 - INFO - Report created at: Reports\20250417_174456\report_20250417_174456.xlsx
+2025-04-17 17:44:57,065 - INFO - Execution folder: Reports\20250417_174456
+2025-04-17 17:44:59,712 - INFO - Executing: open_url on None with value https://github.com/
+2025-04-17 17:45:01,470 - INFO - Opened URL: https://github.com/
+2025-04-17 17:45:01,471 - INFO - Executing: element_click on //a[contains(text(), 'Sign in')] with value None
+2025-04-17 17:45:01,611 - ERROR - Failed to click element //a[contains(text(), 'Sign in')]: Message: element not interactable
+  (Session info: chrome=135.0.7049.95)
+Stacktrace:
+	GetHandleVerifier [0x00007FF747105355+78597]
+	GetHandleVerifier [0x00007FF7471053B0+78688]
+	(No symbol) [0x00007FF746EB8FDC]
+	(No symbol) [0x00007FF746F1061D]
+	(No symbol) [0x00007FF746F02204]
+	(No symbol) [0x00007FF746F370EA]
+	(No symbol) [0x00007FF746F01AB6]
+	(No symbol) [0x00007FF746F37300]
+	(No symbol) [0x00007FF746F5F2BB]
+	(No symbol) [0x00007FF746F36EC3]
+	(No symbol) [0x00007FF746F003F8]
+	(No symbol) [0x00007FF746F01163]
+	GetHandleVerifier [0x00007FF7473AEF0D+2870973]
+	GetHandleVerifier [0x00007FF7473A96B8+2848360]
+	GetHandleVerifier [0x00007FF7473C6993+2967875]
+	GetHandleVerifier [0x00007FF74712019A+188746]
+	GetHandleVerifier [0x00007FF74712847F+222255]
+	GetHandleVerifier [0x00007FF74710D2D4+111236]
+	GetHandleVerifier [0x00007FF74710D482+111666]
+	GetHandleVerifier [0x00007FF7470F35A9+5465]
+	BaseThreadInitThunk [0x00007FF8250B259D+29]
+	RtlUserThreadStart [0x00007FF825AEAF38+40]
+
+2025-04-17 17:45:02,064 - INFO - Screenshot saved to: Reports\20250417_174456\Screenshots\step_3_174501.png
+2025-04-17 17:45:02,064 - INFO - Screenshot path saved to report: Screenshots\step_3_174501.png
+2025-04-17 17:45:06,561 - INFO - Browser closed and cleanup completed
+2025-04-17 17:48:13,582 - INFO - Successfully created report at: Reports\20250417_174813\report_20250417_174813.xlsx
+2025-04-17 17:48:13,583 - INFO - Report created at: Reports\20250417_174813\report_20250417_174813.xlsx
+2025-04-17 17:48:13,583 - INFO - Execution folder: Reports\20250417_174813
+2025-04-17 17:48:14,902 - INFO - Executing: open_url on None with value https://github.com/
+2025-04-17 17:48:17,125 - INFO - Opened URL: https://github.com/
+2025-04-17 17:48:17,126 - INFO - Executing: element_click on //a[contains(text(), 'Sign in')] with value None
+2025-04-17 17:48:17,181 - ERROR - Failed to click element //a[contains(text(), 'Sign in')]: Message: element not interactable
+  (Session info: chrome=135.0.7049.95)
+Stacktrace:
+	GetHandleVerifier [0x00007FF747105355+78597]
+	GetHandleVerifier [0x00007FF7471053B0+78688]
+	(No symbol) [0x00007FF746EB8FDC]
+	(No symbol) [0x00007FF746F1061D]
+	(No symbol) [0x00007FF746F02204]
+	(No symbol) [0x00007FF746F370EA]
+	(No symbol) [0x00007FF746F01AB6]
+	(No symbol) [0x00007FF746F37300]
+	(No symbol) [0x00007FF746F5F2BB]
+	(No symbol) [0x00007FF746F36EC3]
+	(No symbol) [0x00007FF746F003F8]
+	(No symbol) [0x00007FF746F01163]
+	GetHandleVerifier [0x00007FF7473AEF0D+2870973]
+	GetHandleVerifier [0x00007FF7473A96B8+2848360]
+	GetHandleVerifier [0x00007FF7473C6993+2967875]
+	GetHandleVerifier [0x00007FF74712019A+188746]
+	GetHandleVerifier [0x00007FF74712847F+222255]
+	GetHandleVerifier [0x00007FF74710D2D4+111236]
+	GetHandleVerifier [0x00007FF74710D482+111666]
+	GetHandleVerifier [0x00007FF7470F35A9+5465]
+	BaseThreadInitThunk [0x00007FF8250B259D+29]
+	RtlUserThreadStart [0x00007FF825AEAF38+40]
+
+2025-04-17 17:48:17,310 - INFO - Screenshot saved to: Reports\20250417_174813\Screenshots\step_3_174817.png
+2025-04-17 17:48:17,310 - INFO - Screenshot path saved to report: Screenshots\step_3_174817.png
+2025-04-17 17:48:20,365 - INFO - Browser closed and cleanup completed
+2025-04-17 17:54:11,600 - INFO - Successfully created report at: Reports\20250417_175411\report_20250417_175411.xlsx
+2025-04-17 17:54:11,600 - INFO - Report created at: Reports\20250417_175411\report_20250417_175411.xlsx
+2025-04-17 17:54:11,600 - INFO - Execution folder: Reports\20250417_175411
+2025-04-17 17:54:14,160 - INFO - Executing: open_url on None with value https://github.com/
+2025-04-17 17:54:17,037 - INFO - Opened URL: https://github.com/
+2025-04-17 17:54:17,037 - INFO - Executing: element_click on //a[contains(text(), 'Sign in')] with value None
+2025-04-17 17:54:17,106 - ERROR - Failed to click element //a[contains(text(), 'Sign in')]: Message: element not interactable
+  (Session info: chrome=135.0.7049.95)
+Stacktrace:
+	GetHandleVerifier [0x00007FF747105355+78597]
+	GetHandleVerifier [0x00007FF7471053B0+78688]
+	(No symbol) [0x00007FF746EB8FDC]
+	(No symbol) [0x00007FF746F1061D]
+	(No symbol) [0x00007FF746F02204]
+	(No symbol) [0x00007FF746F370EA]
+	(No symbol) [0x00007FF746F01AB6]
+	(No symbol) [0x00007FF746F37300]
+	(No symbol) [0x00007FF746F5F2BB]
+	(No symbol) [0x00007FF746F36EC3]
+	(No symbol) [0x00007FF746F003F8]
+	(No symbol) [0x00007FF746F01163]
+	GetHandleVerifier [0x00007FF7473AEF0D+2870973]
+	GetHandleVerifier [0x00007FF7473A96B8+2848360]
+	GetHandleVerifier [0x00007FF7473C6993+2967875]
+	GetHandleVerifier [0x00007FF74712019A+188746]
+	GetHandleVerifier [0x00007FF74712847F+222255]
+	GetHandleVerifier [0x00007FF74710D2D4+111236]
+	GetHandleVerifier [0x00007FF74710D482+111666]
+	GetHandleVerifier [0x00007FF7470F35A9+5465]
+	BaseThreadInitThunk [0x00007FF8250B259D+29]
+	RtlUserThreadStart [0x00007FF825AEAF38+40]
+
+2025-04-17 17:54:17,404 - INFO - Screenshot saved to: Reports\20250417_175411\Screenshots\step_3_175417.png
+2025-04-17 17:54:17,405 - INFO - Screenshot path saved to report: Screenshots\step_3_175417.png
+2025-04-17 17:54:20,131 - INFO - Browser closed and cleanup completed
+2025-04-17 17:58:31,561 - INFO - Successfully created report at: Reports\20250417_175831\report_20250417_175831.xlsx
+2025-04-17 17:58:31,561 - INFO - Report created at: Reports\20250417_175831\report_20250417_175831.xlsx
+2025-04-17 17:58:31,562 - INFO - Execution folder: Reports\20250417_175831
+2025-04-17 17:58:33,868 - INFO - Executing: open_url on None with value https://github.com/
+2025-04-17 17:58:36,272 - INFO - Opened URL: https://github.com/
+2025-04-17 17:58:36,273 - INFO - Executing: element_click on //a[contains(text(), 'Sign in')] with value None
+2025-04-17 17:58:36,335 - ERROR - Failed to click element //a[contains(text(), 'Sign in')]: Message: element not interactable
+  (Session info: chrome=135.0.7049.95)
+Stacktrace:
+	GetHandleVerifier [0x00007FF747105355+78597]
+	GetHandleVerifier [0x00007FF7471053B0+78688]
+	(No symbol) [0x00007FF746EB8FDC]
+	(No symbol) [0x00007FF746F1061D]
+	(No symbol) [0x00007FF746F02204]
+	(No symbol) [0x00007FF746F370EA]
+	(No symbol) [0x00007FF746F01AB6]
+	(No symbol) [0x00007FF746F37300]
+	(No symbol) [0x00007FF746F5F2BB]
+	(No symbol) [0x00007FF746F36EC3]
+	(No symbol) [0x00007FF746F003F8]
+	(No symbol) [0x00007FF746F01163]
+	GetHandleVerifier [0x00007FF7473AEF0D+2870973]
+	GetHandleVerifier [0x00007FF7473A96B8+2848360]
+	GetHandleVerifier [0x00007FF7473C6993+2967875]
+	GetHandleVerifier [0x00007FF74712019A+188746]
+	GetHandleVerifier [0x00007FF74712847F+222255]
+	GetHandleVerifier [0x00007FF74710D2D4+111236]
+	GetHandleVerifier [0x00007FF74710D482+111666]
+	GetHandleVerifier [0x00007FF7470F35A9+5465]
+	BaseThreadInitThunk [0x00007FF8250B259D+29]
+	RtlUserThreadStart [0x00007FF825AEAF38+40]
+
+2025-04-17 17:58:36,575 - INFO - Screenshot saved to: Reports\20250417_175831\Screenshots\step_3_175836.png
+2025-04-17 17:58:36,576 - INFO - Screenshot path saved to report: Screenshots\step_3_175836.png
+2025-04-17 17:58:36,620 - ERROR - Error processing testcases: name 'test_results_rows' is not defined
+2025-04-17 18:18:39,222 - INFO - Successfully created report at: Reports\20250417_181839\report_20250417_181839.xlsx
+2025-04-17 18:18:39,223 - INFO - Report created at: Reports\20250417_181839\report_20250417_181839.xlsx
+2025-04-17 18:18:39,223 - INFO - Execution folder: Reports\20250417_181839
+2025-04-17 18:18:40,524 - INFO - Executing: open_url on None with value https://github.com/
+2025-04-17 18:18:42,836 - INFO - Opened URL: https://github.com/
+2025-04-17 18:18:42,837 - INFO - Executing: element_click on //a[contains(text(), 'Sign in')] with value None
+2025-04-17 18:18:42,890 - ERROR - Failed to click element //a[contains(text(), 'Sign in')]: Message: element not interactable
+  (Session info: chrome=135.0.7049.95)
+Stacktrace:
+	GetHandleVerifier [0x00007FF747105355+78597]
+	GetHandleVerifier [0x00007FF7471053B0+78688]
+	(No symbol) [0x00007FF746EB8FDC]
+	(No symbol) [0x00007FF746F1061D]
+	(No symbol) [0x00007FF746F02204]
+	(No symbol) [0x00007FF746F370EA]
+	(No symbol) [0x00007FF746F01AB6]
+	(No symbol) [0x00007FF746F37300]
+	(No symbol) [0x00007FF746F5F2BB]
+	(No symbol) [0x00007FF746F36EC3]
+	(No symbol) [0x00007FF746F003F8]
+	(No symbol) [0x00007FF746F01163]
+	GetHandleVerifier [0x00007FF7473AEF0D+2870973]
+	GetHandleVerifier [0x00007FF7473A96B8+2848360]
+	GetHandleVerifier [0x00007FF7473C6993+2967875]
+	GetHandleVerifier [0x00007FF74712019A+188746]
+	GetHandleVerifier [0x00007FF74712847F+222255]
+	GetHandleVerifier [0x00007FF74710D2D4+111236]
+	GetHandleVerifier [0x00007FF74710D482+111666]
+	GetHandleVerifier [0x00007FF7470F35A9+5465]
+	BaseThreadInitThunk [0x00007FF8250B259D+29]
+	RtlUserThreadStart [0x00007FF825AEAF38+40]
+
+2025-04-17 18:18:43,112 - INFO - Screenshot saved to: Reports\20250417_181839\Screenshots\step_3_181842.png
+2025-04-17 18:18:43,113 - INFO - Screenshot path saved to report: Screenshots\step_3_181842.png
+2025-04-17 18:18:43,170 - ERROR - Error processing testcases: name 'test_results_rows' is not defined
+2025-04-17 18:19:54,572 - INFO - Successfully created report at: Reports\20250417_181954\report_20250417_181954.xlsx
+2025-04-17 18:19:54,572 - INFO - Report created at: Reports\20250417_181954\report_20250417_181954.xlsx
+2025-04-17 18:19:54,572 - INFO - Execution folder: Reports\20250417_181954
+2025-04-17 18:19:55,841 - INFO - Executing: open_url on None with value https://github.com/
+2025-04-17 18:19:58,079 - INFO - Opened URL: https://github.com/
+2025-04-17 18:19:58,080 - INFO - Executing: element_click on //a[contains(text(), 'Sign in')] with value None
+2025-04-17 18:19:58,139 - ERROR - Failed to click element //a[contains(text(), 'Sign in')]: Message: element not interactable
+  (Session info: chrome=135.0.7049.95)
+Stacktrace:
+	GetHandleVerifier [0x00007FF747105355+78597]
+	GetHandleVerifier [0x00007FF7471053B0+78688]
+	(No symbol) [0x00007FF746EB8FDC]
+	(No symbol) [0x00007FF746F1061D]
+	(No symbol) [0x00007FF746F02204]
+	(No symbol) [0x00007FF746F370EA]
+	(No symbol) [0x00007FF746F01AB6]
+	(No symbol) [0x00007FF746F37300]
+	(No symbol) [0x00007FF746F5F2BB]
+	(No symbol) [0x00007FF746F36EC3]
+	(No symbol) [0x00007FF746F003F8]
+	(No symbol) [0x00007FF746F01163]
+	GetHandleVerifier [0x00007FF7473AEF0D+2870973]
+	GetHandleVerifier [0x00007FF7473A96B8+2848360]
+	GetHandleVerifier [0x00007FF7473C6993+2967875]
+	GetHandleVerifier [0x00007FF74712019A+188746]
+	GetHandleVerifier [0x00007FF74712847F+222255]
+	GetHandleVerifier [0x00007FF74710D2D4+111236]
+	GetHandleVerifier [0x00007FF74710D482+111666]
+	GetHandleVerifier [0x00007FF7470F35A9+5465]
+	BaseThreadInitThunk [0x00007FF8250B259D+29]
+	RtlUserThreadStart [0x00007FF825AEAF38+40]
+
+2025-04-17 18:19:58,376 - INFO - Screenshot saved to: Reports\20250417_181954\Screenshots\step_3_181958.png
+2025-04-17 18:19:58,377 - INFO - Screenshot path saved to report: Screenshots\step_3_181958.png
+2025-04-17 18:20:01,025 - INFO - Browser closed and cleanup completed
+2025-04-17 18:23:36,052 - INFO - Successfully created report at: Reports\20250417_182336\report_20250417_182336.xlsx
+2025-04-17 18:23:36,053 - INFO - Report created at: Reports\20250417_182336\report_20250417_182336.xlsx
+2025-04-17 18:23:36,054 - INFO - Execution folder: Reports\20250417_182336
+2025-04-17 18:23:39,540 - INFO - Executing: open_url on None with value https://github.com/
+2025-04-17 18:23:41,730 - INFO - Opened URL: https://github.com/
+2025-04-17 18:23:41,731 - INFO - Executing: element_click on //a[contains(text(), 'Sign in')] with value None
+2025-04-17 18:23:41,783 - ERROR - Failed to click element //a[contains(text(), 'Sign in')]: Message: element not interactable
+  (Session info: chrome=135.0.7049.95)
+Stacktrace:
+	GetHandleVerifier [0x00007FF747105355+78597]
+	GetHandleVerifier [0x00007FF7471053B0+78688]
+	(No symbol) [0x00007FF746EB8FDC]
+	(No symbol) [0x00007FF746F1061D]
+	(No symbol) [0x00007FF746F02204]
+	(No symbol) [0x00007FF746F370EA]
+	(No symbol) [0x00007FF746F01AB6]
+	(No symbol) [0x00007FF746F37300]
+	(No symbol) [0x00007FF746F5F2BB]
+	(No symbol) [0x00007FF746F36EC3]
+	(No symbol) [0x00007FF746F003F8]
+	(No symbol) [0x00007FF746F01163]
+	GetHandleVerifier [0x00007FF7473AEF0D+2870973]
+	GetHandleVerifier [0x00007FF7473A96B8+2848360]
+	GetHandleVerifier [0x00007FF7473C6993+2967875]
+	GetHandleVerifier [0x00007FF74712019A+188746]
+	GetHandleVerifier [0x00007FF74712847F+222255]
+	GetHandleVerifier [0x00007FF74710D2D4+111236]
+	GetHandleVerifier [0x00007FF74710D482+111666]
+	GetHandleVerifier [0x00007FF7470F35A9+5465]
+	BaseThreadInitThunk [0x00007FF8250B259D+29]
+	RtlUserThreadStart [0x00007FF825AEAF38+40]
+
+2025-04-17 18:23:41,920 - INFO - Screenshot saved to: Reports\20250417_182336\Screenshots\step_3_182341.png
+2025-04-17 18:23:41,921 - INFO - Screenshot path saved to report: Screenshots\step_3_182341.png
+2025-04-17 18:23:44,634 - INFO - Browser closed and cleanup completed
+2025-04-17 18:28:07,147 - INFO - Successfully created report at: Reports\20250417_182807\report_20250417_182807.xlsx
+2025-04-17 18:28:07,148 - INFO - Report created at: Reports\20250417_182807\report_20250417_182807.xlsx
+2025-04-17 18:28:07,148 - INFO - Execution folder: Reports\20250417_182807
+2025-04-17 18:28:09,699 - INFO - Executing: open_url on None with value https://github.com/
+2025-04-17 18:28:11,837 - INFO - Opened URL: https://github.com/
+2025-04-17 18:28:11,837 - INFO - Executing: element_click on //a[contains(text(), 'Sign in')] with value None
+2025-04-17 18:28:11,885 - ERROR - Failed to click element //a[contains(text(), 'Sign in')]: Message: element not interactable
+  (Session info: chrome=135.0.7049.95)
+Stacktrace:
+	GetHandleVerifier [0x00007FF747105355+78597]
+	GetHandleVerifier [0x00007FF7471053B0+78688]
+	(No symbol) [0x00007FF746EB8FDC]
+	(No symbol) [0x00007FF746F1061D]
+	(No symbol) [0x00007FF746F02204]
+	(No symbol) [0x00007FF746F370EA]
+	(No symbol) [0x00007FF746F01AB6]
+	(No symbol) [0x00007FF746F37300]
+	(No symbol) [0x00007FF746F5F2BB]
+	(No symbol) [0x00007FF746F36EC3]
+	(No symbol) [0x00007FF746F003F8]
+	(No symbol) [0x00007FF746F01163]
+	GetHandleVerifier [0x00007FF7473AEF0D+2870973]
+	GetHandleVerifier [0x00007FF7473A96B8+2848360]
+	GetHandleVerifier [0x00007FF7473C6993+2967875]
+	GetHandleVerifier [0x00007FF74712019A+188746]
+	GetHandleVerifier [0x00007FF74712847F+222255]
+	GetHandleVerifier [0x00007FF74710D2D4+111236]
+	GetHandleVerifier [0x00007FF74710D482+111666]
+	GetHandleVerifier [0x00007FF7470F35A9+5465]
+	BaseThreadInitThunk [0x00007FF8250B259D+29]
+	RtlUserThreadStart [0x00007FF825AEAF38+40]
+
+2025-04-17 18:28:12,000 - INFO - Screenshot saved to: Reports\20250417_182807\Screenshots\step_3_182811.png
+2025-04-17 18:28:12,000 - INFO - Screenshot path saved to report: Screenshots\step_3_182811.png
+2025-04-17 18:28:14,744 - INFO - Browser closed and cleanup completed
+2025-04-17 18:28:19,269 - INFO - Successfully created report at: Reports\20250417_182819\report_20250417_182819.xlsx
+2025-04-17 18:28:19,270 - INFO - Report created at: Reports\20250417_182819\report_20250417_182819.xlsx
+2025-04-17 18:28:19,270 - INFO - Execution folder: Reports\20250417_182819
+2025-04-17 18:28:20,677 - INFO - Executing: open_url on None with value https://github.com/
+2025-04-17 18:28:24,803 - INFO - Opened URL: https://github.com/
+2025-04-17 18:28:24,803 - INFO - Executing: element_click on //a[contains(text(), 'Sign in')] with value None
+2025-04-17 18:28:24,868 - ERROR - Failed to click element //a[contains(text(), 'Sign in')]: Message: element not interactable
+  (Session info: chrome=135.0.7049.95)
+Stacktrace:
+	GetHandleVerifier [0x00007FF747105355+78597]
+	GetHandleVerifier [0x00007FF7471053B0+78688]
+	(No symbol) [0x00007FF746EB8FDC]
+	(No symbol) [0x00007FF746F1061D]
+	(No symbol) [0x00007FF746F02204]
+	(No symbol) [0x00007FF746F370EA]
+	(No symbol) [0x00007FF746F01AB6]
+	(No symbol) [0x00007FF746F37300]
+	(No symbol) [0x00007FF746F5F2BB]
+	(No symbol) [0x00007FF746F36EC3]
+	(No symbol) [0x00007FF746F003F8]
+	(No symbol) [0x00007FF746F01163]
+	GetHandleVerifier [0x00007FF7473AEF0D+2870973]
+	GetHandleVerifier [0x00007FF7473A96B8+2848360]
+	GetHandleVerifier [0x00007FF7473C6993+2967875]
+	GetHandleVerifier [0x00007FF74712019A+188746]
+	GetHandleVerifier [0x00007FF74712847F+222255]
+	GetHandleVerifier [0x00007FF74710D2D4+111236]
+	GetHandleVerifier [0x00007FF74710D482+111666]
+	GetHandleVerifier [0x00007FF7470F35A9+5465]
+	BaseThreadInitThunk [0x00007FF8250B259D+29]
+	RtlUserThreadStart [0x00007FF825AEAF38+40]
+
+2025-04-17 18:28:25,098 - INFO - Screenshot saved to: Reports\20250417_182819\Screenshots\step_3_182824.png
+2025-04-17 18:28:25,098 - INFO - Screenshot path saved to report: Screenshots\step_3_182824.png
+2025-04-17 18:28:27,601 - INFO - Browser closed and cleanup completed
+2025-04-17 18:32:10,165 - INFO - Successfully created report at: Reports\20250417_183210\report_20250417_183210.xlsx
+2025-04-17 18:32:10,166 - INFO - Report created at: Reports\20250417_183210\report_20250417_183210.xlsx
+2025-04-17 18:32:10,167 - INFO - Execution folder: Reports\20250417_183210
+2025-04-17 18:32:11,563 - INFO - Executing: open_url on None with value https://github.com/
+2025-04-17 18:32:14,972 - INFO - Opened URL: https://github.com/
+2025-04-17 18:32:14,973 - INFO - Executing: element_click on //a[contains(text(), 'Sign in')] with value None
+2025-04-17 18:32:15,039 - ERROR - Failed to click element //a[contains(text(), 'Sign in')]: Message: element not interactable
+  (Session info: chrome=135.0.7049.95)
+Stacktrace:
+	GetHandleVerifier [0x00007FF747105355+78597]
+	GetHandleVerifier [0x00007FF7471053B0+78688]
+	(No symbol) [0x00007FF746EB8FDC]
+	(No symbol) [0x00007FF746F1061D]
+	(No symbol) [0x00007FF746F02204]
+	(No symbol) [0x00007FF746F370EA]
+	(No symbol) [0x00007FF746F01AB6]
+	(No symbol) [0x00007FF746F37300]
+	(No symbol) [0x00007FF746F5F2BB]
+	(No symbol) [0x00007FF746F36EC3]
+	(No symbol) [0x00007FF746F003F8]
+	(No symbol) [0x00007FF746F01163]
+	GetHandleVerifier [0x00007FF7473AEF0D+2870973]
+	GetHandleVerifier [0x00007FF7473A96B8+2848360]
+	GetHandleVerifier [0x00007FF7473C6993+2967875]
+	GetHandleVerifier [0x00007FF74712019A+188746]
+	GetHandleVerifier [0x00007FF74712847F+222255]
+	GetHandleVerifier [0x00007FF74710D2D4+111236]
+	GetHandleVerifier [0x00007FF74710D482+111666]
+	GetHandleVerifier [0x00007FF7470F35A9+5465]
+	BaseThreadInitThunk [0x00007FF8250B259D+29]
+	RtlUserThreadStart [0x00007FF825AEAF38+40]
+
+2025-04-17 18:32:15,269 - INFO - Screenshot saved to: Reports\20250417_183210\Screenshots\step_3_183215.png
+2025-04-17 18:32:15,270 - INFO - Screenshot path saved to report: Screenshots\step_3_183215.png
+2025-04-17 18:32:18,032 - INFO - Browser closed and cleanup completed
+2025-04-17 18:37:11,617 - INFO - Successfully created report at: Reports\20250417_183711\report_20250417_183711.xlsx
+2025-04-17 18:37:11,618 - INFO - Report created at: Reports\20250417_183711\report_20250417_183711.xlsx
+2025-04-17 18:37:11,619 - INFO - Execution folder: Reports\20250417_183711
+2025-04-17 18:37:14,215 - INFO - Executing: open_url on None with value https://github.com/
+2025-04-17 18:37:16,494 - INFO - Opened URL: https://github.com/
+2025-04-17 18:37:16,495 - INFO - Executing: element_click on //a[contains(text(), 'Sign in')] with value None
+2025-04-17 18:37:16,561 - ERROR - Failed to click element //a[contains(text(), 'Sign in')]: Message: element not interactable
+  (Session info: chrome=135.0.7049.95)
+Stacktrace:
+	GetHandleVerifier [0x00007FF747105355+78597]
+	GetHandleVerifier [0x00007FF7471053B0+78688]
+	(No symbol) [0x00007FF746EB8FDC]
+	(No symbol) [0x00007FF746F1061D]
+	(No symbol) [0x00007FF746F02204]
+	(No symbol) [0x00007FF746F370EA]
+	(No symbol) [0x00007FF746F01AB6]
+	(No symbol) [0x00007FF746F37300]
+	(No symbol) [0x00007FF746F5F2BB]
+	(No symbol) [0x00007FF746F36EC3]
+	(No symbol) [0x00007FF746F003F8]
+	(No symbol) [0x00007FF746F01163]
+	GetHandleVerifier [0x00007FF7473AEF0D+2870973]
+	GetHandleVerifier [0x00007FF7473A96B8+2848360]
+	GetHandleVerifier [0x00007FF7473C6993+2967875]
+	GetHandleVerifier [0x00007FF74712019A+188746]
+	GetHandleVerifier [0x00007FF74712847F+222255]
+	GetHandleVerifier [0x00007FF74710D2D4+111236]
+	GetHandleVerifier [0x00007FF74710D482+111666]
+	GetHandleVerifier [0x00007FF7470F35A9+5465]
+	BaseThreadInitThunk [0x00007FF8250B259D+29]
+	RtlUserThreadStart [0x00007FF825AEAF38+40]
+
+2025-04-17 18:37:16,764 - INFO - Screenshot saved to: Reports\20250417_183711\Screenshots\step_3_183716.png
+2025-04-17 18:37:16,764 - INFO - Screenshot path saved to report: Screenshots\step_3_183716.png
+2025-04-17 18:37:19,456 - INFO - Browser closed and cleanup completed
+2025-04-17 18:40:24,797 - INFO - Successfully created report at: Reports\20250417_184024\report_20250417_184024.xlsx
+2025-04-17 18:40:24,797 - INFO - Report created at: Reports\20250417_184024\report_20250417_184024.xlsx
+2025-04-17 18:40:24,798 - INFO - Execution folder: Reports\20250417_184024
+2025-04-17 18:40:26,172 - INFO - Executing: open_url on None with value https://github.com/
+2025-04-17 18:40:28,406 - INFO - Opened URL: https://github.com/
+2025-04-17 18:40:28,406 - INFO - Executing: element_click on //a[contains(text(), 'Sign in')] with value None
+2025-04-17 18:40:28,466 - ERROR - Failed to click element //a[contains(text(), 'Sign in')]: Message: element not interactable
+  (Session info: chrome=135.0.7049.95)
+Stacktrace:
+	GetHandleVerifier [0x00007FF747105355+78597]
+	GetHandleVerifier [0x00007FF7471053B0+78688]
+	(No symbol) [0x00007FF746EB8FDC]
+	(No symbol) [0x00007FF746F1061D]
+	(No symbol) [0x00007FF746F02204]
+	(No symbol) [0x00007FF746F370EA]
+	(No symbol) [0x00007FF746F01AB6]
+	(No symbol) [0x00007FF746F37300]
+	(No symbol) [0x00007FF746F5F2BB]
+	(No symbol) [0x00007FF746F36EC3]
+	(No symbol) [0x00007FF746F003F8]
+	(No symbol) [0x00007FF746F01163]
+	GetHandleVerifier [0x00007FF7473AEF0D+2870973]
+	GetHandleVerifier [0x00007FF7473A96B8+2848360]
+	GetHandleVerifier [0x00007FF7473C6993+2967875]
+	GetHandleVerifier [0x00007FF74712019A+188746]
+	GetHandleVerifier [0x00007FF74712847F+222255]
+	GetHandleVerifier [0x00007FF74710D2D4+111236]
+	GetHandleVerifier [0x00007FF74710D482+111666]
+	GetHandleVerifier [0x00007FF7470F35A9+5465]
+	BaseThreadInitThunk [0x00007FF8250B259D+29]
+	RtlUserThreadStart [0x00007FF825AEAF38+40]
+
+2025-04-17 18:40:28,686 - INFO - Screenshot saved to: Reports\20250417_184024\Screenshots\step_3_184028.png
+2025-04-17 18:40:28,686 - INFO - Screenshot path saved to report: Screenshots\step_3_184028.png
+2025-04-17 18:40:31,291 - INFO - Browser closed and cleanup completed
+2025-04-17 18:50:08,530 - INFO - Successfully created report at: Reports\20250417_185008\report_20250417_185008.xlsx
+2025-04-17 18:50:08,530 - INFO - Report created at: Reports\20250417_185008\report_20250417_185008.xlsx
+2025-04-17 18:50:08,531 - INFO - Execution folder: Reports\20250417_185008
+2025-04-17 18:50:09,830 - INFO - Executing: open_url on None with value https://github.com/
+2025-04-17 18:50:12,046 - INFO - Opened URL: https://github.com/
+2025-04-17 18:50:12,047 - INFO - Executing: element_click on //a[contains(text(), 'Sign in')] with value None
+2025-04-17 18:50:12,106 - ERROR - Failed to click element //a[contains(text(), 'Sign in')]: Message: element not interactable
+  (Session info: chrome=135.0.7049.95)
+Stacktrace:
+	GetHandleVerifier [0x00007FF747105355+78597]
+	GetHandleVerifier [0x00007FF7471053B0+78688]
+	(No symbol) [0x00007FF746EB8FDC]
+	(No symbol) [0x00007FF746F1061D]
+	(No symbol) [0x00007FF746F02204]
+	(No symbol) [0x00007FF746F370EA]
+	(No symbol) [0x00007FF746F01AB6]
+	(No symbol) [0x00007FF746F37300]
+	(No symbol) [0x00007FF746F5F2BB]
+	(No symbol) [0x00007FF746F36EC3]
+	(No symbol) [0x00007FF746F003F8]
+	(No symbol) [0x00007FF746F01163]
+	GetHandleVerifier [0x00007FF7473AEF0D+2870973]
+	GetHandleVerifier [0x00007FF7473A96B8+2848360]
+	GetHandleVerifier [0x00007FF7473C6993+2967875]
+	GetHandleVerifier [0x00007FF74712019A+188746]
+	GetHandleVerifier [0x00007FF74712847F+222255]
+	GetHandleVerifier [0x00007FF74710D2D4+111236]
+	GetHandleVerifier [0x00007FF74710D482+111666]
+	GetHandleVerifier [0x00007FF7470F35A9+5465]
+	BaseThreadInitThunk [0x00007FF8250B259D+29]
+	RtlUserThreadStart [0x00007FF825AEAF38+40]
+
+2025-04-17 18:50:12,362 - INFO - Screenshot saved to: Reports\20250417_185008\Screenshots\step_3_185012.png
+2025-04-17 18:50:12,362 - INFO - Screenshot path saved to report: Screenshots\step_3_185012.png
+2025-04-17 18:50:12,363 - INFO - Executing: set_value on //*[@id="login_field"] with value pradipta.7845@gmail.com
+2025-04-17 18:50:22,875 - ERROR - Failed to set value: Element not found: //*[@id="login_field"]
+2025-04-17 18:50:23,071 - INFO - Screenshot saved to: Reports\20250417_185008\Screenshots\step_4_185022.png
+2025-04-17 18:50:23,073 - INFO - Screenshot path saved to report: Screenshots\step_4_185022.png
+2025-04-17 18:50:23,074 - INFO - Executing: set_value on //*[@id="password"] with value Welcome2jan@2025
+2025-04-17 18:50:33,551 - ERROR - Failed to set value: Element not found: //*[@id="password"]
+2025-04-17 18:50:33,724 - INFO - Screenshot saved to: Reports\20250417_185008\Screenshots\step_5_185033.png
+2025-04-17 18:50:33,725 - INFO - Screenshot path saved to report: Screenshots\step_5_185033.png
+2025-04-17 18:50:33,726 - INFO - Executing: element_click on //input[@type='submit' and @value='Sign in'] with value None
+2025-04-17 18:50:44,193 - ERROR - Failed to click element //input[@type='submit' and @value='Sign in']: Element not found: //input[@type='submit' and @value='Sign in']
+2025-04-17 18:50:44,372 - INFO - Screenshot saved to: Reports\20250417_185008\Screenshots\step_6_185044.png
+2025-04-17 18:50:44,374 - INFO - Screenshot path saved to report: Screenshots\step_6_185044.png
+2025-04-17 18:50:44,375 - INFO - Executing: element_click on //button[@aria-label='Open user navigation menu'] with value None
+2025-04-17 18:50:54,860 - ERROR - Failed to click element //button[@aria-label='Open user navigation menu']: Element not found: //button[@aria-label='Open user navigation menu']
+2025-04-17 18:50:55,037 - INFO - Screenshot saved to: Reports\20250417_185008\Screenshots\step_7_185054.png
+2025-04-17 18:50:55,038 - INFO - Screenshot path saved to report: Screenshots\step_7_185054.png
+2025-04-17 18:50:57,885 - INFO - Browser closed and cleanup completed
+2025-04-17 18:54:59,937 - INFO - Successfully created report at: Reports\20250417_185459\report_20250417_185459.xlsx
+2025-04-17 18:54:59,938 - INFO - Report created at: Reports\20250417_185459\report_20250417_185459.xlsx
+2025-04-17 18:54:59,938 - INFO - Execution folder: Reports\20250417_185459
+2025-04-17 18:55:06,054 - INFO - Executing: open_url on None with value https://github.com/
+2025-04-17 18:55:07,617 - INFO - Opened URL: https://github.com/
+2025-04-17 18:55:07,618 - INFO - Executing: element_click on //a[contains(text(), 'Sign in')] with value None
+2025-04-17 18:55:07,769 - ERROR - Failed to click element //a[contains(text(), 'Sign in')]: Message: element not interactable
+  (Session info: chrome=135.0.7049.95)
+Stacktrace:
+	GetHandleVerifier [0x00007FF747105355+78597]
+	GetHandleVerifier [0x00007FF7471053B0+78688]
+	(No symbol) [0x00007FF746EB8FDC]
+	(No symbol) [0x00007FF746F1061D]
+	(No symbol) [0x00007FF746F02204]
+	(No symbol) [0x00007FF746F370EA]
+	(No symbol) [0x00007FF746F01AB6]
+	(No symbol) [0x00007FF746F37300]
+	(No symbol) [0x00007FF746F5F2BB]
+	(No symbol) [0x00007FF746F36EC3]
+	(No symbol) [0x00007FF746F003F8]
+	(No symbol) [0x00007FF746F01163]
+	GetHandleVerifier [0x00007FF7473AEF0D+2870973]
+	GetHandleVerifier [0x00007FF7473A96B8+2848360]
+	GetHandleVerifier [0x00007FF7473C6993+2967875]
+	GetHandleVerifier [0x00007FF74712019A+188746]
+	GetHandleVerifier [0x00007FF74712847F+222255]
+	GetHandleVerifier [0x00007FF74710D2D4+111236]
+	GetHandleVerifier [0x00007FF74710D482+111666]
+	GetHandleVerifier [0x00007FF7470F35A9+5465]
+	BaseThreadInitThunk [0x00007FF8250B259D+29]
+	RtlUserThreadStart [0x00007FF825AEAF38+40]
+
+2025-04-17 18:55:08,250 - INFO - Screenshot saved to: Reports\20250417_185459\Screenshots\step_3_185507.png
+2025-04-17 18:55:08,251 - INFO - Screenshot path saved to report: Screenshots\step_3_185507.png
+2025-04-17 18:55:08,251 - INFO - Executing: set_value on //*[@id="login_field"] with value pradipta.7845@gmail.com
+2025-04-17 18:55:18,610 - ERROR - Failed to set value: Element not found: //*[@id="login_field"]
+2025-04-17 18:55:18,763 - INFO - Screenshot saved to: Reports\20250417_185459\Screenshots\step_4_185518.png
+2025-04-17 18:55:18,764 - INFO - Screenshot path saved to report: Screenshots\step_4_185518.png
+2025-04-17 18:55:18,765 - INFO - Executing: set_value on //*[@id="password"] with value Welcome2jan@2025
+2025-04-17 18:55:29,192 - ERROR - Failed to set value: Element not found: //*[@id="password"]
+2025-04-17 18:55:29,450 - INFO - Screenshot saved to: Reports\20250417_185459\Screenshots\step_5_185529.png
+2025-04-17 18:55:29,452 - INFO - Screenshot path saved to report: Screenshots\step_5_185529.png
+2025-04-17 18:55:29,454 - INFO - Executing: element_click on //input[@type='submit' and @value='Sign in'] with value None
+2025-04-17 18:55:39,573 - ERROR - Failed to click element //input[@type='submit' and @value='Sign in']: Element not found: //input[@type='submit' and @value='Sign in']
+2025-04-17 18:55:39,842 - INFO - Screenshot saved to: Reports\20250417_185459\Screenshots\step_6_185539.png
+2025-04-17 18:55:39,844 - INFO - Screenshot path saved to report: Screenshots\step_6_185539.png
+2025-04-17 18:55:39,844 - INFO - Executing: element_click on //button[@aria-label='Open user navigation menu'] with value None
+2025-04-17 18:55:49,901 - ERROR - Failed to click element //button[@aria-label='Open user navigation menu']: Element not found: //button[@aria-label='Open user navigation menu']
+2025-04-17 18:55:50,166 - INFO - Screenshot saved to: Reports\20250417_185459\Screenshots\step_7_185549.png
+2025-04-17 18:55:50,167 - INFO - Screenshot path saved to report: Screenshots\step_7_185549.png
+2025-04-17 18:55:53,298 - INFO - Browser closed and cleanup completed
+2025-04-17 19:03:13,896 - INFO - Successfully created report at: Reports\20250417_190313\report_20250417_190313.xlsx
+2025-04-17 19:03:13,897 - INFO - Report created at: Reports\20250417_190313\report_20250417_190313.xlsx
+2025-04-17 19:03:13,898 - INFO - Execution folder: Reports\20250417_190313
+2025-04-17 19:03:15,501 - INFO - Executing: open_url on None with value https://github.com/
+2025-04-17 19:03:19,671 - INFO - Opened URL: https://github.com/
+2025-04-17 19:03:19,672 - INFO - Executing: element_click on //a[contains(text(), 'Sign in')] with value None
+2025-04-17 19:03:19,736 - ERROR - Failed to click element //a[contains(text(), 'Sign in')]: Message: element not interactable
+  (Session info: chrome=135.0.7049.95)
+Stacktrace:
+	GetHandleVerifier [0x00007FF747105355+78597]
+	GetHandleVerifier [0x00007FF7471053B0+78688]
+	(No symbol) [0x00007FF746EB8FDC]
+	(No symbol) [0x00007FF746F1061D]
+	(No symbol) [0x00007FF746F02204]
+	(No symbol) [0x00007FF746F370EA]
+	(No symbol) [0x00007FF746F01AB6]
+	(No symbol) [0x00007FF746F37300]
+	(No symbol) [0x00007FF746F5F2BB]
+	(No symbol) [0x00007FF746F36EC3]
+	(No symbol) [0x00007FF746F003F8]
+	(No symbol) [0x00007FF746F01163]
+	GetHandleVerifier [0x00007FF7473AEF0D+2870973]
+	GetHandleVerifier [0x00007FF7473A96B8+2848360]
+	GetHandleVerifier [0x00007FF7473C6993+2967875]
+	GetHandleVerifier [0x00007FF74712019A+188746]
+	GetHandleVerifier [0x00007FF74712847F+222255]
+	GetHandleVerifier [0x00007FF74710D2D4+111236]
+	GetHandleVerifier [0x00007FF74710D482+111666]
+	GetHandleVerifier [0x00007FF7470F35A9+5465]
+	BaseThreadInitThunk [0x00007FF8250B259D+29]
+	RtlUserThreadStart [0x00007FF825AEAF38+40]
+
+2025-04-17 19:03:20,002 - INFO - Screenshot saved to: Reports\20250417_190313\Screenshots\step_3_190319.png
+2025-04-17 19:03:20,004 - INFO - Screenshot path saved to report: Screenshots\step_3_190319.png
+2025-04-17 19:03:20,004 - INFO - Executing: set_value on //*[@id="login_field"] with value pradipta.7845@gmail.com
+2025-04-17 19:03:30,311 - ERROR - Failed to set value: Element not found: //*[@id="login_field"]
+2025-04-17 19:03:30,555 - INFO - Screenshot saved to: Reports\20250417_190313\Screenshots\step_4_190330.png
+2025-04-17 19:03:30,557 - INFO - Screenshot path saved to report: Screenshots\step_4_190330.png
+2025-04-17 19:03:30,558 - INFO - Executing: set_value on //*[@id="password"] with value Welcome2jan@2025
+2025-04-17 19:03:41,038 - ERROR - Failed to set value: Element not found: //*[@id="password"]
+2025-04-17 19:03:41,298 - INFO - Screenshot saved to: Reports\20250417_190313\Screenshots\step_5_190341.png
+2025-04-17 19:03:41,300 - INFO - Screenshot path saved to report: Screenshots\step_5_190341.png
+2025-04-17 19:03:41,301 - INFO - Executing: element_click on //input[@type='submit' and @value='Sign in'] with value None
+2025-04-17 19:03:51,323 - ERROR - Failed to click element //input[@type='submit' and @value='Sign in']: Element not found: //input[@type='submit' and @value='Sign in']
+2025-04-17 19:03:51,615 - INFO - Screenshot saved to: Reports\20250417_190313\Screenshots\step_6_190351.png
+2025-04-17 19:03:51,616 - INFO - Screenshot path saved to report: Screenshots\step_6_190351.png
+2025-04-17 19:03:51,618 - INFO - Executing: element_click on //button[@aria-label='Open user navigation menu'] with value None
+2025-04-17 19:04:01,662 - ERROR - Failed to click element //button[@aria-label='Open user navigation menu']: Element not found: //button[@aria-label='Open user navigation menu']
+2025-04-17 19:04:01,904 - INFO - Screenshot saved to: Reports\20250417_190313\Screenshots\step_7_190401.png
+2025-04-17 19:04:01,905 - INFO - Screenshot path saved to report: Screenshots\step_7_190401.png
+2025-04-17 19:04:05,108 - INFO - Browser closed and cleanup completed
+2025-04-17 19:09:40,676 - INFO - Successfully created report at: Reports\20250417_190940\report_20250417_190940.xlsx
+2025-04-17 19:09:40,677 - INFO - Report created at: Reports\20250417_190940\report_20250417_190940.xlsx
+2025-04-17 19:09:40,677 - INFO - Execution folder: Reports\20250417_190940
+2025-04-17 19:09:43,416 - INFO - Executing: open_url on None with value https://github.com/
+2025-04-17 19:09:45,671 - INFO - Opened URL: https://github.com/
+2025-04-17 19:09:45,673 - INFO - Executing: element_click on //a[contains(text(), 'Sign in')] with value None
+2025-04-17 19:09:45,712 - ERROR - Failed to click element //a[contains(text(), 'Sign in')]: Message: element not interactable
+  (Session info: chrome=135.0.7049.95)
+Stacktrace:
+	GetHandleVerifier [0x00007FF747105355+78597]
+	GetHandleVerifier [0x00007FF7471053B0+78688]
+	(No symbol) [0x00007FF746EB8FDC]
+	(No symbol) [0x00007FF746F1061D]
+	(No symbol) [0x00007FF746F02204]
+	(No symbol) [0x00007FF746F370EA]
+	(No symbol) [0x00007FF746F01AB6]
+	(No symbol) [0x00007FF746F37300]
+	(No symbol) [0x00007FF746F5F2BB]
+	(No symbol) [0x00007FF746F36EC3]
+	(No symbol) [0x00007FF746F003F8]
+	(No symbol) [0x00007FF746F01163]
+	GetHandleVerifier [0x00007FF7473AEF0D+2870973]
+	GetHandleVerifier [0x00007FF7473A96B8+2848360]
+	GetHandleVerifier [0x00007FF7473C6993+2967875]
+	GetHandleVerifier [0x00007FF74712019A+188746]
+	GetHandleVerifier [0x00007FF74712847F+222255]
+	GetHandleVerifier [0x00007FF74710D2D4+111236]
+	GetHandleVerifier [0x00007FF74710D482+111666]
+	GetHandleVerifier [0x00007FF7470F35A9+5465]
+	BaseThreadInitThunk [0x00007FF8250B259D+29]
+	RtlUserThreadStart [0x00007FF825AEAF38+40]
+
+2025-04-17 19:09:46,009 - INFO - Screenshot saved to: Reports\20250417_190940\Screenshots\step_3_190945.png
+2025-04-17 19:09:46,009 - INFO - Screenshot path saved to report: Screenshots\step_3_190945.png
+2025-04-17 19:09:46,009 - INFO - Executing: set_value on //*[@id="login_field"] with value pradipta.7845@gmail.com
+2025-04-17 19:09:56,218 - ERROR - Failed to set value: Element not found: //*[@id="login_field"]
+2025-04-17 19:09:56,451 - INFO - Screenshot saved to: Reports\20250417_190940\Screenshots\step_4_190956.png
+2025-04-17 19:09:56,452 - INFO - Screenshot path saved to report: Screenshots\step_4_190956.png
+2025-04-17 19:09:56,453 - INFO - Executing: set_value on //*[@id="password"] with value Welcome2jan@2025
+2025-04-17 19:10:06,939 - ERROR - Failed to set value: Element not found: //*[@id="password"]
+2025-04-17 19:10:07,165 - INFO - Screenshot saved to: Reports\20250417_190940\Screenshots\step_5_191006.png
+2025-04-17 19:10:07,166 - INFO - Screenshot path saved to report: Screenshots\step_5_191006.png
+2025-04-17 19:10:07,166 - INFO - Executing: element_click on //input[@type='submit' and @value='Sign in'] with value None
+2025-04-17 19:10:17,578 - ERROR - Failed to click element //input[@type='submit' and @value='Sign in']: Element not found: //input[@type='submit' and @value='Sign in']
+2025-04-17 19:10:17,824 - INFO - Screenshot saved to: Reports\20250417_190940\Screenshots\step_6_191017.png
+2025-04-17 19:10:17,825 - INFO - Screenshot path saved to report: Screenshots\step_6_191017.png
+2025-04-17 19:10:17,826 - INFO - Executing: element_click on //button[@aria-label='Open user navigation menu'] with value None
+2025-04-17 19:10:27,837 - ERROR - Failed to click element //button[@aria-label='Open user navigation menu']: Element not found: //button[@aria-label='Open user navigation menu']
+2025-04-17 19:10:28,092 - INFO - Screenshot saved to: Reports\20250417_190940\Screenshots\step_7_191027.png
+2025-04-17 19:10:28,093 - INFO - Screenshot path saved to report: Screenshots\step_7_191027.png
+2025-04-17 19:10:31,162 - INFO - Browser closed and cleanup completed
+2025-04-17 19:13:54,737 - INFO - Successfully created report at: Reports\20250417_191354\report_20250417_191354.xlsx
+2025-04-17 19:13:54,738 - INFO - Report created at: Reports\20250417_191354\report_20250417_191354.xlsx
+2025-04-17 19:13:54,738 - INFO - Execution folder: Reports\20250417_191354
+2025-04-17 19:13:56,134 - INFO - Executing: open_url on None with value https://github.com/
+2025-04-17 19:13:58,408 - INFO - Opened URL: https://github.com/
+2025-04-17 19:13:58,409 - INFO - Executing: element_click on //a[contains(text(), 'Sign in')] with value None
+2025-04-17 19:13:58,471 - ERROR - Failed to click element //a[contains(text(), 'Sign in')]: Message: element not interactable
+  (Session info: chrome=135.0.7049.95)
+Stacktrace:
+	GetHandleVerifier [0x00007FF747105355+78597]
+	GetHandleVerifier [0x00007FF7471053B0+78688]
+	(No symbol) [0x00007FF746EB8FDC]
+	(No symbol) [0x00007FF746F1061D]
+	(No symbol) [0x00007FF746F02204]
+	(No symbol) [0x00007FF746F370EA]
+	(No symbol) [0x00007FF746F01AB6]
+	(No symbol) [0x00007FF746F37300]
+	(No symbol) [0x00007FF746F5F2BB]
+	(No symbol) [0x00007FF746F36EC3]
+	(No symbol) [0x00007FF746F003F8]
+	(No symbol) [0x00007FF746F01163]
+	GetHandleVerifier [0x00007FF7473AEF0D+2870973]
+	GetHandleVerifier [0x00007FF7473A96B8+2848360]
+	GetHandleVerifier [0x00007FF7473C6993+2967875]
+	GetHandleVerifier [0x00007FF74712019A+188746]
+	GetHandleVerifier [0x00007FF74712847F+222255]
+	GetHandleVerifier [0x00007FF74710D2D4+111236]
+	GetHandleVerifier [0x00007FF74710D482+111666]
+	GetHandleVerifier [0x00007FF7470F35A9+5465]
+	BaseThreadInitThunk [0x00007FF8250B259D+29]
+	RtlUserThreadStart [0x00007FF825AEAF38+40]
+
+2025-04-17 19:13:58,804 - INFO - Screenshot saved to: Reports\20250417_191354\Screenshots\step_3_191358.png
+2025-04-17 19:13:58,805 - INFO - Screenshot path saved to report: Screenshots\step_3_191358.png
+2025-04-17 19:13:58,805 - INFO - Executing: set_value on //*[@id="login_field"] with value pradipta.7845@gmail.com
+2025-04-17 19:14:08,845 - ERROR - Failed to set value: Element not found: //*[@id="login_field"]
+2025-04-17 19:14:09,167 - INFO - Screenshot saved to: Reports\20250417_191354\Screenshots\step_4_191408.png
+2025-04-17 19:14:09,168 - INFO - Screenshot path saved to report: Screenshots\step_4_191408.png
+2025-04-17 19:14:09,169 - INFO - Executing: set_value on //*[@id="password"] with value Welcome2jan@2025
+2025-04-17 19:14:19,688 - ERROR - Failed to set value: Element not found: //*[@id="password"]
+2025-04-17 19:14:20,005 - INFO - Screenshot saved to: Reports\20250417_191354\Screenshots\step_5_191419.png
+2025-04-17 19:14:20,007 - INFO - Screenshot path saved to report: Screenshots\step_5_191419.png
+2025-04-17 19:14:20,007 - INFO - Executing: element_click on //input[@type='submit' and @value='Sign in'] with value None
+2025-04-17 19:14:30,022 - ERROR - Failed to click element //input[@type='submit' and @value='Sign in']: Element not found: //input[@type='submit' and @value='Sign in']
+2025-04-17 19:14:30,328 - INFO - Screenshot saved to: Reports\20250417_191354\Screenshots\step_6_191430.png
+2025-04-17 19:14:30,329 - INFO - Screenshot path saved to report: Screenshots\step_6_191430.png
+2025-04-17 19:14:30,330 - INFO - Executing: element_click on //button[@aria-label='Open user navigation menu'] with value None
+2025-04-17 19:14:40,412 - ERROR - Failed to click element //button[@aria-label='Open user navigation menu']: Element not found: //button[@aria-label='Open user navigation menu']
+2025-04-17 19:14:40,736 - INFO - Screenshot saved to: Reports\20250417_191354\Screenshots\step_7_191440.png
+2025-04-17 19:14:40,738 - INFO - Screenshot path saved to report: Screenshots\step_7_191440.png
+2025-04-17 19:14:43,801 - INFO - Browser closed and cleanup completed
+2025-04-17 19:17:33,375 - INFO - Successfully created report at: Reports\20250417_191733\report_20250417_191733.xlsx
+2025-04-17 19:17:33,376 - INFO - Report created at: Reports\20250417_191733\report_20250417_191733.xlsx
+2025-04-17 19:17:33,377 - INFO - Execution folder: Reports\20250417_191733
+2025-04-17 19:17:34,820 - INFO - Executing: open_url on None with value https://github.com/
+2025-04-17 19:17:36,554 - INFO - Opened URL: https://github.com/
+2025-04-17 19:17:36,555 - INFO - Executing: element_click on //a[contains(text(), 'Sign in')] with value None
+2025-04-17 19:17:36,885 - ERROR - Failed to click element //a[contains(text(), 'Sign in')]: Message: element not interactable
+  (Session info: chrome=135.0.7049.95)
+Stacktrace:
+	GetHandleVerifier [0x00007FF747105355+78597]
+	GetHandleVerifier [0x00007FF7471053B0+78688]
+	(No symbol) [0x00007FF746EB8FDC]
+	(No symbol) [0x00007FF746F1061D]
+	(No symbol) [0x00007FF746F02204]
+	(No symbol) [0x00007FF746F370EA]
+	(No symbol) [0x00007FF746F01AB6]
+	(No symbol) [0x00007FF746F37300]
+	(No symbol) [0x00007FF746F5F2BB]
+	(No symbol) [0x00007FF746F36EC3]
+	(No symbol) [0x00007FF746F003F8]
+	(No symbol) [0x00007FF746F01163]
+	GetHandleVerifier [0x00007FF7473AEF0D+2870973]
+	GetHandleVerifier [0x00007FF7473A96B8+2848360]
+	GetHandleVerifier [0x00007FF7473C6993+2967875]
+	GetHandleVerifier [0x00007FF74712019A+188746]
+	GetHandleVerifier [0x00007FF74712847F+222255]
+	GetHandleVerifier [0x00007FF74710D2D4+111236]
+	GetHandleVerifier [0x00007FF74710D482+111666]
+	GetHandleVerifier [0x00007FF7470F35A9+5465]
+	BaseThreadInitThunk [0x00007FF8250B259D+29]
+	RtlUserThreadStart [0x00007FF825AEAF38+40]
+
+2025-04-17 19:17:37,185 - INFO - Screenshot saved to: Reports\20250417_191733\Screenshots\step_3_191736.png
+2025-04-17 19:17:37,186 - INFO - Screenshot path saved to report: Screenshots\step_3_191736.png
+2025-04-17 19:17:37,186 - INFO - Executing: set_value on //*[@id="login_field"] with value pradipta.7845@gmail.com
+2025-04-17 19:17:47,202 - ERROR - Failed to set value: Element not found: //*[@id="login_field"]
+2025-04-17 19:17:47,476 - INFO - Screenshot saved to: Reports\20250417_191733\Screenshots\step_4_191747.png
+2025-04-17 19:17:47,477 - INFO - Screenshot path saved to report: Screenshots\step_4_191747.png
+2025-04-17 19:17:47,479 - INFO - Executing: set_value on //*[@id="password"] with value Welcome2jan@2025
+2025-04-17 19:17:57,487 - ERROR - Failed to set value: Element not found: //*[@id="password"]
+2025-04-17 19:17:57,750 - INFO - Screenshot saved to: Reports\20250417_191733\Screenshots\step_5_191757.png
+2025-04-17 19:17:57,752 - INFO - Screenshot path saved to report: Screenshots\step_5_191757.png
+2025-04-17 19:17:57,753 - INFO - Executing: element_click on //input[@type='submit' and @value='Sign in'] with value None
+2025-04-17 19:18:07,796 - ERROR - Failed to click element //input[@type='submit' and @value='Sign in']: Element not found: //input[@type='submit' and @value='Sign in']
+2025-04-17 19:18:08,053 - INFO - Screenshot saved to: Reports\20250417_191733\Screenshots\step_6_191807.png
+2025-04-17 19:18:08,055 - INFO - Screenshot path saved to report: Screenshots\step_6_191807.png
+2025-04-17 19:18:08,055 - INFO - Executing: element_click on //button[@aria-label='Open user navigation menu'] with value None
+2025-04-17 19:18:18,531 - ERROR - Failed to click element //button[@aria-label='Open user navigation menu']: Element not found: //button[@aria-label='Open user navigation menu']
+2025-04-17 19:18:18,786 - INFO - Screenshot saved to: Reports\20250417_191733\Screenshots\step_7_191818.png
+2025-04-17 19:18:18,788 - INFO - Screenshot path saved to report: Screenshots\step_7_191818.png
+2025-04-17 19:18:21,782 - INFO - Browser closed and cleanup completed
+2025-04-17 19:23:20,603 - INFO - Successfully created report at: Reports\20250417_192320\report_20250417_192320.xlsx
+2025-04-17 19:23:20,604 - INFO - Report created at: Reports\20250417_192320\report_20250417_192320.xlsx
+2025-04-17 19:23:20,605 - INFO - Execution folder: Reports\20250417_192320
+2025-04-17 19:23:22,006 - INFO - Executing: open_url on None with value https://github.com/
+2025-04-17 19:23:22,578 - INFO - Opened URL: https://github.com/
+2025-04-17 19:23:22,580 - INFO - Executing: element_click on //a[contains(text(), 'Sign in')] with value None
+2025-04-17 19:23:32,649 - ERROR - Failed to click element //a[contains(text(), 'Sign in')]: Element not found: //a[contains(text(), 'Sign in')]
+2025-04-17 19:23:33,268 - INFO - Screenshot saved to: Reports\20250417_192320\Screenshots\step_3_192332.png
+2025-04-17 19:23:33,268 - INFO - Screenshot path saved to report: Screenshots\step_3_192332.png
+2025-04-17 19:23:33,269 - INFO - Executing: set_value on //*[@id="login_field"] with value pradipta.7845@gmail.com
+2025-04-17 19:23:43,438 - ERROR - Failed to set value: Element not found: //*[@id="login_field"]
+2025-04-17 19:23:43,851 - INFO - Screenshot saved to: Reports\20250417_192320\Screenshots\step_4_192343.png
+2025-04-17 19:23:43,851 - INFO - Screenshot path saved to report: Screenshots\step_4_192343.png
+2025-04-17 19:23:43,852 - INFO - Executing: set_value on //*[@id="password"] with value Welcome2jan@2025
+2025-04-17 19:23:53,914 - ERROR - Failed to set value: Element not found: //*[@id="password"]
+2025-04-17 19:23:55,049 - INFO - Screenshot saved to: Reports\20250417_192320\Screenshots\step_5_192353.png
+2025-04-17 19:23:55,050 - INFO - Screenshot path saved to report: Screenshots\step_5_192353.png
+2025-04-17 19:23:55,051 - INFO - Executing: element_click on //input[@type='submit' and @value='Sign in'] with value None
+2025-04-17 19:24:05,067 - ERROR - Failed to click element //input[@type='submit' and @value='Sign in']: Element not found: //input[@type='submit' and @value='Sign in']
+2025-04-17 19:24:06,170 - INFO - Screenshot saved to: Reports\20250417_192320\Screenshots\step_6_192405.png
+2025-04-17 19:24:06,170 - INFO - Screenshot path saved to report: Screenshots\step_6_192405.png
+2025-04-17 19:24:06,171 - INFO - Executing: element_click on //button[@aria-label='Open user navigation menu'] with value None
+2025-04-17 19:24:16,680 - ERROR - Failed to click element //button[@aria-label='Open user navigation menu']: Element not found: //button[@aria-label='Open user navigation menu']
+2025-04-17 19:24:17,794 - INFO - Screenshot saved to: Reports\20250417_192320\Screenshots\step_7_192416.png
+2025-04-17 19:24:17,794 - INFO - Screenshot path saved to report: Screenshots\step_7_192416.png
+2025-04-17 19:24:20,827 - INFO - Browser closed and cleanup completed
+2025-04-17 19:26:13,920 - INFO - Successfully created report at: Reports\20250417_192613\report_20250417_192613.xlsx
+2025-04-17 19:26:13,921 - INFO - Report created at: Reports\20250417_192613\report_20250417_192613.xlsx
+2025-04-17 19:26:13,922 - INFO - Execution folder: Reports\20250417_192613
+2025-04-17 19:26:17,767 - INFO - Executing: open_url on None with value https://github.com/
+2025-04-17 19:26:21,316 - INFO - Opened URL: https://github.com/
+2025-04-17 19:26:21,317 - INFO - Executing: element_click on //a[contains(text(), 'Sign in')] with value None
+2025-04-17 19:26:21,368 - ERROR - Failed to click element //a[contains(text(), 'Sign in')]: Message: element not interactable
+  (Session info: chrome=135.0.7049.95)
+Stacktrace:
+	GetHandleVerifier [0x00007FF747105355+78597]
+	GetHandleVerifier [0x00007FF7471053B0+78688]
+	(No symbol) [0x00007FF746EB8FDC]
+	(No symbol) [0x00007FF746F1061D]
+	(No symbol) [0x00007FF746F02204]
+	(No symbol) [0x00007FF746F370EA]
+	(No symbol) [0x00007FF746F01AB6]
+	(No symbol) [0x00007FF746F37300]
+	(No symbol) [0x00007FF746F5F2BB]
+	(No symbol) [0x00007FF746F36EC3]
+	(No symbol) [0x00007FF746F003F8]
+	(No symbol) [0x00007FF746F01163]
+	GetHandleVerifier [0x00007FF7473AEF0D+2870973]
+	GetHandleVerifier [0x00007FF7473A96B8+2848360]
+	GetHandleVerifier [0x00007FF7473C6993+2967875]
+	GetHandleVerifier [0x00007FF74712019A+188746]
+	GetHandleVerifier [0x00007FF74712847F+222255]
+	GetHandleVerifier [0x00007FF74710D2D4+111236]
+	GetHandleVerifier [0x00007FF74710D482+111666]
+	GetHandleVerifier [0x00007FF7470F35A9+5465]
+	BaseThreadInitThunk [0x00007FF8250B259D+29]
+	RtlUserThreadStart [0x00007FF825AEAF38+40]
+
+2025-04-17 19:26:21,692 - INFO - Screenshot saved to: Reports\20250417_192613\Screenshots\step_3_192621.png
+2025-04-17 19:26:21,692 - INFO - Screenshot path saved to report: Screenshots\step_3_192621.png
+2025-04-17 19:26:21,693 - INFO - Executing: set_value on //*[@id="login_field"] with value pradipta.7845@gmail.com
+2025-04-17 19:26:31,863 - ERROR - Failed to set value: Element not found: //*[@id="login_field"]
+2025-04-17 19:26:32,217 - INFO - Screenshot saved to: Reports\20250417_192613\Screenshots\step_4_192631.png
+2025-04-17 19:26:32,218 - INFO - Screenshot path saved to report: Screenshots\step_4_192631.png
+2025-04-17 19:26:32,219 - INFO - Executing: set_value on //*[@id="password"] with value Welcome2jan@2025
+2025-04-17 19:26:42,287 - ERROR - Failed to set value: Element not found: //*[@id="password"]
+2025-04-17 19:26:42,612 - INFO - Screenshot saved to: Reports\20250417_192613\Screenshots\step_5_192642.png
+2025-04-17 19:26:42,613 - INFO - Screenshot path saved to report: Screenshots\step_5_192642.png
+2025-04-17 19:26:42,614 - INFO - Executing: element_click on //input[@type='submit' and @value='Sign in'] with value None
+2025-04-17 19:26:52,659 - ERROR - Failed to click element //input[@type='submit' and @value='Sign in']: Element not found: //input[@type='submit' and @value='Sign in']
+2025-04-17 19:26:52,966 - INFO - Screenshot saved to: Reports\20250417_192613\Screenshots\step_6_192652.png
+2025-04-17 19:26:52,967 - INFO - Screenshot path saved to report: Screenshots\step_6_192652.png
+2025-04-17 19:26:52,967 - INFO - Executing: element_click on //button[@aria-label='Open user navigation menu'] with value None
+2025-04-17 19:27:03,004 - ERROR - Failed to click element //button[@aria-label='Open user navigation menu']: Element not found: //button[@aria-label='Open user navigation menu']
+2025-04-17 19:27:03,339 - INFO - Screenshot saved to: Reports\20250417_192613\Screenshots\step_7_192703.png
+2025-04-17 19:27:03,340 - INFO - Screenshot path saved to report: Screenshots\step_7_192703.png
+2025-04-17 19:27:06,338 - INFO - Browser closed and cleanup completed

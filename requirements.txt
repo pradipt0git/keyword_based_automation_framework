@@ -1,0 +1,7 @@
+selenium
+openpyxl
+pandas
+webdriver-manager
+Pillow
+jinja2 
+matplotlib

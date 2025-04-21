@@ -1,0 +1,395 @@
+2025-04-21 10:47:49,972 - INFO - Successfully created report at: Reports\20250421_104749\report_20250421_104749.xlsx
+2025-04-21 10:47:49,973 - INFO - Report created at: Reports\20250421_104749\report_20250421_104749.xlsx
+2025-04-21 10:47:49,973 - INFO - Execution folder: Reports\20250421_104749
+2025-04-21 10:47:55,739 - INFO - Executing: open_url on None with value https://automationintesting.com/selenium/testpage
+2025-04-21 10:47:58,552 - INFO - Opened URL: https://automationintesting.com/selenium/testpage
+2025-04-21 10:47:58,553 - INFO - Executing: set_value on //*[@id="firstname"] with value firstname
+2025-04-21 10:47:58,745 - INFO - Set value 'firstname' to element: //*[@id="firstname"]
+2025-04-21 10:47:58,746 - INFO - Executing: set_value on //*[@id="surname"] with value lastname
+2025-04-21 10:47:58,830 - INFO - Set value 'lastname' to element: //*[@id="surname"]
+2025-04-21 10:47:58,831 - INFO - Executing: set_value on //*[@id="gender"] with value kkkk
+2025-04-21 10:47:58,876 - ERROR - Failed to set value: Message: Could not locate element with visible text: kkkk; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+
+2025-04-21 10:47:58,978 - INFO - Screenshot saved to: Reports\20250421_104749\Screenshots\step_5_104758.png
+2025-04-21 10:47:58,978 - INFO - Screenshot path saved to report: Screenshots\step_5_104758.png
+2025-04-21 10:47:58,979 - INFO - Executing: element_click on //*[@id="red"] with value None
+2025-04-21 10:47:59,033 - INFO - Clicked element: //*[@id="red"]
+2025-04-21 10:47:59,034 - INFO - Executing: set_value on //*[@id="contactus"]/div[5]/div/label/textarea with value description
+2025-04-21 10:47:59,109 - INFO - Set value 'description' to element: //*[@id="contactus"]/div[5]/div/label/textarea
+2025-04-21 10:47:59,110 - INFO - Executing: custom-reload_current_window on None with value None
+2025-04-21 10:48:02,126 - INFO - Browser closed and cleanup completed
+2025-04-21 16:15:18,663 - INFO - Successfully created report at: Reports\20250421_161518\report_20250421_161518.xlsx
+2025-04-21 16:15:18,664 - INFO - Report created at: Reports\20250421_161518\report_20250421_161518.xlsx
+2025-04-21 16:15:18,664 - INFO - Execution folder: Reports\20250421_161518
+2025-04-21 16:15:22,482 - ERROR - Error processing testcases: cannot access local variable 'execution_sheet' where it is not associated with a value
+2025-04-21 16:15:22,482 - ERROR - Error in report generation: cannot access local variable 'execution_log' where it is not associated with a value
+2025-04-21 16:17:05,739 - INFO - Successfully created report at: Reports\20250421_161705\report_20250421_161705.xlsx
+2025-04-21 16:17:05,740 - INFO - Report created at: Reports\20250421_161705\report_20250421_161705.xlsx
+2025-04-21 16:17:05,740 - INFO - Execution folder: Reports\20250421_161705
+2025-04-21 16:17:07,133 - INFO - Executing: open_url on None with value https://automationintesting.com/selenium/testpage
+2025-04-21 16:17:09,440 - INFO - Opened URL: https://automationintesting.com/selenium/testpage
+2025-04-21 16:17:09,441 - ERROR - Error processing testcases: name 'action_status_col' is not defined
+2025-04-21 16:17:09,441 - ERROR - Error in report generation: I/O operation on closed file.
+2025-04-21 16:21:34,786 - INFO - Successfully created report at: Reports\20250421_162134\report_20250421_162134.xlsx
+2025-04-21 16:21:34,786 - INFO - Report created at: Reports\20250421_162134\report_20250421_162134.xlsx
+2025-04-21 16:21:34,787 - INFO - Execution folder: Reports\20250421_162134
+2025-04-21 16:21:36,073 - INFO - Executing: open_url on None with value https://automationintesting.com/selenium/testpage
+2025-04-21 16:21:39,960 - INFO - Opened URL: https://automationintesting.com/selenium/testpage
+2025-04-21 16:21:39,961 - INFO - Executing: set_value on //*[@id="firstname"] with value firstname
+2025-04-21 16:21:40,170 - INFO - Set value 'firstname' to element: //*[@id="firstname"]
+2025-04-21 16:21:40,171 - INFO - Executing: set_value on //*[@id="surname"] with value lastname
+2025-04-21 16:21:40,263 - INFO - Set value 'lastname' to element: //*[@id="surname"]
+2025-04-21 16:21:40,265 - INFO - Executing: set_value on //*[@id="gender"] with value kkkk
+2025-04-21 16:21:40,306 - ERROR - Failed to set value: Message: Could not locate element with visible text: kkkk; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+
+2025-04-21 16:21:40,393 - INFO - Screenshot saved to: Reports\20250421_162134\Screenshots\step_5_162140.png
+2025-04-21 16:21:40,393 - INFO - Screenshot path saved to report: Screenshots\step_5_162140.png
+2025-04-21 16:21:40,393 - INFO - Executing: element_click on //*[@id="red"] with value None
+2025-04-21 16:21:40,453 - INFO - Clicked element: //*[@id="red"]
+2025-04-21 16:21:40,455 - INFO - Executing: set_value on //*[@id="contactus"]/div[5]/div/label/textarea with value description
+2025-04-21 16:21:40,535 - INFO - Set value 'description' to element: //*[@id="contactus"]/div[5]/div/label/textarea
+2025-04-21 16:21:40,535 - INFO - Executing: custom-reload_current_window on None with value None
+2025-04-21 16:21:43,622 - INFO - Browser closed and cleanup completed
+2025-04-21 16:39:00,604 - INFO - Successfully created report at: Reports\20250421_163900\report_20250421_163900.xlsx
+2025-04-21 16:39:00,604 - INFO - Report created at: Reports\20250421_163900\report_20250421_163900.xlsx
+2025-04-21 16:39:00,604 - INFO - Execution folder: Reports\20250421_163900
+2025-04-21 16:39:02,593 - INFO - Executing: open_url on None with value https://automationintesting.com/selenium/testpage
+2025-04-21 16:39:06,900 - INFO - Opened URL: https://automationintesting.com/selenium/testpage
+2025-04-21 16:39:06,902 - INFO - Executing: set_value on //*[@id="firstname"] with value firstname
+2025-04-21 16:39:07,137 - INFO - Set value 'firstname' to element: //*[@id="firstname"]
+2025-04-21 16:39:07,138 - INFO - Executing: set_value on //*[@id="surname"] with value lastname
+2025-04-21 16:39:07,267 - INFO - Set value 'lastname' to element: //*[@id="surname"]
+2025-04-21 16:39:07,269 - INFO - Executing: set_value on //*[@id="gender"] with value kkkk
+2025-04-21 16:39:07,336 - ERROR - Failed to set value: Message: Could not locate element with visible text: kkkk; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+
+2025-04-21 16:39:07,514 - INFO - Screenshot saved to: Reports\20250421_163900\Screenshots\step_5_163907.png
+2025-04-21 16:39:07,514 - INFO - Screenshot path saved to report: Screenshots\step_5_163907.png
+2025-04-21 16:39:07,515 - INFO - Executing: element_click on //*[@id="red"] with value None
+2025-04-21 16:39:07,631 - INFO - Clicked element: //*[@id="red"]
+2025-04-21 16:39:07,632 - INFO - Executing: set_value on //*[@id="contactus"]/div[5]/div/label/textarea with value description
+2025-04-21 16:39:07,761 - INFO - Set value 'description' to element: //*[@id="contactus"]/div[5]/div/label/textarea
+2025-04-21 16:39:07,762 - INFO - Executing: custom-reload_current_window on None with value None
+2025-04-21 16:39:10,914 - INFO - Browser closed and cleanup completed
+2025-04-21 16:40:56,438 - INFO - Successfully created report at: Reports\20250421_164056\report_20250421_164056.xlsx
+2025-04-21 16:40:56,438 - INFO - Report created at: Reports\20250421_164056\report_20250421_164056.xlsx
+2025-04-21 16:40:56,438 - INFO - Execution folder: Reports\20250421_164056
+2025-04-21 16:40:57,787 - INFO - Executing: open_url on None with value https://automationintesting.com/selenium/testpage
+2025-04-21 16:41:02,440 - INFO - Opened URL: https://automationintesting.com/selenium/testpage
+2025-04-21 16:41:02,440 - INFO - Executing: set_value on //*[@id="firstname"] with value firstname
+2025-04-21 16:41:02,592 - INFO - Set value 'firstname' to element: //*[@id="firstname"]
+2025-04-21 16:41:02,594 - INFO - Executing: set_value on //*[@id="surname"] with value lastname
+2025-04-21 16:41:02,742 - INFO - Set value 'lastname' to element: //*[@id="surname"]
+2025-04-21 16:41:02,743 - INFO - Executing: set_value on //*[@id="gender"] with value kkkk
+2025-04-21 16:41:02,799 - ERROR - Failed to set value: Message: Could not locate element with visible text: kkkk; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+
+2025-04-21 16:41:02,915 - INFO - Screenshot saved to: Reports\20250421_164056\Screenshots\step_5_164102.png
+2025-04-21 16:41:02,915 - INFO - Screenshot path saved to report: Screenshots\step_5_164102.png
+2025-04-21 16:41:02,916 - INFO - Executing: element_click on //*[@id="red"] with value None
+2025-04-21 16:41:02,989 - INFO - Clicked element: //*[@id="red"]
+2025-04-21 16:41:02,990 - INFO - Executing: set_value on //*[@id="contactus"]/div[5]/div/label/textarea with value description
+2025-04-21 16:41:03,077 - INFO - Set value 'description' to element: //*[@id="contactus"]/div[5]/div/label/textarea
+2025-04-21 16:41:03,078 - INFO - Executing: custom-reload_current_window on None with value None
+2025-04-21 16:41:06,128 - INFO - Browser closed and cleanup completed
+2025-04-21 16:57:17,978 - INFO - Successfully created report at: Reports\20250421_165717\report_20250421_165717.xlsx
+2025-04-21 16:57:17,979 - INFO - Report created at: Reports\20250421_165717\report_20250421_165717.xlsx
+2025-04-21 16:57:17,979 - INFO - Execution folder: Reports\20250421_165717
+2025-04-21 16:57:20,106 - INFO - Executing: open_url on None with value https://automationintesting.com/selenium/testpage
+2025-04-21 16:57:24,011 - INFO - Opened URL: https://automationintesting.com/selenium/testpage
+2025-04-21 16:57:24,012 - INFO - Executing: set_value on //*[@id="firstname"] with value firstname
+2025-04-21 16:57:24,240 - INFO - Set value 'firstname' to element: //*[@id="firstname"]
+2025-04-21 16:57:24,241 - INFO - Executing: set_value on //*[@id="surname"] with value lastname
+2025-04-21 16:57:24,332 - INFO - Set value 'lastname' to element: //*[@id="surname"]
+2025-04-21 16:57:24,333 - INFO - Executing: set_value on //*[@id="gender"] with value kkkk
+2025-04-21 16:57:24,420 - ERROR - Failed to set value: Message: Could not locate element with visible text: kkkk; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+
+2025-04-21 16:57:24,518 - INFO - Screenshot saved to: Reports\20250421_165717\Screenshots\step_5_165724.png
+2025-04-21 16:57:24,519 - INFO - Screenshot path saved to report: Screenshots\step_5_165724.png
+2025-04-21 16:57:24,519 - INFO - Executing: element_click on //*[@id="red"] with value None
+2025-04-21 16:57:24,581 - INFO - Clicked element: //*[@id="red"]
+2025-04-21 16:57:24,582 - INFO - Executing: set_value on //*[@id="contactus"]/div[5]/div/label/textarea with value description
+2025-04-21 16:57:24,668 - INFO - Set value 'description' to element: //*[@id="contactus"]/div[5]/div/label/textarea
+2025-04-21 16:57:24,669 - INFO - Executing: custom-reload_current_window on None with value None
+2025-04-21 16:57:27,626 - INFO - Browser closed and cleanup completed
+2025-04-21 16:59:29,077 - INFO - Successfully created report at: Reports\20250421_165929\report_20250421_165929.xlsx
+2025-04-21 16:59:29,077 - INFO - Report created at: Reports\20250421_165929\report_20250421_165929.xlsx
+2025-04-21 16:59:29,078 - INFO - Execution folder: Reports\20250421_165929
+2025-04-21 16:59:30,845 - INFO - Executing: open_url on None with value https://automationintesting.com/selenium/testpage
+2025-04-21 16:59:34,769 - INFO - Opened URL: https://automationintesting.com/selenium/testpage
+2025-04-21 16:59:34,770 - INFO - Executing: set_value on //*[@id="firstname"] with value firstname
+2025-04-21 16:59:34,890 - INFO - Set value 'firstname' to element: //*[@id="firstname"]
+2025-04-21 16:59:34,891 - INFO - Executing: set_value on //*[@id="surname"] with value lastname
+2025-04-21 16:59:34,980 - INFO - Set value 'lastname' to element: //*[@id="surname"]
+2025-04-21 16:59:34,981 - INFO - Executing: set_value on //*[@id="gender"] with value kkkk
+2025-04-21 16:59:35,044 - ERROR - Failed to set value: Message: Could not locate element with visible text: kkkk; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+
+2025-04-21 16:59:35,135 - INFO - Screenshot saved to: Reports\20250421_165929\Screenshots\step_5_165935.png
+2025-04-21 16:59:35,135 - INFO - Screenshot path saved to report: Screenshots\step_5_165935.png
+2025-04-21 16:59:35,136 - INFO - Executing: element_click on //*[@id="red"] with value None
+2025-04-21 16:59:35,203 - INFO - Clicked element: //*[@id="red"]
+2025-04-21 16:59:35,204 - INFO - Executing: set_value on //*[@id="contactus"]/div[5]/div/label/textarea with value description
+2025-04-21 16:59:35,286 - INFO - Set value 'description' to element: //*[@id="contactus"]/div[5]/div/label/textarea
+2025-04-21 16:59:35,287 - INFO - Executing: custom-reload_current_window on None with value None
+2025-04-21 16:59:38,386 - INFO - Browser closed and cleanup completed
+2025-04-21 17:00:20,432 - INFO - Successfully created report at: Reports\20250421_170020\report_20250421_170020.xlsx
+2025-04-21 17:00:20,433 - INFO - Report created at: Reports\20250421_170020\report_20250421_170020.xlsx
+2025-04-21 17:00:20,433 - INFO - Execution folder: Reports\20250421_170020
+2025-04-21 17:00:21,862 - INFO - Executing: open_url on None with value https://automationintesting.com/selenium/testpage
+2025-04-21 17:00:25,105 - INFO - Opened URL: https://automationintesting.com/selenium/testpage
+2025-04-21 17:00:25,106 - INFO - Executing: set_value on //*[@id="firstname"] with value firstname
+2025-04-21 17:00:25,243 - INFO - Set value 'firstname' to element: //*[@id="firstname"]
+2025-04-21 17:00:25,244 - INFO - Executing: set_value on //*[@id="surname"] with value lastname
+2025-04-21 17:00:25,326 - INFO - Set value 'lastname' to element: //*[@id="surname"]
+2025-04-21 17:00:25,327 - INFO - Executing: set_value on //*[@id="gender"] with value kkkk
+2025-04-21 17:00:25,376 - ERROR - Failed to set value: Message: Could not locate element with visible text: kkkk; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+
+2025-04-21 17:00:25,477 - INFO - Screenshot saved to: Reports\20250421_170020\Screenshots\step_5_170025.png
+2025-04-21 17:00:25,478 - INFO - Screenshot path saved to report: Screenshots\step_5_170025.png
+2025-04-21 17:00:25,478 - INFO - Executing: element_click on //*[@id="red"] with value None
+2025-04-21 17:00:25,563 - INFO - Clicked element: //*[@id="red"]
+2025-04-21 17:00:25,564 - INFO - Executing: set_value on //*[@id="contactus"]/div[5]/div/label/textarea with value description
+2025-04-21 17:00:25,676 - INFO - Set value 'description' to element: //*[@id="contactus"]/div[5]/div/label/textarea
+2025-04-21 17:00:25,677 - INFO - Executing: custom-reload_current_window on None with value None
+2025-04-21 17:00:29,301 - INFO - Browser closed and cleanup completed
+2025-04-21 17:02:05,158 - INFO - Successfully created report at: Reports\20250421_170205\report_20250421_170205.xlsx
+2025-04-21 17:02:05,158 - INFO - Report created at: Reports\20250421_170205\report_20250421_170205.xlsx
+2025-04-21 17:02:05,159 - INFO - Execution folder: Reports\20250421_170205
+2025-04-21 17:02:06,488 - INFO - Executing: open_url on None with value https://automationintesting.com/selenium/testpage
+2025-04-21 17:02:10,240 - INFO - Opened URL: https://automationintesting.com/selenium/testpage
+2025-04-21 17:02:10,241 - INFO - Executing: set_value on //*[@id="firstname"] with value firstname
+2025-04-21 17:02:10,385 - INFO - Set value 'firstname' to element: //*[@id="firstname"]
+2025-04-21 17:02:10,386 - INFO - Executing: set_value on //*[@id="surname"] with value lastname
+2025-04-21 17:02:10,479 - INFO - Set value 'lastname' to element: //*[@id="surname"]
+2025-04-21 17:02:10,480 - INFO - Executing: set_value on //*[@id="gender"] with value kkkk
+2025-04-21 17:02:10,530 - ERROR - Failed to set value: Message: Could not locate element with visible text: kkkk; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+
+2025-04-21 17:02:10,620 - INFO - Screenshot saved to: Reports\20250421_170205\Screenshots\step_5_170210.png
+2025-04-21 17:02:10,621 - INFO - Screenshot path saved to report: Screenshots\step_5_170210.png
+2025-04-21 17:02:10,621 - INFO - Executing: element_click on //*[@id="red"] with value None
+2025-04-21 17:02:10,686 - INFO - Clicked element: //*[@id="red"]
+2025-04-21 17:02:10,688 - INFO - Executing: set_value on //*[@id="contactus"]/div[5]/div/label/textarea with value description
+2025-04-21 17:02:10,780 - INFO - Set value 'description' to element: //*[@id="contactus"]/div[5]/div/label/textarea
+2025-04-21 17:02:10,781 - INFO - Executing: custom-reload_current_window on None with value None
+2025-04-21 17:02:13,964 - INFO - Browser closed and cleanup completed
+2025-04-21 17:04:29,697 - INFO - Successfully created report at: Reports\20250421_170429\report_20250421_170429.xlsx
+2025-04-21 17:04:29,698 - INFO - Report created at: Reports\20250421_170429\report_20250421_170429.xlsx
+2025-04-21 17:04:29,698 - INFO - Execution folder: Reports\20250421_170429
+2025-04-21 17:04:31,010 - INFO - Executing: open_url on None with value https://automationintesting.com/selenium/testpage
+2025-04-21 17:04:35,188 - INFO - Opened URL: https://automationintesting.com/selenium/testpage
+2025-04-21 17:04:35,190 - INFO - Executing: set_value on //*[@id="firstname"] with value firstname
+2025-04-21 17:04:35,321 - INFO - Set value 'firstname' to element: //*[@id="firstname"]
+2025-04-21 17:04:35,322 - INFO - Executing: set_value on //*[@id="surname"] with value lastname
+2025-04-21 17:04:35,409 - INFO - Set value 'lastname' to element: //*[@id="surname"]
+2025-04-21 17:04:35,410 - INFO - Executing: set_value on //*[@id="gender"] with value kkkk
+2025-04-21 17:04:35,455 - ERROR - Failed to set value: Message: Could not locate element with visible text: kkkk; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+
+2025-04-21 17:04:35,552 - INFO - Screenshot saved to: Reports\20250421_170429\Screenshots\step_5_170435.png
+2025-04-21 17:04:35,553 - INFO - Screenshot path saved to report: Screenshots\step_5_170435.png
+2025-04-21 17:04:35,553 - INFO - Executing: element_click on //*[@id="red"] with value None
+2025-04-21 17:04:35,619 - INFO - Clicked element: //*[@id="red"]
+2025-04-21 17:04:35,620 - INFO - Executing: set_value on //*[@id="contactus"]/div[5]/div/label/textarea with value description
+2025-04-21 17:04:35,695 - INFO - Set value 'description' to element: //*[@id="contactus"]/div[5]/div/label/textarea
+2025-04-21 17:04:35,697 - INFO - Executing: custom-reload_current_window on None with value None
+2025-04-21 17:04:38,793 - INFO - Browser closed and cleanup completed
+2025-04-21 17:16:34,209 - INFO - Successfully created report at: Reports\20250421_171634\report_20250421_171634.xlsx
+2025-04-21 17:16:34,209 - INFO - Report created at: Reports\20250421_171634\report_20250421_171634.xlsx
+2025-04-21 17:16:34,210 - INFO - Execution folder: Reports\20250421_171634
+2025-04-21 17:23:47,891 - INFO - Successfully created report at: Reports\20250421_172347\report_20250421_172347.xlsx
+2025-04-21 17:23:47,891 - INFO - Report created at: Reports\20250421_172347\report_20250421_172347.xlsx
+2025-04-21 17:23:47,892 - INFO - Execution folder: Reports\20250421_172347
+2025-04-21 17:23:55,099 - INFO - Executing: open_url on None with value https://automationintesting.com/selenium/testpage
+2025-04-21 17:23:58,976 - INFO - Opened URL: https://automationintesting.com/selenium/testpage
+2025-04-21 17:23:58,978 - INFO - Executing: set_value on //*[@id="firstname"] with value firstname
+2025-04-21 17:23:59,145 - INFO - Set value 'firstname' to element: //*[@id="firstname"]
+2025-04-21 17:23:59,146 - INFO - Executing: set_value on //*[@id="surname"] with value lastname
+2025-04-21 17:23:59,259 - INFO - Set value 'lastname' to element: //*[@id="surname"]
+2025-04-21 17:23:59,260 - INFO - Executing: set_value on //*[@id="gender"] with value kkkk
+2025-04-21 17:23:59,332 - ERROR - Failed to set value: Message: Could not locate element with visible text: kkkk; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+
+2025-04-21 17:23:59,459 - INFO - Screenshot saved to: Reports\20250421_172347\Screenshots\step_5_172359.png
+2025-04-21 17:23:59,459 - INFO - Screenshot path saved to report: Screenshots\step_5_172359.png
+2025-04-21 17:23:59,460 - INFO - Executing: element_click on //*[@id="red"] with value None
+2025-04-21 17:23:59,533 - INFO - Clicked element: //*[@id="red"]
+2025-04-21 17:23:59,535 - INFO - Executing: set_value on //*[@id="contactus"]/div[5]/div/label/textarea with value description
+2025-04-21 17:23:59,658 - INFO - Set value 'description' to element: //*[@id="contactus"]/div[5]/div/label/textarea
+2025-04-21 17:23:59,659 - INFO - Executing: custom-reload_current_window on None with value None
+2025-04-21 17:24:02,910 - INFO - Browser closed and cleanup completed
+2025-04-21 17:24:39,774 - INFO - Successfully created report at: Reports\20250421_172439\report_20250421_172439.xlsx
+2025-04-21 17:24:39,774 - INFO - Report created at: Reports\20250421_172439\report_20250421_172439.xlsx
+2025-04-21 17:24:39,774 - INFO - Execution folder: Reports\20250421_172439
+2025-04-21 17:24:41,223 - INFO - Executing: open_url on None with value https://automationintesting.com/selenium/testpage
+2025-04-21 17:24:45,734 - INFO - Opened URL: https://automationintesting.com/selenium/testpage
+2025-04-21 17:24:45,735 - INFO - Executing: set_value on //*[@id="firstname"] with value firstname
+2025-04-21 17:24:45,944 - INFO - Set value 'firstname' to element: //*[@id="firstname"]
+2025-04-21 17:24:45,945 - INFO - Executing: set_value on //*[@id="surname"] with value lastname
+2025-04-21 17:24:46,048 - INFO - Set value 'lastname' to element: //*[@id="surname"]
+2025-04-21 17:24:46,049 - INFO - Executing: set_value on //*[@id="gender"] with value kkkk
+2025-04-21 17:24:46,105 - ERROR - Failed to set value: Message: Could not locate element with visible text: kkkk; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+
+2025-04-21 17:24:46,228 - INFO - Screenshot saved to: Reports\20250421_172439\Screenshots\step_5_172446.png
+2025-04-21 17:24:46,229 - INFO - Screenshot path saved to report: Screenshots\step_5_172446.png
+2025-04-21 17:24:46,230 - INFO - Executing: element_click on //*[@id="red"] with value None
+2025-04-21 17:24:46,314 - INFO - Clicked element: //*[@id="red"]
+2025-04-21 17:24:46,315 - INFO - Executing: set_value on //*[@id="contactus"]/div[5]/div/label/textarea with value description
+2025-04-21 17:24:46,431 - INFO - Set value 'description' to element: //*[@id="contactus"]/div[5]/div/label/textarea
+2025-04-21 17:24:46,432 - INFO - Executing: custom-reload_current_window on None with value None
+2025-04-21 17:24:49,484 - INFO - Browser closed and cleanup completed
+2025-04-21 17:35:18,956 - INFO - Successfully created report at: Reports\20250421_173518\report_20250421_173518.xlsx
+2025-04-21 17:35:18,956 - INFO - Report created at: Reports\20250421_173518\report_20250421_173518.xlsx
+2025-04-21 17:35:18,957 - INFO - Execution folder: Reports\20250421_173518
+2025-04-21 17:35:20,967 - INFO - Executing: open_url on None with value https://automationintesting.com/selenium/testpage
+2025-04-21 17:35:25,097 - INFO - Opened URL: https://automationintesting.com/selenium/testpage
+2025-04-21 17:35:25,098 - INFO - Executing: set_value on //*[@id="firstname"] with value firstname
+2025-04-21 17:35:25,275 - INFO - Set value 'firstname' to element: //*[@id="firstname"]
+2025-04-21 17:35:25,276 - INFO - Executing: set_value on //*[@id="surname"] with value lastname
+2025-04-21 17:35:25,367 - INFO - Set value 'lastname' to element: //*[@id="surname"]
+2025-04-21 17:35:25,368 - INFO - Executing: set_value on //*[@id="gender"] with value kkkk
+2025-04-21 17:35:25,414 - ERROR - Failed to set value: Message: Could not locate element with visible text: kkkk; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+
+2025-04-21 17:35:25,507 - INFO - Screenshot saved to: Reports\20250421_173518\Screenshots\step_5_173525.png
+2025-04-21 17:35:25,507 - INFO - Screenshot path saved to report: Screenshots\step_5_173525.png
+2025-04-21 17:35:25,507 - INFO - Executing: element_click on //*[@id="red"] with value None
+2025-04-21 17:35:25,568 - INFO - Clicked element: //*[@id="red"]
+2025-04-21 17:35:25,569 - INFO - Executing: set_value on //*[@id="contactus"]/div[5]/div/label/textarea with value description
+2025-04-21 17:35:25,646 - INFO - Set value 'description' to element: //*[@id="contactus"]/div[5]/div/label/textarea
+2025-04-21 17:35:25,647 - INFO - Executing: custom-reload_current_window on None with value None
+2025-04-21 17:35:28,644 - INFO - Browser closed and cleanup completed
+2025-04-21 17:36:24,975 - INFO - Successfully created report at: Reports\20250421_173624\report_20250421_173624.xlsx
+2025-04-21 17:36:24,975 - INFO - Report created at: Reports\20250421_173624\report_20250421_173624.xlsx
+2025-04-21 17:36:24,976 - INFO - Execution folder: Reports\20250421_173624
+2025-04-21 17:36:26,317 - INFO - Executing: open_url on None with value https://automationintesting.com/selenium/testpage
+2025-04-21 17:36:29,858 - INFO - Opened URL: https://automationintesting.com/selenium/testpage
+2025-04-21 17:36:29,859 - INFO - Executing: set_value on //*[@id="firstname"] with value firstname
+2025-04-21 17:36:30,016 - INFO - Set value 'firstname' to element: //*[@id="firstname"]
+2025-04-21 17:36:30,017 - INFO - Executing: set_value on //*[@id="surname"] with value lastname
+2025-04-21 17:36:30,114 - INFO - Set value 'lastname' to element: //*[@id="surname"]
+2025-04-21 17:36:30,115 - INFO - Executing: set_value on //*[@id="gender"] with value kkkk
+2025-04-21 17:36:30,164 - ERROR - Failed to set value: Message: Could not locate element with visible text: kkkk; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+
+2025-04-21 17:36:30,254 - INFO - Screenshot saved to: Reports\20250421_173624\Screenshots\step_5_173630.png
+2025-04-21 17:36:30,255 - INFO - Screenshot path saved to report: Screenshots\step_5_173630.png
+2025-04-21 17:36:30,255 - INFO - Executing: element_click on //*[@id="red"] with value None
+2025-04-21 17:36:30,318 - INFO - Clicked element: //*[@id="red"]
+2025-04-21 17:36:30,319 - INFO - Executing: set_value on //*[@id="contactus"]/div[5]/div/label/textarea with value description
+2025-04-21 17:36:30,396 - INFO - Set value 'description' to element: //*[@id="contactus"]/div[5]/div/label/textarea
+2025-04-21 17:36:30,397 - INFO - Executing: custom-reload_current_window on None with value None
+2025-04-21 17:36:33,498 - INFO - Browser closed and cleanup completed
+2025-04-21 17:45:02,669 - INFO - Successfully created report at: Reports\20250421_174502\report_20250421_174502.xlsx
+2025-04-21 17:45:02,670 - INFO - Report created at: Reports\20250421_174502\report_20250421_174502.xlsx
+2025-04-21 17:45:02,670 - INFO - Execution folder: Reports\20250421_174502
+2025-04-21 17:45:04,664 - INFO - Executing: open_url on None with value https://automationintesting.com/selenium/testpage
+2025-04-21 17:45:08,827 - INFO - Opened URL: https://automationintesting.com/selenium/testpage
+2025-04-21 17:45:08,829 - INFO - Executing: set_value on //*[@id="firstname"] with value firstname
+2025-04-21 17:45:09,092 - INFO - Set value 'firstname' to element: //*[@id="firstname"]
+2025-04-21 17:45:09,093 - INFO - Executing: set_value on //*[@id="surname"] with value lastname
+2025-04-21 17:45:09,190 - INFO - Set value 'lastname' to element: //*[@id="surname"]
+2025-04-21 17:45:09,191 - INFO - Executing: set_value on //*[@id="gender"] with value kkkk
+2025-04-21 17:45:09,244 - ERROR - Failed to set value: Message: Could not locate element with visible text: kkkk; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+
+2025-04-21 17:45:09,337 - INFO - Screenshot saved to: Reports\20250421_174502\Screenshots\step_5_174509.png
+2025-04-21 17:45:09,337 - INFO - Screenshot path saved to report: Screenshots\step_5_174509.png
+2025-04-21 17:45:09,338 - INFO - Executing: element_click on //*[@id="red"] with value None
+2025-04-21 17:45:09,423 - INFO - Clicked element: //*[@id="red"]
+2025-04-21 17:45:09,424 - INFO - Executing: set_value on //*[@id="contactus"]/div[5]/div/label/textarea with value description
+2025-04-21 17:45:09,542 - INFO - Set value 'description' to element: //*[@id="contactus"]/div[5]/div/label/textarea
+2025-04-21 17:45:09,543 - INFO - Executing: custom-reload_current_window on None with value None
+2025-04-21 17:45:13,029 - INFO - Browser closed and cleanup completed
+2025-04-21 17:57:31,015 - INFO - Successfully created report at: Reports\20250421_175730\report_20250421_175730.xlsx
+2025-04-21 17:57:31,016 - INFO - Report created at: Reports\20250421_175730\report_20250421_175730.xlsx
+2025-04-21 17:57:31,017 - INFO - Execution folder: Reports\20250421_175730
+2025-04-21 17:57:33,021 - INFO - Executing: open_url on None with value https://automationintesting.com/selenium/testpage
+2025-04-21 17:57:36,660 - INFO - Opened URL: https://automationintesting.com/selenium/testpage
+2025-04-21 17:57:36,662 - INFO - Executing: set_value on //*[@id="firstname"] with value firstname
+2025-04-21 17:57:36,919 - INFO - Set value 'firstname' to element: //*[@id="firstname"]
+2025-04-21 17:57:36,920 - INFO - Executing: set_value on //*[@id="surname"] with value lastname
+2025-04-21 17:57:37,020 - INFO - Set value 'lastname' to element: //*[@id="surname"]
+2025-04-21 17:57:37,021 - INFO - Executing: set_value on //*[@id="gender"] with value kkkk
+2025-04-21 17:57:37,086 - ERROR - Failed to set value: Message: Could not locate element with visible text: kkkk; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+
+2025-04-21 17:57:37,184 - INFO - Screenshot saved to: Reports\20250421_175730\Screenshots\step_5_175737.png
+2025-04-21 17:57:37,185 - INFO - Screenshot path saved to report: Screenshots\step_5_175737.png
+2025-04-21 17:57:37,185 - INFO - Executing: element_click on //*[@id="red"] with value None
+2025-04-21 17:57:37,273 - INFO - Clicked element: //*[@id="red"]
+2025-04-21 17:57:37,274 - INFO - Executing: set_value on //*[@id="contactus"]/div[5]/div/label/textarea with value description
+2025-04-21 17:57:37,393 - INFO - Set value 'description' to element: //*[@id="contactus"]/div[5]/div/label/textarea
+2025-04-21 17:57:37,394 - INFO - Executing: custom-reload_current_window on None with value None
+2025-04-21 17:57:40,321 - INFO - Browser closed and cleanup completed
+2025-04-21 19:13:59,136 - INFO - Successfully created report at: Reports\20250421_191359\report_20250421_191359.xlsx
+2025-04-21 19:13:59,137 - INFO - Report created at: Reports\20250421_191359\report_20250421_191359.xlsx
+2025-04-21 19:13:59,137 - INFO - Execution folder: Reports\20250421_191359
+2025-04-21 19:14:00,585 - INFO - Executing: open_url on None with value https://automationintesting.com/selenium/testpage
+2025-04-21 19:14:04,030 - INFO - Opened URL: https://automationintesting.com/selenium/testpage
+2025-04-21 19:14:04,031 - INFO - Executing: set_value on //*[@id="firstname"] with value firstname
+2025-04-21 19:14:04,185 - INFO - Set value 'firstname' to element: //*[@id="firstname"]
+2025-04-21 19:14:04,186 - INFO - Executing: set_value on //*[@id="surname"] with value lastname
+2025-04-21 19:14:04,286 - INFO - Set value 'lastname' to element: //*[@id="surname"]
+2025-04-21 19:14:04,287 - INFO - Executing: set_value on //*[@id="gender"] with value kkkk
+2025-04-21 19:14:04,344 - ERROR - Failed to set value: Message: Could not locate element with visible text: kkkk; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+
+2025-04-21 19:14:04,465 - INFO - Screenshot saved to: Reports\20250421_191359\Screenshots\step_5_191404.png
+2025-04-21 19:14:04,465 - INFO - Screenshot path saved to report: Screenshots\step_5_191404.png
+2025-04-21 19:14:04,466 - INFO - Executing: element_click on //*[@id="red"] with value None
+2025-04-21 19:14:04,561 - INFO - Clicked element: //*[@id="red"]
+2025-04-21 19:14:04,562 - INFO - Executing: set_value on //*[@id="contactus"]/div[5]/div/label/textarea with value description
+2025-04-21 19:14:04,661 - INFO - Set value 'description' to element: //*[@id="contactus"]/div[5]/div/label/textarea
+2025-04-21 19:14:04,662 - INFO - Executing: custom-reload_current_window on None with value None
+2025-04-21 19:14:07,910 - INFO - Browser closed and cleanup completed
+2025-04-21 19:33:30,712 - INFO - Successfully created report at: Reports\20250421_193330\report_20250421_193330.xlsx
+2025-04-21 19:33:30,712 - INFO - Report created at: Reports\20250421_193330\report_20250421_193330.xlsx
+2025-04-21 19:33:30,712 - INFO - Execution folder: Reports\20250421_193330
+2025-04-21 19:33:32,747 - INFO - Executing: open_url on None with value https://automationintesting.com/selenium/testpage
+2025-04-21 19:33:36,305 - INFO - Opened URL: https://automationintesting.com/selenium/testpage
+2025-04-21 19:33:36,306 - INFO - Executing: set_value on //*[@id="firstname"] with value firstname
+2025-04-21 19:33:36,471 - INFO - Set value 'firstname' to element: //*[@id="firstname"]
+2025-04-21 19:33:36,472 - INFO - Executing: set_value on //*[@id="surname"] with value lastname
+2025-04-21 19:33:36,558 - INFO - Set value 'lastname' to element: //*[@id="surname"]
+2025-04-21 19:33:36,560 - INFO - Executing: set_value on //*[@id="gender"] with value kkkk
+2025-04-21 19:33:36,605 - ERROR - Failed to set value: Message: Could not locate element with visible text: kkkk; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+
+2025-04-21 19:33:36,712 - INFO - Screenshot saved to: Reports\20250421_193330\Screenshots\step_5_193336.png
+2025-04-21 19:33:36,712 - INFO - Screenshot path saved to report: Screenshots\step_5_193336.png
+2025-04-21 19:33:36,712 - INFO - Executing: element_click on //*[@id="red"] with value None
+2025-04-21 19:33:36,820 - INFO - Clicked element: //*[@id="red"]
+2025-04-21 19:33:36,821 - INFO - Executing: set_value on //*[@id="contactus"]/div[5]/div/label/textarea with value description
+2025-04-21 19:33:36,898 - INFO - Set value 'description' to element: //*[@id="contactus"]/div[5]/div/label/textarea
+2025-04-21 19:33:36,899 - INFO - Executing: custom-reload_current_window on None with value None
+2025-04-21 19:33:39,994 - INFO - Browser closed and cleanup completed
+2025-04-21 19:36:39,720 - INFO - Successfully created report at: Reports\20250421_193639\report_20250421_193639.xlsx
+2025-04-21 19:36:39,721 - INFO - Report created at: Reports\20250421_193639\report_20250421_193639.xlsx
+2025-04-21 19:36:39,721 - INFO - Execution folder: Reports\20250421_193639
+2025-04-21 19:36:41,539 - INFO - Executing: open_url on None with value https://automationintesting.com/selenium/testpage
+2025-04-21 19:36:45,199 - INFO - Opened URL: https://automationintesting.com/selenium/testpage
+2025-04-21 19:36:45,200 - INFO - Executing: set_value on //*[@id="firstname"] with value firstname
+2025-04-21 19:36:45,400 - INFO - Set value 'firstname' to element: //*[@id="firstname"]
+2025-04-21 19:36:45,402 - INFO - Executing: set_value on //*[@id="surname"] with value lastname
+2025-04-21 19:36:45,497 - INFO - Set value 'lastname' to element: //*[@id="surname"]
+2025-04-21 19:36:45,499 - INFO - Executing: set_value on //*[@id="gender"] with value kkkk
+2025-04-21 19:36:45,547 - ERROR - Failed to set value: Message: Could not locate element with visible text: kkkk; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+
+2025-04-21 19:36:45,660 - INFO - Screenshot saved to: Reports\20250421_193639\Screenshots\step_5_193645.png
+2025-04-21 19:36:45,660 - INFO - Screenshot path saved to report: Screenshots\step_5_193645.png
+2025-04-21 19:36:45,660 - INFO - Executing: element_click on //*[@id="red"] with value None
+2025-04-21 19:36:45,722 - INFO - Clicked element: //*[@id="red"]
+2025-04-21 19:36:45,723 - INFO - Executing: set_value on //*[@id="contactus"]/div[5]/div/label/textarea with value description
+2025-04-21 19:36:45,805 - INFO - Set value 'description' to element: //*[@id="contactus"]/div[5]/div/label/textarea
+2025-04-21 19:36:45,806 - INFO - Executing: custom-reload_current_window on None with value None
+2025-04-21 19:36:48,835 - INFO - Browser closed and cleanup completed
+2025-04-21 19:37:34,669 - INFO - Successfully created report at: Reports\20250421_193734\report_20250421_193734.xlsx
+2025-04-21 19:37:34,669 - INFO - Report created at: Reports\20250421_193734\report_20250421_193734.xlsx
+2025-04-21 19:37:34,670 - INFO - Execution folder: Reports\20250421_193734
+2025-04-21 19:37:35,949 - INFO - Executing: open_url on None with value https://automationintesting.com/selenium/testpage
+2025-04-21 19:37:40,193 - INFO - Opened URL: https://automationintesting.com/selenium/testpage
+2025-04-21 19:37:40,194 - INFO - Executing: set_value on //*[@id="firstname"] with value firstname
+2025-04-21 19:37:40,323 - INFO - Set value 'firstname' to element: //*[@id="firstname"]
+2025-04-21 19:37:40,324 - INFO - Executing: set_value on //*[@id="surname"] with value lastname
+2025-04-21 19:37:40,410 - INFO - Set value 'lastname' to element: //*[@id="surname"]
+2025-04-21 19:37:40,411 - INFO - Executing: set_value on //*[@id="gender"] with value kkkk
+2025-04-21 19:37:40,459 - ERROR - Failed to set value: Message: Could not locate element with visible text: kkkk; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+
+2025-04-21 19:37:40,543 - INFO - Screenshot saved to: Reports\20250421_193734\Screenshots\step_5_193740.png
+2025-04-21 19:37:40,544 - INFO - Screenshot path saved to report: Screenshots\step_5_193740.png
+2025-04-21 19:37:40,544 - INFO - Executing: element_click on //*[@id="red"] with value None
+2025-04-21 19:37:40,613 - INFO - Clicked element: //*[@id="red"]
+2025-04-21 19:37:40,614 - INFO - Executing: set_value on //*[@id="contactus"]/div[5]/div/label/textarea with value description
+2025-04-21 19:37:40,693 - INFO - Set value 'description' to element: //*[@id="contactus"]/div[5]/div/label/textarea
+2025-04-21 19:37:40,694 - INFO - Executing: custom-reload_current_window on None with value None
+2025-04-21 19:37:44,168 - INFO - Browser closed and cleanup completed

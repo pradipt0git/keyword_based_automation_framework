@@ -1,0 +1,77 @@
+2025-04-11 00:17:28,104 - INFO - Successfully created report at: Reports\20250411_001728\report_20250411_001728.xlsx
+2025-04-11 00:17:28,113 - INFO - Report created at: Reports\20250411_001728\report_20250411_001728.xlsx
+2025-04-11 00:17:28,113 - INFO - Execution folder: Reports\20250411_001728
+2025-04-11 00:17:30,008 - INFO - Executing: open_url on None with value https://tcm-growthv2.hgr.tcmstunner.com/hub/login
+2025-04-11 00:17:31,102 - INFO - Opened URL: https://tcm-growthv2.hgr.tcmstunner.com/hub/login
+2025-04-11 00:17:31,103 - INFO - Executing: set_value on //*[@id="email"] with value sales@tcmstunner.com
+2025-04-11 00:17:31,430 - INFO - Set value 'sales@tcmstunner.com' to element: //*[@id="email"]
+2025-04-11 00:17:31,430 - INFO - Executing: set_value on //*[@id="password"] with value DevAdmin@TCM#2024
+2025-04-11 00:17:31,746 - INFO - Set value 'DevAdmin@TCM#2024' to element: //*[@id="password"]
+2025-04-11 00:17:31,746 - INFO - Executing: set_value on //*[@id="remember-me"] with value True
+2025-04-11 00:17:31,875 - INFO - Set value 'True' to element: //*[@id="remember-me"]
+2025-04-11 00:41:18,299 - INFO - Successfully created report at: Reports\20250411_004118\report_20250411_004118.xlsx
+2025-04-11 00:41:18,299 - INFO - Report created at: Reports\20250411_004118\report_20250411_004118.xlsx
+2025-04-11 00:41:18,299 - INFO - Execution folder: Reports\20250411_004118
+2025-04-11 00:41:20,884 - INFO - Executing: open_url on None with value https://tcm-growthv2.hgr.tcmstunner.com/hub/login
+2025-04-11 00:41:22,186 - INFO - Opened URL: https://tcm-growthv2.hgr.tcmstunner.com/hub/login
+2025-04-11 00:41:22,187 - INFO - Executing: set_value on //*[@id="email"] with value sales@tcmstunner.com
+2025-04-11 00:41:22,570 - INFO - Set value 'sales@tcmstunner.com' to element: //*[@id="email"]
+2025-04-11 00:41:22,570 - INFO - Executing: set_value on //*[@id="password"] with value DevAdmin@TCM#2024
+2025-04-11 00:41:22,937 - INFO - Set value 'DevAdmin@TCM#2024' to element: //*[@id="password"]
+2025-04-11 00:41:22,937 - INFO - Executing: set_value on //*[@id="remember-me"] with value True
+2025-04-11 00:41:23,078 - INFO - Set value 'True' to element: //*[@id="remember-me"]
+2025-04-11 00:41:25,353 - INFO - Browser closed and cleanup completed
+2025-04-11 00:42:50,492 - INFO - Successfully created report at: Reports\20250411_004250\report_20250411_004250.xlsx
+2025-04-11 00:42:50,492 - INFO - Report created at: Reports\20250411_004250\report_20250411_004250.xlsx
+2025-04-11 00:42:50,492 - INFO - Execution folder: Reports\20250411_004250
+2025-04-11 00:42:52,886 - INFO - Executing: open_url on None with value https://tcm-growthv2.hgr.tcmstunner.com/hub/login
+2025-04-11 00:42:53,999 - INFO - Opened URL: https://tcm-growthv2.hgr.tcmstunner.com/hub/login
+2025-04-11 00:42:53,999 - INFO - Executing: set_value on //*[@id="email"] with value sales@tcmstunner.com
+2025-04-11 00:42:54,355 - INFO - Set value 'sales@tcmstunner.com' to element: //*[@id="email"]
+2025-04-11 00:42:54,355 - INFO - Executing: set_value on //*[@id="password"] with value DevAdmin@TCM#2024
+2025-04-11 00:42:54,652 - INFO - Set value 'DevAdmin@TCM#2024' to element: //*[@id="password"]
+2025-04-11 00:42:54,652 - INFO - Executing: set_value on //*[@id="remember-me"] with value True
+2025-04-11 00:42:54,773 - INFO - Set value 'True' to element: //*[@id="remember-me"]
+2025-04-11 00:42:56,994 - INFO - Browser closed and cleanup completed
+2025-04-11 00:47:55,048 - INFO - Successfully created report at: Reports\20250411_004755\report_20250411_004755.xlsx
+2025-04-11 00:47:55,048 - INFO - Report created at: Reports\20250411_004755\report_20250411_004755.xlsx
+2025-04-11 00:47:55,064 - INFO - Execution folder: Reports\20250411_004755
+2025-04-11 00:47:56,955 - INFO - Executing: open_url on None with value https://tcm-growthv2.hgr.tcmstunner.com/hub/login
+2025-04-11 00:47:57,950 - INFO - Opened URL: https://tcm-growthv2.hgr.tcmstunner.com/hub/login
+2025-04-11 00:47:57,950 - INFO - Executing: set_value on //*[@id="email"] with value sales@tcmstunner.com
+2025-04-11 00:47:58,316 - INFO - Set value 'sales@tcmstunner.com' to element: //*[@id="email"]
+2025-04-11 00:47:58,316 - INFO - Executing: set_value on //*[@id="password"] with value DevAdmin@TCM#2024
+2025-04-11 00:47:58,633 - INFO - Set value 'DevAdmin@TCM#2024' to element: //*[@id="password"]
+2025-04-11 00:47:58,633 - INFO - Executing: set_value on //*[@id="remember-me"] with value True
+2025-04-11 00:47:58,753 - INFO - Set value 'True' to element: //*[@id="remember-me"]
+2025-04-11 00:47:58,771 - INFO - Executing: element_click on /html/body/div/section/main/div/div/form/button with value None
+2025-04-11 00:47:58,772 - ERROR - Unknown action: element_click
+2025-04-11 00:48:00,958 - INFO - Browser closed and cleanup completed
+2025-04-11 00:48:45,545 - INFO - Successfully created report at: Reports\20250411_004845\report_20250411_004845.xlsx
+2025-04-11 00:48:45,545 - INFO - Report created at: Reports\20250411_004845\report_20250411_004845.xlsx
+2025-04-11 00:48:45,545 - INFO - Execution folder: Reports\20250411_004845
+2025-04-11 00:48:47,389 - INFO - Executing: open_url on None with value https://tcm-growthv2.hgr.tcmstunner.com/hub/login
+2025-04-11 00:48:48,299 - INFO - Opened URL: https://tcm-growthv2.hgr.tcmstunner.com/hub/login
+2025-04-11 00:48:48,299 - INFO - Executing: set_value on //*[@id="email"] with value sales@tcmstunner.com
+2025-04-11 00:48:48,739 - INFO - Set value 'sales@tcmstunner.com' to element: //*[@id="email"]
+2025-04-11 00:48:48,740 - INFO - Executing: set_value on //*[@id="password"] with value DevAdmin@TCM#2024
+2025-04-11 00:48:49,049 - INFO - Set value 'DevAdmin@TCM#2024' to element: //*[@id="password"]
+2025-04-11 00:48:49,049 - INFO - Executing: set_value on //*[@id="remember-me"] with value True
+2025-04-11 00:48:49,174 - INFO - Set value 'True' to element: //*[@id="remember-me"]
+2025-04-11 00:48:49,193 - INFO - Executing: element_click on /html/body/div/section/main/div/div/form/button with value None
+2025-04-11 00:48:49,194 - ERROR - Unknown action: element_click
+2025-04-11 00:48:51,435 - INFO - Browser closed and cleanup completed
+2025-04-11 00:51:14,728 - INFO - Successfully created report at: Reports\20250411_005114\report_20250411_005114.xlsx
+2025-04-11 00:51:14,744 - INFO - Report created at: Reports\20250411_005114\report_20250411_005114.xlsx
+2025-04-11 00:51:14,744 - INFO - Execution folder: Reports\20250411_005114
+2025-04-11 00:51:16,469 - INFO - Executing: open_url on None with value https://tcm-growthv2.hgr.tcmstunner.com/hub/login
+2025-04-11 00:51:17,261 - INFO - Opened URL: https://tcm-growthv2.hgr.tcmstunner.com/hub/login
+2025-04-11 00:51:17,273 - INFO - Executing: set_value on //*[@id="email"] with value sales@tcmstunner.com
+2025-04-11 00:51:18,033 - INFO - Set value 'sales@tcmstunner.com' to element: //*[@id="email"]
+2025-04-11 00:51:18,034 - INFO - Executing: set_value on //*[@id="password"] with value DevAdmin@TCM#2024
+2025-04-11 00:51:18,348 - INFO - Set value 'DevAdmin@TCM#2024' to element: //*[@id="password"]
+2025-04-11 00:51:18,348 - INFO - Executing: set_value on //*[@id="remember-me"] with value True
+2025-04-11 00:51:18,465 - INFO - Set value 'True' to element: //*[@id="remember-me"]
+2025-04-11 00:51:18,501 - INFO - Executing: element_click on /html/body/div/section/main/div/div/form/button with value None
+2025-04-11 00:51:36,958 - INFO - Clicked element: /html/body/div/section/main/div/div/form/button
+2025-04-11 00:51:39,224 - INFO - Browser closed and cleanup completed
