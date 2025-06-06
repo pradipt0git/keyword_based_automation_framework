@@ -83,6 +83,20 @@ def process_testcase_rows(testcase, sheet, row_num, driver, reporting, actions, 
         driver_sheet = wb['DriverSheet']
         common_sheet = wb['CommonSheet']
         data_sheet = wb[sheet]
+        # Check if the Execute column in the data_sheet for the given row_num is 'Y'
+        header_row = [cell.value for cell in data_sheet[1]]
+        execute_col_idx = None
+        for idx, col_name in enumerate(header_row):
+            if str(col_name).strip().lower() == 'execute':
+                execute_col_idx = idx + 1  # 1-based index for openpyxl
+                break
+        if execute_col_idx:
+            execute_value = data_sheet.cell(row=row_num, column=execute_col_idx).value
+            if str(execute_value).strip().upper() != 'Y':
+                msg = f"Skipping TestCase '{testcase}' DataSheet '{sheet}' Row {row_num}: Execute column is not 'Y'"
+                reporting.log_info(msg)
+                wb.close()
+                return
         # Build CommonSheet lookup: {(Screen, Field): Xpath}
         common_lookup = {}
         for row in common_sheet.iter_rows(min_row=2, values_only=True):
