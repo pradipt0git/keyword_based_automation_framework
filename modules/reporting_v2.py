@@ -5,13 +5,13 @@ import shutil
 import openpyxl
 from selenium import webdriver
 from tempfile import NamedTemporaryFile
+from string import Template
 
 class RobustReporting:
     def __init__(self):
         self.values_dict = {}
         self._init_logging()
-        os.makedirs('Reports', exist_ok=True)
-        os.makedirs('Backups', exist_ok=True)
+        os.makedirs('Reports', exist_ok=True)        
 
     def _init_logging(self):
         """Initialize enhanced logging system"""
@@ -30,14 +30,14 @@ class RobustReporting:
         )
         self.logger = logging.getLogger('robust_reporting')
 
-    def start_execution_log(self, report_path):
-        """Start a new execution log."""
-        execution_log_file = f"execution_{datetime.now().strftime('%Y%m%d')}.log"
-        execution_log_path = os.path.join(os.path.dirname(report_path), execution_log_file)
-        execution_handler = logging.FileHandler(execution_log_path)
-        execution_formatter = logging.Formatter('%(asctime)s - %(message)s')
-        execution_handler.setFormatter(execution_formatter)
-        self.logger.addHandler(execution_handler)
+    # def start_execution_log(self, report_path):
+    #     """Start a new execution log."""
+    #     execution_log_file = f"execution_{datetime.now().strftime('%Y%m%d')}.log"
+    #     execution_log_path = os.path.join(os.path.dirname(report_path), execution_log_file)
+    #     execution_handler = logging.FileHandler(execution_log_path)
+    #     execution_formatter = logging.Formatter('%(asctime)s - %(message)s')
+    #     execution_handler.setFormatter(execution_formatter)
+    #     self.logger.addHandler(execution_handler)
 
     def log_info(self, message):
         """Log informational message"""
@@ -47,108 +47,84 @@ class RobustReporting:
         """Log error message"""
         self.logger.error(message)
 
-    def log_execution(self, action, field_name=None, error_message=None):
-        """Log execution details."""
-        if field_name:
-            self.logger.info(f"{action} for {field_name}")
-        else:
-            self.logger.info(action)
-        if error_message:
-            self.logger.error(error_message)
-
-    def _validate_excel_file(self, filepath):
-        """Validate Excel file integrity"""
+    
+    # Move generate_html_report to module level (not inside RobustReporting)
+    def generate_html_report(self, excel_path, template_path, html_output_path):
         try:
-            # Create temp file with .xlsx extension
-            with NamedTemporaryFile(suffix='.xlsx', delete=False) as tmp:
-                with open(filepath, 'rb') as src:
-                    tmp.write(src.read())
-                tmp_path = tmp.name
+            import pandas as pd
+            from datetime import datetime
+            import os
+            # Read the Excel report
+            df = pd.read_excel(excel_path)
+            # Count pass/fail
+            pass_count = (df['execution_status'].str.lower() == 'pass').sum()
+            fail_count = (df['execution_status'].str.lower() == 'fail').sum()
+            # Helper to wrap long paths for display
+            def wrap_path(path, maxlen=50):
+                if not path:
+                    return ''
+                if len(path) <= maxlen:
+                    return path
+                # Insert <wbr> at every maxlen interval for HTML wrapping
+                return '<wbr>'.join([path[i:i+maxlen] for i in range(0, len(path), maxlen)])
 
-            try:
-                wb = openpyxl.load_workbook(tmp_path)
-                wb.close()
-                return True
-            except Exception as e:
-                self.log_error(f"File validation failed: {str(e)}")
-                return False
-        finally:
-            if os.path.exists(tmp_path):
-                try:
-                    os.unlink(tmp_path)
-                except:
-                    pass  # Ignore cleanup errors
+            # Prepare test results rows with wrapped screenshot paths and thumbnail images
+            test_results_rows = ''
+            for _, row in df.iterrows():
+                # Show blank for NaN error message
+                error_msg = '' if pd.isna(row['error message']) else row['error message']
+                # Show thumbnail image if screenshot exists, else blank
+                if pd.notna(row['screenshot']) and row['screenshot']:
+                    thumb_html = (
+                        f'<a href="{row["screenshot"]}" target="_blank">'
+                        f'<img src="{row["screenshot"]}" alt="screenshot" style="max-width:80px;max-height:60px;border:1px solid #888;vertical-align:middle;"/>'
+                        f'</a>'
+                    )
+                else:
+                    thumb_html = ''
+                test_results_rows += f"<tr class='{row['execution_status'].lower()}'>" \
+                    f"<td>{row['testcasename']}</td>" \
+                    f"<td>{row.get('dataset number','')}</td>" \
+                    f"<td>{row['action']}</td>" \
+                    f"<td>{row['execution_status']}</td>" \
+                    f"<td>{error_msg}</td>" \
+                    f"<td>{thumb_html}</td></tr>"
 
-    def _create_backup(self, filepath):
-        """Create timestamped backup copy"""
-        timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
-        backup_path = os.path.join(
-            'Backups', f"{os.path.basename(filepath)}_backup_{timestamp}.xlsx")
-        shutil.copy2(filepath, backup_path)
-        return backup_path
+            # Wrap report_path, log_path, screenshot_path for display in header
+            display_report_path = wrap_path(excel_path)
+            display_log_path = wrap_path(os.path.join(os.path.dirname(excel_path), 'execution_log.txt'))
+            display_screenshot_path = wrap_path(os.path.join(os.path.dirname(excel_path), 'Screenshots'))
 
-    def copy_excel_template(self, template_path: str) -> str:
-        """Safely copy Excel template with validation"""
-        try:
-            if not os.path.exists(template_path):
-                raise FileNotFoundError(
-                    f"Template not found at {template_path}")
-
-            if not self._validate_excel_file(template_path):
-                raise ValueError("Template file is corrupted")
-
-            timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
-            execution_folder = os.path.join('Reports', timestamp)
-            os.makedirs(execution_folder, exist_ok=True)
-            os.makedirs(os.path.join(execution_folder,
-                        'Screenshots'), exist_ok=True)
-
-            report_filename = f"report_{timestamp}.xlsx"
-            report_path = os.path.join(execution_folder, report_filename)
-
-            # Create backup of template first
-            self._create_backup(template_path)
-
-            # Copy using binary mode with verification
-            with open(template_path, 'rb') as src, open(report_path, 'wb') as dst:
-                data = src.read()
-                dst.write(data)
-                dst.flush()
-                os.fsync(dst.fileno())
-
-            # Verify copy
-            if os.path.getsize(report_path) != os.path.getsize(template_path):
-                raise IOError("File copy incomplete - size mismatch")
-
-            if not self._validate_excel_file(report_path):
-                raise ValueError("Copied file failed validation")
-
-            os.chmod(report_path, 0o777)
-            self.log_info(f"Successfully created report at: {report_path}")
-            return report_path
-
+            # Read and update template
+            with open(template_path, encoding='utf-8') as f:
+                template = f.read()
+            # Remove teststep, add testset number (dataset number)
+            template = template.replace('<th>Test Step</th>', '<th>Test Set Number</th>')
+            # Fill template
+            now = datetime.now()
+            # Move the replacements BEFORE creating the Template object
+            template = template.replace('{{execution_date}}', '$execution_date')
+            template = template.replace('{{execution_time}}', '$execution_time')
+            template = template.replace('{{report_path}}', '$report_path')
+            template = template.replace('{{log_path}}', '$log_path')
+            template = template.replace('{{screenshot_path}}', '$screenshot_path')
+            template = template.replace('{pass_count}', '$pass_count')
+            template = template.replace('{fail_count}', '$fail_count')
+            template = template.replace('{{test_results_rows}}', '$test_results_rows')
+            template = Template(template)
+            html = template.safe_substitute(
+                execution_date=now.strftime('%Y-%m-%d'),
+                execution_time=now.strftime('%H:%M:%S'),
+                report_path=display_report_path,
+                log_path=display_log_path,
+                screenshot_path=display_screenshot_path,
+                pass_count=pass_count,
+                fail_count=fail_count,
+                test_results_rows=test_results_rows
+            )
+            # Write HTML
+            with open(html_output_path, 'w', encoding='utf-8') as f:
+                f.write(html)
         except Exception as e:
-            self.log_error(f"Failed to copy template: {str(e)}")
-            raise
-
-    def capture_screenshot(self, driver: webdriver.Chrome, report_path: str, step_name: str):
-        """Capture screenshot and save to file, return path"""
-        try:
-            # Screenshots go in Screenshots subfolder of execution folder
-            execution_folder = os.path.dirname(report_path)
-            screenshot_dir = os.path.join(execution_folder, 'Screenshots')
-            os.makedirs(screenshot_dir, exist_ok=True)
-
-            # Generate filename
-            timestamp = datetime.now().strftime('%H%M%S')
-            filename = f"{step_name}_{timestamp}.png"
-            screenshot_path = os.path.join(screenshot_dir, filename)
-
-            # Save screenshot
-            driver.save_screenshot(screenshot_path)
-            self.log_info(f"Screenshot saved to: {screenshot_path}")
-            return screenshot_path
-
-        except Exception as e:
-            self.log_error(f"Failed to capture screenshot: {str(e)}")
-            return None
+            self.log_error(f"Failed to generate HTML report: {e}")
+            print(f"[ERROR] Failed to generate HTML report: {e}")

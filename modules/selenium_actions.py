@@ -13,11 +13,13 @@ import os
 import shutil
 
 class SeleniumActions:
-    def __init__(self, reporting: RobustReporting):
+    def __init__(self, reporting: RobustReporting, driver: webdriver = None):
         """Initialize the SeleniumActions class."""
         self.reporting = reporting
-        self.driver = None
-        self._init_driver()  # Initialize the WebDriver
+        if(driver is not None):
+            self.driver = driver
+        else:
+            self._init_driver()  # Initialize the WebDriver
         os.makedirs('Reports', exist_ok=True)  # Ensure the Reports directory exists
 
     def _init_driver(self):
@@ -244,5 +246,33 @@ class SeleniumActions:
             return True, None
         except Exception as e:
             error_message = f"Scroll failed: {str(e)}"
+            self.reporting.log_error(error_message)
+            return False, error_message
+
+    def clear_text(self, xpath):
+        """Clear the value of an element identified by its XPath."""
+        try:
+            if not xpath:
+                raise ValueError("XPath cannot be empty for clear_text action")
+            element = self._find_element(xpath)
+            element.clear()
+            self.reporting.log_info(f"Cleared text for element: {xpath}")
+            return True, None
+        except Exception as e:
+            error_message = f"Failed to clear text: {str(e)}"
+            self.reporting.log_error(error_message)
+            return False, error_message
+
+    def is_element_visible(self, xpath):
+        """Check if an element identified by its XPath is visible on the page."""
+        try:
+            if not xpath:
+                raise ValueError("XPath cannot be empty for is_element_visible action")
+            element = self._find_element(xpath)
+            visible = element.is_displayed()
+            self.reporting.log_info(f"Element visibility for {xpath}: {visible}")
+            return True, str(visible)
+        except Exception as e:
+            error_message = f"Failed to check element visibility: {str(e)}"
             self.reporting.log_error(error_message)
             return False, error_message
