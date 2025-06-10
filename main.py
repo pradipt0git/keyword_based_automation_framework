@@ -27,8 +27,25 @@ def main():
             print(f"  TestCase: {testcase}, DataSheet: {sheet}, Rows: {row_nums}")
             for row_num in row_nums:
                 print(f"    Row {row_num}")
-                browser = 'chrome'  # or 'edge'
-                driver = initiatedriver(browser)
+                # Determine headless mode from DataSheet's 'HeadLess' column for this row
+                headless = True  # Default to headless
+                try:
+                    import openpyxl
+                    datasheet_path = os.path.join(CONFIG_FOLDER, 'testcase_driver_data_sheet.xlsx')
+                    wb = openpyxl.load_workbook(datasheet_path, data_only=True)
+                    if sheet in wb.sheetnames:
+                        data_sheet = wb[sheet]
+                        header_row = [cell.value for cell in data_sheet[1]]
+                        if 'HeadLess' in header_row:
+                            col_idx = header_row.index('HeadLess') + 1  # 1-based
+                            headless_cell = data_sheet.cell(row=row_num, column=col_idx).value
+                            if str(headless_cell).strip().upper() != 'T':
+                                headless = False
+                    wb.close()
+                except Exception as e:
+                    print(f"[WARN] Could not determine headless mode for {sheet} row {row_num}: {e}")
+                browser = 'edge'  # Use Edge as the default browser
+                driver = initiatedriver(browser, headless=headless)
                 actions = SeleniumActions(reporting, driver)
                 print(f"TestCase: {testcase}")
                 process_testcase_rows(testcase, sheet, row_num, driver, reporting, actions, dataset_counter)

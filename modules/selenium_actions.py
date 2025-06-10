@@ -54,8 +54,11 @@ class SeleniumActions:
             element_type = element.get_attribute("type").lower() if element.get_attribute("type") else "text"
 
             # Handle different input types
-            if element_type in ["text", "password", "email", "number"]:
+            if element_type in ["text", "email", "number"]:
                 element.clear()
+                element.send_keys(value)
+                element.send_keys("\t")  # Send TAB key after setting value
+            elif element_type in ["password"]:
                 element.send_keys(value)
                 element.send_keys("\t")  # Send TAB key after setting value
             elif element_type in ["radio", "checkbox"]:
@@ -129,18 +132,23 @@ class SeleniumActions:
             return False, error_message
 
     def _find_element(self, xpath):
-        """Find an element using its XPath with robust error handling."""
+        """Find an element using its XPath with robust error handling. Waits for presence and clickability."""
         try:
-            # Attempt to locate the element
+            # Wait for the element to be present in the DOM
             element = WebDriverWait(self.driver, 10).until(
                 EC.presence_of_element_located((By.XPATH, xpath))
             )
-
+            # Wait for the element to be clickable (if visible)
+            try:
+                element = WebDriverWait(self.driver, 10).until(
+                    EC.element_to_be_clickable((By.XPATH, xpath))
+                )
+            except Exception:
+                self.reporting.log_info(f"Element present but not clickable within 10s: {xpath}")
             # Check if the element is visible
             if not element.is_displayed():
                 self.reporting.log_info(f"Element found but not visible: {xpath}")
                 return element  # Return the element even if not visible
-
             # Scroll element into view if not visible
             self.driver.execute_script(
                 "arguments[0].scrollIntoView({block: 'center'});", element)

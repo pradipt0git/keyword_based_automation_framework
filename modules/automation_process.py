@@ -10,7 +10,7 @@ sys.path.append(os.path.join(os.path.dirname(os.path.dirname(__file__))))
 from customization import custom_actions as ca  # Now import directly as ca
 
     
-def process_step(testcasename, screen, field, action, xpath, data, driver, reporting: RobustReporting, actions: SeleniumActions, dataset_number=None):
+def process_step(testcasename, screen, field, action, xpath, data, driver, reporting: RobustReporting, actions: SeleniumActions, dataset_number=None, get_pass_screenshot=False):
     """
     Process a single automation step.
     Calls the appropriate SeleniumActions method based on the action.
@@ -91,9 +91,9 @@ def process_step(testcasename, screen, field, action, xpath, data, driver, repor
         reporting.log_error(error_message)
         print(f"[ERROR] Exception in process_step: {e}")
     
-    # Take screenshot if failed
+    # Take screenshot if failed or if get_pass_screenshot is True and status is pass
     screenshot_path = ''
-    if status == 'fail' and driver is not None:
+    if (status == 'fail' and driver is not None) or (get_pass_screenshot and status == 'pass' and driver is not None):
         try:
             # Save screenshot to file in Screenshots folder inside the report folder
             report_folder = os.environ.get('CURRENT_REPORT_FOLDER')

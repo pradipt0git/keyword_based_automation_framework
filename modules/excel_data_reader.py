@@ -11,6 +11,7 @@ from modules.selenium_actions import SeleniumActions
 import datetime
 import shutil
 import sys
+import tempfile
 
 step_results = []
 CONFIG_FOLDER = os.path.join(os.path.dirname(os.path.dirname(__file__)), 'config')
@@ -37,13 +38,21 @@ def parse_datasheet_refs(ref_str):
         row_nums = list(range(row_nums[0], row_nums[1]+1))
     return sheet_name, row_nums
 
+def get_temp_excel_copy():
+    """Copy the Excel file to a temporary file and return its path."""
+    tmp = tempfile.NamedTemporaryFile(delete=False, suffix='.xlsx')
+    tmp.close()
+    shutil.copy2(EXCEL_FILE, tmp.name)
+    return tmp.name
+
 def get_testcase_to_datarefs_dict(sheet_name='DriverSheet'):
     """
     Returns a dict: {TestCaseName: [(sheet_name, [row_numbers]), ...], ...}
     Only includes testcases where the first occurrence of TestCaseName has Execute == 'Y'.
     Skips blank TestDataSheetReference.
     """
-    wb = openpyxl.load_workbook(EXCEL_FILE, data_only=True)
+    temp_excel = get_temp_excel_copy()
+    wb = openpyxl.load_workbook(temp_excel, data_only=True, read_only=True)
     if sheet_name not in wb.sheetnames:
         raise ValueError(f"Sheet '{sheet_name}' not found in Excel file.")
     driver_sheet = wb[sheet_name]
@@ -73,13 +82,14 @@ def get_testcase_to_datarefs_dict(sheet_name='DriverSheet'):
             testcase_datarefs[testcase].append((sheet, rows))
     filtered = {tc: refs for tc, refs in testcase_datarefs.items() if testcase_first_execute.get(tc) == 'Y'}
     wb.close()
+    os.unlink(temp_excel)
     return filtered
 
 def process_testcase_rows(testcase, sheet, row_num, driver, reporting, actions, dataset_number):
     try:
         print(f"Processing rows for TestCase: {testcase}")
-        # Open Excel and get sheets
-        wb = openpyxl.load_workbook(EXCEL_FILE, data_only=True)
+        temp_excel = get_temp_excel_copy()
+        wb = openpyxl.load_workbook(temp_excel, data_only=True, read_only=True)
         driver_sheet = wb['DriverSheet']
         common_sheet = wb['CommonSheet']
         data_sheet = wb[sheet]
@@ -97,6 +107,15 @@ def process_testcase_rows(testcase, sheet, row_num, driver, reporting, actions, 
                 reporting.log_info(msg)
                 wb.close()
                 return
+            
+        # Find GetPassScreenshot column index in DriverSheet
+        driver_headers = [cell.value for cell in next(driver_sheet.iter_rows(min_row=1, max_row=1))]
+        get_pass_screenshot_idx = None
+        for idx, col_name in enumerate(driver_headers):
+            if str(col_name).strip().lower() == 'getpassscreenshot':
+                get_pass_screenshot_idx = idx
+                break
+        
         # Build CommonSheet lookup: {(Screen, Field): Xpath}
         common_lookup = {}
         for row in common_sheet.iter_rows(min_row=2, values_only=True):
@@ -129,15 +148,22 @@ def process_testcase_rows(testcase, sheet, row_num, driver, reporting, actions, 
                 data_value = ''
             # Now data_value contains the value from the DataSheet for this field
             # Process the step using the automation process function
-            step_result = process_step(testcase, screen, field, action, xpath, data_value, driver, reporting, actions,dataset_number)
+            # Determine GetPassScreenshot value for this step
+            get_pass_screenshot = False
+            if get_pass_screenshot_idx is not None:
+                gps_val = row[get_pass_screenshot_idx]
+                if str(gps_val).strip().upper() == 'Y':
+                    get_pass_screenshot = True
+            step_result = process_step(testcase, screen, field, action, xpath, data_value, driver, reporting, actions, dataset_number, get_pass_screenshot=get_pass_screenshot)
             #step_result['dataset_number'] = dataset_number
             step_results.append(step_result)
         # Close the workbook after processing    
         wb.close()
+        os.unlink(temp_excel)
     except Exception as e:
         reporting.log_error(f"Error in process_testcase_rows for testcase '{testcase}': {e}")
 
-def initiatedriver(browser='chrome'):
+def initiatedriver(browser='edge', headless=True):
     try:
         from selenium import webdriver
         from selenium.webdriver.chrome.service import Service as ChromeService
@@ -151,7 +177,9 @@ def initiatedriver(browser='chrome'):
             chrome_options.add_argument('--no-sandbox')
             chrome_options.add_argument('--disable-gpu')
             chrome_options.add_argument('--disable-dev-shm-usage')
-            chrome_options.add_experimental_option('excludeSwitches', ['enable-logging'])  # Suppress logging
+            chrome_options.add_experimental_option('excludeSwitches', ['enable-logging'])
+            if headless:
+                chrome_options.add_argument('--headless=new')
             driver = webdriver.Chrome(service=ChromeService(), options=chrome_options)
         elif browser == 'edge':
             edge_options = EdgeOptions()
@@ -159,7 +187,9 @@ def initiatedriver(browser='chrome'):
             edge_options.add_argument('--no-sandbox')
             edge_options.add_argument('--disable-gpu')
             edge_options.add_argument('--disable-dev-shm-usage')
-            edge_options.add_experimental_option('excludeSwitches', ['enable-logging'])  # Suppress logging
+            edge_options.add_experimental_option('excludeSwitches', ['enable-logging'])
+            if headless:
+                edge_options.add_argument('--headless=new')
             driver = webdriver.Edge(service=EdgeService(), options=edge_options)
         else:
             raise ValueError('Unsupported browser')
