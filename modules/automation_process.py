@@ -1,5 +1,6 @@
 # automation_process.py
 
+import time
 from modules.selenium_actions import SeleniumActions
 from modules.reporting_v2 import RobustReporting
 import datetime
@@ -10,11 +11,12 @@ sys.path.append(os.path.join(os.path.dirname(os.path.dirname(__file__))))
 from customization import custom_actions as ca  # Now import directly as ca
 
     
-def process_step(testcasename, screen, field, action, xpath, data, driver, reporting: RobustReporting, actions: SeleniumActions, dataset_number=None, get_pass_screenshot=False):
+def process_step(testcasename, screen, field, action, xpath, data, driver, reporting: RobustReporting, actions: SeleniumActions, dataset_number=None, get_pass_screenshot=False, testcase_description='', validation='', expected_validation=''):
     """
     Process a single automation step.
     Calls the appropriate SeleniumActions method based on the action.
     Records step result, error message, and screenshot (if failed) in step_results.
+    Accepts testcase_description, validation, expected_validation for enhanced logging/reporting.
     """
     import base64
     import traceback
@@ -72,11 +74,25 @@ def process_step(testcasename, screen, field, action, xpath, data, driver, repor
                 print(f"[SKIP] No matching Selenium action for: {action}")
                 status = 'fail'
                 error_message = f"No matching Selenium action for: {action}"
+        
+        time.sleep(3)  # Wait for 3 seconds after each action
         # Optionally print or log the result
+        # Prepare a more readable, multiline log line
         log_line = (
-            f"[{datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] "
-            f"TestCase={testcasename}, Dataset={dataset_number}, Screen={screen}, Field={field}, Action={action}, "
-            f"Xpath={xpath}, Data={data}, Status={status}, Message={error_message if error_message else result}"
+            f"[Step Execution @ {datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')}]\n"
+            f"  TestCase   : {testcasename}\n"
+            f"  Dataset    : {dataset_number}\n"
+            f"  Screen     : {screen}\n"
+            f"  Field      : {field}\n"
+            f"  Action     : {action}\n"
+            f"  Xpath      : {xpath}\n"
+            f"  Data       : {data}\n"
+            f"  TestCaseDescription : {testcase_description}\n"
+            f"  Validation         : {validation}\n"
+            f"  ExpectedValidation : {expected_validation}\n"
+            f"  Status     : {status}\n"
+            f"  Message    : {error_message if error_message else result}\n"
+            f"{'-'*60}"
         )
         # Write to execution_log.txt in the report folder
         report_folder = os.environ.get('CURRENT_REPORT_FOLDER')
@@ -119,7 +135,10 @@ def process_step(testcasename, screen, field, action, xpath, data, driver, repor
         'data': data,
         'execution_status': status,
         'error message': error_message,
-        'screenshot': screenshot_path
+        'screenshot': screenshot_path,
+        'testcase_description': testcase_description,
+        'validation': validation,
+        'expected_validation': expected_validation
     }
 
 def extract_status_and_message(result, default_fail_msg):

@@ -1,0 +1,18 @@
+2025-06-10 15:54:16,900 - INFO - Opened URL: https://automationintesting.com/selenium/testpage
+2025-06-10 15:54:19,060 - INFO - Set value 'testfirst1' to element: //*[@id="firstname"]
+2025-06-10 15:54:19,539 - INFO - Set value 'testlast1' to element: //*[@id="surname"]
+2025-06-10 15:54:19,907 - ERROR - Failed to set value: Message: Could not locate element with visible text: male; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+
+2025-06-10 15:54:20,734 - INFO - Reloaded the current browser window successfully.
+2025-06-10 15:54:28,525 - INFO - Opened URL: https://automationintesting.com/selenium/testpage
+2025-06-10 15:54:29,972 - INFO - Set value 'testfirst2' to element: //*[@id="firstname"]
+2025-06-10 15:54:30,373 - INFO - Set value 'testlast2' to element: //*[@id="surname"]
+2025-06-10 15:54:30,674 - ERROR - Failed to set value: Message: Could not locate element with visible text: male; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+
+2025-06-10 15:54:31,552 - INFO - Reloaded the current browser window successfully.
+2025-06-10 15:54:40,579 - INFO - Opened URL: https://automationintesting.com/selenium/testpage
+2025-06-10 15:54:40,853 - INFO - Clicked element: //*[@id="firstname"]
+2025-06-10 15:54:41,247 - INFO - Set value 'testlast1' to element: //*[@id="surname"]
+2025-06-10 15:54:50,075 - INFO - Opened URL: https://automationintesting.com/selenium/testpage
+2025-06-10 15:54:50,357 - INFO - Clicked element: //*[@id="firstname"]
+2025-06-10 15:54:50,780 - INFO - Set value 'testlast2' to element: //*[@id="surname"]

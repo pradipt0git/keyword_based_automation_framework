@@ -135,6 +135,9 @@ def process_testcase_rows(testcase, sheet, row_num, driver, reporting, actions, 
             screen = str(row[col_idx['Screen']]).strip() if row[col_idx['Screen']] else ''
             field = str(row[col_idx['Field']]).strip() if row[col_idx['Field']] else ''
             action = str(row[col_idx['Action']]).strip() if row[col_idx['Action']] else ''
+            testcase_description = str(row[col_idx['TestCaseDescription']]).strip() if 'TestCaseDescription' in col_idx and row[col_idx['TestCaseDescription']] else ''
+            validation = str(row[col_idx['Validation']]).strip() if 'Validation' in col_idx and row[col_idx['Validation']] else ''
+            expected_validation = str(row[col_idx['ExpectedValidation']]).strip() if 'ExpectedValidation' in col_idx and row[col_idx['ExpectedValidation']] else ''
             xpath = common_lookup.get((screen, field), '')
             data_value = None
             
@@ -154,8 +157,17 @@ def process_testcase_rows(testcase, sheet, row_num, driver, reporting, actions, 
                 gps_val = row[get_pass_screenshot_idx]
                 if str(gps_val).strip().upper() == 'Y':
                     get_pass_screenshot = True
-            step_result = process_step(testcase, screen, field, action, xpath, data_value, driver, reporting, actions, dataset_number, get_pass_screenshot=get_pass_screenshot)
-            #step_result['dataset_number'] = dataset_number
+            step_result = process_step(
+                testcase, screen, field, action, xpath, data_value, driver, reporting, actions, dataset_number,
+                get_pass_screenshot=get_pass_screenshot,
+                testcase_description=testcase_description,
+                validation=validation,
+                expected_validation=expected_validation
+            )
+            # Add new columns to step_result
+            step_result['testcase_description'] = testcase_description
+            step_result['validation'] = validation
+            step_result['expected_validation'] = expected_validation
             step_results.append(step_result)
         # Close the workbook after processing    
         wb.close()
