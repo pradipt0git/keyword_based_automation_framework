@@ -125,6 +125,43 @@ class RobustReporting:
             # Write HTML
             with open(html_output_path, 'w', encoding='utf-8') as f:
                 f.write(html)
+            # --- Testcase-wise HTML report generation ---
+            testcase_reports_dir = os.path.join(os.path.dirname(html_output_path), 'testcase_reports')
+            os.makedirs(testcase_reports_dir, exist_ok=True)
+            for testcase in df['testcasename'].unique():
+                testcase_df = df[df['testcasename'] == testcase]
+                testcase_rows = ''
+                for _, row in testcase_df.iterrows():
+                    error_msg = '' if pd.isna(row['error message']) else row['error message']
+                    if pd.notna(row['screenshot']) and row['screenshot']:
+                        thumb_html = (
+                            f'<a href="{row["screenshot"]}" target="_blank">'
+                            f'<img src="{row["screenshot"]}" alt="screenshot" style="max-width:80px;max-height:60px;border:1px solid #888;vertical-align:middle;"/>'
+                            f'</a>'
+                        )
+                    else:
+                        thumb_html = ''
+                    testcase_rows += f"<tr class='{row['execution_status'].lower()}'>" \
+                        f"<td>{row['testcasename']}</td>" \
+                        f"<td>{row.get('dataset number','')}</td>" \
+                        f"<td>{row['action']}</td>" \
+                        f"<td>{row['execution_status']}</td>" \
+                        f"<td>{error_msg}</td>" \
+                        f"<td>{thumb_html}</td></tr>"
+                testcase_html = template.safe_substitute(
+                    execution_date=now.strftime('%Y-%m-%d'),
+                    execution_time=now.strftime('%H:%M:%S'),
+                    report_path=display_report_path,
+                    log_path=display_log_path,
+                    screenshot_path=display_screenshot_path,
+                    pass_count=(testcase_df['execution_status'].str.lower() == 'pass').sum(),
+                    fail_count=(testcase_df['execution_status'].str.lower() == 'fail').sum(),
+                    test_results_rows=testcase_rows
+                )
+                testcase_html_path = os.path.join(testcase_reports_dir, f"{testcase}.html")
+                with open(testcase_html_path, 'w', encoding='utf-8') as f:
+                    f.write(testcase_html)
+            # --- End testcase-wise HTML report generation ---
         except Exception as e:
             self.log_error(f"Failed to generate HTML report: {e}")
             print(f"[ERROR] Failed to generate HTML report: {e}")
