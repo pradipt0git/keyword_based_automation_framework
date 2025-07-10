@@ -85,6 +85,26 @@ def get_testcase_to_datarefs_dict(sheet_name='DriverSheet'):
     os.unlink(temp_excel)
     return filtered
 
+def get_component_steps(component_name, components_sheet):
+    """
+    Given a component name and the openpyxl worksheet for Components,
+    return a list of dicts for each step in the component.
+    Handles merged cells by forward-filling the ComponentName.
+    """
+    steps = []
+    headers = [cell.value for cell in next(components_sheet.iter_rows(min_row=1, max_row=1))]
+    last_component = None
+    for row in components_sheet.iter_rows(min_row=2, values_only=True):
+        comp_val = row[0]
+        if comp_val is not None and str(comp_val).strip() != '':
+            last_component = str(comp_val).strip()
+        # Forward-fill merged/empty cells
+        if last_component == str(component_name).strip():
+            step = {headers[i]: row[i] for i in range(len(headers))}
+            step[headers[0]] = last_component  # Ensure ComponentName is set
+            steps.append(step)
+    return steps
+
 def process_testcase_rows(testcase, sheet, row_num, driver, reporting, actions, dataset_number):
     try:
         print(f"Processing rows for TestCase: {testcase}")
@@ -93,6 +113,7 @@ def process_testcase_rows(testcase, sheet, row_num, driver, reporting, actions, 
         driver_sheet = wb['DriverSheet']
         common_sheet = wb['CommonSheet']
         data_sheet = wb[sheet]
+        components_sheet = wb['Components'] if 'Components' in wb.sheetnames else None
         # Check if the Execute column in the data_sheet for the given row_num is 'Y'
         header_row = [cell.value for cell in data_sheet[1]]
         execute_col_idx = None
@@ -138,38 +159,58 @@ def process_testcase_rows(testcase, sheet, row_num, driver, reporting, actions, 
             testcase_description = str(row[col_idx['TestCaseDescription']]).strip() if 'TestCaseDescription' in col_idx and row[col_idx['TestCaseDescription']] else ''
             validation = str(row[col_idx['Validation']]).strip() if 'Validation' in col_idx and row[col_idx['Validation']] else ''
             expected_validation = str(row[col_idx['ExpectedValidation']]).strip() if 'ExpectedValidation' in col_idx and row[col_idx['ExpectedValidation']] else ''
+            component_name = str(row[col_idx['ComponentName']]).strip() if 'ComponentName' in col_idx and row[col_idx['ComponentName']] else ''
             xpath = common_lookup.get((screen, field), '')
             data_value = None
-            
-            # Fetch the header row from data_sheet
             header_row = [cell.value for cell in data_sheet[1]]
-            data_value = None
             if field in header_row:
                 col_idx_val = header_row.index(field)
-                data_value = data_sheet.cell(row=row_num, column=col_idx_val + 1).value  # +1 for 1-based index
+                data_value = data_sheet.cell(row=row_num, column=col_idx_val + 1).value
             else:
                 data_value = ''
-            # Now data_value contains the value from the DataSheet for this field
-            # Process the step using the automation process function
-            # Determine GetPassScreenshot value for this step
             get_pass_screenshot = False
             if get_pass_screenshot_idx is not None:
                 gps_val = row[get_pass_screenshot_idx]
                 if str(gps_val).strip().upper() == 'Y':
                     get_pass_screenshot = True
-            step_result = process_step(
-                testcase, screen, field, action, xpath, data_value, driver, reporting, actions, dataset_number,
-                get_pass_screenshot=get_pass_screenshot,
-                testcase_description=testcase_description,
-                validation=validation,
-                expected_validation=expected_validation
-            )
-            # Add new columns to step_result
-            step_result['testcase_description'] = testcase_description
-            step_result['validation'] = validation
-            step_result['expected_validation'] = expected_validation
-            step_results.append(step_result)
-        # Close the workbook after processing    
+            # If ComponentName is present, expand steps from Components sheet
+            if component_name and components_sheet:
+                component_steps = get_component_steps(component_name, components_sheet)
+                for comp_step in component_steps:
+                    comp_screen = str(comp_step.get('Screen', '')).strip()
+                    comp_field = str(comp_step.get('Field', '')).strip()
+                    comp_action = str(comp_step.get('Action', '')).strip()
+                    comp_testcase_description = str(comp_step.get('TestCaseDescription', '')).strip()
+                    comp_validation = str(comp_step.get('Validation', '')).strip()
+                    comp_expected_validation = str(comp_step.get('ExpectedValidation', '')).strip()
+                    comp_xpath = common_lookup.get((comp_screen, comp_field), '')
+                    comp_data_value = ''
+                    if comp_field in header_row:
+                        col_idx_val = header_row.index(comp_field)
+                        comp_data_value = data_sheet.cell(row=row_num, column=col_idx_val + 1).value
+                    step_result = process_step(
+                        testcase, comp_screen, comp_field, comp_action, comp_xpath, comp_data_value, driver, reporting, actions, dataset_number,
+                        get_pass_screenshot=get_pass_screenshot,
+                        testcase_description=comp_testcase_description,
+                        validation=comp_validation,
+                        expected_validation=comp_expected_validation
+                    )
+                    step_result['testcase_description'] = comp_testcase_description
+                    step_result['validation'] = comp_validation
+                    step_result['expected_validation'] = comp_expected_validation
+                    step_results.append(step_result)
+            else:
+                step_result = process_step(
+                    testcase, screen, field, action, xpath, data_value, driver, reporting, actions, dataset_number,
+                    get_pass_screenshot=get_pass_screenshot,
+                    testcase_description=testcase_description,
+                    validation=validation,
+                    expected_validation=expected_validation
+                )
+                step_result['testcase_description'] = testcase_description
+                step_result['validation'] = validation
+                step_result['expected_validation'] = expected_validation
+                step_results.append(step_result)
         wb.close()
         os.unlink(temp_excel)
     except Exception as e:

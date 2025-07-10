@@ -68,4 +68,4 @@ def main():
         del os.environ['CURRENT_REPORT_FOLDER']
 
 if __name__ == "__main__":
-    main()
+    main() 
