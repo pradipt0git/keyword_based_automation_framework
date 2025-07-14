@@ -1,0 +1,156 @@
+[Step Execution @ 2025-07-14 10:00:37]
+  TestCase   : TC01
+  Dataset    : 1
+  Screen     : Landing
+  Field      : app_url
+  Action     : OpenUrl
+  Xpath      : 
+  Data       : https://automationintesting.com/selenium/testpage
+  TestCaseDescription : 5
+  Validation         : 55
+  ExpectedValidation : 555
+  Status     : pass
+  Message    : (True, None)
+------------------------------------------------------------
+[Step Execution @ 2025-07-14 10:00:41]
+  TestCase   : TC01
+  Dataset    : 1
+  Screen     : Landing
+  Field      : firstname
+  Action     : InputText
+  Xpath      : //*[@id="firstname"]
+  Data       : testfirst1
+  TestCaseDescription : 6
+  Validation         : 66
+  ExpectedValidation : 666
+  Status     : pass
+  Message    : (True, None)
+------------------------------------------------------------
+[Step Execution @ 2025-07-14 10:00:54]
+  TestCase   : TC01
+  Dataset    : 1
+  Screen     : Landing
+  Field      : surname
+  Action     : InputText
+  Xpath      : //*[@id="surname"]
+  Data       : testlast1
+  TestCaseDescription : 7
+  Validation         : 77
+  ExpectedValidation : 777
+  Status     : pass
+  Message    : (True, None)
+------------------------------------------------------------
+[Step Execution @ 2025-07-14 10:00:59]
+  TestCase   : TC01
+  Dataset    : 1
+  Screen     : Landing
+  Field      : gender
+  Action     : InputText
+  Xpath      : //*[@id="gender"]
+  Data       : male
+  TestCaseDescription : 8
+  Validation         : 88
+  ExpectedValidation : 888
+  Status     : fail
+  Message    : Failed to set value: Message: Could not locate element with visible text: male; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+
+------------------------------------------------------------
+[Step Execution @ 2025-07-14 10:01:03]
+  TestCase   : TC01
+  Dataset    : 1
+  Screen     : Landing
+  Field      : 
+  Action     : custom-reload_current_window
+  Xpath      : 
+  Data       : 
+  TestCaseDescription : 
+  Validation         : 
+  ExpectedValidation : 
+  Status     : pass
+  Message    : None
+------------------------------------------------------------
+[Step Execution @ 2025-07-14 10:01:13]
+  TestCase   : TC01
+  Dataset    : 2
+  Screen     : Landing
+  Field      : app_url
+  Action     : OpenUrl
+  Xpath      : 
+  Data       : https://automationintesting.com/selenium/testpage
+  TestCaseDescription : 5
+  Validation         : 55
+  ExpectedValidation : 555
+  Status     : pass
+  Message    : (True, None)
+------------------------------------------------------------
+[Step Execution @ 2025-07-14 10:01:17]
+  TestCase   : TC01
+  Dataset    : 2
+  Screen     : Landing
+  Field      : firstname
+  Action     : InputText
+  Xpath      : //*[@id="firstname"]
+  Data       : testfirst2
+  TestCaseDescription : 6
+  Validation         : 66
+  ExpectedValidation : 666
+  Status     : pass
+  Message    : (True, None)
+------------------------------------------------------------
+[Step Execution @ 2025-07-14 10:01:31]
+  TestCase   : TC01
+  Dataset    : 2
+  Screen     : Landing
+  Field      : surname
+  Action     : InputText
+  Xpath      : //*[@id="surname"]
+  Data       : testlast2
+  TestCaseDescription : 7
+  Validation         : 77
+  ExpectedValidation : 777
+  Status     : pass
+  Message    : (True, None)
+------------------------------------------------------------
+[Step Execution @ 2025-07-14 10:01:35]
+  TestCase   : TC01
+  Dataset    : 2
+  Screen     : Landing
+  Field      : gender
+  Action     : InputText
+  Xpath      : //*[@id="gender"]
+  Data       : male
+  TestCaseDescription : 8
+  Validation         : 88
+  ExpectedValidation : 888
+  Status     : fail
+  Message    : Failed to set value: Message: Could not locate element with visible text: male; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+
+------------------------------------------------------------
+[Step Execution @ 2025-07-14 10:01:39]
+  TestCase   : TC01
+  Dataset    : 2
+  Screen     : Landing
+  Field      : 
+  Action     : custom-reload_current_window
+  Xpath      : 
+  Data       : 
+  TestCaseDescription : 
+  Validation         : 
+  ExpectedValidation : 
+  Status     : pass
+  Message    : None
+------------------------------------------------------------
+[Step Execution @ 2025-07-14 10:03:45]
+  TestCase   : TC02
+  Dataset    : 1
+  Screen     : Landing
+  Field      : app_url
+  Action     : OpenUrl
+  Xpath      : 
+  Data       : https://automationintesting.com/selenium/testpage
+  TestCaseDescription : 2
+  Validation         : 22
+  ExpectedValidation : 222
+  Status     : fail
+  Message    : Failed to open URL https://automationintesting.com/selenium/testpage: HTTPConnectionPool(host='localhost', port=60155): Read timed out. (read timeout=120)
+------------------------------------------------------------

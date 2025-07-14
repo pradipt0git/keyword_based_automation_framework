@@ -1,0 +1,226 @@
+[Step Execution @ 2025-07-14 10:06:54]
+  TestCase   : TC01
+  Dataset    : 1
+  Screen     : Landing
+  Field      : app_url
+  Action     : OpenUrl
+  Xpath      : 
+  Data       : https://automationintesting.com/selenium/testpage
+  TestCaseDescription : 5
+  Validation         : 55
+  ExpectedValidation : 555
+  Status     : pass
+  Message    : (True, None)
+------------------------------------------------------------
+[Step Execution @ 2025-07-14 10:06:59]
+  TestCase   : TC01
+  Dataset    : 1
+  Screen     : Landing
+  Field      : firstname
+  Action     : InputText
+  Xpath      : //*[@id="firstname"]
+  Data       : testfirst1
+  TestCaseDescription : 6
+  Validation         : 66
+  ExpectedValidation : 666
+  Status     : pass
+  Message    : (True, None)
+------------------------------------------------------------
+[Step Execution @ 2025-07-14 10:07:12]
+  TestCase   : TC01
+  Dataset    : 1
+  Screen     : Landing
+  Field      : surname
+  Action     : InputText
+  Xpath      : //*[@id="surname"]
+  Data       : testlast1
+  TestCaseDescription : 7
+  Validation         : 77
+  ExpectedValidation : 777
+  Status     : pass
+  Message    : (True, None)
+------------------------------------------------------------
+[Step Execution @ 2025-07-14 10:07:16]
+  TestCase   : TC01
+  Dataset    : 1
+  Screen     : Landing
+  Field      : gender
+  Action     : InputText
+  Xpath      : //*[@id="gender"]
+  Data       : male
+  TestCaseDescription : 8
+  Validation         : 88
+  ExpectedValidation : 888
+  Status     : fail
+  Message    : Failed to set value: Message: Could not locate element with visible text: male; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+
+------------------------------------------------------------
+[Step Execution @ 2025-07-14 10:08:37]
+  TestCase   : TC01
+  Dataset    : 1
+  Screen     : Landing
+  Field      : 
+  Action     : custom-reload_current_window
+  Xpath      : 
+  Data       : 
+  TestCaseDescription : 
+  Validation         : 
+  ExpectedValidation : 
+  Status     : pass
+  Message    : None
+------------------------------------------------------------
+[Step Execution @ 2025-07-14 10:08:48]
+  TestCase   : TC01
+  Dataset    : 2
+  Screen     : Landing
+  Field      : app_url
+  Action     : OpenUrl
+  Xpath      : 
+  Data       : https://automationintesting.com/selenium/testpage
+  TestCaseDescription : 5
+  Validation         : 55
+  ExpectedValidation : 555
+  Status     : pass
+  Message    : (True, None)
+------------------------------------------------------------
+[Step Execution @ 2025-07-14 10:08:52]
+  TestCase   : TC01
+  Dataset    : 2
+  Screen     : Landing
+  Field      : firstname
+  Action     : InputText
+  Xpath      : //*[@id="firstname"]
+  Data       : testfirst2
+  TestCaseDescription : 6
+  Validation         : 66
+  ExpectedValidation : 666
+  Status     : pass
+  Message    : (True, None)
+------------------------------------------------------------
+[Step Execution @ 2025-07-14 10:09:06]
+  TestCase   : TC01
+  Dataset    : 2
+  Screen     : Landing
+  Field      : surname
+  Action     : InputText
+  Xpath      : //*[@id="surname"]
+  Data       : testlast2
+  TestCaseDescription : 7
+  Validation         : 77
+  ExpectedValidation : 777
+  Status     : pass
+  Message    : (True, None)
+------------------------------------------------------------
+[Step Execution @ 2025-07-14 10:09:10]
+  TestCase   : TC01
+  Dataset    : 2
+  Screen     : Landing
+  Field      : gender
+  Action     : InputText
+  Xpath      : //*[@id="gender"]
+  Data       : male
+  TestCaseDescription : 8
+  Validation         : 88
+  ExpectedValidation : 888
+  Status     : fail
+  Message    : Failed to set value: Message: Could not locate element with visible text: male; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+
+------------------------------------------------------------
+[Step Execution @ 2025-07-14 10:09:14]
+  TestCase   : TC01
+  Dataset    : 2
+  Screen     : Landing
+  Field      : 
+  Action     : custom-reload_current_window
+  Xpath      : 
+  Data       : 
+  TestCaseDescription : 
+  Validation         : 
+  ExpectedValidation : 
+  Status     : pass
+  Message    : None
+------------------------------------------------------------
+[Step Execution @ 2025-07-14 10:09:23]
+  TestCase   : TC02
+  Dataset    : 1
+  Screen     : Landing
+  Field      : app_url
+  Action     : OpenUrl
+  Xpath      : 
+  Data       : https://automationintesting.com/selenium/testpage
+  TestCaseDescription : 2
+  Validation         : 22
+  ExpectedValidation : 222
+  Status     : pass
+  Message    : (True, None)
+------------------------------------------------------------
+[Step Execution @ 2025-07-14 10:09:26]
+  TestCase   : TC02
+  Dataset    : 1
+  Screen     : Landing
+  Field      : firstname
+  Action     : ClickElement
+  Xpath      : //*[@id="firstname"]
+  Data       : testfirst1
+  TestCaseDescription : 3
+  Validation         : 33
+  ExpectedValidation : 333
+  Status     : pass
+  Message    : (True, None)
+------------------------------------------------------------
+[Step Execution @ 2025-07-14 10:09:40]
+  TestCase   : TC02
+  Dataset    : 1
+  Screen     : Landing
+  Field      : surname
+  Action     : InputText
+  Xpath      : //*[@id="surname"]
+  Data       : testlast1
+  TestCaseDescription : 4
+  Validation         : 44
+  ExpectedValidation : 444
+  Status     : pass
+  Message    : (True, None)
+------------------------------------------------------------
+[Step Execution @ 2025-07-14 10:09:50]
+  TestCase   : TC02
+  Dataset    : 2
+  Screen     : Landing
+  Field      : app_url
+  Action     : OpenUrl
+  Xpath      : 
+  Data       : https://automationintesting.com/selenium/testpage
+  TestCaseDescription : 2
+  Validation         : 22
+  ExpectedValidation : 222
+  Status     : pass
+  Message    : (True, None)
+------------------------------------------------------------
+[Step Execution @ 2025-07-14 10:09:53]
+  TestCase   : TC02
+  Dataset    : 2
+  Screen     : Landing
+  Field      : firstname
+  Action     : ClickElement
+  Xpath      : //*[@id="firstname"]
+  Data       : testfirst2
+  TestCaseDescription : 3
+  Validation         : 33
+  ExpectedValidation : 333
+  Status     : pass
+  Message    : (True, None)
+------------------------------------------------------------
+[Step Execution @ 2025-07-14 10:10:06]
+  TestCase   : TC02
+  Dataset    : 2
+  Screen     : Landing
+  Field      : surname
+  Action     : InputText
+  Xpath      : //*[@id="surname"]
+  Data       : testlast2
+  TestCaseDescription : 4
+  Validation         : 44
+  ExpectedValidation : 444
+  Status     : pass
+  Message    : (True, None)
+------------------------------------------------------------

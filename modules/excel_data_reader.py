@@ -137,12 +137,18 @@ def process_testcase_rows(testcase, sheet, row_num, driver, reporting, actions, 
                 get_pass_screenshot_idx = idx
                 break
         
-        # Build CommonSheet lookup: {(Screen, Field): Xpath}
+        # Build CommonSheet lookup: {(Screen, Field): (Xpath, WaitTimeInSec)}
         common_lookup = {}
         for row in common_sheet.iter_rows(min_row=2, values_only=True):
             screen, field, xpath = row[:3]
+            wait_time = 0
+            if len(row) > 3 and row[3] is not None:
+                try:
+                    wait_time = float(row[3])
+                except Exception:
+                    wait_time = 0
             if screen and field and xpath:
-                common_lookup[(str(screen).strip(), str(field).strip())] = str(xpath).strip()
+                common_lookup[(str(screen).strip(), str(field).strip())] = (str(xpath).strip(), wait_time)
         # Find column indices in DriverSheet
         headers = [cell.value for cell in next(driver_sheet.iter_rows(min_row=1, max_row=1))]
         col_idx = {h: i for i, h in enumerate(headers)}
@@ -160,7 +166,8 @@ def process_testcase_rows(testcase, sheet, row_num, driver, reporting, actions, 
             validation = str(row[col_idx['Validation']]).strip() if 'Validation' in col_idx and row[col_idx['Validation']] else ''
             expected_validation = str(row[col_idx['ExpectedValidation']]).strip() if 'ExpectedValidation' in col_idx and row[col_idx['ExpectedValidation']] else ''
             component_name = str(row[col_idx['ComponentName']]).strip() if 'ComponentName' in col_idx and row[col_idx['ComponentName']] else ''
-            xpath = common_lookup.get((screen, field), '')
+            # Get xpath and wait_time from common_lookup
+            xpath, wait_time = common_lookup.get((screen, field), ('', 0))
             data_value = None
             header_row = [cell.value for cell in data_sheet[1]]
             if field in header_row:
@@ -183,7 +190,10 @@ def process_testcase_rows(testcase, sheet, row_num, driver, reporting, actions, 
                     comp_testcase_description = str(comp_step.get('TestCaseDescription', '')).strip()
                     comp_validation = str(comp_step.get('Validation', '')).strip()
                     comp_expected_validation = str(comp_step.get('ExpectedValidation', '')).strip()
-                    comp_xpath = common_lookup.get((comp_screen, comp_field), '')
+                    # Get xpath and wait_time from common_lookup for component step
+                    comp_xpath, comp_wait_time = common_lookup.get((comp_screen, comp_field), ('', 1))
+                    if not comp_wait_time:
+                        comp_wait_time = 1
                     comp_data_value = ''
                     if comp_field in header_row:
                         col_idx_val = header_row.index(comp_field)
@@ -193,19 +203,22 @@ def process_testcase_rows(testcase, sheet, row_num, driver, reporting, actions, 
                         get_pass_screenshot=get_pass_screenshot,
                         testcase_description=comp_testcase_description,
                         validation=comp_validation,
-                        expected_validation=comp_expected_validation
+                        expected_validation=comp_expected_validation,
+                        wait_time_before_exec=comp_wait_time
                     )
                     step_result['testcase_description'] = comp_testcase_description
                     step_result['validation'] = comp_validation
                     step_result['expected_validation'] = comp_expected_validation
                     step_results.append(step_result)
             else:
+                # Pass wait_time to process_step (add argument if needed)
                 step_result = process_step(
                     testcase, screen, field, action, xpath, data_value, driver, reporting, actions, dataset_number,
                     get_pass_screenshot=get_pass_screenshot,
                     testcase_description=testcase_description,
                     validation=validation,
-                    expected_validation=expected_validation
+                    expected_validation=expected_validation,
+                    wait_time_before_exec=wait_time
                 )
                 step_result['testcase_description'] = testcase_description
                 step_result['validation'] = validation

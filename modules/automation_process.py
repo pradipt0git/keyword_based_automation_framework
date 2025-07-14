@@ -11,12 +11,13 @@ sys.path.append(os.path.join(os.path.dirname(os.path.dirname(__file__))))
 from customization import custom_actions as ca  # Now import directly as ca
 
     
-def process_step(testcasename, screen, field, action, xpath, data, driver, reporting: RobustReporting, actions: SeleniumActions, dataset_number=None, get_pass_screenshot=False, testcase_description='', validation='', expected_validation=''):
+def process_step(testcasename, screen, field, action, xpath, data, driver, reporting: RobustReporting, actions: SeleniumActions, dataset_number=None, get_pass_screenshot=False, testcase_description='', validation='', expected_validation='', wait_time_before_exec=0):
     """
     Process a single automation step.
     Calls the appropriate SeleniumActions method based on the action.
     Records step result, error message, and screenshot (if failed) in step_results.
     Accepts testcase_description, validation, expected_validation for enhanced logging/reporting.
+    Accepts wait_time_before_exec to wait before element access.
     """
     import base64
     import traceback
@@ -25,6 +26,12 @@ def process_step(testcasename, screen, field, action, xpath, data, driver, repor
     action_lower = str(action).strip().lower() if action else ''
     result = None
     try:
+        # Wait before execution if specified
+        if wait_time_before_exec and wait_time_before_exec > 0:
+            try:
+                time.sleep(float(wait_time_before_exec))
+            except Exception:
+                pass
         # Dynamically call custom action if action starts with 'custom-'
         if action and action.startswith("custom-"):
             action_name = action.replace("custom-", "")
@@ -84,6 +91,7 @@ def process_step(testcasename, screen, field, action, xpath, data, driver, repor
             f"  Dataset    : {dataset_number}\n"
             f"  Screen     : {screen}\n"
             f"  Field      : {field}\n"
+            f"  ExplicitWaitTime : {wait_time_before_exec}\n"
             f"  Action     : {action}\n"
             f"  Xpath      : {xpath}\n"
             f"  Data       : {data}\n"
