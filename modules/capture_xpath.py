@@ -16,9 +16,11 @@ EDGEDRIVER_PATH = r'C:\\WebDriver\\msedgedriver.exe'  # Update path as needed
 # Predefined URL
 default_url = 'https://www.google.com'
 
-# JSON output file
-selectors_csv = 'element_selectors.csv'
-selectors_json = 'element_selectors.json'
+# JSON and CSV output files (inside captured_xpaths folder)
+captured_folder = os.path.join(os.path.dirname(os.path.dirname(__file__)), 'captured_xpaths')
+os.makedirs(captured_folder, exist_ok=True)
+selectors_csv = os.path.join(captured_folder, 'element_selectors.csv')
+selectors_json = os.path.join(captured_folder, 'element_selectors.json')
 
 def close_all_browsers():
     # Windows: close all Chrome processes
@@ -232,8 +234,11 @@ def capture_elements(driver, selectors_list):
         elem = driver.execute_script('return window.clickedElement;')
         element = driver.execute_script('return arguments[0];', elem)
         details = get_element_details(driver, driver.switch_to.active_element)
+        # Add current page URL to details
+        page_url = driver.current_url
+        details['page_url'] = page_url
         print('Element details:', details)
-        # --- CSV: Only append name, value, type, text (max 40 chars), full_xpath, relative_xpath ---
+        # --- CSV: Only append page_url, name, value, type, text (max 40 chars), full_xpath, relative_xpath ---
         name = details['properties'].get('name', '')
         value = details['properties'].get('value', '')
         typ = details['properties'].get('type', '')
@@ -242,12 +247,12 @@ def capture_elements(driver, selectors_list):
             text = text[:40]
         full_xpath = details['selectors'].get('Full XPath', '')
         relative_xpath = details['selectors'].get('Relative XPath', '')
-        row = [name, value, typ, text, full_xpath, relative_xpath]
+        row = [page_url, name, value, typ, text, full_xpath, relative_xpath]
         write_header = not os.path.exists(selectors_csv)
         with open(selectors_csv, 'a', newline='', encoding='utf-8') as f:
             writer = csv.writer(f)
             if write_header:
-                writer.writerow(['name', 'value', 'type', 'text', 'full_xpath', 'relative_xpath'])
+                writer.writerow(['page_url', 'name', 'value', 'type', 'text', 'full_xpath', 'relative_xpath'])
             writer.writerow(row)
         print(f'Details appended to {selectors_csv}')
         # --- JSON: Save all data, overwrite on each run ---
