@@ -131,53 +131,65 @@ class SeleniumActions:
             self.reporting.log_error(error_message)
             return False, error_message
 
-    def _find_element(self, xpath):
-        """Find an element using its XPath with robust error handling. Waits for presence and clickability."""
+    def _detect_selector_type(self, selector):
+        """Detect if the selector is XPath or CSS selector."""
+        # Heuristic: XPath usually starts with /, //, .//, ( or contains '@', '[', etc.
+        selector = selector.strip()
+        if selector.startswith('/') or selector.startswith('(') or selector.startswith('.//') or selector.startswith('//'):
+            return 'xpath'
+        # If it contains [@ or @, likely XPath
+        if '[@' in selector or selector.startswith('..') or selector.startswith('('):
+            return 'xpath'
+        # Otherwise, treat as CSS
+        return 'css'
+
+    def _find_element(self, selector):
+        """Find an element using XPath or CSS selector with robust error handling. Waits for presence and clickability."""
+        by_type = self._detect_selector_type(selector)
+        by = By.XPATH if by_type == 'xpath' else By.CSS_SELECTOR
         try:
             # Wait for the element to be present in the DOM
             element = WebDriverWait(self.driver, 10).until(
-                EC.presence_of_element_located((By.XPATH, xpath))
+                EC.presence_of_element_located((by, selector))
             )
             # Wait for the element to be clickable (if visible)
             try:
                 element = WebDriverWait(self.driver, 10).until(
-                    EC.element_to_be_clickable((By.XPATH, xpath))
+                    EC.element_to_be_clickable((by, selector))
                 )
             except Exception:
-                self.reporting.log_info(f"Element present but not clickable within 10s: {xpath}")
+                self.reporting.log_info(f"Element present but not clickable within 10s: {selector}")
             # Check if the element is visible
             if not element.is_displayed():
-                self.reporting.log_info(f"Element found but not visible: {xpath}")
+                self.reporting.log_info(f"Element found but not visible: {selector}")
                 return element  # Return the element even if not visible
             # Scroll element into view if not visible
             self.driver.execute_script(
                 "arguments[0].scrollIntoView({block: 'center'});", element)
             return element
         except TimeoutException:
-            # If element is not found, attempt to scroll step by step
-            self.reporting.log_info(f"Element not found initially, attempting to scroll and locate: {xpath}")
+            self.reporting.log_info(f"Element not found initially, attempting to scroll and locate: {selector}")
 
-            # Detect the immediate scrollable parent container of the element
-            detect_container_script = """
-                var element = document.evaluate(arguments[0], document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
-                if (!element) return null;
-                var parent = element.parentElement;
-                while (parent) {
-                    var overflowY = window.getComputedStyle(parent).overflowY;
-                    if (overflowY === 'auto' || overflowY === 'scroll') {
-                        return parent;
+            # Detect the immediate scrollable parent container of the element (only for XPath)
+            container = None
+            if by == By.XPATH:
+                detect_container_script = """
+                    var element = document.evaluate(arguments[0], document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
+                    if (!element) return null;
+                    var parent = element.parentElement;
+                    while (parent) {
+                        var overflowY = window.getComputedStyle(parent).overflowY;
+                        if (overflowY === 'auto' || overflowY === 'scroll') {
+                            return parent;
+                        }
+                        parent = parent.parentElement;
                     }
-                    parent = parent.parentElement;
-                }
-                return null;
-            """
-
-            container = self.driver.execute_script(detect_container_script, xpath)
-
-            if not container:
-                self.reporting.log_info("No scrollable container found; defaulting to window scroll.")
-                container = None  # Default to window scroll
-
+                    return null;
+                """
+                container = self.driver.execute_script(detect_container_script, selector)
+                if not container:
+                    self.reporting.log_info("No scrollable container found; defaulting to window scroll.")
+                    container = None  # Default to window scroll
             scroll_script = """
                 var container = arguments[0] || window;
                 var scrollStep = arguments[1];
@@ -190,27 +202,20 @@ class SeleniumActions:
                     return true; // Reached the end of scroll
                 }
             """
-
             scroll_step = 100  # Scroll by 100px at a time
-
             while True:
-                # Execute the scroll script
                 at_end = self.driver.execute_script(scroll_script, container, scroll_step)
-
-                # Attempt to locate the element again
                 try:
                     element = WebDriverWait(self.driver, 2).until(
-                        EC.presence_of_element_located((By.XPATH, xpath))
+                        EC.presence_of_element_located((by, selector))
                     )
-                    self.reporting.log_info(f"Element found after scrolling: {xpath}")
+                    self.reporting.log_info(f"Element found after scrolling: {selector}")
                     return element
                 except TimeoutException:
                     pass  # Continue scrolling
-
                 if at_end:
                     break  # Stop if reached the end of the scrollable area
-
-            raise Exception(f"Element not found after scrolling: {xpath}")
+            raise Exception(f"Element not found after scrolling: {selector}")
 
     def quit(self):
         """Close the browser and clean up resources."""

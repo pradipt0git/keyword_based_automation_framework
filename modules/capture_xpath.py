@@ -255,10 +255,38 @@ def capture_elements(driver, selectors_list):
                 writer.writerow(['page_url', 'name', 'value', 'type', 'text', 'full_xpath', 'relative_xpath'])
             writer.writerow(row)
         print(f'Details appended to {selectors_csv}')
-        # --- JSON: Save all data, overwrite on each run ---
-        selectors_list.append(details)
-        with open(selectors_json, 'w', encoding='utf-8') as f:
-            json.dump(selectors_list, f, indent=2, ensure_ascii=False)
+
+        # --- PAGE-WISE JSON: Save per page, append only if not duplicate ---
+        import re
+        def sanitize_filename(url):
+            # Remove protocol, replace non-alphanum with _
+            fname = re.sub(r'^https?://', '', url)
+            fname = re.sub(r'[^a-zA-Z0-9]+', '_', fname)
+            return fname[:80]  # Limit length
+
+        page_json = os.path.join(captured_folder, f"selectors_{sanitize_filename(page_url)}.json")
+        # Load existing data for this page
+        existing_data = []
+        if os.path.exists(page_json):
+            try:
+                with open(page_json, 'r', encoding='utf-8') as f:
+                    existing_data = json.load(f)
+            except Exception:
+                existing_data = []
+        # Check for duplicate: use full_xpath as unique key
+        new_full_xpath = details.get('selectors', {}).get('Full XPath', '')
+        is_duplicate = False
+        for d in existing_data:
+            if d.get('selectors', {}).get('Full XPath', '') == new_full_xpath:
+                is_duplicate = True
+                break
+        if not is_duplicate:
+            existing_data.append(details)
+            with open(page_json, 'w', encoding='utf-8') as f:
+                json.dump(existing_data, f, indent=2, ensure_ascii=False)
+            print(f'Details appended to {page_json}')
+        else:
+            print(f"Element already present in {page_json}, not appending.")
         # Reset clickedElement so user can click again
         driver.execute_script('window.clickedElement = null;')
 

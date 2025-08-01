@@ -1,0 +1,123 @@
+[
+  {
+    "properties": {
+      "ariaLabel": null,
+      "className": "jR8x9d nyoS7c NhGkGb EIlDfe",
+      "href": null,
+      "id": "",
+      "name": null,
+      "role": null,
+      "tag": "BODY",
+      "text": "Sign in\nto continue to Gmail\nEmail or phone\nForgot email?\nNot your computer? Use a private browsing window to sign in. Learn more about using Guest mode\nNext\nCreate account\nEnglish (United States)\nHelp\nPrivacy\nTerms",
+      "title": "",
+      "type": null,
+      "value": null,
+      "rect": {
+        "bottom": 562,
+        "height": 562,
+        "left": 0,
+        "right": 1012.6666870117188,
+        "top": 0,
+        "width": 1012.6666870117188,
+        "x": 0,
+        "y": 0
+      },
+      "x": 506.3333435058594,
+      "y": 281.0
+    },
+    "selectors": {
+      "Class Name": "jR8x9d nyoS7c NhGkGb EIlDfe",
+      "CSS Selector (Class)": ".jR8x9d",
+      "XPath (Class)": "//*[contains(@class, 'jR8x9d')]",
+      "CSS Selector (Combined)": "body.jR8x9d.nyoS7c.NhGkGb.EIlDfe",
+      "XPath (Combined)": "//body[contains(@class, 'jR8x9d')]",
+      "Tag": "body",
+      "Full XPath": "/html[1]/body[1]",
+      "Relative XPath": "/html/body",
+      "accu_xpath": "//div[2]/div[1]/div[2]/c-wiz/main/div[1]/c-wiz/div/svg"
+    },
+    "page_url": "https://accounts.google.com/v3/signin/identifier?continue=https%3A%2F%2Fmail.google.com%2Fmail%2F%26ogbl%2F&emr=1&ifkv=AdBytiOE1515yzecIUhYwcpo9gMN4xKAjokrM1z6momDzPhoAtIqnk_CaemVfq0sHkB8rf19UVajzQ&ltmpl=default&ltmplcache=2&osid=1&passive=true&rm=false&scc=1&service=mail&ss=1&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-786269438%3A1753976289510636"
+  },
+  {
+    "properties": {
+      "ariaLabel": null,
+      "className": "VfPpkd-LgbsSe VfPpkd-LgbsSe-OWXEXe-dgl2Hf ksBjEc lKxP2d LQeN7 BqKGqe eR0mzb TrZEUc J7pUA VfPpkd-ksKsZd-mWPk3d VfPpkd-ksKsZd-mWPk3d-OWXEXe-Tv8l5d-OmS1vf",
+      "href": null,
+      "id": "",
+      "name": "",
+      "role": null,
+      "tag": "BUTTON",
+      "text": "Create account",
+      "title": "",
+      "type": "button",
+      "value": "",
+      "rect": {
+        "bottom": 414,
+        "height": 40,
+        "left": 654.8333740234375,
+        "right": 787.8750457763672,
+        "top": 374,
+        "width": 133.0416717529297,
+        "x": 654.8333740234375,
+        "y": 374
+      },
+      "x": 721.3542098999023,
+      "y": 394.0
+    },
+    "selectors": {
+      "Class Name": "VfPpkd-LgbsSe VfPpkd-LgbsSe-OWXEXe-dgl2Hf ksBjEc lKxP2d LQeN7 BqKGqe eR0mzb TrZEUc J7pUA VfPpkd-ksKsZd-mWPk3d VfPpkd-ksKsZd-mWPk3d-OWXEXe-Tv8l5d-OmS1vf",
+      "CSS Selector (Class)": ".VfPpkd-LgbsSe",
+      "XPath (Class)": "//*[contains(@class, 'VfPpkd-LgbsSe')]",
+      "CSS Selector (Combined)": "button.VfPpkd-LgbsSe.VfPpkd-LgbsSe-OWXEXe-dgl2Hf.ksBjEc.lKxP2d.LQeN7.BqKGqe.eR0mzb.TrZEUc.J7pUA.VfPpkd-ksKsZd-mWPk3d.VfPpkd-ksKsZd-mWPk3d-OWXEXe-Tv8l5d-OmS1vf",
+      "XPath (Combined)": "//button[contains(@class, 'VfPpkd-LgbsSe')]",
+      "Tag": "button",
+      "Full XPath": "/html[1]/body[1]/div[2]/div[1]/div[2]/c-wiz[1]/main[1]/div[3]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/button[1]",
+      "Relative XPath": "//*[@id=\"yDmH0d\"]/c-wiz/main/div[3]/div/div[2]/div/div/div[1]/div/button",
+      "accu_xpath": "//div[2]/div[1]/div[2]/c-wiz/main/div[3]/div/div[2]/div/div/div[1]/div/button/span"
+    },
+    "page_url": "https://accounts.google.com/v3/signin/identifier?continue=https%3A%2F%2Fmail.google.com%2Fmail%2F%26ogbl%2F&emr=1&ifkv=AdBytiOE1515yzecIUhYwcpo9gMN4xKAjokrM1z6momDzPhoAtIqnk_CaemVfq0sHkB8rf19UVajzQ&ltmpl=default&ltmplcache=2&osid=1&passive=true&rm=false&scc=1&service=mail&ss=1&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-786269438%3A1753976289510636"
+  },
+  {
+    "properties": {
+      "ariaLabel": "Email or phone",
+      "className": "whsOnd zHQkBf",
+      "href": null,
+      "id": "identifierId",
+      "name": "identifier",
+      "role": null,
+      "tag": "INPUT",
+      "text": "",
+      "title": "",
+      "type": "email",
+      "value": "",
+      "rect": {
+        "bottom": 218,
+        "height": 52,
+        "left": 532.3333740234375,
+        "right": 888.3333740234375,
+        "top": 166,
+        "width": 356,
+        "x": 532.3333740234375,
+        "y": 166
+      },
+      "x": 710.3333740234375,
+      "y": 192.0
+    },
+    "selectors": {
+      "Class Name": "whsOnd zHQkBf",
+      "CSS Selector (Class)": ".whsOnd",
+      "XPath (Class)": "//*[contains(@class, 'whsOnd')]",
+      "CSS Selector (Combined)": "input.whsOnd.zHQkBf",
+      "XPath (Combined)": "//input[contains(@class, 'whsOnd')]",
+      "CSS Selector (ID)": "#identifierId",
+      "XPath (ID)": "//*[@id='identifierId']",
+      "CSS Selector (Name)": "input[name='identifier']",
+      "XPath (Name)": "//input[@name='identifier']",
+      "Tag": "input",
+      "Full XPath": "/html[1]/body[1]/div[2]/div[1]/div[2]/c-wiz[1]/main[1]/div[2]/div[1]/div[1]/div[1]/form[1]/span[1]/section[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/input[1]",
+      "Relative XPath": "//*[@id=\"identifierId\"]",
+      "accu_xpath": "//div[2]/div[1]/div[2]/c-wiz/main/div[3]/div/div[1]/div/div/button/span"
+    },
+    "page_url": "https://accounts.google.com/v3/signin/identifier?continue=https%3A%2F%2Fmail.google.com%2Fmail%2F%26ogbl%2F&emr=1&ifkv=AdBytiOE1515yzecIUhYwcpo9gMN4xKAjokrM1z6momDzPhoAtIqnk_CaemVfq0sHkB8rf19UVajzQ&ltmpl=default&ltmplcache=2&osid=1&passive=true&rm=false&scc=1&service=mail&ss=1&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-786269438%3A1753976289510636"
+  }
+]
