@@ -85,6 +85,30 @@ def get_element_details(driver, element):
         # Add generic
         selectors['Tag'] = tag
 
+        # --- CSS Selector Validation ---
+        css_keys = [
+            'CSS Selector (Class)',
+            'CSS Selector (Combined)',
+            'CSS Selector (ID)',
+            'CSS Selector (Name)'
+        ]
+        found_element_counts = {}
+        for css_key in css_keys:
+            css_val = selectors.get(css_key, None)
+            if css_val:
+                try:
+                    found = driver.find_elements(By.CSS_SELECTOR, css_val)
+                    count = len(found)
+                    if count > 0:
+                        selectors[css_key] = css_val
+                        found_element_counts[css_key] = count
+                    else:
+                        selectors.pop(css_key, None)
+                except Exception:
+                    selectors.pop(css_key, None)
+            else:
+                selectors.pop(css_key, None)
+
         # Add full XPath and most relative XPath using browser's developer tools logic
         # Full XPath (absolute):
         full_xpath = driver.execute_script('''
@@ -102,14 +126,26 @@ def get_element_details(driver, element):
             }
             return getElementXPath(arguments[0]);
         ''', element)
-        selectors['Full XPath'] = full_xpath
+        if full_xpath and '"' in full_xpath:
+            full_xpath = full_xpath.replace('"', "'")
+        # Only add if it actually detects exactly one element
+        try:
+            found = driver.find_elements(By.XPATH, full_xpath)
+            count = len(found)
+            if count > 0:
+                selectors['Full XPath'] = full_xpath
+                found_element_counts['Full XPath'] = count
+            else:
+                selectors.pop('Full XPath', None)
+        except Exception:
+            selectors.pop('Full XPath', None)
 
         # Most relative XPath (copy as relative from devtools):
         # This is usually the shortest unique XPath from the element to the root with id if available
         relative_xpath = driver.execute_script('''
             function getRelativeXPath(elt) {
                 if (elt.id !== '') {
-                    return '//*[@id="' + elt.id + '"]';
+                    return "//*[@id='" + elt.id + "']";
                 }
                 var path = '';
                 for (; elt && elt.nodeType == 1; elt = elt.parentNode) {
@@ -125,7 +161,7 @@ def get_element_details(driver, element):
                     var segment = xname + (sibCount > 1 ? '[' + sibIndex + ']' : '');
                     path = '/' + segment + path;
                     if (elt.parentNode && elt.parentNode.nodeType == 1 && elt.parentNode.id) {
-                        path = '//*[@id="' + elt.parentNode.id + '"]' + path;
+                        path = "//*[@id='" + elt.parentNode.id + "']" + path;
                         break;
                     }
                 }
@@ -133,7 +169,19 @@ def get_element_details(driver, element):
             }
             return getRelativeXPath(arguments[0]);
         ''', element)
-        selectors['Relative XPath'] = relative_xpath
+        if relative_xpath and '"' in relative_xpath:
+            relative_xpath = relative_xpath.replace('"', "'")
+        # Only add if it actually detects exactly one element
+        try:
+            found = driver.find_elements(By.XPATH, relative_xpath)
+            count = len(found)
+            if count > 0:
+                selectors['Relative XPath'] = relative_xpath
+                found_element_counts['Relative XPath'] = count
+            else:
+                selectors.pop('Relative XPath', None)
+        except Exception:
+            selectors.pop('Relative XPath', None)
 
         # Add smart/shortest unique XPath (like DevTools) as accu_xpath
         accu_xpath = None
@@ -178,7 +226,23 @@ def get_element_details(driver, element):
             ''')
         except Exception:
             accu_xpath = None
-        selectors['accu_xpath'] = accu_xpath
+        # Only add if it actually detects an element
+        if accu_xpath:
+            # Always use single quotes in accu_xpath
+            if '"' in accu_xpath:
+                accu_xpath = accu_xpath.replace('"', "'")
+            try:
+                found = driver.find_elements(By.XPATH, accu_xpath)
+                count = len(found)
+                if count > 0:
+                    selectors['accu_xpath'] = accu_xpath
+                    found_element_counts['accu_xpath'] = count
+                else:
+                    selectors.pop('accu_xpath', None)
+            except Exception:
+                selectors.pop('accu_xpath', None)
+        else:
+            selectors.pop('accu_xpath', None)
 
         # Add visible_property_xpath: prefer text, then aria-label, then value
         visible_property_xpath = None
@@ -187,14 +251,45 @@ def get_element_details(driver, element):
         value_val = props.get('value', '')
         tag = element.tag_name
         if text_val:
-            # Use normalize-space to match text
-            visible_property_xpath = f"//{tag}[normalize-space(text())='{text_val.strip()}']"
+            candidate = f"//{tag}[normalize-space(text())='{text_val.strip()}']"
+            try:
+                found = driver.find_elements(By.XPATH, candidate)
+                count = len(found)
+                if count > 0:
+                    selectors['visible_property_xpath'] = candidate
+                    found_element_counts['visible_property_xpath'] = count
+                else:
+                    selectors.pop('visible_property_xpath', None)
+            except Exception:
+                selectors.pop('visible_property_xpath', None)
         elif aria_label_val:
-            visible_property_xpath = f"//{tag}[@aria-label='{aria_label_val}']"
+            candidate = f"//{tag}[@aria-label='{aria_label_val}']".replace('"', "'")
+            try:
+                found = driver.find_elements(By.XPATH, candidate)
+                count = len(found)
+                if count > 0:
+                    selectors['visible_property_xpath'] = candidate
+                    found_element_counts['visible_property_xpath'] = count
+                else:
+                    selectors.pop('visible_property_xpath', None)
+            except Exception:
+                selectors.pop('visible_property_xpath', None)
         elif value_val:
-            visible_property_xpath = f"//{tag}[@value='{value_val}']"
-        selectors['visible_property_xpath'] = visible_property_xpath
+            candidate = f"//{tag}[@value='{value_val}']".replace('"', "'")
+            try:
+                found = driver.find_elements(By.XPATH, candidate)
+                count = len(found)
+                if count > 0:
+                    selectors['visible_property_xpath'] = candidate
+                    found_element_counts['visible_property_xpath'] = count
+                else:
+                    selectors.pop('visible_property_xpath', None)
+            except Exception:
+                selectors.pop('visible_property_xpath', None)
+        else:
+            selectors.pop('visible_property_xpath', None)
         details['selectors'] = selectors
+        details['found_element_counts'] = found_element_counts
     except Exception as e:
         details['error'] = str(e)
     return details
@@ -253,23 +348,59 @@ def capture_elements(driver, selectors_list):
         page_url = driver.current_url
         details['page_url'] = page_url
         print('Element details:', details)
-        # --- CSV: Only append page_url, name, value, type, text (max 40 chars), full_xpath, relative_xpath ---
+
+        # --- CSV: Only append selectors with exactly one match ---
         name = details['properties'].get('name', '')
         value = details['properties'].get('value', '')
         typ = details['properties'].get('type', '')
         text = details['properties'].get('text', '')
         if text and len(text) > 40:
             text = text[:40]
-        full_xpath = details['selectors'].get('Full XPath', '')
-        relative_xpath = details['selectors'].get('Relative XPath', '')
+        selectors = details['selectors']
+        found_element_counts = details.get('found_element_counts', {})
+        # XPaths
+        full_xpath = selectors.get('Full XPath', '') if found_element_counts.get('Full XPath', 0) == 1 else ''
+        relative_xpath = selectors.get('Relative XPath', '') if found_element_counts.get('Relative XPath', 0) == 1 else ''
+        # Extra xpaths
+        extra_xpaths = {}
+        for key in ['accu_xpath', 'visible_property_xpath']:
+            xpath_val = selectors.get(key, None)
+            found_count = found_element_counts.get(key, 0)
+            if xpath_val and found_count == 1:
+                extra_xpaths[key] = xpath_val
+        # CSS selectors with exactly one match
+        css_keys = [
+            'CSS Selector (Class)',
+            'CSS Selector (Combined)',
+            'CSS Selector (ID)',
+            'CSS Selector (Name)'
+        ]
+        css_selectors = {}
+        for css_key in css_keys:
+            css_val = selectors.get(css_key, None)
+            found_count = found_element_counts.get(css_key, 0)
+            if css_val and found_count == 1:
+                css_selectors[css_key] = css_val
+
+        # Prepare CSV columns
+        base_columns = ['page_url', 'name', 'value', 'type', 'text', 'full_xpath', 'relative_xpath']
+        extra_columns = list(extra_xpaths.keys())
+        css_columns = list(css_selectors.keys())
         row = [page_url, name, value, typ, text, full_xpath, relative_xpath]
+        for col in extra_columns:
+            row.append(extra_xpaths[col])
+        for col in css_columns:
+            row.append(css_selectors[col])
         write_header = not os.path.exists(selectors_csv)
         with open(selectors_csv, 'a', newline='', encoding='utf-8') as f:
             writer = csv.writer(f)
             if write_header:
-                writer.writerow(['page_url', 'name', 'value', 'type', 'text', 'full_xpath', 'relative_xpath'])
+                writer.writerow(base_columns + extra_columns + css_columns)
             writer.writerow(row)
         print(f'Details appended to {selectors_csv}')
+        # Add found element count flag to selectors_list
+        # Only keep found_element_counts for selectors with count > 0
+        details['found_element_counts'] = {k: v for k, v in found_element_counts.items() if v > 0}
 
         # --- PAGE-WISE JSON: Save per page, append only if not duplicate ---
         import re
