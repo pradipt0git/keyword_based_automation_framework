@@ -179,6 +179,21 @@ def get_element_details(driver, element):
         except Exception:
             accu_xpath = None
         selectors['accu_xpath'] = accu_xpath
+
+        # Add visible_property_xpath: prefer text, then aria-label, then value
+        visible_property_xpath = None
+        text_val = props.get('text', '')
+        aria_label_val = props.get('ariaLabel', '')
+        value_val = props.get('value', '')
+        tag = element.tag_name
+        if text_val:
+            # Use normalize-space to match text
+            visible_property_xpath = f"//{tag}[normalize-space(text())='{text_val.strip()}']"
+        elif aria_label_val:
+            visible_property_xpath = f"//{tag}[@aria-label='{aria_label_val}']"
+        elif value_val:
+            visible_property_xpath = f"//{tag}[@value='{value_val}']"
+        selectors['visible_property_xpath'] = visible_property_xpath
         details['selectors'] = selectors
     except Exception as e:
         details['error'] = str(e)
@@ -275,6 +290,8 @@ def capture_elements(driver, selectors_list):
                 existing_data = []
         # Check for duplicate: use full_xpath as unique key
         new_full_xpath = details.get('selectors', {}).get('Full XPath', '')
+
+
         is_duplicate = False
         for d in existing_data:
             if d.get('selectors', {}).get('Full XPath', '') == new_full_xpath:
