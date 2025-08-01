@@ -11,7 +11,7 @@ from selenium.common.exceptions import WebDriverException
 
 
 # Path to EdgeDriver (update if needed)
-EDGEDRIVER_PATH = r'C:\\WebDriver\\msedgedriver.exe'  # Update path as needed
+#EDGEDRIVER_PATH = r'C:\\WebDriver\\msedgedriver.exe'  # Update path as needed
 
 # Predefined URL
 default_url = 'https://www.google.com'
@@ -30,7 +30,7 @@ def close_all_browsers():
 def open_browser(url):
     options = Options()
     # Edge does not support 'detach' option like Chrome, so we skip it
-    driver = webdriver.Edge(service=Service(EDGEDRIVER_PATH), options=options)
+    driver = webdriver.Edge(options=options)
     driver.get(url)
     return driver
 
