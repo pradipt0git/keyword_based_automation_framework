@@ -318,11 +318,35 @@ def get_css_selector(element):
 def enable_capture_js(driver):
     js = '''
     if (!window._captureHandler) {
+        window._captureModeActive = true;
+        window._f9Pressed = false;
+        window.addEventListener('keydown', function(e) {
+            if (e.key === 'F9') window._f9Pressed = true;
+        }, true);
+        window.addEventListener('keyup', function(e) {
+            if (e.key === 'F9') window._f9Pressed = false;
+        }, true);
         window._captureHandler = function(e) {
-            e.preventDefault();
-            window.clickedElement = e.target;
+            if (window._captureModeActive && window._f9Pressed) {
+                e.preventDefault();
+                e.stopPropagation();
+                window.clickedElement = e.target;
+            }
         };
         document.body.addEventListener('click', window._captureHandler, true);
+        // Prevent all key and mouse events from propagating and triggering default actions only if capture mode is active and F9 is pressed
+        window._captureKeyHandler = function(e) {
+            if (window._captureModeActive && window._f9Pressed) {
+                e.preventDefault();
+                e.stopPropagation();
+            }
+        };
+        var events = ['keydown','keyup','keypress','mousedown','mouseup','dblclick','contextmenu'];
+        for (var i = 0; i < events.length; i++) {
+            document.body.addEventListener(events[i], window._captureKeyHandler, true);
+        }
+    } else {
+        window._captureModeActive = true;
     }
     '''
     driver.execute_script(js)
@@ -330,8 +354,7 @@ def enable_capture_js(driver):
 def disable_capture_js(driver):
     js = '''
     if (window._captureHandler) {
-        document.body.removeEventListener('click', window._captureHandler, true);
-        window._captureHandler = null;
+        window._captureModeActive = false;
     }
     '''
     driver.execute_script(js)
@@ -342,8 +365,8 @@ def capture_elements(driver, selectors_list):
     clicked = driver.execute_script('return window.clickedElement || null;')
     if clicked:
         elem = driver.execute_script('return window.clickedElement;')
-        element = driver.execute_script('return arguments[0];', elem)
-        details = get_element_details(driver, driver.switch_to.active_element)
+        # Use the actual clicked element for get_element_details
+        details = get_element_details(driver, elem)
         # Add current page URL to details
         page_url = driver.current_url
         details['page_url'] = page_url

@@ -1,0 +1,10 @@
+page_url,name,value,type,text,full_xpath,relative_xpath,visible_property_xpath,CSS Selector (Class),CSS Selector (Combined),CSS Selector (ID),CSS Selector (Name)
+https://www.google.com/,q,,textarea,,/html[1]/body[1]/div[2]/div[4]/form[1]/div[1]/div[1]/div[1]/div[1]/div[2]/textarea[1],//*[@id='APjFqb'],//textarea[@aria-label='Search'],.gLFyf,textarea.gLFyf,#APjFqb,textarea[name='q']
+https://www.google.com/,,,,Store,/html[1]/body[1]/div[2]/div[2]/a[2],/html/body/div[2]/div[2]/a[2],//a[normalize-space(text())='Store']
+https://www.google.com/,,,,About,/html[1]/body[1]/div[2]/div[2]/a[1],/html/body/div[2]/div[2]/a[1],//a[normalize-space(text())='About']
+https://www.google.com/,q,,textarea,,/html[1]/body[1]/div[2]/div[4]/form[1]/div[1]/div[1]/div[1]/div[1]/div[2]/textarea[1],//*[@id='APjFqb'],//*[@id='APjFqb'],//textarea[@aria-label='Search'],.gLFyf,textarea.gLFyf,#APjFqb,textarea[name='q']
+https://www.google.com/,q,,textarea,,/html[1]/body[1]/div[2]/div[4]/form[1]/div[1]/div[1]/div[1]/div[1]/div[2]/textarea[1],//*[@id='APjFqb'],//*[@id='APjFqb'],//textarea[@aria-label='Search'],.gLFyf,textarea.gLFyf,#APjFqb,textarea[name='q']
+https://www.google.com/,,,,Images,/html[1]/body[1]/div[2]/div[2]/div[1]/div[1]/header[1]/div[1]/div[2]/a[1],//*[@id='gb']/div[1]/div[2]/a,//div[2]/div[2]/div/div/header/div[1]/div[2]/a,//a[normalize-space(text())='Images']
+https://www.google.com/,,,,About,/html[1]/body[1]/div[2]/div[2]/a[1],/html/body/div[2]/div[2]/a[1],//a[normalize-space(text())='About']
+https://www.google.com/,,,,বাংলা,/html[1]/body[1]/div[2]/div[5]/div[3]/div[1]/a[2],//*[@id='SIvCob']/a[2],//div[2]/div[5]/div[3]/div/a[2],//a[normalize-space(text())='বাংলা']
+https://www.google.com/,q,,textarea,,/html[1]/body[1]/div[2]/div[4]/form[1]/div[1]/div[1]/div[1]/div[1]/div[2]/textarea[1],//*[@id='APjFqb'],//*[@id='APjFqb'],//textarea[@aria-label='Search'],.gLFyf,textarea.gLFyf,#APjFqb,textarea[name='q']
