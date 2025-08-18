@@ -1,111 +1,60 @@
 [
   {
+    "name": "Store",
     "properties": {
-      "ariaLabel": "Search",
-      "className": "gLFyf",
-      "href": null,
-      "id": "APjFqb",
-      "name": "q",
-      "role": "combobox",
-      "tag": "TEXTAREA",
-      "text": "",
-      "title": "Search",
-      "type": "textarea",
-      "value": "",
-      "rect": {
-        "bottom": 228.6666717529297,
-        "height": 50,
-        "left": 222.6666717529297,
-        "right": 664.1875152587891,
-        "top": 178.6666717529297,
-        "width": 441.5208435058594,
-        "x": 222.6666717529297,
-        "y": 178.6666717529297
-      },
-      "x": 443.4270935058594,
-      "y": 203.6666717529297
-    },
-    "selectors": {
-      "Class Name": "gLFyf",
-      "CSS Selector (Class)": ".gLFyf",
-      "XPath (Class)": "//*[contains(@class, 'gLFyf')]",
-      "CSS Selector (Combined)": "textarea.gLFyf",
-      "XPath (Combined)": "//textarea[contains(@class, 'gLFyf')]",
-      "CSS Selector (ID)": "#APjFqb",
-      "XPath (ID)": "//*[@id='APjFqb']",
-      "CSS Selector (Name)": "textarea[name='q']",
-      "XPath (Name)": "//textarea[@name='q']",
-      "Tag": "textarea",
-      "Full XPath": "/html[1]/body[1]/div[2]/div[4]/form[1]/div[1]/div[1]/div[1]/div[1]/div[2]/textarea[1]",
-      "Relative XPath": "//*[@id='APjFqb']",
-      "accu_xpath": "//*[@id='APjFqb']",
-      "visible_property_xpath": "//textarea[@aria-label='Search']"
-    },
-    "found_element_counts": {
-      "CSS Selector (Class)": 1,
-      "CSS Selector (Combined)": 1,
-      "CSS Selector (ID)": 1,
-      "CSS Selector (Name)": 1,
-      "Full XPath": 1,
-      "Relative XPath": 1,
-      "accu_xpath": 1,
-      "visible_property_xpath": 1
-    },
-    "page_url": "https://www.google.com/"
-  },
-  {
-    "properties": {
-      "ariaLabel": "Search for Images ",
-      "className": "gb_X",
-      "href": "https://www.google.com/imghp?hl=en&ogbl",
+      "ariaLabel": null,
+      "className": "MV3Tnb",
+      "href": "https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=webhp&cd=&ved=0ahUKEwiA4LWSr4qPAxXIRmwGHUnXL-gQpMwCCAM&url=https%3A%2F%2Fstore.google.com%2FIN%3Futm_source%3Dhp_header%26utm_medium%3Dgoogle_ooo%26utm_campaign%3DGS100042%26hl%3Den-IN&usg=AOvVaw1yMLu5XT-r35gxGQEqYnyy&opi=89978449",
       "id": "",
       "name": "",
       "role": null,
       "tag": "A",
-      "text": "Images",
+      "text": "Store",
       "title": "",
       "type": "",
       "value": null,
       "rect": {
-        "bottom": 40.33333396911621,
-        "height": 24,
-        "left": 837.3646240234375,
-        "right": 880.0000419616699,
-        "top": 16.33333396911621,
-        "width": 42.63541793823242,
-        "x": 837.3646240234375,
-        "y": 16.33333396911621
+        "bottom": 43,
+        "height": 26,
+        "left": 77.59375,
+        "right": 121.0625,
+        "top": 17,
+        "width": 43.46875,
+        "x": 77.59375,
+        "y": 17
       },
-      "x": 858.6823329925537,
-      "y": 28.33333396911621
+      "x": 99.328125,
+      "y": 30.0
     },
     "selectors": {
-      "Class Name": "gb_X",
-      "CSS Selector (Class)": ".gb_X",
-      "XPath (Class)": "//*[contains(@class, 'gb_X')]",
-      "CSS Selector (Combined)": "a.gb_X",
-      "XPath (Combined)": "//a[contains(@class, 'gb_X')]",
+      "Class Name": "MV3Tnb",
+      "CSS Selector (Class)": ".MV3Tnb",
+      "XPath (Class)": "//*[contains(@class, 'MV3Tnb')]",
+      "CSS Selector (Combined)": "a.MV3Tnb",
+      "XPath (Combined)": "//a[contains(@class, 'MV3Tnb')]",
       "Tag": "a",
-      "Full XPath": "/html[1]/body[1]/div[2]/div[2]/div[1]/div[1]/header[1]/div[1]/div[2]/a[1]",
-      "Relative XPath": "//*[@id='gb']/div[1]/div[2]/a",
-      "accu_xpath": "//div[2]/div[2]/div/div/header/div[1]/div[2]/a",
-      "visible_property_xpath": "//a[normalize-space(text())='Images']"
+      "Full XPath": "/html[1]/body[1]/div[2]/div[2]/a[2]",
+      "Relative XPath": "/html/body/div[2]/div[2]/a[2]",
+      "accu_xpath": "//div[2]/div[2]/a[2]",
+      "visible_property_xpath": "//a[normalize-space(text())='Store']",
+      "xpath": "//a[normalize-space(text())='Store']"
     },
     "found_element_counts": {
       "CSS Selector (Class)": 2,
       "CSS Selector (Combined)": 2,
       "Full XPath": 1,
       "Relative XPath": 1,
-      "accu_xpath": 1,
+      "accu_xpath": 2,
       "visible_property_xpath": 1
     },
     "page_url": "https://www.google.com/"
   },
   {
+    "name": "About",
     "properties": {
       "ariaLabel": null,
       "className": "MV3Tnb",
-      "href": "https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=webhp&cd=&ved=0ahUKEwix1sLu_fCOAxXPjJUCHa_pB0EQkNQCCAI&url=https%3A%2F%2Fabout.google%2F%3Ffg%3D1%26utm_source%3Dgoogle-IN%26utm_medium%3Dreferral%26utm_campaign%3Dhp-header&usg=AOvVaw0CtSO059N49aDG_TIeJdnK&opi=89978449",
+      "href": "https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=webhp&cd=&ved=0ahUKEwiA4LWSr4qPAxXIRmwGHUnXL-gQkNQCCAI&url=https%3A%2F%2Fabout.google%2F%3Ffg%3D1%26utm_source%3Dgoogle-IN%26utm_medium%3Dreferral%26utm_campaign%3Dhp-header&usg=AOvVaw0CtSO059N49aDG_TIeJdnK&opi=89978449",
       "id": "",
       "name": "",
       "role": null,
@@ -137,7 +86,8 @@
       "Full XPath": "/html[1]/body[1]/div[2]/div[2]/a[1]",
       "Relative XPath": "/html/body/div[2]/div[2]/a[1]",
       "accu_xpath": "//div[2]/div[2]/a[1]",
-      "visible_property_xpath": "//a[normalize-space(text())='About']"
+      "visible_property_xpath": "//a[normalize-space(text())='About']",
+      "xpath": "//a[normalize-space(text())='About']"
     },
     "found_element_counts": {
       "CSS Selector (Class)": 2,
@@ -145,50 +95,6 @@
       "Full XPath": 1,
       "Relative XPath": 1,
       "accu_xpath": 2,
-      "visible_property_xpath": 1
-    },
-    "page_url": "https://www.google.com/"
-  },
-  {
-    "properties": {
-      "ariaLabel": null,
-      "className": "",
-      "href": "https://www.google.com/setprefs?sig=0_yG2QBmhLcthcyO7TwrqfiYSGMSA%3D&hl=bn&source=homepage&sa=X&ved=0ahUKEwix1sLu_fCOAxXPjJUCHa_pB0EQ2ZgBCBk",
-      "id": "",
-      "name": "",
-      "role": null,
-      "tag": "A",
-      "text": "বাংলা",
-      "title": "",
-      "type": "",
-      "value": null,
-      "rect": {
-        "bottom": 358.6666669845581,
-        "height": 14.666666984558105,
-        "left": 416.125,
-        "right": 446,
-        "top": 344,
-        "width": 29.875,
-        "x": 416.125,
-        "y": 344
-      },
-      "x": 431.0625,
-      "y": 351.33333349227905
-    },
-    "selectors": {
-      "Class Name": "",
-      "XPath (Class)": null,
-      "XPath (Combined)": null,
-      "Tag": "a",
-      "Full XPath": "/html[1]/body[1]/div[2]/div[5]/div[3]/div[1]/a[2]",
-      "Relative XPath": "//*[@id='SIvCob']/a[2]",
-      "accu_xpath": "//div[2]/div[5]/div[3]/div/a[2]",
-      "visible_property_xpath": "//a[normalize-space(text())='বাংলা']"
-    },
-    "found_element_counts": {
-      "Full XPath": 1,
-      "Relative XPath": 1,
-      "accu_xpath": 1,
       "visible_property_xpath": 1
     },
     "page_url": "https://www.google.com/"

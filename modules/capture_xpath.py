@@ -36,7 +36,20 @@ def open_browser(url):
 
 
 def get_element_details(driver, element):
-    details = {}
+    # Determine the 'name' field for the JSON object
+    name_val = element.get_attribute('name')
+    if name_val:
+        details = {'name': name_val}
+    else:
+        text_val = element.text
+        if text_val:
+            details = {'name': text_val}
+        else:
+            title_val = element.get_attribute('title')
+            if title_val:
+                details = {'name': title_val}
+            else:
+                details = {'name': ''}
     try:
         # Properties
         props = {}
@@ -257,11 +270,14 @@ def get_element_details(driver, element):
                 count = len(found)
                 if count > 0:
                     selectors['visible_property_xpath'] = candidate
+                    selectors['xpath'] = candidate  # Add 'xpath' property after 'visible_property_xpath'
                     found_element_counts['visible_property_xpath'] = count
                 else:
                     selectors.pop('visible_property_xpath', None)
+                    selectors.pop('xpath', None)
             except Exception:
                 selectors.pop('visible_property_xpath', None)
+                selectors.pop('xpath', None)
         elif aria_label_val:
             candidate = f"//{tag}[@aria-label='{aria_label_val}']".replace('"', "'")
             try:
@@ -269,11 +285,14 @@ def get_element_details(driver, element):
                 count = len(found)
                 if count > 0:
                     selectors['visible_property_xpath'] = candidate
+                    selectors['xpath'] = candidate  # Add 'xpath' property after 'visible_property_xpath'
                     found_element_counts['visible_property_xpath'] = count
                 else:
                     selectors.pop('visible_property_xpath', None)
+                    selectors.pop('xpath', None)
             except Exception:
                 selectors.pop('visible_property_xpath', None)
+                selectors.pop('xpath', None)
         elif value_val:
             candidate = f"//{tag}[@value='{value_val}']".replace('"', "'")
             try:
@@ -281,13 +300,17 @@ def get_element_details(driver, element):
                 count = len(found)
                 if count > 0:
                     selectors['visible_property_xpath'] = candidate
+                    selectors['xpath'] = candidate  # Add 'xpath' property after 'visible_property_xpath'
                     found_element_counts['visible_property_xpath'] = count
                 else:
                     selectors.pop('visible_property_xpath', None)
+                    selectors.pop('xpath', None)
             except Exception:
                 selectors.pop('visible_property_xpath', None)
+                selectors.pop('xpath', None)
         else:
             selectors.pop('visible_property_xpath', None)
+            selectors.pop('xpath', None)
         details['selectors'] = selectors
         details['found_element_counts'] = found_element_counts
     except Exception as e:
