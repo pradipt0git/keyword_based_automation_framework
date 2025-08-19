@@ -199,7 +199,7 @@ def get_element_details(driver, element):
         # Add smart/shortest unique XPath (like DevTools) as accu_xpath
         accu_xpath = None
         try:
-            accu_xpath = driver.execute_script('''
+            accu_xpath = driver.execute_script(r'''
                 function getSmartXPath(element) {
                     if (!element) return '';
                     // Prefer id if unique

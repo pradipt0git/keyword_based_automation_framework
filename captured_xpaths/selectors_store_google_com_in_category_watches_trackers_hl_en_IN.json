@@ -1,0 +1,198 @@
+[
+  {
+    "name": "Earbuds",
+    "properties": {
+      "ariaLabel": null,
+      "className": "XRLS1c",
+      "href": "https://store.google.com/category/earbuds",
+      "id": "",
+      "name": "",
+      "role": null,
+      "tag": "A",
+      "text": "Earbuds",
+      "title": "",
+      "type": "",
+      "value": null,
+      "rect": {
+        "bottom": 91.2500057220459,
+        "height": 17.33333396911621,
+        "left": 131.42709350585938,
+        "right": 183.86459350585938,
+        "top": 73.91667175292969,
+        "width": 52.4375,
+        "x": 131.42709350585938,
+        "y": 73.91667175292969
+      },
+      "x": 157.64584350585938,
+      "y": 82.5833387374878
+    },
+    "selectors": {
+      "Class Name": "XRLS1c",
+      "CSS Selector (Class)": ".XRLS1c",
+      "XPath (Class)": "//*[contains(@class, 'XRLS1c')]",
+      "CSS Selector (Combined)": "a.XRLS1c",
+      "XPath (Combined)": "//a[contains(@class, 'XRLS1c')]",
+      "Tag": "a",
+      "Full XPath": "/html[1]/body[1]/c-wiz[1]/div[1]/div[2]/div[2]/div[1]/c-wiz[1]/div[1]/div[3]/div[2]/a[1]",
+      "Relative XPath": "//*[@id='kO001e']/div/div[2]/div[2]/div/c-wiz/div/div[3]/div[2]/a",
+      "accu_xpath": "//c-wiz[1]/div/div[2]/div[2]/div/c-wiz/div/div[3]/div[2]/a",
+      "visible_property_xpath": "//a[normalize-space(text())='Earbuds']",
+      "xpath": "//a[normalize-space(text())='Earbuds']"
+    },
+    "found_element_counts": {
+      "CSS Selector (Class)": 12,
+      "CSS Selector (Combined)": 12,
+      "Full XPath": 1,
+      "Relative XPath": 1,
+      "accu_xpath": 1,
+      "visible_property_xpath": 1
+    },
+    "page_url": "https://store.google.com/in/category/watches_trackers?hl=en-IN"
+  },
+  {
+    "name": "Phones",
+    "properties": {
+      "ariaLabel": null,
+      "className": "XRLS1c",
+      "href": "https://store.google.com/category/phones",
+      "id": "",
+      "name": "",
+      "role": null,
+      "tag": "A",
+      "text": "Phones",
+      "title": "",
+      "type": "",
+      "value": null,
+      "rect": {
+        "bottom": 91.2500057220459,
+        "height": 17.33333396911621,
+        "left": 64,
+        "right": 111.42708587646484,
+        "top": 73.91667175292969,
+        "width": 47.427085876464844,
+        "x": 64,
+        "y": 73.91667175292969
+      },
+      "x": 87.71354293823242,
+      "y": 82.5833387374878
+    },
+    "selectors": {
+      "Class Name": "XRLS1c",
+      "CSS Selector (Class)": ".XRLS1c",
+      "XPath (Class)": "//*[contains(@class, 'XRLS1c')]",
+      "CSS Selector (Combined)": "a.XRLS1c",
+      "XPath (Combined)": "//a[contains(@class, 'XRLS1c')]",
+      "Tag": "a",
+      "Full XPath": "/html[1]/body[1]/c-wiz[1]/div[1]/div[2]/div[2]/div[1]/c-wiz[1]/div[1]/div[3]/div[1]/a[1]",
+      "Relative XPath": "//*[@id='kO001e']/div/div[2]/div[2]/div/c-wiz/div/div[3]/div[1]/a",
+      "accu_xpath": "//c-wiz[1]/div/div[2]/div[2]/div/c-wiz/div/div[3]/div[1]/a",
+      "visible_property_xpath": "//a[normalize-space(text())='Phones']",
+      "xpath": "//a[normalize-space(text())='Phones']"
+    },
+    "found_element_counts": {
+      "CSS Selector (Class)": 12,
+      "CSS Selector (Combined)": 12,
+      "Full XPath": 1,
+      "Relative XPath": 1,
+      "accu_xpath": 1,
+      "visible_property_xpath": 1
+    },
+    "page_url": "https://store.google.com/in/category/watches_trackers?hl=en-IN"
+  },
+  {
+    "name": "Accessories",
+    "properties": {
+      "ariaLabel": null,
+      "className": "XRLS1c",
+      "href": "https://store.google.com/collection/accessories_wall",
+      "id": "",
+      "name": "",
+      "role": null,
+      "tag": "A",
+      "text": "Accessories",
+      "title": "",
+      "type": "",
+      "value": null,
+      "rect": {
+        "bottom": 91.2500057220459,
+        "height": 17.33333396911621,
+        "left": 349.19793701171875,
+        "right": 426.29168701171875,
+        "top": 73.91667175292969,
+        "width": 77.09375,
+        "x": 349.19793701171875,
+        "y": 73.91667175292969
+      },
+      "x": 387.74481201171875,
+      "y": 82.5833387374878
+    },
+    "selectors": {
+      "Class Name": "XRLS1c",
+      "CSS Selector (Class)": ".XRLS1c",
+      "XPath (Class)": "//*[contains(@class, 'XRLS1c')]",
+      "CSS Selector (Combined)": "a.XRLS1c",
+      "XPath (Combined)": "//a[contains(@class, 'XRLS1c')]",
+      "Tag": "a",
+      "Full XPath": "/html[1]/body[1]/c-wiz[1]/div[1]/div[2]/div[2]/div[1]/c-wiz[1]/div[1]/div[3]/div[4]/a[1]",
+      "Relative XPath": "//*[@id='kO001e']/div/div[2]/div[2]/div/c-wiz/div/div[3]/div[4]/a",
+      "accu_xpath": "//c-wiz[1]/div/div[2]/div[2]/div/c-wiz/div/div[3]/div[4]/a",
+      "visible_property_xpath": "//a[normalize-space(text())='Accessories']",
+      "xpath": "//a[normalize-space(text())='Accessories']"
+    },
+    "found_element_counts": {
+      "CSS Selector (Class)": 12,
+      "CSS Selector (Combined)": 12,
+      "Full XPath": 1,
+      "Relative XPath": 1,
+      "accu_xpath": 1,
+      "visible_property_xpath": 1
+    },
+    "page_url": "https://store.google.com/in/category/watches_trackers?hl=en-IN"
+  },
+  {
+    "name": "here",
+    "properties": {
+      "ariaLabel": null,
+      "className": "",
+      "href": "https://store.google.com/magazine/google_fitbit",
+      "id": "",
+      "name": "",
+      "role": null,
+      "tag": "A",
+      "text": "here",
+      "title": "",
+      "type": "",
+      "value": null,
+      "rect": {
+        "bottom": 222,
+        "height": 24,
+        "left": 659.6354370117188,
+        "right": 696.1979370117188,
+        "top": 198,
+        "width": 36.5625,
+        "x": 659.6354370117188,
+        "y": 198
+      },
+      "x": 677.9166870117188,
+      "y": 210.0
+    },
+    "selectors": {
+      "Class Name": "",
+      "XPath (Class)": null,
+      "XPath (Combined)": null,
+      "Tag": "a",
+      "Full XPath": "/html[1]/body[1]/c-wiz[2]/div[1]/div[1]/div[2]/main[1]/div[1]/div[1]/div[1]/div[2]/c-wiz[1]/div[1]/c-wiz[1]/div[1]/div[1]/section[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/a[1]",
+      "Relative XPath": "//*[@id='fitbit-migration-banner']/div/div/div/div/div/div/div/div/div/div/div/div/div/div/div[2]/div/div/div/div/div/a",
+      "accu_xpath": "//c-wiz[2]/div/div/div[2]/main/div[1]/div/div/div[2]/c-wiz/div[1]/c-wiz/div/div/section/div/div/div/div/div/div/div/div/div/div/div/div/div/div/div[2]/div/div/div/div/div/a",
+      "visible_property_xpath": "//a[normalize-space(text())='here']",
+      "xpath": "//a[normalize-space(text())='here']"
+    },
+    "found_element_counts": {
+      "Full XPath": 1,
+      "Relative XPath": 1,
+      "accu_xpath": 1,
+      "visible_property_xpath": 1
+    },
+    "page_url": "https://store.google.com/in/category/watches_trackers?hl=en-IN"
+  }
+]
