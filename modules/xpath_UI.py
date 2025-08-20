@@ -6,7 +6,7 @@ app = Flask(__name__)
 
 CAPTURED_XPATHS_DIR = os.path.join(os.path.dirname(__file__), '../captured_xpaths')
 
-TEMPLATE = '''
+TEMPLATE = r'''
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -59,6 +59,7 @@ TEMPLATE = '''
         }
         function createElementTree(page, elements, pageIdx) {
             const pageLi = document.createElement('li');
+            pageLi.classList.add('collapsed');
             // File name input (without extension)
             const fileName = page.replace(/\.json$/, '');
             const fileNameInput = document.createElement('input');
@@ -87,27 +88,40 @@ TEMPLATE = '''
                     alert('Rename failed: ' + (result.error || 'Unknown error'));
                 }
             };
-            // Tree toggle
-            const pageToggle = document.createElement('span');
-            pageToggle.textContent = ' '; // for spacing
-            pageToggle.className = 'tree-toggle';
-            pageToggle.onclick = () => {
-                pageLi.classList.toggle('open');
+            // Page collapse/expand button
+            const pageCollapseBtn = document.createElement('button');
+            pageCollapseBtn.textContent = '[+]';
+            pageCollapseBtn.title = 'Collapse/Expand Page';
+            pageCollapseBtn.onclick = () => {
+                const isCollapsed = pageLi.classList.toggle('collapsed');
+                pageCollapseBtn.textContent = isCollapsed ? '[+]' : '[–]';
+                ul.style.display = isCollapsed ? 'none' : 'block';
             };
+            // Move this after ul is defined
+            // Tree toggle (for spacing only)
+            const pageToggle = document.createElement('span');
+            pageToggle.textContent = ' ';
+            pageToggle.className = 'tree-toggle';
             pageLi.appendChild(fileNameInput);
             pageLi.appendChild(saveBtn);
+            pageLi.appendChild(pageCollapseBtn);
             pageLi.appendChild(pageToggle);
             const ul = document.createElement('ul');
+            ul.style.display = 'none'; // Default collapsed
             elements.forEach((el, elIdx) => {
                 const elLi = document.createElement('li');
                 elLi.className = 'element';
-                // Name input
+                // Name input and save button
                 const nameInput = document.createElement('input');
                 nameInput.type = 'text';
                 nameInput.value = el.name || '';
                 nameInput.className = 'element-name-input';
-                nameInput.onchange = async (e) => {
-                    const newName = e.target.value;
+                nameInput.style.marginRight = '4px';
+                const saveNameBtn = document.createElement('button');
+                saveNameBtn.innerHTML = '💾';
+                saveNameBtn.title = 'Save Name';
+                saveNameBtn.onclick = async () => {
+                    const newName = nameInput.value;
                     await fetch('/api/update_name', {
                         method: 'POST',
                         headers: { 'Content-Type': 'application/json' },
@@ -115,6 +129,7 @@ TEMPLATE = '''
                     });
                 };
                 elLi.appendChild(nameInput);
+                elLi.appendChild(saveNameBtn);
                 // Expand/collapse
                 const expandBtn = document.createElement('button');
                 expandBtn.textContent = '[+]';
@@ -126,6 +141,24 @@ TEMPLATE = '''
                 // Details (collapsible JSON)
                 const detailsDiv = document.createElement('div');
                 detailsDiv.className = 'element-details';
+                // Xpath textbox and save button (shown after expand/collapse)
+                const xpathBox = document.createElement('input');
+                xpathBox.type = 'text';
+                xpathBox.value = (el.selectors && el.selectors.xpath) ? el.selectors.xpath : '';
+                xpathBox.className = 'element-name-input';
+                xpathBox.style.marginBottom = '4px';
+                xpathBox.style.width = '70%';
+                const saveXpathBtn = document.createElement('button');
+                saveXpathBtn.innerHTML = '💾';
+                saveXpathBtn.title = 'Save XPath';
+                saveXpathBtn.onclick = async () => {
+                    const newXpath = xpathBox.value;
+                    await fetch('/api/update_xpath', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({ page, index: elIdx, xpath: newXpath })
+                    });
+                };
                 // Use <details> and <summary> for collapsible JSON
                 const detailsTag = document.createElement('details');
                 detailsTag.open = false;
@@ -138,8 +171,18 @@ TEMPLATE = '''
                 pre.style.fontSize = '13px';
                 pre.textContent = JSON.stringify(el, null, 2);
                 detailsTag.appendChild(pre);
+                detailsDiv.appendChild(xpathBox);
+                detailsDiv.appendChild(saveXpathBtn);
                 detailsDiv.appendChild(detailsTag);
                 elLi.appendChild(detailsDiv);
+                // Show/hide detailsDiv (xpath box + JSON) on expand/collapse
+                elLi.classList.remove('open');
+                detailsDiv.style.display = 'none';
+                expandBtn.onclick = () => {
+                    elLi.classList.toggle('open');
+                    expandBtn.textContent = elLi.classList.contains('open') ? '[-]' : '[+]';
+                    detailsDiv.style.display = elLi.classList.contains('open') ? 'block' : 'none';
+                };
                 ul.appendChild(elLi);
             });
             pageLi.appendChild(ul);
@@ -274,10 +317,17 @@ def api_update_xpath():
         return jsonify({'success': False, 'error': str(e)})
     return jsonify({'success': False, 'error': 'Invalid index'})
                 
-if __name__ == '__main__':
+def open_browser(url):
+    import time
+    time.sleep(1.5)
     import webbrowser
-    import threading
+    webbrowser.open(url)
+
+if __name__ == '__main__':
     port = 5005
     url = f'http://127.0.0.1:{port}/'
-    threading.Timer(1.5, lambda: webbrowser.open(url)).start()
+    from multiprocessing import Process
+    import os
+    if os.environ.get('WERKZEUG_RUN_MAIN') == 'true':
+        Process(target=open_browser, args=(url,)).start()
     app.run(port=port, debug=True)
