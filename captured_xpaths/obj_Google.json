@@ -151,5 +151,57 @@
     "page_url": "https://www.google.com/",
     "page_title": "Google",
     "page_name": "Google"
+  },
+  {
+    "name": "Advertising",
+    "properties": {
+      "ariaLabel": null,
+      "className": "pHiOh",
+      "href": "https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=webhp&cd=&ved=0ahUKEwi5l9Lul5mPAxXtFbkGHaa6D4QQkdQCCCE&url=https%3A%2F%2Fwww.google.com%2Fintl%2Fen_in%2Fads%2F%3Fsubid%3Dww-ww-et-g-awa-a-g_hpafoot1_1!o2%26utm_source%3Dgoogle.com%26utm_medium%3Dreferral%26utm_campaign%3Dgoogle_hpafooter%26fg%3D1&usg=AOvVaw3Oj62V1xNd5oAI6Vxou5Lx&opi=89978449",
+      "id": "",
+      "name": "",
+      "role": null,
+      "tag": "A",
+      "text": "Advertising",
+      "title": "",
+      "type": "",
+      "value": null,
+      "rect": {
+        "bottom": 515.3333435058594,
+        "height": 46,
+        "left": 163.53125,
+        "right": 262.7916717529297,
+        "top": 469.3333435058594,
+        "width": 99.26042175292969,
+        "x": 163.53125,
+        "y": 469.3333435058594
+      },
+      "x": 213.16146087646484,
+      "y": 492.3333435058594
+    },
+    "selectors": {
+      "Class Name": "pHiOh",
+      "CSS Selector (Class)": ".pHiOh",
+      "XPath (Class)": "//*[contains(@class, 'pHiOh')]",
+      "CSS Selector (Combined)": "a.pHiOh",
+      "XPath (Combined)": "//a[contains(@class, 'pHiOh')]",
+      "Tag": "a",
+      "Full XPath": "/html[1]/body[1]/div[2]/div[7]/div[1]/div[2]/div[1]/a[1]",
+      "Relative XPath": "/html/body/div[2]/div[7]/div/div[2]/div[1]/a[1]",
+      "accu_xpath": "//div[2]/div[7]/div/div[2]/div[1]/a[1]",
+      "visible_property_xpath": "//a[normalize-space(text())='Advertising']",
+      "xpath": "//a[normalize-space(text())='Advertising']"
+    },
+    "found_element_counts": {
+      "CSS Selector (Class)": 6,
+      "CSS Selector (Combined)": 5,
+      "Full XPath": 1,
+      "Relative XPath": 1,
+      "accu_xpath": 1,
+      "visible_property_xpath": 1
+    },
+    "page_url": "https://www.google.com/",
+    "page_title": "Google",
+    "page_name": "Google"
   }
 ]

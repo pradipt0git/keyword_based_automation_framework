@@ -255,7 +255,25 @@ def api_rename_json():
         return jsonify({'success': True})
     except Exception as e:
         return jsonify({'success': False, 'error': str(e)})
-
+@app.route('/api/update_xpath', methods=['POST'])
+def api_update_xpath():
+    req = request.json
+    page = req['page']
+    idx = req['index']
+    new_xpath = req['xpath']
+    fpath = os.path.join(CAPTURED_XPATHS_DIR, page)
+    try:
+        with open(fpath, 'r', encoding='utf-8') as f:
+            arr = json.load(f)
+        if 0 <= idx < len(arr):
+            arr[idx].setdefault('selectors', {})['xpath'] = new_xpath
+            with open(fpath, 'w', encoding='utf-8') as f:
+                json.dump(arr, f, indent=2, ensure_ascii=False)
+            return jsonify({'success': True})
+    except Exception as e:
+        return jsonify({'success': False, 'error': str(e)})
+    return jsonify({'success': False, 'error': 'Invalid index'})
+                
 if __name__ == '__main__':
     import webbrowser
     import threading

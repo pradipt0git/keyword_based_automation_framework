@@ -102,5 +102,111 @@
     "page_url": "https://accounts.google.com/v3/signin/identifier?continue=https%3A%2F%2Fmail.google.com%2Fmail%2F%26ogbl%2F&emr=1&ifkv=AdBytiNDH8VAbwFtHgO6z2LraadjoWFzS0r3L3CUp-xiYAQ7bfqJEtfsuf_XqArOREIwKWztbi4YQQ&ltmpl=default&ltmplcache=2&osid=1&passive=true&rm=false&scc=1&service=mail&ss=1&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-1490976155%3A1755616133682106",
     "page_title": "Gmail",
     "page_name": "Gmail"
+  },
+  {
+    "name": "Forgot email?",
+    "properties": {
+      "ariaLabel": null,
+      "className": "",
+      "href": null,
+      "id": "",
+      "name": "",
+      "role": null,
+      "tag": "BUTTON",
+      "text": "Forgot email?",
+      "title": "",
+      "type": "button",
+      "value": "",
+      "rect": {
+        "bottom": 247.6666774749756,
+        "height": 17.33333396911621,
+        "left": 530.3333740234375,
+        "right": 622.7083740234375,
+        "top": 230.33334350585938,
+        "width": 92.375,
+        "x": 530.3333740234375,
+        "y": 230.33334350585938
+      },
+      "x": 576.5208740234375,
+      "y": 239.00001049041748
+    },
+    "selectors": {
+      "Class Name": "",
+      "XPath (Class)": null,
+      "XPath (Combined)": null,
+      "Tag": "button",
+      "Full XPath": "/html[1]/body[1]/div[2]/div[1]/div[2]/c-wiz[1]/main[1]/div[2]/div[1]/div[1]/div[1]/form[1]/span[1]/section[1]/div[1]/div[1]/div[3]/button[1]",
+      "Relative XPath": "//*[@id='yDmH0d']/c-wiz/main/div[2]/div/div/div[1]/form/span/section/div/div/div[3]/button",
+      "accu_xpath": "//div[2]/div[1]/div[2]/c-wiz/main/div[2]/div/div/div[1]/form/span/section/div/div/div[3]/button",
+      "visible_property_xpath": "//button[normalize-space(text())='Forgot email?']",
+      "xpath": "//button[normalize-space(text())='Forgot email?']"
+    },
+    "found_element_counts": {
+      "Full XPath": 1,
+      "Relative XPath": 1,
+      "accu_xpath": 1,
+      "visible_property_xpath": 1
+    },
+    "page_url": "https://accounts.google.com/v3/signin/identifier?continue=https%3A%2F%2Fmail.google.com%2Fmail%2F%26ogbl%2F&emr=1&ifkv=AdBytiMac9Yf_II6jfYXax_Wge7awggpgTGw71Jx_9LArJ_QjA8GqXFnkEZQklh2I8L94BdHKsEJkw&ltmpl=default&ltmplcache=2&osid=1&passive=true&rm=false&scc=1&service=mail&ss=1&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S1141683277%3A1755685354404920",
+    "page_title": "Gmail",
+    "page_name": "Gmail"
+  },
+  {
+    "name": "identifier",
+    "properties": {
+      "ariaLabel": "Email or phone",
+      "className": "whsOnd zHQkBf",
+      "href": null,
+      "id": "identifierId",
+      "name": "identifier",
+      "role": null,
+      "tag": "INPUT",
+      "text": "",
+      "title": "",
+      "type": "email",
+      "value": "",
+      "rect": {
+        "bottom": 218,
+        "height": 52,
+        "left": 532.3333740234375,
+        "right": 888.3333740234375,
+        "top": 166,
+        "width": 356,
+        "x": 532.3333740234375,
+        "y": 166
+      },
+      "x": 710.3333740234375,
+      "y": 192.0
+    },
+    "selectors": {
+      "Class Name": "whsOnd zHQkBf",
+      "CSS Selector (Class)": ".whsOnd",
+      "XPath (Class)": "//*[contains(@class, 'whsOnd')]",
+      "CSS Selector (Combined)": "input.whsOnd.zHQkBf",
+      "XPath (Combined)": "//input[contains(@class, 'whsOnd')]",
+      "CSS Selector (ID)": "#identifierId",
+      "XPath (ID)": "//*[@id='identifierId']",
+      "CSS Selector (Name)": "input[name='identifier']",
+      "XPath (Name)": "//input[@name='identifier']",
+      "Tag": "input",
+      "Full XPath": "/html[1]/body[1]/div[2]/div[1]/div[2]/c-wiz[1]/main[1]/div[2]/div[1]/div[1]/div[1]/form[1]/span[1]/section[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/input[1]",
+      "Relative XPath": "//*[@id='identifierId']",
+      "accu_xpath": "//*[@id='identifierId']",
+      "visible_property_xpath": "//input[@aria-label='Email or phone']",
+      "xpath": "//input[@aria-label='Email or phone']"
+    },
+    "found_element_counts": {
+      "CSS Selector (Class)": 2,
+      "CSS Selector (Combined)": 2,
+      "CSS Selector (ID)": 1,
+      "CSS Selector (Name)": 1,
+      "Full XPath": 1,
+      "Relative XPath": 1,
+      "accu_xpath": 1,
+      "visible_property_xpath": 1
+    },
+    "page_url": "https://accounts.google.com/v3/signin/identifier?continue=https%3A%2F%2Fmail.google.com%2Fmail%2F%26ogbl%2F&emr=1&ifkv=AdBytiMac9Yf_II6jfYXax_Wge7awggpgTGw71Jx_9LArJ_QjA8GqXFnkEZQklh2I8L94BdHKsEJkw&ltmpl=default&ltmplcache=2&osid=1&passive=true&rm=false&scc=1&service=mail&ss=1&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S1141683277%3A1755685354404920",
+    "page_title": "Gmail",
+    "page_name": "Gmail"
   }
 ]
