@@ -4,7 +4,7 @@
     "properties": {
       "ariaLabel": null,
       "className": "MV3Tnb",
-      "href": "https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=webhp&cd=&ved=0ahUKEwijtfy63JaPAxUkCbkGHQPnCVoQkNQCCAI&url=https%3A%2F%2Fabout.google%2F%3Ffg%3D1%26utm_source%3Dgoogle-IN%26utm_medium%3Dreferral%26utm_campaign%3Dhp-header&usg=AOvVaw0CtSO059N49aDG_TIeJdnK&opi=89978449",
+      "href": "https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=webhp&cd=&ved=0ahUKEwivtM_Lk5ePAxVAlFYBHdLpGUQQkNQCCAI&url=https%3A%2F%2Fabout.google%2F%3Ffg%3D1%26utm_source%3Dgoogle-IN%26utm_medium%3Dreferral%26utm_campaign%3Dhp-header&usg=AOvVaw0CtSO059N49aDG_TIeJdnK&opi=89978449",
       "id": "",
       "name": "",
       "role": null,
@@ -47,14 +47,16 @@
       "accu_xpath": 2,
       "visible_property_xpath": 1
     },
-    "page_url": "https://www.google.com/?zx=1755601292587&no_sw_cr=1"
+    "page_url": "https://www.google.com/",
+    "page_title": "Google",
+    "page_name": "Google"
   },
   {
     "name": "Store",
     "properties": {
       "ariaLabel": null,
       "className": "MV3Tnb",
-      "href": "https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=webhp&cd=&ved=0ahUKEwijtfy63JaPAxUkCbkGHQPnCVoQpMwCCAM&url=https%3A%2F%2Fstore.google.com%2FIN%3Futm_source%3Dhp_header%26utm_medium%3Dgoogle_ooo%26utm_campaign%3DGS100042%26hl%3Den-IN&usg=AOvVaw1yMLu5XT-r35gxGQEqYnyy&opi=89978449",
+      "href": "https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=webhp&cd=&ved=0ahUKEwivtM_Lk5ePAxVAlFYBHdLpGUQQpMwCCAM&url=https%3A%2F%2Fstore.google.com%2FIN%3Futm_source%3Dhp_header%26utm_medium%3Dgoogle_ooo%26utm_campaign%3DGS100042%26hl%3Den-IN&usg=AOvVaw1yMLu5XT-r35gxGQEqYnyy&opi=89978449",
       "id": "",
       "name": "",
       "role": null,
@@ -97,6 +99,57 @@
       "accu_xpath": 2,
       "visible_property_xpath": 1
     },
-    "page_url": "https://www.google.com/?zx=1755601292587&no_sw_cr=1"
+    "page_url": "https://www.google.com/",
+    "page_title": "Google",
+    "page_name": "Google"
+  },
+  {
+    "name": "Sign in",
+    "properties": {
+      "ariaLabel": "Sign in",
+      "className": "gb_A",
+      "href": "https://accounts.google.com/ServiceLogin?hl=en&passive=true&continue=https://www.google.com/&ec=futura_exp_og_so_72776762_e",
+      "id": "",
+      "name": "",
+      "role": null,
+      "tag": "A",
+      "text": "Sign in",
+      "title": "",
+      "type": "",
+      "value": null,
+      "rect": {
+        "bottom": 48.33333396911621,
+        "height": 40,
+        "left": 933,
+        "right": 1018,
+        "top": 8.333333969116211,
+        "width": 85,
+        "x": 933,
+        "y": 8.333333969116211
+      },
+      "x": 975.5,
+      "y": 28.33333396911621
+    },
+    "selectors": {
+      "Class Name": "gb_A",
+      "CSS Selector (Class)": ".gb_A",
+      "XPath (Class)": "//*[contains(@class, 'gb_A')]",
+      "CSS Selector (Combined)": "a.gb_A",
+      "XPath (Combined)": "//a[contains(@class, 'gb_A')]",
+      "Tag": "a",
+      "Full XPath": "/html[1]/body[1]/div[2]/div[2]/div[1]/div[1]/header[1]/div[3]/a[1]",
+      "Relative XPath": "//*[@id='gb']/div[3]/a",
+      "accu_xpath": "//a[contains(@class, 'gb_A')]"
+    },
+    "found_element_counts": {
+      "CSS Selector (Class)": 1,
+      "CSS Selector (Combined)": 1,
+      "Full XPath": 1,
+      "Relative XPath": 1,
+      "accu_xpath": 1
+    },
+    "page_url": "https://www.google.com/",
+    "page_title": "Google",
+    "page_name": "Google"
   }
 ]

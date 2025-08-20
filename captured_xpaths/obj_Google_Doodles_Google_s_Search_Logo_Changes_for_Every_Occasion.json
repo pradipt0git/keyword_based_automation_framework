@@ -1,0 +1,106 @@
+[
+  {
+    "name": "Library",
+    "properties": {
+      "ariaLabel": null,
+      "className": "glue-header__link",
+      "href": "https://doodles.google/search/",
+      "id": "",
+      "name": "",
+      "role": null,
+      "tag": "A",
+      "text": "Library",
+      "title": "",
+      "type": "",
+      "value": null,
+      "rect": {
+        "bottom": 56,
+        "height": 48,
+        "left": 228,
+        "right": 305.70833587646484,
+        "top": 8,
+        "width": 77.70833587646484,
+        "x": 228,
+        "y": 8
+      },
+      "x": 266.8541679382324,
+      "y": 32.0
+    },
+    "selectors": {
+      "Class Name": "glue-header__link",
+      "CSS Selector (Class)": ".glue-header__link",
+      "XPath (Class)": "//*[contains(@class, 'glue-header__link')]",
+      "CSS Selector (Combined)": "a.glue-header__link",
+      "XPath (Combined)": "//a[contains(@class, 'glue-header__link')]",
+      "Tag": "a",
+      "Full XPath": "/html[1]/body[1]/header[1]/div[2]/div[1]/div[2]/nav[1]/ul[1]/li[1]/a[1]",
+      "Relative XPath": "//*[@id='glue-drawer-2465973']/div/div[2]/nav/ul/li[1]/a",
+      "accu_xpath": "//header/div[2]/div/div[2]/nav/ul/li[1]/a",
+      "visible_property_xpath": "//a[normalize-space(text())='Library']",
+      "xpath": "//a[normalize-space(text())='Library']"
+    },
+    "found_element_counts": {
+      "CSS Selector (Class)": 6,
+      "CSS Selector (Combined)": 6,
+      "Full XPath": 1,
+      "Relative XPath": 1,
+      "accu_xpath": 1,
+      "visible_property_xpath": 2
+    },
+    "page_url": "https://doodles.google/",
+    "page_title": "Google Doodles - Google’s Search Logo Changes for Every Occasion",
+    "page_name": "Google Doodles - Google’s Search Logo Changes for Every Occasion"
+  },
+  {
+    "name": "Creating a Doodle",
+    "properties": {
+      "ariaLabel": null,
+      "className": "glue-header__link",
+      "href": "https://doodles.google/creating-a-doodle/",
+      "id": "",
+      "name": "",
+      "role": null,
+      "tag": "A",
+      "text": "Creating a Doodle",
+      "title": "",
+      "type": "",
+      "value": null,
+      "rect": {
+        "bottom": 56,
+        "height": 48,
+        "left": 305.7083435058594,
+        "right": 468.03126525878906,
+        "top": 8,
+        "width": 162.3229217529297,
+        "x": 305.7083435058594,
+        "y": 8
+      },
+      "x": 386.8698043823242,
+      "y": 32.0
+    },
+    "selectors": {
+      "Class Name": "glue-header__link",
+      "CSS Selector (Class)": ".glue-header__link",
+      "XPath (Class)": "//*[contains(@class, 'glue-header__link')]",
+      "CSS Selector (Combined)": "a.glue-header__link",
+      "XPath (Combined)": "//a[contains(@class, 'glue-header__link')]",
+      "Tag": "a",
+      "Full XPath": "/html[1]/body[1]/header[1]/div[2]/div[1]/div[2]/nav[1]/ul[1]/li[2]/a[1]",
+      "Relative XPath": "//*[@id='glue-drawer-2465973']/div/div[2]/nav/ul/li[2]/a",
+      "accu_xpath": "//header/div[2]/div/div[2]/nav/ul/li[2]/a",
+      "visible_property_xpath": "//a[normalize-space(text())='Creating a Doodle']",
+      "xpath": "//a[normalize-space(text())='Creating a Doodle']"
+    },
+    "found_element_counts": {
+      "CSS Selector (Class)": 6,
+      "CSS Selector (Combined)": 6,
+      "Full XPath": 1,
+      "Relative XPath": 1,
+      "accu_xpath": 1,
+      "visible_property_xpath": 2
+    },
+    "page_url": "https://doodles.google/",
+    "page_title": "Google Doodles - Google’s Search Logo Changes for Every Occasion",
+    "page_name": "Google Doodles - Google’s Search Logo Changes for Every Occasion"
+  }
+]

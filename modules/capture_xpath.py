@@ -386,103 +386,108 @@ def capture_elements(driver, selectors_list):
     # Check for clicked element and append selectors
     import csv
     clicked = driver.execute_script('return window.clickedElement || null;')
-    if clicked:
-        elem = driver.execute_script('return window.clickedElement;')
-        # Use the actual clicked element for get_element_details
-        details = get_element_details(driver, elem)
-        # Add current page URL to details
-        page_url = driver.current_url
-        details['page_url'] = page_url
-        print('Element details:', details)
+    if not clicked:
+        print('No element clicked. Nothing to capture.')
+        return
+    elem = driver.execute_script('return window.clickedElement;')
+    # Use the actual clicked element for get_element_details
+    details = get_element_details(driver, elem)
+    # Add current page URL and title to details
+    page_url = driver.current_url
+    page_title = driver.title if hasattr(driver, 'title') else ''
+    details['page_url'] = page_url
+    details['page_title'] = page_title
+    details['page_name'] = page_title or page_url
+    print('Element details:', details)
 
-        # --- CSV: Only append selectors with exactly one match ---
-        name = details['properties'].get('name', '')
-        value = details['properties'].get('value', '')
-        typ = details['properties'].get('type', '')
-        text = details['properties'].get('text', '')
-        if text and len(text) > 40:
-            text = text[:40]
-        selectors = details['selectors']
-        found_element_counts = details.get('found_element_counts', {})
-        # XPaths
-        full_xpath = selectors.get('Full XPath', '') if found_element_counts.get('Full XPath', 0) == 1 else ''
-        relative_xpath = selectors.get('Relative XPath', '') if found_element_counts.get('Relative XPath', 0) == 1 else ''
-        # Extra xpaths
-        extra_xpaths = {}
-        for key in ['accu_xpath', 'visible_property_xpath']:
-            xpath_val = selectors.get(key, None)
-            found_count = found_element_counts.get(key, 0)
-            if xpath_val and found_count == 1:
-                extra_xpaths[key] = xpath_val
-        # CSS selectors with exactly one match
-        css_keys = [
-            'CSS Selector (Class)',
-            'CSS Selector (Combined)',
-            'CSS Selector (ID)',
-            'CSS Selector (Name)'
-        ]
-        css_selectors = {}
-        for css_key in css_keys:
-            css_val = selectors.get(css_key, None)
-            found_count = found_element_counts.get(css_key, 0)
-            if css_val and found_count == 1:
-                css_selectors[css_key] = css_val
+    # --- CSV: Only append selectors with exactly one match ---
+    name = details['properties'].get('name', '')
+    value = details['properties'].get('value', '')
+    typ = details['properties'].get('type', '')
+    text = details['properties'].get('text', '')
+    if text and len(text) > 40:
+        text = text[:40]
+    selectors = details['selectors']
+    found_element_counts = details.get('found_element_counts', {})
+    # XPaths
+    full_xpath = selectors.get('Full XPath', '') if found_element_counts.get('Full XPath', 0) == 1 else ''
+    relative_xpath = selectors.get('Relative XPath', '') if found_element_counts.get('Relative XPath', 0) == 1 else ''
+    # Extra xpaths
+    extra_xpaths = {}
+    for key in ['accu_xpath', 'visible_property_xpath']:
+        xpath_val = selectors.get(key, None)
+        found_count = found_element_counts.get(key, 0)
+        if xpath_val and found_count == 1:
+            extra_xpaths[key] = xpath_val
+    # CSS selectors with exactly one match
+    css_keys = [
+        'CSS Selector (Class)',
+        'CSS Selector (Combined)',
+        'CSS Selector (ID)',
+        'CSS Selector (Name)'
+    ]
+    css_selectors = {}
+    for css_key in css_keys:
+        css_val = selectors.get(css_key, None)
+        found_count = found_element_counts.get(css_key, 0)
+        if css_val and found_count == 1:
+            css_selectors[css_key] = css_val
 
-        # Prepare CSV columns
-        base_columns = ['page_url', 'name', 'value', 'type', 'text', 'full_xpath', 'relative_xpath']
-        extra_columns = list(extra_xpaths.keys())
-        css_columns = list(css_selectors.keys())
-        row = [page_url, name, value, typ, text, full_xpath, relative_xpath]
-        for col in extra_columns:
-            row.append(extra_xpaths[col])
-        for col in css_columns:
-            row.append(css_selectors[col])
-        write_header = not os.path.exists(selectors_csv)
-        with open(selectors_csv, 'a', newline='', encoding='utf-8') as f:
-            writer = csv.writer(f)
-            if write_header:
-                writer.writerow(base_columns + extra_columns + css_columns)
-            writer.writerow(row)
-        print(f'Details appended to {selectors_csv}')
-        # Add found element count flag to selectors_list
-        # Only keep found_element_counts for selectors with count > 0
-        details['found_element_counts'] = {k: v for k, v in found_element_counts.items() if v > 0}
+    # Prepare CSV columns
+    base_columns = ['page_url', 'name', 'value', 'type', 'text', 'full_xpath', 'relative_xpath']
+    extra_columns = list(extra_xpaths.keys())
+    css_columns = list(css_selectors.keys())
+    row = [page_url, name, value, typ, text, full_xpath, relative_xpath]
+    for col in extra_columns:
+        row.append(extra_xpaths[col])
+    for col in css_columns:
+        row.append(css_selectors[col])
+    write_header = not os.path.exists(selectors_csv)
+    with open(selectors_csv, 'a', newline='', encoding='utf-8') as f:
+        writer = csv.writer(f)
+        if write_header:
+            writer.writerow(base_columns + extra_columns + css_columns)
+        writer.writerow(row)
+    print(f'Details appended to {selectors_csv}')
+    # Add found element count flag to selectors_list
+    # Only keep found_element_counts for selectors with count > 0
+    details['found_element_counts'] = {k: v for k, v in found_element_counts.items() if v > 0}
 
-        # --- PAGE-WISE JSON: Save per page, append only if not duplicate ---
-        import re
-        def sanitize_filename(url):
-            # Remove protocol, replace non-alphanum with _
-            fname = re.sub(r'^https?://', '', url)
-            fname = re.sub(r'[^a-zA-Z0-9]+', '_', fname)
-            return fname[:80]  # Limit length
+    # --- PAGE-WISE JSON: Save per page, append only if not duplicate ---
+    import re
+    def sanitize_filename(name):
+        # Replace non-alphanum with _
+        fname = re.sub(r'[^a-zA-Z0-9]+', '_', name)
+        return fname[:80]  # Limit length
 
-        page_json = os.path.join(captured_folder, f"selectors_{sanitize_filename(page_url)}.json")
-        # Load existing data for this page
-        existing_data = []
-        if os.path.exists(page_json):
-            try:
-                with open(page_json, 'r', encoding='utf-8') as f:
-                    existing_data = json.load(f)
-            except Exception:
-                existing_data = []
-        # Check for duplicate: use full_xpath as unique key
-        new_full_xpath = details.get('selectors', {}).get('Full XPath', '')
+    page_name = details.get('page_name', '')
+    safe_page_name = sanitize_filename(page_name) if page_name else sanitize_filename(page_url)
+    page_json = os.path.join(captured_folder, f"obj_{safe_page_name}.json")
+    # Load existing data for this page
+    existing_data = []
+    if os.path.exists(page_json):
+        try:
+            with open(page_json, 'r', encoding='utf-8') as f:
+                existing_data = json.load(f)
+        except Exception:
+            existing_data = []
+    # Check for duplicate: use full_xpath as unique key
+    new_full_xpath = details.get('selectors', {}).get('Full XPath', '')
 
-
-        is_duplicate = False
-        for d in existing_data:
-            if d.get('selectors', {}).get('Full XPath', '') == new_full_xpath:
-                is_duplicate = True
-                break
-        if not is_duplicate:
-            existing_data.append(details)
-            with open(page_json, 'w', encoding='utf-8') as f:
-                json.dump(existing_data, f, indent=2, ensure_ascii=False)
-            print(f'Details appended to {page_json}')
-        else:
-            print(f"Element already present in {page_json}, not appending.")
-        # Reset clickedElement so user can click again
-        driver.execute_script('window.clickedElement = null;')
+    is_duplicate = False
+    for d in existing_data:
+        if d.get('selectors', {}).get('Full XPath', '') == new_full_xpath:
+            is_duplicate = True
+            break
+    if not is_duplicate:
+        existing_data.append(details)
+        with open(page_json, 'w', encoding='utf-8') as f:
+            json.dump(existing_data, f, indent=2, ensure_ascii=False)
+        print(f'Details appended to {page_json}')
+    else:
+        print(f"Element already present in {page_json}, not appending.")
+    # Reset clickedElement so user can click again
+    driver.execute_script('window.clickedElement = null;')
 
 
 def main():
