@@ -13,18 +13,315 @@ TEMPLATE = r'''
     <meta charset="UTF-8">
     <title>XPath UI Tree View</title>
     <style>
-        ul { list-style-type: none; }
-        .element-details { margin-left: 20px; display: none; }
-        .element.open > .element-details { display: block; }
-        .element-name-input { width: 200px; }
-        .tree-toggle { cursor: pointer; }
+        :root {
+            --bg-main: #1e1e1e;
+            --bg-secondary: #252526;
+            --bg-hover: #2a2d2e;
+            --text-primary: #cccccc;
+            --text-secondary: #858585;
+            --accent-blue: #0e639c;
+            --accent-blue-hover: #1177bb;
+            --border-color: #454545;
+            --tree-line-color: #353535;
+            --input-bg: #3c3c3c;
+            --tree-indent: 20px;
+        }
+        body {
+            background: var(--bg-main);
+            color: var(--text-primary);
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+            margin: 0;
+            padding: 20px;
+            line-height: 1.4;
+        }
+        h2 {
+            color: var(--text-primary);
+            margin: 0 0 20px 0;
+            font-weight: 400;
+            font-size: 1.5em;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 10px;
+        }
+        #tree-root {
+            margin: 20px 0;
+            padding: 0;
+            background: var(--bg-secondary);
+            border-radius: 6px;
+            border: 1px solid var(--border-color);
+        }
+        ul {
+            list-style-type: none;
+            padding-left: 20px;
+            margin: 0;
+            position: relative;
+        }
+        li {
+            margin: 2px 0;
+            position: relative;
+            padding-left: 20px;
+        }
+        /* Tree node container */
+        .tree-node {
+            position: relative;
+            display: flex;
+            align-items: center;
+            min-height: 28px;
+        }
+        /* Button container */
+        .tree-controls {
+            position: absolute;
+            left: -20px;
+            top: 0;
+            bottom: 0;
+            width: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .child-list {
+            max-height: 0;
+            overflow: hidden;
+            opacity: 0;
+            transition: all 0.3s ease-out;
+            transform: translateY(-10px);
+        }
+        li.open > .child-list {
+            max-height: 2000px;
+            opacity: 1;
+            overflow: visible;
+            transform: translateY(0);
+        }
+        /* Tree structure */
+        li:last-child > .tree-node > .tree-line-container > .tree-line-vertical {
+            display: none;
+        }
+        .element-details {
+            display: none;
+            margin: 0;
+            max-height: 0;
+            overflow: hidden;
+            background: var(--bg-main);
+            border-radius: 4px;
+            border: 1px solid var(--border-color);
+            padding: 0;
+            position: relative;
+            transform: translateY(-10px);
+            opacity: 0;
+            transition: all 0.3s ease-out, opacity 0.3s ease-out;
+            will-change: max-height, padding, margin, opacity, transform;
+        }
+        .element-details::before {
+            content: "";
+            position: absolute;
+            left: -16px;
+            top: -8px;
+            bottom: 8px;
+            width: 2px;
+            background: var(--border-color);
+            opacity: 0;
+            transition: opacity 0.3s ease-out;
+        }
+        .element-details.expanded {
+            display: block;
+        }
+        .element.open > .element-details {
+            transform: translateY(0);
+        }
+        .element.open > .element-details::before {
+            opacity: 1;
+        }
+        /* Ensure buttons are clickable */
+        .tree-btn {
+            z-index: 2;
+            cursor: pointer;
+            position: relative;
+        }
+
+        /* JSON Container Styles */
+        .json-container {
+            margin-top: 12px;
+            border-top: 1px solid var(--border-color);
+            padding-top: 12px;
+        }
+
+        .json-toggle {
+            background: transparent;
+            border: none;
+            color: var(--text-secondary);
+            cursor: pointer;
+            padding: 4px 8px;
+            font-size: 13px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            margin: 0;
+            transition: color 0.2s ease;
+        }
+
+        .json-toggle:hover {
+            color: var(--text-primary);
+        }
+
+        .toggle-icon {
+            font-family: monospace;
+            font-size: 14px;
+            display: inline-block;
+            width: 12px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .json-container.expanded .toggle-icon {
+            transform: rotate(180deg);
+        }
+
+        .json-content {
+            max-height: 0;
+            overflow: hidden;
+            opacity: 0;
+            transition: all 0.3s ease-out;
+            margin-top: 8px;
+            background: var(--bg-main);
+            border-radius: 4px;
+        }
+
+        .json-container.expanded .json-content {
+            opacity: 1;
+            padding: 8px;
+            border: 1px solid var(--border-color);
+            margin-bottom: 8px;
+        }
+        .element-name-input {
+            width: 220px;
+            background: var(--input-bg);
+            color: var(--text-primary);
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            padding: 6px 8px;
+            font-size: 13px;
+            transition: all 0.2s;
+        }
+        .element-name-input:focus {
+            outline: none;
+            border-color: var(--accent-blue);
+            box-shadow: 0 0 0 1px var(--accent-blue);
+        }
+        .item-container {
+            display: flex;
+            align-items: center;
+            min-height: 28px;
+            position: relative;
+            padding: 2px 0;
+        }
+        button {
+            background: transparent;
+            color: var(--text-secondary);
+            border: none;
+            padding: 4px;
+            margin: 0 4px;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 24px;
+            height: 24px;
+            transition: color 0.2s;
+        }
+        button:active {
+            background: #1a1d22;
+        }
+        button:focus {
+            outline: 2px solid #4e9cff;
+        }
+        button[disabled] {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+        button.save-btn {
+            background: linear-gradient(90deg, #2d7cff 60%, #4e9cff 100%);
+            color: #fff;
+            font-weight: bold;
+            box-shadow: 0 2px 8px #4e9cff33;
+        }
+        button.save-btn:hover {
+            background: linear-gradient(90deg, #4e9cff 60%, #2d7cff 100%);
+            color: #fff;
+        }
+        button.tree-btn {
+            background: transparent;
+            border: none;
+            color: var(--text-secondary);
+            font-family: monospace;
+            font-size: 14px;
+            padding: 0;
+            margin: 0;
+            width: 20px;
+            height: 20px;
+            line-height: 20px;
+            display: flex;
+            align-items: center;
+            transition: transform 0.3s ease;
+            justify-content: center;
+            z-index: 2;
+            opacity: 0.7;
+            border-radius: 3px;
+            position: relative;
+            width: 16px;
+            height: 16px;
+            font-size: 16px;
+            line-height: 16px;
+        }
+        button.tree-btn::before {
+            content: attr(data-icon);
+            display: block;
+            width: 16px;
+            height: 16px;
+            text-align: center;
+            line-height: 16px;
+            transition: transform 0.3s ease;
+        }
+        .open > div > .tree-controls > .tree-btn::before {
+            transform: rotate(90deg);
+        }
+        button.tree-btn:hover {
+            background: var(--bg-hover);
+            opacity: 1;
+        }
+        .tree-toggle {
+            cursor: pointer;
+        }
+        li.collapsed > ul {
+            display: none;
+        }
+        li.collapsed > button.tree-btn {
+            color: #4e9cff;
+        }
+        pre {
+            background: #181c20;
+            color: #b8e1ff;
+            border-radius: 6px;
+            padding: 8px 12px;
+            font-size: 13px;
+            overflow-x: auto;
+        }
+        /* Scrollbar styling */
+        ::-webkit-scrollbar {
+            width: 10px;
+            background: #23272e;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #333a;
+            border-radius: 8px;
+        }
     </style>
 </head>
 <body>
     <h2>XPath UI Tree View</h2>
-    <button id="capture-xpath-btn">Capture XPath</button>
-    <button id="stop-capture-btn">Stop Capture</button>
-    <button id="refresh-btn">Refresh</button>
+    <div class="action-buttons">
+        <button id="capture-xpath-btn">Capture XPath</button>
+        <button id="stop-capture-btn">Stop Capture</button>
+        <button id="refresh-btn">↻ Refresh</button>
+    </div>
     <div id="tree-root"></div>
     <script>
         let captureProcessRunning = false;
@@ -59,7 +356,39 @@ TEMPLATE = r'''
         }
         function createElementTree(page, elements, pageIdx) {
             const pageLi = document.createElement('li');
-            pageLi.classList.add('collapsed');
+            const treeNode = document.createElement('div');
+            treeNode.className = 'tree-node';
+            
+            // Tree lines
+            const lineContainer = document.createElement('div');
+            lineContainer.className = 'tree-line-container';
+            const verticalLine = document.createElement('div');
+            verticalLine.className = 'tree-line-vertical';
+            const horizontalLine = document.createElement('div');
+            horizontalLine.className = 'tree-line-horizontal';
+            lineContainer.appendChild(verticalLine);
+            lineContainer.appendChild(horizontalLine);
+            treeNode.appendChild(lineContainer);
+            
+            // Controls container (for button)
+            const treeControls = document.createElement('div');
+            treeControls.className = 'tree-controls';
+            treeNode.appendChild(treeControls);
+            
+            const itemContainer = document.createElement('div');
+            itemContainer.className = 'item-container';
+            
+            // Page collapse/expand button
+            const pageCollapseBtn = document.createElement('button');
+            pageCollapseBtn.setAttribute('data-icon', '+');
+            pageCollapseBtn.title = 'Expand/Collapse';
+            pageCollapseBtn.className = 'tree-btn';
+            // Button positioning handled by CSS
+            pageCollapseBtn.onclick = () => {
+                pageLi.classList.toggle('open');
+                pageCollapseBtn.setAttribute('data-icon', pageLi.classList.contains('open') ? '>' : '+');
+            };
+            
             // File name input (without extension)
             const fileName = page.replace(/\.json$/, '');
             const fileNameInput = document.createElement('input');
@@ -70,8 +399,9 @@ TEMPLATE = r'''
             fileNameInput.style.width = '250px';
             // Save icon
             const saveBtn = document.createElement('button');
-            saveBtn.innerHTML = '💾';
+            saveBtn.innerHTML = '✓';
             saveBtn.title = 'Save (rename file)';
+            saveBtn.className = 'save-btn';
             saveBtn.onclick = async () => {
                 const newName = fileNameInput.value.trim();
                 if (!newName || newName === fileName) return;
@@ -88,38 +418,87 @@ TEMPLATE = r'''
                     alert('Rename failed: ' + (result.error || 'Unknown error'));
                 }
             };
-            // Page collapse/expand button
-            const pageCollapseBtn = document.createElement('button');
-            pageCollapseBtn.textContent = '[+]';
-            pageCollapseBtn.title = 'Collapse/Expand Page';
-            pageCollapseBtn.onclick = () => {
-                const isCollapsed = pageLi.classList.toggle('collapsed');
-                pageCollapseBtn.textContent = isCollapsed ? '[+]' : '[–]';
-                ul.style.display = isCollapsed ? 'none' : 'block';
-            };
-            // Move this after ul is defined
             // Tree toggle (for spacing only)
             const pageToggle = document.createElement('span');
             pageToggle.textContent = ' ';
             pageToggle.className = 'tree-toggle';
-            pageLi.appendChild(fileNameInput);
-            pageLi.appendChild(saveBtn);
-            pageLi.appendChild(pageCollapseBtn);
-            pageLi.appendChild(pageToggle);
+            treeControls.appendChild(pageCollapseBtn);
+            itemContainer.appendChild(fileNameInput);
+            itemContainer.appendChild(saveBtn);
+            treeNode.appendChild(itemContainer);
+            pageLi.appendChild(treeNode);
             const ul = document.createElement('ul');
-            ul.style.display = 'none'; // Default collapsed
+            ul.classList.add('child-list');
             elements.forEach((el, elIdx) => {
                 const elLi = document.createElement('li');
                 elLi.className = 'element';
+                
+                const treeNode = document.createElement('div');
+                treeNode.className = 'tree-node';
+                
+                // Tree spacing for hierarchy
+                
+                // Controls container (for button)
+                const treeControls = document.createElement('div');
+                treeControls.className = 'tree-controls';
+                treeNode.appendChild(treeControls);
+                
+                const itemContainer = document.createElement('div');
+                itemContainer.className = 'item-container';
+                
+                // Expand/collapse button
+                const expandBtn = document.createElement('button');
+                expandBtn.setAttribute('data-icon', '+');
+                expandBtn.className = 'tree-btn';
+                expandBtn.title = 'Expand/Collapse';
+                expandBtn.addEventListener('click', function(e) {
+                    console.log('Click detected on element button');
+                    e.stopPropagation(); // Prevent event bubbling
+                    elLi.classList.toggle('open');
+                    expandBtn.setAttribute('data-icon', elLi.classList.contains('open') ? '>' : '+');
+                    
+                    // Remove previous transition end listener if exists
+                    detailsDiv.removeEventListener('transitionend', detailsDiv._transitionEndHandler);
+                    
+                    if (elLi.classList.contains('open')) {
+                        console.log('Opening element details');
+                        // Set initial height to trigger animation
+                        detailsDiv.style.display = 'block';
+                        setTimeout(() => {
+                            detailsDiv.style.padding = '12px';
+                            detailsDiv.style.margin = '8px 0 8px 12px';
+                            const height = detailsDiv.scrollHeight;
+                            console.log('Content height:', height);
+                            detailsDiv.style.maxHeight = height + 'px';
+                            detailsDiv.style.opacity = '1';
+                        }, 10);
+                    } else {
+                        console.log('Closing element details');
+                        detailsDiv.style.maxHeight = '0';
+                        detailsDiv.style.padding = '0';
+                        detailsDiv.style.margin = '0';
+                        detailsDiv.style.opacity = '0';
+                        
+                        // Add transition end listener
+                        detailsDiv._transitionEndHandler = function() {
+                            if (!elLi.classList.contains('open')) {
+                                detailsDiv.style.display = 'none';
+                            }
+                        };
+                        detailsDiv.addEventListener('transitionend', detailsDiv._transitionEndHandler);
+                    }
+                });
+                
                 // Name input and save button
                 const nameInput = document.createElement('input');
                 nameInput.type = 'text';
                 nameInput.value = el.name || '';
                 nameInput.className = 'element-name-input';
-                nameInput.style.marginRight = '4px';
+                
                 const saveNameBtn = document.createElement('button');
-                saveNameBtn.innerHTML = '💾';
+                saveNameBtn.innerHTML = '✓';
                 saveNameBtn.title = 'Save Name';
+                saveNameBtn.className = 'save-btn';
                 saveNameBtn.onclick = async () => {
                     const newName = nameInput.value;
                     await fetch('/api/update_name', {
@@ -128,19 +507,19 @@ TEMPLATE = r'''
                         body: JSON.stringify({ page, index: elIdx, name: newName })
                     });
                 };
-                elLi.appendChild(nameInput);
-                elLi.appendChild(saveNameBtn);
-                // Expand/collapse
-                const expandBtn = document.createElement('button');
-                expandBtn.textContent = '[+]';
-                expandBtn.onclick = () => {
-                    elLi.classList.toggle('open');
-                    expandBtn.textContent = elLi.classList.contains('open') ? '[-]' : '[+]';
-                };
-                elLi.appendChild(expandBtn);
+                treeControls.appendChild(expandBtn);
+                itemContainer.appendChild(nameInput);
+                itemContainer.appendChild(saveNameBtn);
+                treeNode.appendChild(itemContainer);
+                elLi.appendChild(treeNode);
                 // Details (collapsible JSON)
                 const detailsDiv = document.createElement('div');
                 detailsDiv.className = 'element-details';
+
+                const detailsContent = document.createElement('div');
+                detailsContent.className = 'details-content';
+                detailsDiv.appendChild(detailsContent);
+
                 // Xpath textbox and save button (shown after expand/collapse)
                 const xpathBox = document.createElement('input');
                 xpathBox.type = 'text';
@@ -149,8 +528,9 @@ TEMPLATE = r'''
                 xpathBox.style.marginBottom = '4px';
                 xpathBox.style.width = '70%';
                 const saveXpathBtn = document.createElement('button');
-                saveXpathBtn.innerHTML = '💾';
+                saveXpathBtn.innerHTML = '✓';
                 saveXpathBtn.title = 'Save XPath';
+                saveXpathBtn.className = 'save-btn';
                 saveXpathBtn.onclick = async () => {
                     const newXpath = xpathBox.value;
                     await fetch('/api/update_xpath', {
@@ -159,30 +539,61 @@ TEMPLATE = r'''
                         body: JSON.stringify({ page, index: elIdx, xpath: newXpath })
                     });
                 };
-                // Use <details> and <summary> for collapsible JSON
-                const detailsTag = document.createElement('details');
-                detailsTag.open = false;
-                const summaryTag = document.createElement('summary');
-                summaryTag.textContent = 'Show JSON';
-                detailsTag.appendChild(summaryTag);
+                // Use custom collapsible for JSON display
+                const jsonContainer = document.createElement('div');
+                jsonContainer.className = 'json-container';
+                
+                const jsonToggle = document.createElement('button');
+                jsonToggle.className = 'json-toggle';
+                jsonToggle.innerHTML = '<span class="toggle-icon">+</span> Show JSON';
+                
+                const jsonContent = document.createElement('div');
+                jsonContent.className = 'json-content';
+                
                 // Pretty JSON with syntax highlighting
                 const pre = document.createElement('pre');
                 pre.style.margin = '0';
                 pre.style.fontSize = '13px';
+                
+                jsonToggle.addEventListener('click', function() {
+                    const isExpanded = jsonContainer.classList.toggle('expanded');
+                    this.querySelector('.toggle-icon').textContent = isExpanded ? '−' : '+';
+                    
+                    if (isExpanded) {
+                        // First set a minimum height to make content visible for calculation
+                        jsonContent.style.maxHeight = '1000px';
+                        // Calculate the real heights
+                        const jsonHeight = jsonContent.scrollHeight;
+                        const preHeight = pre.offsetHeight;
+                        // Set the actual heights
+                        jsonContent.style.maxHeight = (preHeight + 16) + 'px'; // Adding padding
+                        
+                        // Update parent details div height
+                        setTimeout(() => {
+                            const totalHeight = detailsDiv.scrollHeight;
+                            detailsDiv.style.maxHeight = totalHeight + 'px';
+                        }, 0);
+                    } else {
+                        jsonContent.style.maxHeight = '0';
+                        // Update parent details div height after json collapse
+                        setTimeout(() => {
+                            const totalHeight = detailsDiv.scrollHeight;
+                            detailsDiv.style.maxHeight = totalHeight + 'px';
+                        }, 300); // Wait for JSON collapse animation
+                    }
+                });
                 pre.textContent = JSON.stringify(el, null, 2);
-                detailsTag.appendChild(pre);
-                detailsDiv.appendChild(xpathBox);
-                detailsDiv.appendChild(saveXpathBtn);
-                detailsDiv.appendChild(detailsTag);
+                jsonContent.appendChild(pre);
+                jsonContainer.appendChild(jsonToggle);
+                jsonContainer.appendChild(jsonContent);
+                
+                detailsContent.appendChild(xpathBox);
+                detailsContent.appendChild(saveXpathBtn);
+                detailsContent.appendChild(jsonContainer);
                 elLi.appendChild(detailsDiv);
-                // Show/hide detailsDiv (xpath box + JSON) on expand/collapse
+                // Initialize the element as collapsed
                 elLi.classList.remove('open');
                 detailsDiv.style.display = 'none';
-                expandBtn.onclick = () => {
-                    elLi.classList.toggle('open');
-                    expandBtn.textContent = elLi.classList.contains('open') ? '[-]' : '[+]';
-                    detailsDiv.style.display = elLi.classList.contains('open') ? 'block' : 'none';
-                };
                 ul.appendChild(elLi);
             });
             pageLi.appendChild(ul);
