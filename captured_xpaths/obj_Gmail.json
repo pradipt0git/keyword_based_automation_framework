@@ -1,6 +1,6 @@
 [
   {
-    "name": "Create account",
+    "name": "Create account2",
     "properties": {
       "ariaLabel": null,
       "className": "VfPpkd-vQzf8d",
@@ -37,7 +37,7 @@
       "Relative XPath": "//*[@id='yDmH0d']/c-wiz/main/div[3]/div/div[2]/div/div/div[1]/div/button/span",
       "accu_xpath": "//div[2]/div[1]/div[2]/c-wiz/main/div[3]/div/div[2]/div/div/div[1]/div/button/span",
       "visible_property_xpath": "//span[normalize-space(text())='Create account']",
-      "xpath": "//span[normalize-space(text())='Create account']"
+      "xpath": "//span[normalize-space(text())='Create account']2"
     },
     "found_element_counts": {
       "CSS Selector (Class)": 3,
@@ -89,7 +89,7 @@
       "Relative XPath": "//*[@id='identifierNext']/div/button/span",
       "accu_xpath": "//div[2]/div[1]/div[2]/c-wiz/main/div[3]/div/div[1]/div/div/button/span",
       "visible_property_xpath": "//span[normalize-space(text())='Next']",
-      "xpath": "//span[normalize-space(text())='Next']"
+      "xpath": "//span[normalize-space(text())='Next'].."
     },
     "found_element_counts": {
       "CSS Selector (Class)": 3,
@@ -104,7 +104,7 @@
     "page_name": "Gmail"
   },
   {
-    "name": "Forgot email?",
+    "name": "Forgot email",
     "properties": {
       "ariaLabel": null,
       "className": "",
