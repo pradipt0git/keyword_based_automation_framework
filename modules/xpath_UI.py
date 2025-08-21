@@ -177,7 +177,7 @@ TEMPLATE = r'''
 
         .json-content {
             max-height: 0;
-            overflow: hidden;
+            overflow-y: auto;
             opacity: 0;
             transition: all 0.3s ease-out;
             margin-top: 8px;
@@ -187,9 +187,35 @@ TEMPLATE = r'''
 
         .json-container.expanded .json-content {
             opacity: 1;
-            padding: 8px;
+            padding: 12px;
             border: 1px solid var(--border-color);
             margin-bottom: 8px;
+            max-height: 500px !important;
+        }
+
+        .json-content::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+
+        .json-content::-webkit-scrollbar-track {
+            background: var(--bg-main);
+            border-radius: 4px;
+        }
+
+        .json-content::-webkit-scrollbar-thumb {
+            background: var(--border-color);
+            border-radius: 4px;
+        }
+
+        .json-content::-webkit-scrollbar-thumb:hover {
+            background: #666;
+        }
+
+        .json-content pre {
+            white-space: pre;
+            word-wrap: normal;
+            overflow-x: auto;
         }
         .element-name-input {
             width: 220px;
@@ -554,31 +580,31 @@ TEMPLATE = r'''
                 const pre = document.createElement('pre');
                 pre.style.margin = '0';
                 pre.style.fontSize = '13px';
+                pre.textContent = JSON.stringify(el, null, 2); // Format JSON with proper indentation
                 
                 jsonToggle.addEventListener('click', function() {
                     const isExpanded = jsonContainer.classList.toggle('expanded');
                     this.querySelector('.toggle-icon').textContent = isExpanded ? '−' : '+';
                     
                     if (isExpanded) {
-                        // First set a minimum height to make content visible for calculation
-                        jsonContent.style.maxHeight = '1000px';
-                        // Calculate the real heights
-                        const jsonHeight = jsonContent.scrollHeight;
-                        const preHeight = pre.offsetHeight;
-                        // Set the actual heights
-                        jsonContent.style.maxHeight = (preHeight + 16) + 'px'; // Adding padding
+                        // Set fixed height for JSON content with scroll
+                        jsonContent.style.maxHeight = '500px';
+                        jsonContent.style.opacity = '1';
                         
                         // Update parent details div height
                         setTimeout(() => {
-                            const totalHeight = detailsDiv.scrollHeight;
+                            // Add the fixed JSON height plus padding and margins
+                            const baseHeight = detailsDiv.querySelector('.details-content').offsetHeight;
+                            const totalHeight = baseHeight + 500 + 32; // 500px for JSON + padding
                             detailsDiv.style.maxHeight = totalHeight + 'px';
                         }, 0);
                     } else {
                         jsonContent.style.maxHeight = '0';
+                        jsonContent.style.opacity = '0';
                         // Update parent details div height after json collapse
                         setTimeout(() => {
-                            const totalHeight = detailsDiv.scrollHeight;
-                            detailsDiv.style.maxHeight = totalHeight + 'px';
+                            const baseHeight = detailsDiv.querySelector('.details-content').offsetHeight;
+                            detailsDiv.style.maxHeight = (baseHeight + 32) + 'px'; // Add padding
                         }, 300); // Wait for JSON collapse animation
                     }
                 });
