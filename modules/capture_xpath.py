@@ -264,7 +264,9 @@ def get_element_details(driver, element):
         value_val = props.get('value', '')
         tag = element.tag_name
         if text_val:
-            candidate = f"//{tag}[normalize-space(text())='{text_val.strip()}']"
+            tag_lc = tag.lower() if tag else ''
+            text_val_lc = text_val.strip().lower() if text_val else ''
+            candidate = f"//{tag_lc}[translate(normalize-space(text()), 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz')='{text_val_lc}']"
             try:
                 found = driver.find_elements(By.XPATH, candidate)
                 count = len(found)
@@ -279,7 +281,12 @@ def get_element_details(driver, element):
                 selectors.pop('visible_property_xpath', None)
                 selectors.pop('xpath', None)
         elif aria_label_val:
-            candidate = f"//{tag}[@aria-label='{aria_label_val}']".replace('"', "'")
+            tag_lc = tag.lower() if tag else ''
+            aria_label_lc = aria_label_val.strip().lower() if aria_label_val else ''
+            candidate = (
+                f"//{tag_lc}[translate(@aria-label, 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz')="
+                f"'{aria_label_lc}']"
+            )
             try:
                 found = driver.find_elements(By.XPATH, candidate)
                 count = len(found)
@@ -294,7 +301,12 @@ def get_element_details(driver, element):
                 selectors.pop('visible_property_xpath', None)
                 selectors.pop('xpath', None)
         elif value_val:
-            candidate = f"//{tag}[@value='{value_val}']".replace('"', "'")
+            tag_lc = tag.lower() if tag else ''
+            value_lc = value_val.strip().lower() if value_val else ''
+            candidate = (
+                f"//{tag_lc}[translate(@value, 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz')="
+                f"'{value_lc}']"
+            )
             try:
                 found = driver.find_elements(By.XPATH, candidate)
                 count = len(found)
@@ -476,7 +488,8 @@ def capture_elements(driver, selectors_list):
 
     is_duplicate = False
     for d in existing_data:
-        if d.get('selectors', {}).get('Full XPath', '') == new_full_xpath:
+        existing_xpath = d.get('selectors', {}).get('Full XPath', '')
+        if (existing_xpath or '').lower() == (new_full_xpath or '').lower():
             is_duplicate = True
             break
     if not is_duplicate:

@@ -1,0 +1,158 @@
+[
+  {
+    "name": "Retail",
+    "properties": {
+      "ariaLabel": null,
+      "className": "ion-global-mega-nav__l3-link glue-header__link",
+      "href": "https://business.google.com/in/business-profile/retail/?subid=ww-ww-et-g-awa-a-g_hpbfoot1_1!o2&utm_source=google.com&utm_medium=referral&utm_campaign=google_hpbfooter",
+      "id": "",
+      "name": "",
+      "role": null,
+      "tag": "A",
+      "text": "Retail",
+      "title": "",
+      "type": "",
+      "value": null,
+      "rect": {
+        "bottom": 92,
+        "height": 32,
+        "left": 251.21875,
+        "right": 304.6666679382324,
+        "top": 60,
+        "width": 53.44791793823242,
+        "x": 251.21875,
+        "y": 60
+      },
+      "x": 277.9427089691162,
+      "y": 76.0
+    },
+    "selectors": {
+      "Class Name": "ion-global-mega-nav__l3-link glue-header__link",
+      "CSS Selector (Class)": ".ion-global-mega-nav__l3-link",
+      "XPath (Class)": "//*[contains(@class, 'ion-global-mega-nav__l3-link')]",
+      "CSS Selector (Combined)": "a.ion-global-mega-nav__l3-link.glue-header__link",
+      "XPath (Combined)": "//a[contains(@class, 'ion-global-mega-nav__l3-link')]",
+      "Tag": "a",
+      "Full XPath": "/html[1]/body[1]/header[1]/div[2]/section[1]/div[1]/div[1]/div[2]/nav[1]/ul[1]/li[1]/a[1]",
+      "Relative XPath": "//*[@id='glue-drawer-58615e3']/section/div/div[1]/div[2]/nav/ul/li[1]/a",
+      "accu_xpath": "//header/div[2]/section/div/div[1]/div[2]/nav/ul/li[1]/a",
+      "visible_property_xpath": "//a[translate(normalize-space(text()), 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz')='retail']",
+      "xpath": "//a[translate(normalize-space(text()), 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz')='retail']"
+    },
+    "found_element_counts": {
+      "CSS Selector (Class)": 11,
+      "CSS Selector (Combined)": 11,
+      "Full XPath": 1,
+      "Relative XPath": 1,
+      "accu_xpath": 1,
+      "visible_property_xpath": 3
+    },
+    "page_url": "https://business.google.com/in/business-profile/?subid=ww-ww-et-g-awa-a-g_hpbfoot1_1!o2&utm_source=google.com&utm_medium=referral&utm_campaign=google_hpbfooter&fg=1",
+    "page_title": "Get Listed on Google - Google Business Profile",
+    "page_name": "Get Listed on Google - Google Business Profile"
+  },
+  {
+    "name": "Easy",
+    "properties": {
+      "ariaLabel": null,
+      "className": "glue-font-weight-regular",
+      "href": null,
+      "id": "",
+      "name": null,
+      "role": null,
+      "tag": "SPAN",
+      "text": "Easy",
+      "title": "",
+      "type": null,
+      "value": null,
+      "rect": {
+        "bottom": 332.0000228881836,
+        "height": 35.333335876464844,
+        "left": 477.78125,
+        "right": 534.875,
+        "top": 296.66668701171875,
+        "width": 57.09375,
+        "x": 477.78125,
+        "y": 296.66668701171875
+      },
+      "x": 506.328125,
+      "y": 314.3333549499512
+    },
+    "selectors": {
+      "Class Name": "glue-font-weight-regular",
+      "CSS Selector (Class)": ".glue-font-weight-regular",
+      "XPath (Class)": "//*[contains(@class, 'glue-font-weight-regular')]",
+      "CSS Selector (Combined)": "span.glue-font-weight-regular",
+      "XPath (Combined)": "//span[contains(@class, 'glue-font-weight-regular')]",
+      "Tag": "span",
+      "Full XPath": "/html[1]/body[1]/main[1]/div[1]/section[2]/div[1]/div[1]/div[2]/ul[1]/li[2]/div[1]/div[2]/div[1]/h2[1]/span[1]",
+      "Relative XPath": "//*[@id='page-content']/div/section[2]/div/div/div[2]/ul/li[2]/div/div[2]/div/h2/span",
+      "accu_xpath": "//main/div/section[2]/div/div/div[2]/ul/li[2]/div/div[2]/div/h2/span",
+      "visible_property_xpath": "//span[translate(normalize-space(text()), 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz')='easy']",
+      "xpath": "//span[translate(normalize-space(text()), 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz')='easy']"
+    },
+    "found_element_counts": {
+      "CSS Selector (Class)": 6,
+      "CSS Selector (Combined)": 6,
+      "Full XPath": 1,
+      "Relative XPath": 1,
+      "accu_xpath": 1,
+      "visible_property_xpath": 1
+    },
+    "page_url": "https://business.google.com/in/business-profile/?subid=ww-ww-et-g-awa-a-g_hpbfoot1_1!o2&utm_source=google.com&utm_medium=referral&utm_campaign=google_hpbfooter&fg=1",
+    "page_title": "Get Listed on Google - Google Business Profile",
+    "page_name": "Get Listed on Google - Google Business Profile"
+  },
+  {
+    "name": "Start now",
+    "properties": {
+      "ariaLabel": null,
+      "className": "ion-button glue-button glue-button--high-emphasis",
+      "href": "https://business.google.com/create/new?subid=ww-ww-et-g-awa-a-g_hpbfoot1_1%21o2&utm_source=google.com&utm_medium=referral&utm_campaign=google_hpbfooter&gmbsrc=in-en-z-z-z-gmb-s-z-u%7Ebgcmhp-hom_nav-u&hl=en&skipLandingPage=true&skipPagesList=1&cbl=nav&cbp=hom&cbt=now",
+      "id": "",
+      "name": "",
+      "role": null,
+      "tag": "A",
+      "text": "Start now",
+      "title": "",
+      "type": "",
+      "value": null,
+      "rect": {
+        "bottom": 49.333335876464844,
+        "height": 41.333335876464844,
+        "left": 871.1771240234375,
+        "right": 980.6667098999023,
+        "top": 8,
+        "width": 109.48958587646484,
+        "x": 871.1771240234375,
+        "y": 8
+      },
+      "x": 925.9219169616699,
+      "y": 28.666667938232422
+    },
+    "selectors": {
+      "Class Name": "ion-button glue-button glue-button--high-emphasis",
+      "CSS Selector (Class)": ".ion-button",
+      "XPath (Class)": "//*[contains(@class, 'ion-button')]",
+      "CSS Selector (Combined)": "a.ion-button.glue-button.glue-button--high-emphasis",
+      "XPath (Combined)": "//a[contains(@class, 'ion-button')]",
+      "Tag": "a",
+      "Full XPath": "/html[1]/body[1]/header[1]/div[2]/section[1]/div[1]/div[1]/div[3]/a[2]",
+      "Relative XPath": "//*[@id='glue-drawer-58615e3']/section/div/div[1]/div[3]/a[2]",
+      "accu_xpath": "//header/div[2]/section/div/div[1]/div[3]/a[2]",
+      "visible_property_xpath": "//a[translate(normalize-space(text()), 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz')='start now']",
+      "xpath": "//a[translate(normalize-space(text()), 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz')='start now']"
+    },
+    "found_element_counts": {
+      "CSS Selector (Class)": 12,
+      "CSS Selector (Combined)": 5,
+      "Full XPath": 1,
+      "Relative XPath": 1,
+      "accu_xpath": 1,
+      "visible_property_xpath": 5
+    },
+    "page_url": "https://business.google.com/in/business-profile/?subid=ww-ww-et-g-awa-a-g_hpbfoot1_1!o2&utm_source=google.com&utm_medium=referral&utm_campaign=google_hpbfooter&fg=1",
+    "page_title": "Get Listed on Google - Google Business Profile",
+    "page_name": "Get Listed on Google - Google Business Profile"
+  }
+]
