@@ -1,157 +1,5 @@
 [
   {
-    "name": "Create account2",
-    "properties": {
-      "ariaLabel": null,
-      "className": "VfPpkd-vQzf8d",
-      "href": null,
-      "id": "",
-      "name": null,
-      "role": null,
-      "tag": "SPAN",
-      "text": "Create account",
-      "title": "",
-      "type": null,
-      "value": null,
-      "rect": {
-        "bottom": 404,
-        "height": 20,
-        "left": 670.8333740234375,
-        "right": 771.8750457763672,
-        "top": 384,
-        "width": 101.04167175292969,
-        "x": 670.8333740234375,
-        "y": 384
-      },
-      "x": 721.3542098999023,
-      "y": 394.0
-    },
-    "selectors": {
-      "Class Name": "VfPpkd-vQzf8d",
-      "CSS Selector (Class)": ".VfPpkd-vQzf8d",
-      "XPath (Class)": "//*[contains(@class, 'VfPpkd-vQzf8d')]",
-      "CSS Selector (Combined)": "span.VfPpkd-vQzf8d",
-      "XPath (Combined)": "//span[contains(@class, 'VfPpkd-vQzf8d')]",
-      "Tag": "span",
-      "Full XPath": "/html[1]/body[1]/div[2]/div[1]/div[2]/c-wiz[1]/main[1]/div[3]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/button[1]/span[1]",
-      "Relative XPath": "//*[@id='yDmH0d']/c-wiz/main/div[3]/div/div[2]/div/div/div[1]/div/button/span",
-      "accu_xpath": "//div[2]/div[1]/div[2]/c-wiz/main/div[3]/div/div[2]/div/div/div[1]/div/button/span",
-      "visible_property_xpath": "//span[normalize-space(text())='Create account']",
-      "xpath": "//span[normalize-space(text())='Create account']2"
-    },
-    "found_element_counts": {
-      "CSS Selector (Class)": 3,
-      "CSS Selector (Combined)": 3,
-      "Full XPath": 1,
-      "Relative XPath": 1,
-      "accu_xpath": 1,
-      "visible_property_xpath": 1
-    },
-    "page_url": "https://accounts.google.com/v3/signin/identifier?continue=https%3A%2F%2Fmail.google.com%2Fmail%2F%26ogbl%2F&emr=1&ifkv=AdBytiNDH8VAbwFtHgO6z2LraadjoWFzS0r3L3CUp-xiYAQ7bfqJEtfsuf_XqArOREIwKWztbi4YQQ&ltmpl=default&ltmplcache=2&osid=1&passive=true&rm=false&scc=1&service=mail&ss=1&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-1490976155%3A1755616133682106",
-    "page_title": "Gmail",
-    "page_name": "Gmail"
-  },
-  {
-    "name": "Next",
-    "properties": {
-      "ariaLabel": null,
-      "className": "VfPpkd-vQzf8d",
-      "href": null,
-      "id": "",
-      "name": null,
-      "role": null,
-      "tag": "SPAN",
-      "text": "Next",
-      "title": "",
-      "type": null,
-      "value": null,
-      "rect": {
-        "bottom": 404,
-        "height": 20,
-        "left": 835.875,
-        "right": 866.3333339691162,
-        "top": 384,
-        "width": 30.45833396911621,
-        "x": 835.875,
-        "y": 384
-      },
-      "x": 851.1041669845581,
-      "y": 394.0
-    },
-    "selectors": {
-      "Class Name": "VfPpkd-vQzf8d",
-      "CSS Selector (Class)": ".VfPpkd-vQzf8d",
-      "XPath (Class)": "//*[contains(@class, 'VfPpkd-vQzf8d')]",
-      "CSS Selector (Combined)": "span.VfPpkd-vQzf8d",
-      "XPath (Combined)": "//span[contains(@class, 'VfPpkd-vQzf8d')]",
-      "Tag": "span",
-      "Full XPath": "/html[1]/body[1]/div[2]/div[1]/div[2]/c-wiz[1]/main[1]/div[3]/div[1]/div[1]/div[1]/div[1]/button[1]/span[1]",
-      "Relative XPath": "//*[@id='identifierNext']/div/button/span",
-      "accu_xpath": "//div[2]/div[1]/div[2]/c-wiz/main/div[3]/div/div[1]/div/div/button/span",
-      "visible_property_xpath": "//span[normalize-space(text())='Next']",
-      "xpath": "//span[normalize-space(text())='Next'].."
-    },
-    "found_element_counts": {
-      "CSS Selector (Class)": 3,
-      "CSS Selector (Combined)": 3,
-      "Full XPath": 1,
-      "Relative XPath": 1,
-      "accu_xpath": 1,
-      "visible_property_xpath": 1
-    },
-    "page_url": "https://accounts.google.com/v3/signin/identifier?continue=https%3A%2F%2Fmail.google.com%2Fmail%2F%26ogbl%2F&emr=1&ifkv=AdBytiNDH8VAbwFtHgO6z2LraadjoWFzS0r3L3CUp-xiYAQ7bfqJEtfsuf_XqArOREIwKWztbi4YQQ&ltmpl=default&ltmplcache=2&osid=1&passive=true&rm=false&scc=1&service=mail&ss=1&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-1490976155%3A1755616133682106",
-    "page_title": "Gmail",
-    "page_name": "Gmail"
-  },
-  {
-    "name": "Forgot email",
-    "properties": {
-      "ariaLabel": null,
-      "className": "",
-      "href": null,
-      "id": "",
-      "name": "",
-      "role": null,
-      "tag": "BUTTON",
-      "text": "Forgot email?",
-      "title": "",
-      "type": "button",
-      "value": "",
-      "rect": {
-        "bottom": 247.6666774749756,
-        "height": 17.33333396911621,
-        "left": 530.3333740234375,
-        "right": 622.7083740234375,
-        "top": 230.33334350585938,
-        "width": 92.375,
-        "x": 530.3333740234375,
-        "y": 230.33334350585938
-      },
-      "x": 576.5208740234375,
-      "y": 239.00001049041748
-    },
-    "selectors": {
-      "Class Name": "",
-      "XPath (Class)": null,
-      "XPath (Combined)": null,
-      "Tag": "button",
-      "Full XPath": "/html[1]/body[1]/div[2]/div[1]/div[2]/c-wiz[1]/main[1]/div[2]/div[1]/div[1]/div[1]/form[1]/span[1]/section[1]/div[1]/div[1]/div[3]/button[1]",
-      "Relative XPath": "//*[@id='yDmH0d']/c-wiz/main/div[2]/div/div/div[1]/form/span/section/div/div/div[3]/button",
-      "accu_xpath": "//div[2]/div[1]/div[2]/c-wiz/main/div[2]/div/div/div[1]/form/span/section/div/div/div[3]/button",
-      "visible_property_xpath": "//button[normalize-space(text())='Forgot email?']",
-      "xpath": "//button[normalize-space(text())='Forgot email?']"
-    },
-    "found_element_counts": {
-      "Full XPath": 1,
-      "Relative XPath": 1,
-      "accu_xpath": 1,
-      "visible_property_xpath": 1
-    },
-    "page_url": "https://accounts.google.com/v3/signin/identifier?continue=https%3A%2F%2Fmail.google.com%2Fmail%2F%26ogbl%2F&emr=1&ifkv=AdBytiMac9Yf_II6jfYXax_Wge7awggpgTGw71Jx_9LArJ_QjA8GqXFnkEZQklh2I8L94BdHKsEJkw&ltmpl=default&ltmplcache=2&osid=1&passive=true&rm=false&scc=1&service=mail&ss=1&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S1141683277%3A1755685354404920",
-    "page_title": "Gmail",
-    "page_name": "Gmail"
-  },
-  {
     "name": "identifier",
     "properties": {
       "ariaLabel": "Email or phone",
@@ -192,8 +40,8 @@
       "Full XPath": "/html[1]/body[1]/div[2]/div[1]/div[2]/c-wiz[1]/main[1]/div[2]/div[1]/div[1]/div[1]/form[1]/span[1]/section[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/input[1]",
       "Relative XPath": "//*[@id='identifierId']",
       "accu_xpath": "//*[@id='identifierId']",
-      "visible_property_xpath": "//input[@aria-label='Email or phone']",
-      "xpath": "//input[@aria-label='Email or phone']"
+      "visible_property_xpath": "//input[translate(@aria-label, 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz')='email or phone']",
+      "xpath": "//input[translate(@aria-label, 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz')='email or phone']"
     },
     "found_element_counts": {
       "CSS Selector (Class)": 2,
@@ -205,7 +53,111 @@
       "accu_xpath": 1,
       "visible_property_xpath": 1
     },
-    "page_url": "https://accounts.google.com/v3/signin/identifier?continue=https%3A%2F%2Fmail.google.com%2Fmail%2F%26ogbl%2F&emr=1&ifkv=AdBytiMac9Yf_II6jfYXax_Wge7awggpgTGw71Jx_9LArJ_QjA8GqXFnkEZQklh2I8L94BdHKsEJkw&ltmpl=default&ltmplcache=2&osid=1&passive=true&rm=false&scc=1&service=mail&ss=1&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S1141683277%3A1755685354404920",
+    "page_url": "https://accounts.google.com/v3/signin/identifier?continue=https%3A%2F%2Fmail.google.com%2Fmail%2F%26ogbl%2F&emr=1&ifkv=AdBytiNvftYdVXtXRtSl53a92BdJCJqj0qStZSWHZp1zVY5ri1uqDdi9H4ScF_-20HEPxWkwIls&ltmpl=default&ltmplcache=2&osid=1&passive=true&rm=false&scc=1&service=mail&ss=1&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-584195052%3A1756129534001152",
+    "page_title": "Gmail",
+    "page_name": "Gmail"
+  },
+  {
+    "name": "Create account",
+    "properties": {
+      "ariaLabel": null,
+      "className": "VfPpkd-vQzf8d",
+      "href": null,
+      "id": "",
+      "name": null,
+      "role": null,
+      "tag": "SPAN",
+      "text": "Create account",
+      "title": "",
+      "type": null,
+      "value": null,
+      "rect": {
+        "bottom": 404,
+        "height": 20,
+        "left": 670.8333740234375,
+        "right": 771.8750457763672,
+        "top": 384,
+        "width": 101.04167175292969,
+        "x": 670.8333740234375,
+        "y": 384
+      },
+      "x": 721.3542098999023,
+      "y": 394.0
+    },
+    "selectors": {
+      "Class Name": "VfPpkd-vQzf8d",
+      "CSS Selector (Class)": ".VfPpkd-vQzf8d",
+      "XPath (Class)": "//*[contains(@class, 'VfPpkd-vQzf8d')]",
+      "CSS Selector (Combined)": "span.VfPpkd-vQzf8d",
+      "XPath (Combined)": "//span[contains(@class, 'VfPpkd-vQzf8d')]",
+      "Tag": "span",
+      "Full XPath": "/html[1]/body[1]/div[2]/div[1]/div[2]/c-wiz[1]/main[1]/div[3]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/button[1]/span[1]",
+      "Relative XPath": "//*[@id='yDmH0d']/c-wiz/main/div[3]/div/div[2]/div/div/div[1]/div/button/span",
+      "accu_xpath": "//div[2]/div[1]/div[2]/c-wiz/main/div[3]/div/div[2]/div/div/div[1]/div/button/span",
+      "visible_property_xpath": "//span[translate(normalize-space(text()), 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz')='create account']",
+      "xpath": "//span[translate(normalize-space(text()), 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz')='create account']"
+    },
+    "found_element_counts": {
+      "CSS Selector (Class)": 3,
+      "CSS Selector (Combined)": 3,
+      "Full XPath": 1,
+      "Relative XPath": 1,
+      "accu_xpath": 1,
+      "visible_property_xpath": 1
+    },
+    "page_url": "https://accounts.google.com/v3/signin/identifier?continue=https%3A%2F%2Fmail.google.com%2Fmail%2F%26ogbl%2F&emr=1&ifkv=AdBytiNvftYdVXtXRtSl53a92BdJCJqj0qStZSWHZp1zVY5ri1uqDdi9H4ScF_-20HEPxWkwIls&ltmpl=default&ltmplcache=2&osid=1&passive=true&rm=false&scc=1&service=mail&ss=1&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-584195052%3A1756129534001152",
+    "page_title": "Gmail",
+    "page_name": "Gmail"
+  },
+  {
+    "name": "Next",
+    "properties": {
+      "ariaLabel": null,
+      "className": "VfPpkd-vQzf8d",
+      "href": null,
+      "id": "",
+      "name": null,
+      "role": null,
+      "tag": "SPAN",
+      "text": "Next",
+      "title": "",
+      "type": null,
+      "value": null,
+      "rect": {
+        "bottom": 404,
+        "height": 20,
+        "left": 835.875,
+        "right": 866.3333339691162,
+        "top": 384,
+        "width": 30.45833396911621,
+        "x": 835.875,
+        "y": 384
+      },
+      "x": 851.1041669845581,
+      "y": 394.0
+    },
+    "selectors": {
+      "Class Name": "VfPpkd-vQzf8d",
+      "CSS Selector (Class)": ".VfPpkd-vQzf8d",
+      "XPath (Class)": "//*[contains(@class, 'VfPpkd-vQzf8d')]",
+      "CSS Selector (Combined)": "span.VfPpkd-vQzf8d",
+      "XPath (Combined)": "//span[contains(@class, 'VfPpkd-vQzf8d')]",
+      "Tag": "span",
+      "Full XPath": "/html[1]/body[1]/div[2]/div[1]/div[2]/c-wiz[1]/main[1]/div[3]/div[1]/div[1]/div[1]/div[1]/button[1]/span[1]",
+      "Relative XPath": "//*[@id='identifierNext']/div/button/span",
+      "accu_xpath": "//div[2]/div[1]/div[2]/c-wiz/main/div[3]/div/div[1]/div/div/button/span",
+      "visible_property_xpath": "//span[translate(normalize-space(text()), 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz')='next']",
+      "xpath": "//span[translate(normalize-space(text()), 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz')='next']"
+    },
+    "found_element_counts": {
+      "CSS Selector (Class)": 3,
+      "CSS Selector (Combined)": 3,
+      "Full XPath": 1,
+      "Relative XPath": 1,
+      "accu_xpath": 1,
+      "visible_property_xpath": 1
+    },
+    "page_url": "https://accounts.google.com/v3/signin/identifier?continue=https%3A%2F%2Fmail.google.com%2Fmail%2F%26ogbl%2F&emr=1&ifkv=AdBytiNvftYdVXtXRtSl53a92BdJCJqj0qStZSWHZp1zVY5ri1uqDdi9H4ScF_-20HEPxWkwIls&ltmpl=default&ltmplcache=2&osid=1&passive=true&rm=false&scc=1&service=mail&ss=1&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-584195052%3A1756129534001152",
     "page_title": "Gmail",
     "page_name": "Gmail"
   }

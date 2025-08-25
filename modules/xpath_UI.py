@@ -35,12 +35,13 @@ def api_data():
 
 @app.route('/api/update_name', methods=['POST'])
 def api_update_name():
-    req = request.json
-    page = req['page']
-    idx = req['index']
-    new_name = req['name']
-    fpath = os.path.join(CAPTURED_XPATHS_DIR, page)
     try:
+        req = request.json
+        page = req['page']
+        idx = req['index']
+        new_name = req['name']
+        fpath = os.path.join(CAPTURED_XPATHS_DIR, page)
+        
         with open(fpath, 'r', encoding='utf-8') as f:
             arr = json.load(f)
         if 0 <= idx < len(arr):
@@ -48,6 +49,66 @@ def api_update_name():
             with open(fpath, 'w', encoding='utf-8') as f:
                 json.dump(arr, f, indent=2, ensure_ascii=False)
             return jsonify({'success': True})
+        return jsonify({'success': False, 'error': 'Invalid index'})
+    except Exception as e:
+        return jsonify({'success': False, 'error': str(e)})
+
+@app.route('/api/reorder', methods=['POST'])
+def api_reorder():
+    try:
+        req = request.json
+        page = req['page']
+        old_index = req['oldIndex']
+        new_index = req['newIndex']
+        fpath = os.path.join(CAPTURED_XPATHS_DIR, page)
+        
+        with open(fpath, 'r', encoding='utf-8') as f:
+            arr = json.load(f)
+        if 0 <= old_index < len(arr) and 0 <= new_index < len(arr):
+            item = arr.pop(old_index)
+            arr.insert(new_index, item)
+            with open(fpath, 'w', encoding='utf-8') as f:
+                json.dump(arr, f, indent=2, ensure_ascii=False)
+            return jsonify({'success': True})
+        return jsonify({'success': False, 'error': 'Invalid indices'})
+    except Exception as e:
+        return jsonify({'success': False, 'error': str(e)})
+
+@app.route('/api/reorder_files', methods=['POST'])
+def api_reorder_files():
+    try:
+        req = request.json
+        old_index = req['oldIndex']
+        new_index = req['newIndex']
+        
+        # Get list of JSON files
+        files = [f for f in os.listdir(CAPTURED_XPATHS_DIR) if f.endswith('.json')]
+        files.sort()
+        
+        if 0 <= old_index < len(files) and 0 <= new_index < len(files):
+            file_to_move = files[old_index]
+            files.remove(file_to_move)
+            files.insert(new_index, file_to_move)
+            
+            # Update the order by renaming files with temporary names first
+            temp_names = []
+            for i, fname in enumerate(files):
+                old_path = os.path.join(CAPTURED_XPATHS_DIR, fname)
+                temp_name = f"temp_{i}_{fname}"
+                temp_path = os.path.join(CAPTURED_XPATHS_DIR, temp_name)
+                os.rename(old_path, temp_path)
+                temp_names.append(temp_name)
+            
+            # Rename back to original names in the new order
+            for temp_name, final_name in zip(temp_names, files):
+                temp_path = os.path.join(CAPTURED_XPATHS_DIR, temp_name)
+                final_path = os.path.join(CAPTURED_XPATHS_DIR, final_name)
+                os.rename(temp_path, final_path)
+                
+            return jsonify({'success': True})
+        return jsonify({'success': False, 'error': 'Invalid indices'})
+    except Exception as e:
+        return jsonify({'success': False, 'error': str(e)})
     except Exception as e:
         return jsonify({'success': False, 'error': str(e)})
     return jsonify({'success': False, 'error': 'Invalid index'})

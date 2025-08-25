@@ -428,6 +428,87 @@
             border-color: #ff4444;
             color: #ff6666;
         }
+
+        /* Drag and drop styles */
+        .draggable {
+            cursor: move;
+        }
+
+        .dragging {
+            opacity: 0.7;
+            background: var(--bg-hover);
+            cursor: move;
+            position: relative;
+            z-index: 1000;
+        }
+
+        .tree-node {
+            position: relative;
+            transition: all 0.2s ease;
+            padding: 2px 0;
+        }
+
+        .tree-node.dragging {
+            transform: scale(1.02);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+            background: var(--bg-active);
+        }
+
+        .drag-over-top::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: -2px;
+            height: 4px;
+            background: var(--accent-primary);
+            border-radius: 2px;
+            box-shadow: 0 0 8px var(--accent-primary);
+            pointer-events: none;
+            z-index: 1001;
+        }
+
+        .drag-over-bottom::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: -2px;
+            height: 4px;
+            background: var(--accent-primary);
+            border-radius: 2px;
+            box-shadow: 0 0 8px var(--accent-primary);
+            pointer-events: none;
+            z-index: 1001;
+        }
+
+        /* Drop target highlight */
+        .drop-target {
+            background: var(--bg-hover);
+            transition: background-color 0.2s ease;
+        }
+
+        /* Ghost element style during drag */
+        .drag-ghost {
+            opacity: 0.5;
+            background: var(--bg-active);
+            border: 2px dashed var(--accent-primary);
+            pointer-events: none;
+        }
+
+        .drag-handle {
+            cursor: move;
+            padding: 0 8px;
+            color: var(--text-secondary);
+            opacity: 0.5;
+            transition: opacity 0.2s;
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        .tree-node:hover .drag-handle {
+            opacity: 1;
+        }
     </style>
 </head>
 <body>
@@ -449,6 +530,246 @@
     <div id="tree-root"></div>
     <script>
         let captureProcessRunning = false;
+        let dragSource = null;
+        let dragType = null;
+
+        // Drag and drop functionality
+        document.addEventListener('dragstart', function(e) {
+            const treeNode = e.target.closest('.tree-node');
+            if (!treeNode || !treeNode.draggable) return;
+            
+            dragSource = treeNode;
+            dragType = treeNode.dataset.type;
+            treeNode.classList.add('dragging');
+            
+            // Create a semi-transparent clone for drag image
+            const dragGhost = treeNode.cloneNode(true);
+            dragGhost.classList.add('drag-ghost');
+            dragGhost.style.position = 'absolute';
+            dragGhost.style.top = '-1000px';
+            document.body.appendChild(dragGhost);
+            
+            e.dataTransfer.effectAllowed = 'move';
+            e.dataTransfer.setDragImage(dragGhost, 20, 20);
+            
+            // Remove the ghost element after drag starts
+            requestAnimationFrame(() => {
+                document.body.removeChild(dragGhost);
+            });
+
+            // Add visual feedback for potential drop targets
+            const dropTargets = document.querySelectorAll(`.tree-node[data-type="${dragType}"]`);
+            dropTargets.forEach(target => {
+                if (target !== treeNode) {
+                    target.classList.add('drop-target');
+                }
+            });
+        });
+
+        document.addEventListener('dragend', function(e) {
+            if (dragSource) {
+                dragSource.classList.remove('dragging');
+                // Remove all visual feedback classes
+                document.querySelectorAll('.drop-target').forEach(el => el.classList.remove('drop-target'));
+                document.querySelectorAll('.drag-over-top').forEach(el => el.classList.remove('drag-over-top'));
+                document.querySelectorAll('.drag-over-bottom').forEach(el => el.classList.remove('drag-over-bottom'));
+                dragSource = null;
+                dragType = null;
+            }
+        });
+
+        document.addEventListener('dragover', function(e) {
+            e.preventDefault();
+            const treeNode = e.target.closest('.tree-node');
+            if (!treeNode || !dragSource || treeNode === dragSource) return;
+
+            // Make sure we're dragging and dropping items of the same type
+            if (treeNode.dataset.type !== dragType) return;
+
+            // Remove existing drop indicators
+            document.querySelectorAll('.drag-over-top, .drag-over-bottom').forEach(el => {
+                el.classList.remove('drag-over-top', 'drag-over-bottom');
+            });
+
+            // For JSON files, they can be reordered freely
+            if (dragType === 'json-file') {
+                const rect = treeNode.getBoundingClientRect();
+                const midY = rect.top + rect.height / 2;
+                
+                if (e.clientY < midY) {
+                    treeNode.classList.add('drag-over-top');
+                } else {
+                    treeNode.classList.add('drag-over-bottom');
+                }
+            }
+            // For elements within a JSON file, they can only be reordered within the same file
+            else if (dragType === 'element') {
+                if (treeNode.dataset.page !== dragSource.dataset.page) return;
+                
+                const rect = treeNode.getBoundingClientRect();
+                const midY = rect.top + rect.height / 2;
+                
+                if (e.clientY < midY) {
+                    treeNode.classList.add('drag-over-top');
+                } else {
+                    treeNode.classList.add('drag-over-bottom');
+                }
+            }
+
+            // Set the drop effect
+            e.dataTransfer.dropEffect = 'move';
+        });
+
+        document.addEventListener('dragleave', function(e) {
+            const itemContainer = e.target.closest('.item-container');
+            if (itemContainer) {
+                itemContainer.classList.remove('drag-over-top', 'drag-over-bottom');
+            }
+        });
+
+        document.addEventListener('drop', async function(e) {
+            e.preventDefault();
+            const dropTarget = e.target.closest('.tree-node');
+            if (!dropTarget || !dragSource || dropTarget === dragSource) return;
+
+            // Make sure we're dropping items of the same type
+            if (dropTarget.dataset.type !== dragType) return;
+
+            if (dragType === 'json-file') {
+                // Get the list of JSON files and their current order
+                const fileList = Array.from(document.querySelectorAll('.json-file .item-container[data-type="json-file"]'));
+                const oldIndex = fileList.indexOf(dragSource);
+                const newIndex = fileList.indexOf(dropTarget);
+                
+                if (oldIndex !== -1 && newIndex !== -1) {
+                    // Update UI immediately
+                    const sourceItem = dragSource.closest('li.json-file');
+                    const targetItem = dropTarget.closest('li.json-file');
+                    
+                    // Move the element in the DOM
+                    if (dropBelow) {
+                        targetItem.after(sourceItem);
+                    } else {
+                        targetItem.before(sourceItem);
+                    }
+                    
+                    // Update indices
+                    const allFiles = Array.from(document.querySelectorAll('.json-file'));
+                    allFiles.forEach((file, idx) => {
+                        const node = file.querySelector('.tree-node');
+                        if (node) node.dataset.index = idx;
+                    });
+
+                    // Send reorder request to server in background
+                    fetch('/api/reorder_files', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({
+                            oldIndex: oldIndex,
+                            newIndex: newIndex
+                        })
+                    }).then(resp => resp.json())
+                      .then(result => {
+                          if (!result.success) {
+                              alert('Error saving reorder: ' + (result.error || 'Unknown error'));
+                              // Revert the change if server update fails
+                              if (oldIndex < newIndex) {
+                                  allFiles[oldIndex].before(sourceItem);
+                              } else {
+                                  allFiles[oldIndex].after(sourceItem);
+                              }
+                              // Restore original indices
+                              allFiles.forEach((file, idx) => {
+                                  const node = file.querySelector('.tree-node');
+                                  if (node) node.dataset.index = idx;
+                              });
+                          }
+                      });
+                }
+            } else if (dragType === 'element') {
+                if (dropTarget.dataset.page !== dragSource.dataset.page) return;
+
+                const oldIndex = parseInt(dragSource.dataset.index);
+                let newIndex = parseInt(dropTarget.dataset.index);
+                
+                // Store the expanded state of the parent JSON file
+                const parentJsonFile = dragSource.closest('li.json-file');
+                const wasExpanded = parentJsonFile.classList.contains('open');                // Adjust the newIndex based on whether we're dropping above or below
+                const rect = dropTarget.getBoundingClientRect();
+                const midY = rect.top + rect.height / 2;
+                if (e.clientY > midY && newIndex > oldIndex) {
+                    newIndex++;
+                } else if (e.clientY < midY && newIndex < oldIndex) {
+                    newIndex--;
+                }
+
+                // Get the source and target elements
+                const sourceItem = dragSource.closest('li.element');
+                const targetItem = dropTarget.closest('li.element');
+                const elementsList = sourceItem.parentNode;
+                
+                // Calculate target position
+                const dropPosition = e.clientY > midY ? 'after' : 'before';
+                
+                // First update the UI immediately
+                if (dropPosition === 'after') {
+                    targetItem.after(sourceItem);
+                } else {
+                    targetItem.before(sourceItem);
+                }
+
+                // Re-calculate final indices after DOM update
+                const elements = Array.from(elementsList.children);
+                const finalNewIndex = elements.indexOf(sourceItem);
+
+                // Update all indices to match new positions
+                elements.forEach((el, idx) => {
+                    const node = el.querySelector('.tree-node');
+                    if (node) {
+                        node.dataset.index = idx;
+                    }
+                });
+
+                // Now send the update to the server
+                fetch('/api/reorder', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        page: dragSource.dataset.page,
+                        oldIndex: oldIndex,
+                        newIndex: finalNewIndex
+                    })
+                }).then(resp => resp.json())
+                  .then(result => {
+                      if (!result.success) {
+                          alert('Error saving reorder: ' + (result.error || 'Unknown error'));
+                          // Revert the change if server update fails
+                          elements[oldIndex].parentNode.insertBefore(sourceItem, elements[oldIndex]);
+                          
+                          // Restore original indices
+                          elements.forEach((el, idx) => {
+                              const node = el.querySelector('.tree-node');
+                              if (node) node.dataset.index = idx;
+                          });
+                      }
+                  });
+
+                // Ensure parent JSON file stays expanded and child list is visible
+                if (wasExpanded) {
+                    parentJsonFile.classList.add('open');
+                    const childList = parentJsonFile.querySelector('.child-list');
+                    if (childList) {
+                        childList.style.display = 'block';
+                        childList.style.maxHeight = 'none';
+                        childList.style.opacity = '1';
+                        childList.style.overflow = 'visible';
+                        childList.style.transform = 'translateY(0)';
+                        // Force a reflow to ensure the child list is visible
+                        void childList.offsetHeight;
+                    }
+                }
+            }
+        });
         document.getElementById('capture-xpath-btn').onclick = async function() {
             this.disabled = true;
             document.getElementById('stop-capture-btn').disabled = false;
@@ -480,11 +801,10 @@
         }
         function createElementTree(page, elements, pageIdx) {
             const pageLi = document.createElement('li');
+            pageLi.className = 'json-file';
             
             const treeNode = document.createElement('div');
             treeNode.className = 'tree-node';
-            
-            // Tree spacing for hierarchy
             
             // Controls container (for button)
             const treeControls = document.createElement('div');
@@ -493,6 +813,16 @@
             
             const itemContainer = document.createElement('div');
             itemContainer.className = 'item-container';
+            itemContainer.draggable = true;
+            itemContainer.dataset.type = 'json-file';
+            itemContainer.dataset.filename = page;
+            
+            // Add drag handle for JSON file
+            const dragHandle = document.createElement('span');
+            dragHandle.className = 'drag-handle';
+            dragHandle.textContent = '⋮⋮';
+            dragHandle.title = 'Drag to reorder';
+            itemContainer.appendChild(dragHandle);
             
             // Page collapse/expand button
             const pageCollapseBtn = document.createElement('button');
@@ -585,6 +915,10 @@
                 
                 const treeNode = document.createElement('div');
                 treeNode.className = 'tree-node';
+                treeNode.draggable = true;
+                treeNode.dataset.type = 'element';
+                treeNode.dataset.page = page;
+                treeNode.dataset.index = elIdx;
                 
                 // Controls container (for button)
                 const treeControls = document.createElement('div');
@@ -593,6 +927,23 @@
                 
                 const itemContainer = document.createElement('div');
                 itemContainer.className = 'item-container';
+                
+                // Add drag handle for element
+                const dragHandle = document.createElement('span');
+                dragHandle.className = 'drag-handle';
+                dragHandle.textContent = '⋮⋮';
+                dragHandle.title = 'Drag to reorder';
+                // Make the drag handle trigger dragging of the parent tree-node
+                dragHandle.addEventListener('mousedown', function(e) {
+                    const treeNode = e.target.closest('.tree-node');
+                    if (treeNode) {
+                        treeNode.draggable = true;
+                        treeNode.addEventListener('dragend', function() {
+                            treeNode.draggable = false;
+                        }, { once: true });
+                    }
+                });
+                itemContainer.appendChild(dragHandle);
                 
                 // Expand/collapse button
                 const expandBtn = document.createElement('button');

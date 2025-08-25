@@ -203,5 +203,57 @@
     "page_url": "https://www.google.com/",
     "page_title": "Google",
     "page_name": "Google"
+  },
+  {
+    "name": "Gmail",
+    "properties": {
+      "ariaLabel": "Gmail ",
+      "className": "gb_X",
+      "href": "https://mail.google.com/mail/&ogbl",
+      "id": "",
+      "name": "",
+      "role": null,
+      "tag": "A",
+      "text": "Gmail",
+      "title": "",
+      "type": "",
+      "value": null,
+      "rect": {
+        "bottom": 40.33333396911621,
+        "height": 24,
+        "left": 763.0833740234375,
+        "right": 797.0312919616699,
+        "top": 16.33333396911621,
+        "width": 33.94791793823242,
+        "x": 763.0833740234375,
+        "y": 16.33333396911621
+      },
+      "x": 780.0573329925537,
+      "y": 28.33333396911621
+    },
+    "selectors": {
+      "Class Name": "gb_X",
+      "CSS Selector (Class)": ".gb_X",
+      "XPath (Class)": "//*[contains(@class, 'gb_X')]",
+      "CSS Selector (Combined)": "a.gb_X",
+      "XPath (Combined)": "//a[contains(@class, 'gb_X')]",
+      "Tag": "a",
+      "Full XPath": "/html[1]/body[1]/div[2]/div[2]/div[1]/div[1]/header[1]/div[1]/div[1]/a[1]",
+      "Relative XPath": "//*[@id='gb']/div[1]/div[1]/a",
+      "accu_xpath": "//div[2]/div[2]/div/div/header/div[1]/div[1]/a",
+      "visible_property_xpath": "//a[translate(normalize-space(text()), 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz')='gmail']",
+      "xpath": "//a[translate(normalize-space(text()), 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz')='gmail']"
+    },
+    "found_element_counts": {
+      "CSS Selector (Class)": 2,
+      "CSS Selector (Combined)": 2,
+      "Full XPath": 1,
+      "Relative XPath": 1,
+      "accu_xpath": 1,
+      "visible_property_xpath": 1
+    },
+    "page_url": "https://www.google.com/?zx=1756129517010&no_sw_cr=1",
+    "page_title": "Google",
+    "page_name": "Google"
   }
 ]
