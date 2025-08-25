@@ -14,7 +14,7 @@ from selenium.common.exceptions import WebDriverException
 #EDGEDRIVER_PATH = r'C:\\WebDriver\\msedgedriver.exe'  # Update path as needed
 
 # Predefined URL
-default_url = 'https://www.google.com'
+default_url = 'https://www.google.com'  # fallback
 
 # JSON and CSV output files (inside captured_xpaths folder)
 captured_folder = os.path.join(os.path.dirname(os.path.dirname(__file__)), 'captured_xpaths')
@@ -503,9 +503,20 @@ def capture_elements(driver, selectors_list):
     driver.execute_script('window.clickedElement = null;')
 
 
+# Read URL from config file
+CONFIG_PATH = os.path.join(os.path.dirname(os.path.dirname(__file__)), 'capture_xpath_config.json')
+def get_config_url():
+    try:
+        with open(CONFIG_PATH, 'r', encoding='utf-8') as f:
+            config = json.load(f)
+            return config.get('url', default_url)
+    except Exception:
+        return default_url
+
 def main():
     close_all_browsers()
-    driver = open_browser(default_url)
+    url = get_config_url()
+    driver = open_browser(url)
     print('Press F9 to toggle capture mode (on/off). Click elements to capture selectors. Press F9 again to stop. Repeat as needed. Press Ctrl+C in terminal to exit.')
     selectors_list = []
     capture_mode_enabled = False

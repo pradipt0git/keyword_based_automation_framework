@@ -131,6 +131,43 @@ def open_browser(url):
     import webbrowser
     webbrowser.open(url)
 
+@app.route('/api/delete_json', methods=['POST'])
+def api_delete_json():
+    req = request.json
+    fname = req.get('file')
+    if not fname or not fname.endswith('.json'):
+        return jsonify({'success': False, 'error': 'Invalid file name'})
+    fpath = os.path.join(CAPTURED_XPATHS_DIR, fname)
+    try:
+        if not os.path.exists(fpath):
+            return jsonify({'success': False, 'error': 'File does not exist'})
+        os.remove(fpath)
+        return jsonify({'success': True})
+    except Exception as e:
+        return jsonify({'success': False, 'error': str(e)})
+
+@app.route('/api/delete_field', methods=['POST'])
+def api_delete_field():
+    req = request.json
+    page = req.get('page')
+    idx = req.get('index')
+    if page is None or idx is None:
+        return jsonify({'success': False, 'error': 'Missing page or index'})
+    fpath = os.path.join(CAPTURED_XPATHS_DIR, page)
+    try:
+        with open(fpath, 'r', encoding='utf-8') as f:
+            arr = json.load(f)
+        idx = int(idx)
+        if 0 <= idx < len(arr):
+            arr.pop(idx)
+            with open(fpath, 'w', encoding='utf-8') as f:
+                json.dump(arr, f, indent=2, ensure_ascii=False)
+            return jsonify({'success': True})
+        else:
+            return jsonify({'success': False, 'error': 'Invalid index'})
+    except Exception as e:
+        return jsonify({'success': False, 'error': str(e)})
+
 if __name__ == '__main__':
     port = 5005
     url = f'http://127.0.0.1:{port}/'

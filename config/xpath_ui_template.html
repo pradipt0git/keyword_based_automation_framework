@@ -410,6 +410,24 @@
             word-wrap: normal;
             overflow-x: auto;
         }
+
+        /* Delete button style */
+        .delete-btn {
+            background: var(--bg-secondary);
+            color: #ff4444;
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            padding: 4px 10px;
+            cursor: pointer;
+            font-size: 15px;
+            transition: all 0.2s;
+        }
+
+        .delete-btn:hover {
+            background: var(--bg-hover);
+            border-color: #ff4444;
+            color: #ff6666;
+        }
     </style>
 </head>
 <body>
@@ -530,9 +548,32 @@
                 }
             };
             
+            // Delete icon
+            const deleteBtn = document.createElement('button');
+            deleteBtn.innerHTML = 'X';
+            deleteBtn.title = 'Delete this file';
+            deleteBtn.className = 'delete-btn';
+            deleteBtn.style.marginLeft = '8px';
+            deleteBtn.onclick = async () => {
+                if (!confirm('Are you sure you want to delete this file? This action cannot be undone.')) return;
+                const resp = await fetch('/api/delete_json', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ file: page })
+                });
+                const result = await resp.json();
+                if (result.success) {
+                    alert('File deleted!');
+                    await renderTree();
+                } else {
+                    alert('Delete failed: ' + (result.error || 'Unknown error'));
+                }
+            };
+            
             treeControls.appendChild(pageCollapseBtn);
             itemContainer.appendChild(fileNameInput);
             itemContainer.appendChild(saveBtn);
+            itemContainer.appendChild(deleteBtn);
             treeNode.appendChild(itemContainer);
             pageLi.appendChild(treeNode);
             const ul = document.createElement('ul');
@@ -635,9 +676,32 @@
                         alert('Update failed: ' + (result.error || 'Unknown error'));
                     }
                 };
+                
+                // Delete field (object) button for 2nd layer
+                const deleteFieldBtn = document.createElement('button');
+                deleteFieldBtn.innerHTML = 'X';
+                deleteFieldBtn.title = 'Delete this field/object';
+                deleteFieldBtn.className = 'delete-btn';
+                deleteFieldBtn.style.marginLeft = '8px';
+                deleteFieldBtn.onclick = async () => {
+                    if (!confirm('Are you sure you want to delete this field/object? This action cannot be undone.')) return;
+                    const resp = await fetch('/api/delete_field', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({ page, index: elIdx })
+                    });
+                    const result = await resp.json();
+                    if (result.success) {
+                        alert('Field deleted!');
+                        await renderTree();
+                    } else {
+                        alert('Delete failed: ' + (result.error || 'Unknown error'));
+                    }
+                };
                 treeControls.appendChild(expandBtn);
                 itemContainer.appendChild(nameInput);
                 itemContainer.appendChild(saveNameBtn);
+                itemContainer.appendChild(deleteFieldBtn);
                 treeNode.appendChild(itemContainer);
                 elLi.appendChild(treeNode);
                 
