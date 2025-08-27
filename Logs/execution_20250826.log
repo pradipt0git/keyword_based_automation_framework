@@ -1,0 +1,85 @@
+2025-08-26 18:52:58,813 - WARNING - There was an error managing msedgedriver (error sending request for url (https://msedgedriver.azureedge.net/LATEST_RELEASE_139_WINDOWS)); using driver found in the cache
+2025-08-26 18:53:05,638 - INFO - Opened URL: https://automationintesting.com/selenium/testpage
+2025-08-26 18:53:10,421 - INFO - Set value 'testfirst1' to element: //*[@id="firstname"]
+2025-08-26 18:53:24,049 - INFO - Set value 'testlast1' to element: //*[@id="surname"]
+2025-08-26 18:53:28,549 - ERROR - Failed to set value: Message: Could not locate element with visible text: male; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+
+2025-08-26 18:53:32,529 - INFO - Reloaded the current browser window successfully.
+2025-08-26 18:53:38,664 - WARNING - There was an error managing msedgedriver (error sending request for url (https://msedgedriver.azureedge.net/LATEST_RELEASE_139_WINDOWS)); using driver found in the cache
+2025-08-26 18:53:44,201 - INFO - Opened URL: https://automationintesting.com/selenium/testpage
+2025-08-26 18:53:48,911 - INFO - Set value 'testfirst2' to element: //*[@id="firstname"]
+2025-08-26 18:54:02,371 - INFO - Set value 'testlast2' to element: //*[@id="surname"]
+2025-08-26 18:54:06,692 - ERROR - Failed to set value: Message: Could not locate element with visible text: male; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+
+2025-08-26 18:54:10,564 - INFO - Reloaded the current browser window successfully.
+2025-08-26 18:54:16,667 - WARNING - There was an error managing msedgedriver (error sending request for url (https://msedgedriver.azureedge.net/LATEST_RELEASE_139_WINDOWS)); using driver found in the cache
+2025-08-26 18:54:21,370 - INFO - Opened URL: https://automationintesting.com/selenium/testpage
+2025-08-26 18:54:24,383 - ERROR - Failed to click element //*[@id="firstname"]: Message: invalid session id: session deleted as the browser has closed the connection
+from disconnected: not connected to DevTools
+  (Session info: MicrosoftEdge=139.0.3405.111); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff7f1d381f5+23461]
+	(No symbol) [0x0x7ff7f1c8c2e0]
+	GetHandleVerifier [0x0x7ff7f1fb0128+2611928]
+	(No symbol) [0x0x7ff7f1a4ce20]
+	(No symbol) [0x0x7ff7f1a6b61a]
+	(No symbol) [0x0x7ff7f1acfd1b]
+	(No symbol) [0x0x7ff7f1ae6e5a]
+	(No symbol) [0x0x7ff7f1aca423]
+	(No symbol) [0x0x7ff7f1a9ea86]
+	(No symbol) [0x0x7ff7f1a9dd11]
+	(No symbol) [0x0x7ff7f1a9e8b3]
+	(No symbol) [0x0x7ff7f1b9dd3d]
+	(No symbol) [0x0x7ff7f1bab0c8]
+	GetHandleVerifier [0x0x7ff7f1e1803b+940523]
+	GetHandleVerifier [0x0x7ff7f1e20d91+976705]
+	(No symbol) [0x0x7ff7f1c99ed1]
+	(No symbol) [0x0x7ff7f1c928b4]
+	(No symbol) [0x0x7ff7f1c92a03]
+	(No symbol) [0x0x7ff7f1c844a6]
+	BaseThreadInitThunk [0x0x7ffb0d88e8d7+23]
+	RtlUserThreadStart [0x0x7ffb0e9dc34c+44]
+
+2025-08-26 19:02:33,062 - WARNING - There was an error managing msedgedriver (error sending request for url (https://msedgedriver.azureedge.net/LATEST_RELEASE_139_WINDOWS)); using driver found in the cache
+2025-08-26 19:02:37,706 - INFO - Opened URL: https://automationintesting.com/selenium/testpage
+2025-08-26 19:02:42,407 - INFO - Opened URL: https://automationintesting.com/selenium/testpage
+2025-08-26 19:02:46,644 - ERROR - Failed to click element : Message: invalid selector: No selector specified
+  (Session info: MicrosoftEdge=139.0.3405.111); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidselectorexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff7f1d381f5+23461]
+	(No symbol) [0x0x7ff7f1c8c2e0]
+	GetHandleVerifier [0x0x7ff7f1fb0128+2611928]
+	(No symbol) [0x0x7ff7f1a6381c]
+	(No symbol) [0x0x7ff7f1a660ac]
+	(No symbol) [0x0x7ff7f1a6617f]
+	(No symbol) [0x0x7ff7f1aa8d2b]
+	(No symbol) [0x0x7ff7f1aa946b]
+	(No symbol) [0x0x7ff7f1ae9a67]
+	(No symbol) [0x0x7ff7f1aca6ff]
+	(No symbol) [0x0x7ff7f1a9f58d]
+	(No symbol) [0x0x7ff7f1ae754f]
+	(No symbol) [0x0x7ff7f1aca423]
+	(No symbol) [0x0x7ff7f1a9ea86]
+	(No symbol) [0x0x7ff7f1a9dd11]
+	(No symbol) [0x0x7ff7f1a9e8b3]
+	(No symbol) [0x0x7ff7f1b9dd3d]
+	(No symbol) [0x0x7ff7f1bab0c8]
+	GetHandleVerifier [0x0x7ff7f1e1803b+940523]
+	GetHandleVerifier [0x0x7ff7f1e20d91+976705]
+	(No symbol) [0x0x7ff7f1c99ed1]
+	(No symbol) [0x0x7ff7f1c928b4]
+	(No symbol) [0x0x7ff7f1c92a03]
+	(No symbol) [0x0x7ff7f1c844a6]
+	BaseThreadInitThunk [0x0x7ffb0d88e8d7+23]
+	RtlUserThreadStart [0x0x7ffb0e9dc34c+44]
+
+2025-08-26 19:02:50,798 - ERROR - Failed to set value: XPath cannot be empty for set_value action
+2025-08-26 19:02:55,661 - INFO - Reloaded the current browser window successfully.
+2025-08-26 19:02:59,470 - INFO - Reloaded the current browser window successfully.
+2025-08-26 19:04:52,502 - WARNING - There was an error managing msedgedriver (error sending request for url (https://msedgedriver.azureedge.net/LATEST_RELEASE_139_WINDOWS)); using driver found in the cache
+2025-08-26 19:04:56,853 - INFO - Opened URL: https://automationintesting.com/selenium/testpage
+2025-08-26 19:05:01,963 - INFO - Opened URL: https://automationintesting.com/selenium/testpage
+2025-08-26 19:05:06,171 - ERROR - Failed to set value: XPath cannot be empty for set_value action
+2025-08-26 19:05:10,336 - ERROR - Failed to set value: XPath cannot be empty for set_value action
+2025-08-26 19:05:15,054 - INFO - Set value 'test' to element: //*[@id="contactus"]/div[5]/div/label/textarea
+2025-08-26 19:05:18,923 - INFO - Reloaded the current browser window successfully.

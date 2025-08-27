@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Execution Report</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .header { text-align: center; margin-bottom: 20px; }
+        .header h1 { font-size: 24px; }
+        .top-section { display: flex; justify-content: space-between; margin-bottom: 20px; }
+        .card { border: 1px solid #ddd; border-radius: 5px; padding: 15px; width: 48%; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); }
+        .card h2 { font-size: 18px; margin-bottom: 10px; }
+        .card p { margin: 5px 0; }
+        table { border-collapse: collapse; width: 100%; margin-top: 20px; }
+        th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+        th { background-color: #f2f2f2; }
+        .pass { background-color: #d4edda; } /* Light pale green */
+        .fail { background-color: #f8d7da; } /* Light pale red */
+        img { width: 150px; cursor: pointer; }
+        .chart { text-align: center; }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="header">
+        <h1>Test Execution Report</h1>
+    </div>
+
+    <div class="top-section">
+        <div class="card">
+            <h2>Execution Details</h2>
+            <p><strong>Execution Date:</strong> 2025-08-26</p>
+            <p><strong>Execution Time:</strong> 19:03:05</p>
+            <p><strong>Report Path:</strong> c:\Projects\Selenium_Python-KeywordBased_Framework<wbr>\keyword_based_automation_framework\Reports\execut<wbr>ion_report_20250826_190232\execution_report_202508<wbr>26_190232.xlsx</p>
+            <p><strong>Log Path:</strong> c:\Projects\Selenium_Python-KeywordBased_Framework<wbr>\keyword_based_automation_framework\Reports\execut<wbr>ion_report_20250826_190232\execution_log.txt</p>
+            <p><strong>Screenshot Path:</strong> c:\Projects\Selenium_Python-KeywordBased_Framework<wbr>\keyword_based_automation_framework\Reports\execut<wbr>ion_report_20250826_190232\Screenshots</p>
+        </div>
+        <div class="card chart">            
+            <!-- <img src="data:image/png;base64,{{chart_data}}" alt="Test Summary Chart"> -->
+            <canvas id="testSummaryChart" width="225" height="225" style="display: block; margin: 0 auto;"></canvas>
+        </div>
+    </div>
+
+    <script>
+        const ctx = document.getElementById('testSummaryChart').getContext('2d');
+        const testSummaryChart = new Chart(ctx, {
+            type: 'pie',
+            data: {
+                labels: ['PASS', 'FAIL'],
+                datasets: [{
+                    data: [4, 2],
+                    backgroundColor: ['#4CAF50', '#F44336'],
+                }]
+            },
+            options: {
+                responsive: false,  // Disable responsiveness to respect canvas dimensions
+                plugins: {
+                    legend: {
+                        position: 'right',  // Move legends to the right side
+                    },
+                    tooltip: {
+                        callbacks: {
+                            label: function(context) {
+                                const label = context.label || '';
+                                const value = context.raw;
+                                const total = context.dataset.data.reduce((a, b) => a + b, 0);
+                                const percentage = ((value / total) * 100).toFixed(1);
+                                return `${label}: ${value} (${percentage}%)`;
+                            }
+                        }
+                    },
+                    datalabels: {
+                        color: '#fff',
+                        font: {
+                            weight: 'bold',
+                            size: 14
+                        },
+                        formatter: (value, context) => {
+                            const total = context.dataset.data.reduce((a, b) => a + b, 0);
+                            const percentage = ((value / total) * 100).toFixed(1);
+                            return `${percentage}%`;
+                        }
+                    }
+                }
+            }
+        });
+    </script>
+
+    <h2>Test Results</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Test Name</th>
+                <th>Test Set Number</th>
+                <th>Step Action</th>
+                <th>Action Status</th>
+                <th>Error Message</th>
+                <th>Screenshot</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class='pass'><td>TC01</td><td>1</td><td>OpenUrl</td><td>pass</td><td></td><td><a href="c:\Projects\Selenium_Python-KeywordBased_Framework\keyword_based_automation_framework\Reports\execution_report_20250826_190232\Screenshots\TC01_Landing_app_url_OpenUrl_20250826_190240_713757.png" target="_blank"><img src="c:\Projects\Selenium_Python-KeywordBased_Framework\keyword_based_automation_framework\Reports\execution_report_20250826_190232\Screenshots\TC01_Landing_app_url_OpenUrl_20250826_190240_713757.png" alt="screenshot" style="max-width:80px;max-height:60px;border:1px solid #888;vertical-align:middle;"/></a></td></tr><tr class='pass'><td>TC01</td><td>1</td><td>OpenUrl</td><td>pass</td><td></td><td><a href="c:\Projects\Selenium_Python-KeywordBased_Framework\keyword_based_automation_framework\Reports\execution_report_20250826_190232\Screenshots\TC01_Dashboard_app_url_OpenUrl_20250826_190245_415001.png" target="_blank"><img src="c:\Projects\Selenium_Python-KeywordBased_Framework\keyword_based_automation_framework\Reports\execution_report_20250826_190232\Screenshots\TC01_Dashboard_app_url_OpenUrl_20250826_190245_415001.png" alt="screenshot" style="max-width:80px;max-height:60px;border:1px solid #888;vertical-align:middle;"/></a></td></tr><tr class='fail'><td>TC01</td><td>1</td><td>ClickElement</td><td>fail</td><td>Failed to click element : Message</td><td><a href="c:\Projects\Selenium_Python-KeywordBased_Framework\keyword_based_automation_framework\Reports\execution_report_20250826_190232\Screenshots\TC01_Dashboard_firstname_ClickElement_20250826_190249_649736.png" target="_blank"><img src="c:\Projects\Selenium_Python-KeywordBased_Framework\keyword_based_automation_framework\Reports\execution_report_20250826_190232\Screenshots\TC01_Dashboard_firstname_ClickElement_20250826_190249_649736.png" alt="screenshot" style="max-width:80px;max-height:60px;border:1px solid #888;vertical-align:middle;"/></a></td></tr><tr class='fail'><td>TC01</td><td>1</td><td>InputText</td><td>fail</td><td>Failed to set value: XPath cannot be empty for set_value action</td><td><a href="c:\Projects\Selenium_Python-KeywordBased_Framework\keyword_based_automation_framework\Reports\execution_report_20250826_190232\Screenshots\TC01_Dashboard_surname_InputText_20250826_190253_810171.png" target="_blank"><img src="c:\Projects\Selenium_Python-KeywordBased_Framework\keyword_based_automation_framework\Reports\execution_report_20250826_190232\Screenshots\TC01_Dashboard_surname_InputText_20250826_190253_810171.png" alt="screenshot" style="max-width:80px;max-height:60px;border:1px solid #888;vertical-align:middle;"/></a></td></tr><tr class='pass'><td>TC01</td><td>1</td><td>custom-reload_current_window</td><td>pass</td><td></td><td><a href="c:\Projects\Selenium_Python-KeywordBased_Framework\keyword_based_automation_framework\Reports\execution_report_20250826_190232\Screenshots\TC01_Dashboard_Profile_custom-reload_current_window_20250826_190258_666843.png" target="_blank"><img src="c:\Projects\Selenium_Python-KeywordBased_Framework\keyword_based_automation_framework\Reports\execution_report_20250826_190232\Screenshots\TC01_Dashboard_Profile_custom-reload_current_window_20250826_190258_666843.png" alt="screenshot" style="max-width:80px;max-height:60px;border:1px solid #888;vertical-align:middle;"/></a></td></tr><tr class='pass'><td>TC01</td><td>1</td><td>custom-reload_current_window</td><td>pass</td><td></td><td><a href="c:\Projects\Selenium_Python-KeywordBased_Framework\keyword_based_automation_framework\Reports\execution_report_20250826_190232\Screenshots\TC01_Landing__custom-reload_current_window_20250826_190302_476347.png" target="_blank"><img src="c:\Projects\Selenium_Python-KeywordBased_Framework\keyword_based_automation_framework\Reports\execution_report_20250826_190232\Screenshots\TC01_Landing__custom-reload_current_window_20250826_190302_476347.png" alt="screenshot" style="max-width:80px;max-height:60px;border:1px solid #888;vertical-align:middle;"/></a></td></tr>
+        </tbody>
+    </table>
+</body>
+</html>

@@ -300,6 +300,27 @@ def get_element_details(driver, element):
             except Exception:
                 selectors.pop('visible_property_xpath', None)
                 selectors.pop('xpath', None)
+        elif element.get_attribute('placeholder'):
+            tag_lc = tag.lower() if tag else ''
+            placeholder_val = element.get_attribute('placeholder')
+            placeholder_lc = placeholder_val.strip().lower() if placeholder_val else ''
+            candidate = (
+                f"//{tag_lc}[translate(@placeholder, 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz')="
+                f"'{placeholder_lc}']"
+            )
+            try:
+                found = driver.find_elements(By.XPATH, candidate)
+                count = len(found)
+                if count > 0:
+                    selectors['visible_property_xpath'] = candidate
+                    selectors['xpath'] = candidate  # Add 'xpath' property after 'visible_property_xpath'
+                    found_element_counts['visible_property_xpath'] = count
+                else:
+                    selectors.pop('visible_property_xpath', None)
+                    selectors.pop('xpath', None)
+            except Exception:
+                selectors.pop('visible_property_xpath', None)
+                selectors.pop('xpath', None)
         elif value_val:
             tag_lc = tag.lower() if tag else ''
             value_lc = value_val.strip().lower() if value_val else ''
