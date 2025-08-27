@@ -1,0 +1,14 @@
+2025-08-27 18:11:06,353 - WARNING - There was an error managing msedgedriver (error sending request for url (https://msedgedriver.azureedge.net/LATEST_RELEASE_139_WINDOWS)); using driver found in the cache
+2025-08-27 18:11:12,764 - INFO - Opened URL: https://automationintesting.com/selenium/testpage
+2025-08-27 18:11:17,896 - INFO - Opened URL: https://automationintesting.com/selenium/testpage
+2025-08-27 18:11:22,098 - ERROR - Failed to set value: XPath cannot be empty for set_value action
+2025-08-27 18:11:26,322 - ERROR - Failed to set value: XPath cannot be empty for set_value action
+2025-08-27 18:11:31,272 - INFO - Set value 'test' to element: //*[@id="contactus"]/div[5]/div/label/textarea
+2025-08-27 18:11:35,187 - INFO - Reloaded the current browser window successfully.
+2025-08-27 18:14:43,363 - WARNING - There was an error managing msedgedriver (error sending request for url (https://msedgedriver.azureedge.net/LATEST_RELEASE_139_WINDOWS)); using driver found in the cache
+2025-08-27 18:14:49,930 - INFO - Opened URL: https://automationintesting.com/selenium/testpage
+2025-08-27 18:14:54,789 - INFO - Opened URL: https://automationintesting.com/selenium/testpage
+2025-08-27 18:14:58,990 - ERROR - Failed to set value: XPath cannot be empty for set_value action
+2025-08-27 18:15:03,195 - ERROR - Failed to set value: XPath cannot be empty for set_value action
+2025-08-27 18:15:07,863 - INFO - Set value 'test' to element: //*[@id="contactus"]/div[5]/div/label/textarea
+2025-08-27 18:15:11,739 - INFO - Reloaded the current browser window successfully.
