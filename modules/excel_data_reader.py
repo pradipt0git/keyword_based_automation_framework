@@ -198,6 +198,15 @@ def process_testcase_rows(testcase, sheet, row_num, driver, reporting, actions, 
                     if comp_field in header_row:
                         col_idx_val = header_row.index(comp_field)
                         comp_data_value = data_sheet.cell(row=row_num, column=col_idx_val + 1).value
+                    if "<<" in comp_xpath and ">>" in comp_xpath:
+                        # Replace all occurrences of <<key>> with corresponding value from data_sheet row
+                        matches = re.findall(r"<<([^<>]+)>>", comp_xpath)
+                        for key in matches:
+                            if key in header_row:
+                                col_idx_val = header_row.index(key)
+                                keys_value = data_sheet.cell(row=row_num, column=col_idx_val + 1).value
+                                comp_xpath = comp_xpath.replace(f"<<{key}>>", str(keys_value))
+
                     step_result = process_step(
                         testcase, comp_screen, comp_field, comp_action, comp_xpath, comp_data_value, driver, reporting, actions, dataset_number,
                         get_pass_screenshot=get_pass_screenshot,

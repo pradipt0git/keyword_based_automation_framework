@@ -31,34 +31,7 @@ def process_step(testcasename, screen, field, action, xpath, data, driver, repor
             try:
                 time.sleep(float(wait_time_before_exec))
             except Exception:
-                pass
-
-        # --- Dynamic placeholder replacement in xpath ---
-        import re
-        def replace_xpath_placeholders(xpath, data_sheet_row=None):
-            # Replace all <<key>> with value from data_sheet_row, if available
-            def repl(match):
-                key = match.group(1)
-                if data_sheet_row and key in data_sheet_row:
-                    return str(data_sheet_row[key])
-                return match.group(0)  # leave as is if not found
-            # Use re.sub with global replacement (default behavior)
-            return re.sub(r"<<([^<>]+)>>", repl, xpath) if xpath else xpath
-
-        # Build data_sheet_row if possible (field name to value mapping)
-        data_sheet_row = None
-        try:
-            # If 'field' is present, try to get the row dict from the driver/session
-            # This requires that process_testcase_rows passes a dict or context, or you can extend this logic as needed
-            # For now, try to get from actions or reporting if available
-            if hasattr(actions, 'data_sheet_row'):
-                data_sheet_row = actions.data_sheet_row
-            elif hasattr(reporting, 'data_sheet_row'):
-                data_sheet_row = reporting.data_sheet_row
-        except Exception:
-            pass
-        # Replace placeholders in xpath
-        xpath = replace_xpath_placeholders(xpath, data_sheet_row)
+                pass    
 
         # Dynamically call custom action if action starts with 'custom-'
         if action and action.startswith("custom-"):
