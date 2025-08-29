@@ -1,3 +1,4 @@
+from modules.globals import global_dict
 # main.py
 """
 Entry point for the automation framework. This script starts the execution by calling the main function from excel_data_reader.

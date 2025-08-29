@@ -12,6 +12,7 @@ import datetime
 import shutil
 import sys
 import tempfile
+from modules.globals import global_dict
 
 step_results = []
 CONFIG_FOLDER = os.path.join(os.path.dirname(os.path.dirname(__file__)), 'config')
@@ -173,8 +174,22 @@ def process_testcase_rows(testcase, sheet, row_num, driver, reporting, actions, 
             if field in header_row:
                 col_idx_val = header_row.index(field)
                 data_value = data_sheet.cell(row=row_num, column=col_idx_val + 1).value
+                if data_value.find("$$"):
+                    key_name = data_value
+                    if key_name in global_dict:
+                        data_value = global_dict[key_name]
             else:
                 data_value = ''
+
+            if "<<" in xpath and ">>" in xpath:
+                # Replace all occurrences of <<key>> with corresponding value from data_sheet row
+                matches = re.findall(r"<<([^<>]+)>>", xpath)
+                for key in matches:
+                    if key in header_row:
+                        col_idx_val = header_row.index(key)
+                        keys_value = data_sheet.cell(row=row_num, column=col_idx_val + 1).value
+                        xpath = xpath.replace(f"<<{key}>>", str(keys_value))
+            
             get_pass_screenshot = False
             if get_pass_screenshot_idx is not None:
                 gps_val = row[get_pass_screenshot_idx]
@@ -198,6 +213,11 @@ def process_testcase_rows(testcase, sheet, row_num, driver, reporting, actions, 
                     if comp_field in header_row:
                         col_idx_val = header_row.index(comp_field)
                         comp_data_value = data_sheet.cell(row=row_num, column=col_idx_val + 1).value
+                        if comp_data_value.find("$$"):
+                            key_name = comp_data_value
+                            if key_name in global_dict:
+                                comp_data_value = global_dict[key_name]
+
                     if "<<" in comp_xpath and ">>" in comp_xpath:
                         # Replace all occurrences of <<key>> with corresponding value from data_sheet row
                         matches = re.findall(r"<<([^<>]+)>>", comp_xpath)

@@ -1,4 +1,5 @@
-
+from modules.globals import global_dict
+from modules.selenium_actions import SeleniumActions
 import os
 from modules.reporting_v2 import RobustReporting
 
@@ -72,6 +73,43 @@ def compare_text(driver, xpath=None, value=None, fieldname=None, pagename=None, 
             return False, error_message
     except Exception as e:
         error_message = f"Exception in assert_datasheet_equals_web: {str(e)}"
+        reporting.log_error(error_message)
+        print(error_message)
+        return False, error_message
+    
+def get_and_store_text(driver, xpath=None, value=None, fieldname=None, pagename=None, teststep=None, testname=None):
+    """Custom action: Get text/value from an element using xpath and store/log it with the given fieldname (with $$ prefix)."""
+    try:
+        if not xpath:
+            error_message = "No xpath provided for get_text."
+            reporting.log_error(error_message)
+            print(error_message)
+            return False, error_message
+        if not fieldname or not fieldname.startswith('$$'):
+            error_message = "Fieldname must be provided and start with '$$' for get_text."
+            reporting.log_error(error_message)
+            print(error_message)
+            return False, error_message
+        # Use SeleniumActions to get value
+        actions = SeleniumActions(reporting, driver)
+        success, result = actions.get_value(xpath)
+        if success:
+            log_message = f"get_text: Value for {fieldname} is '{result}'"
+            reporting.log_info(log_message)
+            print(log_message)
+            # Store in global_dict for global access
+            global_dict[fieldname] = result
+            # Optionally, store in reporting.values_dict or similar if needed
+            if hasattr(reporting, 'values_dict'):
+                reporting.values_dict[fieldname] = result
+            return True, result
+        else:
+            error_message = f"get_text failed for {fieldname}: {result}"
+            reporting.log_error(error_message)
+            print(error_message)
+            return False, error_message
+    except Exception as e:
+        error_message = f"Exception in get_text: {str(e)}"
         reporting.log_error(error_message)
         print(error_message)
         return False, error_message
