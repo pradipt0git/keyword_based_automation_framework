@@ -173,7 +173,7 @@ def process_testcase_rows(testcase, sheet, row_num, driver, reporting, actions, 
             header_row = [cell.value for cell in data_sheet[1]]
             if field in header_row:
                 col_idx_val = header_row.index(field)
-                data_value = data_sheet.cell(row=row_num, column=col_idx_val + 1).value
+                data_value = str(data_sheet.cell(row=row_num, column=col_idx_val + 1).value)
                 if data_value.find("$$"):
                     key_name = data_value
                     if key_name in global_dict:
@@ -212,7 +212,7 @@ def process_testcase_rows(testcase, sheet, row_num, driver, reporting, actions, 
                     comp_data_value = ''
                     if comp_field in header_row:
                         col_idx_val = header_row.index(comp_field)
-                        comp_data_value = data_sheet.cell(row=row_num, column=col_idx_val + 1).value
+                        comp_data_value = str(data_sheet.cell(row=row_num, column=col_idx_val + 1).value)
                         if comp_data_value.find("$$"):
                             key_name = comp_data_value
                             if key_name in global_dict:

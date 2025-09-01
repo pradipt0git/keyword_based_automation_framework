@@ -42,26 +42,11 @@ def compare_text(driver, xpath=None, value=None, fieldname=None, pagename=None, 
             reporting.log_error(error_message)
             print(error_message)
             return False, error_message
-        # Find the element and get its visible value/text
-        element = driver.find_element_by_xpath(xpath)
-        web_val = ''
-        # Try to get text content if visible
-        if element.is_displayed():
-            # Try .text (for h1, span, div, etc.)
-            web_val = element.text.strip() if element.text else ''
-            # If .text is empty, try value attribute (for input, textarea)
-            if not web_val:
-                web_val = element.get_attribute('value')
-                web_val = web_val.strip() if web_val else ''
-            # If still empty, try innerText (for some edge cases)
-            if not web_val:
-                try:
-                    web_val = driver.execute_script('return arguments[0].innerText;', element)
-                    web_val = web_val.strip() if web_val else ''
-                except Exception:
-                    pass
+        # Use SeleniumActions to get value
+        actions = SeleniumActions(reporting, driver)
+        success, web_val = actions.get_value(xpath)
         expected_val = str(value).strip() if value is not None else ''
-        if web_val == expected_val:
+        if success and str(web_val).strip() == expected_val:
             log_message = f"Assert passed: Web value '{web_val}' matches expected '{expected_val}'"
             reporting.log_info(log_message)
             print(log_message)
