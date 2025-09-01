@@ -1,0 +1,31 @@
+Press F9 to toggle capture mode (on/off). Click elements to capture selectors. Press F9 again to stop. Repeat as needed. Press Ctrl+C in terminal to exit.
+Hold Windows + F9 to enable capture mode. Release to disable. Press Ctrl+C in terminal to exit.
+Capture mode enabled.
+No element clicked. Nothing to capture.
+No element clicked. Nothing to capture.
+No element clicked. Nothing to capture.
+No element clicked. Nothing to capture.
+No element clicked. Nothing to capture.
+No element clicked. Nothing to capture.
+No element clicked. Nothing to capture.
+No element clicked. Nothing to capture.
+No element clicked. Nothing to capture.
+No element clicked. Nothing to capture.
+No element clicked. Nothing to capture.
+No element clicked. Nothing to capture.
+No element clicked. Nothing to capture.
+No element clicked. Nothing to capture.
+No element clicked. Nothing to capture.
+No element clicked. Nothing to capture.
+No element clicked. Nothing to capture.
+No element clicked. Nothing to capture.
+No element clicked. Nothing to capture.
+No element clicked. Nothing to capture.
+No element clicked. Nothing to capture.
+No element clicked. Nothing to capture.
+No element clicked. Nothing to capture.
+Element details: {'name': 'Settings', 'properties': {'ariaLabel': None, 'className': 'ayzqOc pHiOh', 'href': None, 'id': '', 'name': None, 'role': None, 'tag': 'DIV', 'text': 'Settings', 'title': '', 'type': None, 'value': None, 'rect': {'bottom': 651.200023651123, 'height': 46.79999923706055, 'left': 789.2000122070312, 'right': 869.7875137329102, 'top': 604.4000244140625, 'width': 80.5875015258789, 'x': 789.2000122070312, 'y': 604.4000244140625}, 'x': 829.4937629699707, 'y': 627.8000240325928}, 'selectors': {'Class Name': 'ayzqOc pHiOh', 'CSS Selector (Class)': '.ayzqOc', 'XPath (Class)': "//*[contains(@class, 'ayzqOc')]", 'CSS Selector (Combined)': 'div.ayzqOc.pHiOh', 'XPath (Combined)': "//div[contains(@class, 'ayzqOc')]", 'Tag': 'div', 'Full XPath': '/html[1]/body[1]/div[2]/div[7]/div[1]/div[2]/div[2]/span[1]/span[1]/g-popup[1]/div[1]/div[1]', 'Relative XPath': '/html/body/div[2]/div[7]/div/div[2]/div[2]/span/span/g-popup/div[1]/div', 'accu_xpath': "//div[contains(@class, 'ayzqOc')]", 'visible_property_xpath': "//div[translate(normalize-space(text()), 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz')='settings']", 'xpath': "//div[translate(normalize-space(text()), 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz')='settings']"}, 'found_element_counts': {'CSS Selector (Class)': 1, 'CSS Selector (Combined)': 1, 'Full XPath': 1, 'Relative XPath': 1, 'accu_xpath': 1, 'visible_property_xpath': 1}, 'page_url': 'https://www.google.com/?zx=1756571086095&no_sw_cr=1', 'page_title': 'Google', 'page_name': 'Google'}
+Details appended to d:\Projects\Automation_framework\keyword_based_automation_framework\captured_xpaths\element_selectors.csv
+Details appended to d:\Projects\Automation_framework\keyword_based_automation_framework\captured_xpaths\obj_Google.json
+Capture mode disabled.
+Exiting...

@@ -23,17 +23,70 @@ selectors_csv = os.path.join(captured_folder, 'element_selectors.csv')
 selectors_json = os.path.join(captured_folder, 'element_selectors.json')
 
 def close_all_browsers():
-    # Windows: close all Chrome processes
-    os.system('taskkill /F /IM chrome.exe >nul 2>&1')
-    time.sleep(2)
+    # Only close selenium-controlled browsers
+    driver_names = ['chromedriver.exe', 'msedgedriver.exe', 'geckodriver.exe']
+    for driver in driver_names:
+        os.system(f'taskkill /F /IM {driver} >nul 2>&1')
+    time.sleep(1)
 
 def open_browser(url):
-    options = Options()
-    # Edge does not support 'detach' option like Chrome, so we skip it
-    driver = webdriver.Edge(options=options)
-    driver.get(url)
-    return driver
+    browser_choice = os.environ.get('CAPTURE_BROWSER', 'chrome').lower()
+    
+    try:
+        if browser_choice == 'chrome':
+            from selenium.webdriver.chrome.options import Options
+            options = Options()
+            # Disable GPU and other unnecessary features
+            options.add_argument('--disable-gpu')
+            options.add_argument('--disable-software-rasterizer')
+            options.add_argument('--disable-dev-shm-usage')
+            options.add_argument('--no-sandbox')
+            options.add_argument('--disable-infobars')
+            options.add_argument('--disable-extensions')
+            options.add_argument('--disable-notifications')
+            options.add_experimental_option('excludeSwitches', ['enable-logging', 'enable-automation'])
+            options.add_experimental_option('useAutomationExtension', False)
+            driver = webdriver.Chrome(options=options)
+        elif browser_choice == 'firefox':
+            from selenium.webdriver.firefox.options import Options as FirefoxOptions
+            options = FirefoxOptions()
+            driver = webdriver.Firefox(options=options)
+        else:  # edge as fallback
+            options = Options()
+            options.add_argument('--no-sandbox')
+            options.add_argument('--disable-dev-shm-usage')
+            options.add_experimental_option('excludeSwitches', ['enable-automation'])
+            options.add_experimental_option('useAutomationExtension', False)
+            driver = webdriver.Edge(options=options)
+            
+        driver.get(url)
+        return driver
+    except Exception as e:
+        print(f"Failed to start {browser_choice} browser: {str(e)}")
+        # Try fallback browsers
+        if browser_choice != 'chrome':
+            print("Trying Chrome as fallback...")
+            return open_browser_with_type('chrome', url)
+        elif browser_choice != 'firefox':
+            print("Trying Firefox as fallback...")
+            return open_browser_with_type('firefox', url)
+        raise  # If all browsers fail, raise the original exception
 
+def open_browser_with_type(browser_type, url):
+    # Helper function for fallback browser attempts
+    try:
+        if browser_type == 'chrome':
+            from selenium.webdriver.chrome.options import Options as ChromeOptions
+            options = ChromeOptions()
+            options.add_argument('--no-sandbox')
+            return webdriver.Chrome(options=options)
+        elif browser_type == 'firefox':
+            from selenium.webdriver.firefox.options import Options as FirefoxOptions
+            options = FirefoxOptions()
+            return webdriver.Firefox(options=options)
+    except Exception as e:
+        print(f"Failed to start {browser_type} browser: {str(e)}")
+        return None
 
 def get_element_details(driver, element):
     # Determine the 'name' field for the JSON object
@@ -49,7 +102,11 @@ def get_element_details(driver, element):
             if title_val:
                 details = {'name': title_val}
             else:
-                details = {'name': ''}
+                placeholder_val = element.get_attribute('placeholder')
+                if placeholder_val:
+                    details = {'name': placeholder_val}
+                else:
+                    details = {'name': ''}
     try:
         # Properties
         props = {}
@@ -577,3 +634,4 @@ def main():
 
 if __name__ == '__main__':
     main()
+      

@@ -1,0 +1,2 @@
+Press F9 to toggle capture mode (on/off). Click elements to capture selectors. Press F9 again to stop. Repeat as needed. Press Ctrl+C in terminal to exit.
+Hold Windows + F9 to enable capture mode. Release to disable. Press Ctrl+C in terminal to exit.

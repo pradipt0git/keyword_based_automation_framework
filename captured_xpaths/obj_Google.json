@@ -1,53 +1,56 @@
 [
   {
-    "name": "About",
+    "name": "btnK",
     "properties": {
-      "ariaLabel": null,
-      "className": "MV3Tnb",
-      "href": "https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=webhp&cd=&ved=0ahUKEwivtM_Lk5ePAxVAlFYBHdLpGUQQkNQCCAI&url=https%3A%2F%2Fabout.google%2F%3Ffg%3D1%26utm_source%3Dgoogle-IN%26utm_medium%3Dreferral%26utm_campaign%3Dhp-header&usg=AOvVaw0CtSO059N49aDG_TIeJdnK&opi=89978449",
+      "ariaLabel": "Google Search",
+      "className": "gNO89b",
+      "href": null,
       "id": "",
-      "name": "",
-      "role": null,
-      "tag": "A",
-      "text": "About",
+      "name": "btnK",
+      "role": "button",
+      "tag": "INPUT",
+      "text": "",
       "title": "",
-      "type": "",
-      "value": null,
+      "type": "submit",
+      "value": "Google Search",
       "rect": {
-        "bottom": 43,
-        "height": 26,
-        "left": 21,
-        "right": 67.59375,
-        "top": 17,
-        "width": 46.59375,
-        "x": 21,
-        "y": 17
+        "bottom": 345.8000183105469,
+        "height": 36,
+        "left": 377.5,
+        "right": 504.5,
+        "top": 309.8000183105469,
+        "width": 127,
+        "x": 377.5,
+        "y": 309.8000183105469
       },
-      "x": 44.296875,
-      "y": 30.0
+      "x": 441.0,
+      "y": 327.8000183105469
     },
     "selectors": {
-      "Class Name": "MV3Tnb",
-      "CSS Selector (Class)": ".MV3Tnb",
-      "XPath (Class)": "//*[contains(@class, 'MV3Tnb')]",
-      "CSS Selector (Combined)": "a.MV3Tnb",
-      "XPath (Combined)": "//a[contains(@class, 'MV3Tnb')]",
-      "Tag": "a",
-      "Full XPath": "/html[1]/body[1]/div[2]/div[2]/a[1]",
-      "Relative XPath": "/html/body/div[2]/div[2]/a[1]",
-      "accu_xpath": "//div[2]/div[2]/a[1]",
-      "visible_property_xpath": "//a[normalize-space(text())='About']",
-      "xpath": "//a[normalize-space(text())='About']"
+      "Class Name": "gNO89b",
+      "CSS Selector (Class)": ".gNO89b",
+      "XPath (Class)": "//*[contains(@class, 'gNO89b')]",
+      "CSS Selector (Combined)": "input.gNO89b",
+      "XPath (Combined)": "//input[contains(@class, 'gNO89b')]",
+      "CSS Selector (Name)": "input[name='btnK']",
+      "XPath (Name)": "//input[@name='btnK']",
+      "Tag": "input",
+      "Full XPath": "/html[1]/body[1]/div[2]/div[4]/form[1]/div[1]/div[1]/div[3]/center[1]/input[1]",
+      "Relative XPath": "/html/body/div[2]/div[4]/form/div[1]/div[1]/div[3]/center/input[1]",
+      "accu_xpath": "//div[2]/div[4]/form/div[1]/div[1]/div[3]/center/input[1]",
+      "visible_property_xpath": "//input[translate(@aria-label, 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz')='google search']",
+      "xpath": "//input[translate(@aria-label, 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz')='google search']"
     },
     "found_element_counts": {
       "CSS Selector (Class)": 2,
       "CSS Selector (Combined)": 2,
+      "CSS Selector (Name)": 2,
       "Full XPath": 1,
       "Relative XPath": 1,
-      "accu_xpath": 2,
-      "visible_property_xpath": 1
+      "accu_xpath": 1,
+      "visible_property_xpath": 2
     },
-    "page_url": "https://www.google.com/",
+    "page_url": "https://www.google.com/?zx=1756622997651&no_sw_cr=1",
     "page_title": "Google",
     "page_name": "Google"
   },
@@ -56,7 +59,7 @@
     "properties": {
       "ariaLabel": null,
       "className": "MV3Tnb",
-      "href": "https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=webhp&cd=&ved=0ahUKEwivtM_Lk5ePAxVAlFYBHdLpGUQQpMwCCAM&url=https%3A%2F%2Fstore.google.com%2FIN%3Futm_source%3Dhp_header%26utm_medium%3Dgoogle_ooo%26utm_campaign%3DGS100042%26hl%3Den-IN&usg=AOvVaw1yMLu5XT-r35gxGQEqYnyy&opi=89978449",
+      "href": "https://store.google.com/IN?utm_source=hp_header&utm_medium=google_ooo&utm_campaign=GS100042&hl=en-IN",
       "id": "",
       "name": "",
       "role": null,
@@ -66,17 +69,17 @@
       "type": "",
       "value": null,
       "rect": {
-        "bottom": 43,
-        "height": 26,
-        "left": 77.59375,
-        "right": 121.0625,
-        "top": 17,
-        "width": 43.46875,
-        "x": 77.59375,
-        "y": 17
+        "bottom": 43.400001525878906,
+        "height": 26.80000114440918,
+        "left": 77.5875015258789,
+        "right": 121.05000305175781,
+        "top": 16.600000381469727,
+        "width": 43.462501525878906,
+        "x": 77.5875015258789,
+        "y": 16.600000381469727
       },
-      "x": 99.328125,
-      "y": 30.0
+      "x": 99.31875228881836,
+      "y": 30.000000953674316
     },
     "selectors": {
       "Class Name": "MV3Tnb",
@@ -88,8 +91,8 @@
       "Full XPath": "/html[1]/body[1]/div[2]/div[2]/a[2]",
       "Relative XPath": "/html/body/div[2]/div[2]/a[2]",
       "accu_xpath": "//div[2]/div[2]/a[2]",
-      "visible_property_xpath": "//a[normalize-space(text())='Store']",
-      "xpath": "//a[normalize-space(text())='Store']"
+      "visible_property_xpath": "//a[translate(normalize-space(text()), 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz')='store']",
+      "xpath": "//a[translate(normalize-space(text()), 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz')='store']"
     },
     "found_element_counts": {
       "CSS Selector (Class)": 2,
@@ -99,160 +102,45 @@
       "accu_xpath": 2,
       "visible_property_xpath": 1
     },
-    "page_url": "https://www.google.com/",
+    "page_url": "https://www.google.com/?zx=1756622997651&no_sw_cr=1",
     "page_title": "Google",
     "page_name": "Google"
   },
   {
-    "name": "Sign in",
-    "properties": {
-      "ariaLabel": "Sign in",
-      "className": "gb_A",
-      "href": "https://accounts.google.com/ServiceLogin?hl=en&passive=true&continue=https://www.google.com/&ec=futura_exp_og_so_72776762_e",
-      "id": "",
-      "name": "",
-      "role": null,
-      "tag": "A",
-      "text": "Sign in",
-      "title": "",
-      "type": "",
-      "value": null,
-      "rect": {
-        "bottom": 48.33333396911621,
-        "height": 40,
-        "left": 933,
-        "right": 1018,
-        "top": 8.333333969116211,
-        "width": 85,
-        "x": 933,
-        "y": 8.333333969116211
-      },
-      "x": 975.5,
-      "y": 28.33333396911621
-    },
-    "selectors": {
-      "Class Name": "gb_A",
-      "CSS Selector (Class)": ".gb_A",
-      "XPath (Class)": "//*[contains(@class, 'gb_A')]",
-      "CSS Selector (Combined)": "a.gb_A",
-      "XPath (Combined)": "//a[contains(@class, 'gb_A')]",
-      "Tag": "a",
-      "Full XPath": "/html[1]/body[1]/div[2]/div[2]/div[1]/div[1]/header[1]/div[3]/a[1]",
-      "Relative XPath": "//*[@id='gb']/div[3]/a",
-      "accu_xpath": "//a[contains(@class, 'gb_A')]"
-    },
-    "found_element_counts": {
-      "CSS Selector (Class)": 1,
-      "CSS Selector (Combined)": 1,
-      "Full XPath": 1,
-      "Relative XPath": 1,
-      "accu_xpath": 1
-    },
-    "page_url": "https://www.google.com/",
-    "page_title": "Google",
-    "page_name": "Google"
-  },
-  {
-    "name": "Advertising",
+    "name": "",
     "properties": {
       "ariaLabel": null,
-      "className": "pHiOh",
-      "href": "https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=webhp&cd=&ved=0ahUKEwi5l9Lul5mPAxXtFbkGHaa6D4QQkdQCCCE&url=https%3A%2F%2Fwww.google.com%2Fintl%2Fen_in%2Fads%2F%3Fsubid%3Dww-ww-et-g-awa-a-g_hpafoot1_1!o2%26utm_source%3Dgoogle.com%26utm_medium%3Dreferral%26utm_campaign%3Dgoogle_hpafooter%26fg%3D1&usg=AOvVaw3Oj62V1xNd5oAI6Vxou5Lx&opi=89978449",
+      "className": null,
+      "href": null,
       "id": "",
-      "name": "",
+      "name": null,
       "role": null,
-      "tag": "A",
-      "text": "Advertising",
-      "title": "",
-      "type": "",
+      "tag": "SVG",
+      "text": "",
+      "title": null,
+      "type": null,
       "value": null,
       "rect": {
-        "bottom": 515.3333435058594,
-        "height": 46,
-        "left": 163.53125,
-        "right": 262.7916717529297,
-        "top": 469.3333435058594,
-        "width": 99.26042175292969,
-        "x": 163.53125,
-        "y": 469.3333435058594
+        "bottom": 265,
+        "height": 20,
+        "left": 765.0499877929688,
+        "right": 785.0499877929688,
+        "top": 245,
+        "width": 20,
+        "x": 765.0499877929688,
+        "y": 245
       },
-      "x": 213.16146087646484,
-      "y": 492.3333435058594
+      "x": 775.0499877929688,
+      "y": 255.0
     },
     "selectors": {
-      "Class Name": "pHiOh",
-      "CSS Selector (Class)": ".pHiOh",
-      "XPath (Class)": "//*[contains(@class, 'pHiOh')]",
-      "CSS Selector (Combined)": "a.pHiOh",
-      "XPath (Combined)": "//a[contains(@class, 'pHiOh')]",
-      "Tag": "a",
-      "Full XPath": "/html[1]/body[1]/div[2]/div[7]/div[1]/div[2]/div[1]/a[1]",
-      "Relative XPath": "/html/body/div[2]/div[7]/div/div[2]/div[1]/a[1]",
-      "accu_xpath": "//div[2]/div[7]/div/div[2]/div[1]/a[1]",
-      "visible_property_xpath": "//a[normalize-space(text())='Advertising']",
-      "xpath": "//a[normalize-space(text())='Advertising']"
+      "Class Name": null,
+      "XPath (Class)": null,
+      "XPath (Combined)": null,
+      "Tag": "svg"
     },
-    "found_element_counts": {
-      "CSS Selector (Class)": 6,
-      "CSS Selector (Combined)": 5,
-      "Full XPath": 1,
-      "Relative XPath": 1,
-      "accu_xpath": 1,
-      "visible_property_xpath": 1
-    },
-    "page_url": "https://www.google.com/",
-    "page_title": "Google",
-    "page_name": "Google"
-  },
-  {
-    "name": "Gmail",
-    "properties": {
-      "ariaLabel": "Gmail ",
-      "className": "gb_X",
-      "href": "https://mail.google.com/mail/&ogbl",
-      "id": "",
-      "name": "",
-      "role": null,
-      "tag": "A",
-      "text": "Gmail",
-      "title": "",
-      "type": "",
-      "value": null,
-      "rect": {
-        "bottom": 40.33333396911621,
-        "height": 24,
-        "left": 763.0833740234375,
-        "right": 797.0312919616699,
-        "top": 16.33333396911621,
-        "width": 33.94791793823242,
-        "x": 763.0833740234375,
-        "y": 16.33333396911621
-      },
-      "x": 780.0573329925537,
-      "y": 28.33333396911621
-    },
-    "selectors": {
-      "Class Name": "gb_X",
-      "CSS Selector (Class)": ".gb_X",
-      "XPath (Class)": "//*[contains(@class, 'gb_X')]",
-      "CSS Selector (Combined)": "a.gb_X",
-      "XPath (Combined)": "//a[contains(@class, 'gb_X')]",
-      "Tag": "a",
-      "Full XPath": "/html[1]/body[1]/div[2]/div[2]/div[1]/div[1]/header[1]/div[1]/div[1]/a[1]",
-      "Relative XPath": "//*[@id='gb']/div[1]/div[1]/a",
-      "accu_xpath": "//div[2]/div[2]/div/div/header/div[1]/div[1]/a",
-      "visible_property_xpath": "//a[translate(normalize-space(text()), 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz')='gmail']",
-      "xpath": "//a[translate(normalize-space(text()), 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz')='gmail']"
-    },
-    "found_element_counts": {
-      "CSS Selector (Class)": 2,
-      "CSS Selector (Combined)": 2,
-      "Full XPath": 1,
-      "Relative XPath": 1,
-      "accu_xpath": 1,
-      "visible_property_xpath": 1
-    },
-    "page_url": "https://www.google.com/?zx=1756129517010&no_sw_cr=1",
+    "found_element_counts": {},
+    "page_url": "https://www.google.com/?zx=1756664118423&no_sw_cr=1",
     "page_title": "Google",
     "page_name": "Google"
   }

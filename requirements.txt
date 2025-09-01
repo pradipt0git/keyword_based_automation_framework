@@ -9,3 +9,4 @@ keyboard>=0.13.5
 requests>=2.32.3
 flask>=2.3.3
 flask-cors>=3.0.10
+psutil>=7.0.0

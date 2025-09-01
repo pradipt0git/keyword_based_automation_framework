@@ -509,6 +509,21 @@
         .tree-node:hover .drag-handle {
             opacity: 1;
         }
+
+        /* Add to existing styles */
+        .validate-btn {
+            margin-left: 8px;
+            padding: 4px 8px;
+            background: var(--accent-primary);
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .validate-btn:hover {
+            background: var(--accent-primary-hover);
+        }
     </style>
 </head>
 <body>
@@ -518,7 +533,7 @@
             <span>📷</span>
             <span>Capture XPath</span>
         </button>
-        <button id="stop-capture-btn" class="action-button">
+        <button id="stop-capture-btn" class="action-button" disabled>
             <span>⏹️</span>
             <span>Stop Capture</span>
         </button>
@@ -529,6 +544,133 @@
     </div>
     <div id="tree-root"></div>
     <script>
+    // Add state tracking
+let treeState = new Map(); // Store expanded state of nodes
+
+// Add function to save tree state
+function saveTreeState() {
+    treeState.clear();
+    document.querySelectorAll('.json-file').forEach(file => {
+        const fileName = file.querySelector('.item-container').dataset.filename;
+        const isExpanded = file.classList.contains('open');
+        const elements = {};
+        
+        // Save element states within this file
+        file.querySelectorAll('.element').forEach(el => {
+            const index = el.querySelector('.tree-node').dataset.index;
+            elements[index] = el.classList.contains('open');
+        });
+        
+        treeState.set(fileName, {
+            isExpanded,
+            elements
+        });
+    });
+}
+
+// Add function to restore tree state
+function restoreTreeState() {
+    treeState.forEach((state, fileName) => {
+        const fileNode = document.querySelector(`.item-container[data-filename="${fileName}"]`)?.closest('.json-file');
+        if (fileNode) {
+            if (state.isExpanded) {
+                fileNode.classList.add('open');
+            }
+            
+            // Restore element states
+            Object.entries(state.elements).forEach(([index, isOpen]) => {
+                const element = fileNode.querySelector(`.tree-node[data-index="${index}"]`)?.closest('.element');
+                if (element && isOpen) {
+                    element.classList.add('open');
+                    const detailsDiv = element.querySelector('.element-details');
+                    if (detailsDiv) {
+                        detailsDiv.style.display = 'block';
+                        detailsDiv.style.maxHeight = detailsDiv.scrollHeight + 'px';
+                        detailsDiv.style.opacity = '1';
+                        detailsDiv.style.padding = '12px';
+                        detailsDiv.style.margin = '8px 0 8px 12px';
+                    }
+                }
+            });
+        }
+    });
+}
+
+// Update the refresh button click handler
+document.getElementById('refresh-btn').onclick = async function() {
+    saveTreeState();  // Save current state
+    await renderTree();
+    setTimeout(restoreTreeState, 100);  // Restore state after tree renders
+};
+
+    document.addEventListener('DOMContentLoaded', function() {
+        let captureProcessRunning = false;
+        
+        // Update capture button click handler
+        document.getElementById('capture-xpath-btn').onclick = async function() {
+            this.disabled = true;
+            document.getElementById('stop-capture-btn').disabled = false;
+            this.textContent = 'Capturing...';
+            captureProcessRunning = true;
+            
+            try {
+                const resp = await fetch('/api/capture_xpath', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ browser: 'chrome' })
+                });
+                const result = await resp.json();
+                
+                if (!result.success) {
+                    throw new Error(result.error || 'Unknown error');
+                }
+            } catch (error) {
+                alert('Error: ' + error.message);
+                this.disabled = false;
+                document.getElementById('stop-capture-btn').disabled = true;
+                this.innerHTML = '<span>📷</span><span>Capture XPath</span>';
+                captureProcessRunning = false;
+            }
+        };
+
+        // Update stop capture button click handler
+        document.getElementById('stop-capture-btn').onclick = async function() {
+            this.disabled = true;
+            try {
+                const resp = await fetch('/api/stop_capture', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    }
+                });
+                
+                // Check if response is JSON
+                const contentType = resp.headers.get('content-type');
+                if (!contentType || !contentType.includes('application/json')) {
+                    throw new Error('Server returned non-JSON response');
+                }
+                
+                const result = await resp.json();
+                if (!result.success) {
+                    throw new Error(result.error || 'Unknown error');
+                }
+                
+                document.getElementById('capture-xpath-btn').disabled = false;
+                document.getElementById('capture-xpath-btn').innerHTML = '<span>📷</span><span>Capture XPath</span>';
+                captureProcessRunning = false;
+                await renderTree();
+            } catch (error) {
+                console.error('Stop capture error:', error);
+                this.disabled = false;
+                alert('Error stopping capture: ' + error.message);
+            }
+        };
+
+        // Initialize button states
+        disableCaptureMode();
+    });
         let captureProcessRunning = false;
         let dragSource = null;
         let dragType = null;
@@ -786,10 +928,34 @@
         };
         document.getElementById('stop-capture-btn').onclick = async function() {
             this.disabled = true;
-            await fetch('/api/stop_capture', { method: 'POST' });
-            document.getElementById('capture-xpath-btn').disabled = false;
-            document.getElementById('capture-xpath-btn').textContent = 'Capture XPath';
-            captureProcessRunning = false;
+            try {
+                const resp = await fetch('/api/stop_capture', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    }
+                });
+                
+                // Check if response is JSON
+                const contentType = resp.headers.get('content-type');
+                if (!contentType || !contentType.includes('application/json')) {
+                    throw new Error('Server returned non-JSON response');
+                }
+                
+                const result = await resp.json();
+                if (!result.success) {
+                    throw new Error(result.error || 'Unknown error');
+                }
+                
+                document.getElementById('capture-xpath-btn').disabled = false;
+                document.getElementById('capture-xpath-btn').textContent = 'Capture XPath';
+                captureProcessRunning = false;
+                await renderTree();
+            } catch (error) {
+                console.error('Stop capture error:', error);
+                this.disabled = false;
+                alert('Error stopping capture: ' + error.message);
+            }
         };
         document.getElementById('stop-capture-btn').disabled = true;
         document.getElementById('refresh-btn').onclick = async function() {
@@ -900,10 +1066,51 @@
                 }
             };
             
+            // Validate button
+            const validateBtn = document.createElement('button');
+            validateBtn.className = 'validate-btn';
+            validateBtn.textContent = 'Validate XPaths';
+            validateBtn.onclick = async () => {
+                const filename = page;
+                let currentUrl = '';
+                
+                try {
+                    // Try to get URL from active selenium window if exists
+                    const resp = await fetch('/api/capture_status');
+                    const status = await resp.json();
+                    if (status.active) {
+                        currentUrl = status.currentUrl;
+                    }
+                } catch (e) {
+                    console.error('Error getting current URL:', e);
+                }
+                
+                const result = await fetch('/api/validate_xpaths', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ file: filename, currentUrl })
+                }).then(r => r.json());
+                
+                if (!result.success) {
+                    if (result.details) {
+                        alert(`Validation failed: Current page (${result.details.current}) doesn't match expected URL (${result.details.expected})`);
+                    } else {
+                        alert('Validation failed: ' + (result.error || 'Unknown error'));
+                    }
+                    return;
+                }
+                
+                // Show validation results
+                const validCount = result.results.filter(r => r.valid).length;
+                const totalCount = result.results.length;
+                alert(`Validation complete: ${validCount}/${totalCount} XPaths valid`);
+            };
+            
             treeControls.appendChild(pageCollapseBtn);
             itemContainer.appendChild(fileNameInput);
             itemContainer.appendChild(saveBtn);
             itemContainer.appendChild(deleteBtn);
+            itemContainer.appendChild(validateBtn);
             treeNode.appendChild(itemContainer);
             pageLi.appendChild(treeNode);
             const ul = document.createElement('ul');
@@ -1184,4 +1391,5 @@
         renderTree();
     </script>
 </body>
+</html>
 </html>
