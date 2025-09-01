@@ -50,15 +50,18 @@ class SeleniumActions:
             if not xpath:
                 raise ValueError("XPath cannot be empty for set_value action")
 
-            element = self._find_element(xpath)  # Locate the element
-            element_type = element.get_attribute("type").lower() if element.get_attribute("type") else "text"
+            from selenium.webdriver.common.keys import Keys
 
-            # Handle different input types
+            element = self._find_element(xpath)  # Locate the element
+            element_type = element.get_attribute("type")
+            element_type = element_type.lower() if element_type else None
+            known_types = ["text", "email", "number", "password", "radio", "checkbox"]
+
             if element_type in ["text", "email", "number"]:
                 element.clear()
                 element.send_keys(value)
                 element.send_keys("\t")  # Send TAB key after setting value
-            elif element_type in ["password"]:
+            elif element_type == "password":
                 element.send_keys(value)
                 element.send_keys("\t")  # Send TAB key after setting value
             elif element_type in ["radio", "checkbox"]:
@@ -73,7 +76,12 @@ class SeleniumActions:
                 from selenium.webdriver.support.ui import Select
                 Select(element).select_by_visible_text(value)
             else:
-                element.clear()
+                # For unknown or missing type, use select-all and delete before send_keys
+                try:
+                    element.send_keys(Keys.CONTROL, "a")
+                    element.send_keys(Keys.DELETE)
+                except Exception:
+                    pass
                 element.send_keys(value)
 
             self.reporting.log_info(f"Set value '{value}' to element: {xpath}")
