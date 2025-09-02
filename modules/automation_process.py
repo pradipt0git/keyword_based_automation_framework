@@ -77,6 +77,9 @@ def process_step(testcasename, screen, field, action, xpath, data, driver, repor
             elif action_lower == 'iselementvisible':
                 result = actions.is_element_visible(xpath)
                 status, error_message = extract_status_and_message(result, 'Failed to check element visibility')
+            elif action_lower == 'element_exists':
+                result = actions.element_exists(xpath)
+                status, error_message = extract_status_and_message(result, 'Failed to check element existence')
             else:
                 reporting.log_info(f"No matching Selenium action for: {action}")
                 print(f"[SKIP] No matching Selenium action for: {action}")
