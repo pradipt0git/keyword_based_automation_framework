@@ -13,6 +13,7 @@ import os
 import shutil
 
 class SeleniumActions:
+    
     def __init__(self, reporting: RobustReporting, driver: webdriver = None):
         """Initialize the SeleniumActions class."""
         self.reporting = reporting
@@ -295,5 +296,25 @@ class SeleniumActions:
             return True, str(visible)
         except Exception as e:
             error_message = f"Failed to check element visibility: {str(e)}"
+            self.reporting.log_error(error_message)
+            return False, error_message
+        
+    def element_exists(self, xpath):
+        """Check if an element exists for the given xpath. Returns (True, None) if found, (False, error_message) if not."""
+        try:
+            if not xpath:
+                raise ValueError("XPath cannot be empty for element_exists action")
+            by_type = self._detect_selector_type(xpath)
+            by = By.XPATH if by_type == 'xpath' else By.CSS_SELECTOR
+            elements = self.driver.find_elements(by, xpath)
+            if elements and len(elements) > 0:
+                self.reporting.log_info(f"Element exists: {xpath}")
+                return True, None
+            else:
+                msg = f"Element does not exist: {xpath}"
+                self.reporting.log_info(msg)
+                return False, msg
+        except Exception as e:
+            error_message = f"Error in element_exists: {str(e)}"
             self.reporting.log_error(error_message)
             return False, error_message
