@@ -74,7 +74,7 @@ def process_step(testcasename, screen, field, action, xpath, data, driver, repor
             elif action_lower == 'cleartext':
                 result = actions.clear_text(xpath)
                 status, error_message = extract_status_and_message(result, 'Failed to clear text')
-            elif action_lower == 'iselementvisible':
+            elif action_lower == 'iselementvisible': 
                 result = actions.is_element_visible(xpath)
                 status, error_message = extract_status_and_message(result, 'Failed to check element visibility')
             elif action_lower == 'element_exists':
