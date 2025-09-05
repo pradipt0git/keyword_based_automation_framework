@@ -224,7 +224,10 @@ class SeleniumActions:
                     pass  # Continue scrolling
                 if at_end:
                     break  # Stop if reached the end of the scrollable area
-            raise Exception(f"Element not found after scrolling: {selector}")
+            # if still not found then do not raise error, just return None
+            return None
+                   
+            #raise Exception(f"Element not found after scrolling: {selector}")
 
     def quit(self):
         """Close the browser and clean up resources."""
