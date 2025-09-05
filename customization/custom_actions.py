@@ -113,13 +113,14 @@ def check_n_goto_next_page_get_and_store_acc_no(driver, xpath=None, value=None, 
         def check_and_navigate(driver, xpath, max_pages=10):
             actions = SeleniumActions(reporting, driver)
             for page in range(max_pages):
-                success, element = actions._find_element(xpath)
-                if success and element:
+                #when _find_element returns None, then continue to next page                
+                element = actions._find_element(xpath)
+                if element:
                     return True, element
                 # Try to click on next page button/icon
                 next_page_xpath = "//a[contains(@class, 'next') or contains(text(), 'Next')]"
-                success, next_page_element = actions._find_element(next_page_xpath)
-                if success and next_page_element and next_page_element.is_enabled():
+                next_page_element = actions._find_element(next_page_xpath)
+                if next_page_element and next_page_element.is_enabled():
                     next_page_element.click()
                     time.sleep(2)  # Wait for page to load
                 else:
