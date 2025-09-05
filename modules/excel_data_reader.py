@@ -285,7 +285,10 @@ def initiatedriver(browser='edge', headless=True):
             edge_options.add_experimental_option('excludeSwitches', ['enable-logging'])
             if headless:
                 edge_options.add_argument('--headless=new')
-            driver = webdriver.Edge(service=EdgeService(), options=edge_options)
+            #take driver file msedgedriver.exe from driver folder inside project and use that
+            driver_path = os.path.join(os.path.dirname(os.path.dirname(__file__)), 'drivers', 'msedgedriver.exe')
+
+            driver = webdriver.Edge(service=EdgeService(executable_path=driver_path), options=edge_options)
         else:
             raise ValueError('Unsupported browser')
         return driver
