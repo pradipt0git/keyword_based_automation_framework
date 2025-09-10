@@ -1,0 +1,52 @@
+2025-09-10 16:20:07,663 - INFO - Opened URL: https://automationintesting.com/selenium/testpage
+2025-09-10 16:20:12,636 - INFO - Opened URL: https://automationintesting.com/selenium/testpage
+2025-09-10 16:20:16,865 - INFO - Zoomed in the browser view.
+2025-09-10 16:20:21,054 - ERROR - Failed to set value: XPath cannot be empty for set_value action
+2025-09-10 16:20:25,217 - ERROR - Failed to set value: XPath cannot be empty for set_value action
+2025-09-10 16:20:30,134 - INFO - Set value 'test' to element: //*[@id="contactus"]/div[5]/div/label/textarea
+2025-09-10 16:20:34,035 - INFO - Reloaded the current browser window successfully.
+2025-09-10 16:22:04,405 - INFO - Opened URL: https://automationintesting.com/selenium/testpage
+2025-09-10 16:22:09,442 - INFO - Opened URL: https://automationintesting.com/selenium/testpage
+2025-09-10 16:22:13,713 - INFO - Zoomed in the browser view.
+2025-09-10 16:22:17,912 - ERROR - Failed to set value: XPath cannot be empty for set_value action
+2025-09-10 16:22:22,144 - ERROR - Failed to set value: XPath cannot be empty for set_value action
+2025-09-10 16:22:26,882 - INFO - Set value 'test' to element: //*[@id="contactus"]/div[5]/div/label/textarea
+2025-09-10 16:22:30,930 - INFO - Reloaded the current browser window successfully.
+2025-09-10 16:24:27,269 - INFO - Opened URL: https://automationintesting.com/selenium/testpage
+2025-09-10 16:24:32,063 - INFO - Opened URL: https://automationintesting.com/selenium/testpage
+2025-09-10 16:30:53,060 - INFO - Opened URL: https://automationintesting.com/selenium/testpage
+2025-09-10 16:30:57,806 - INFO - Opened URL: https://automationintesting.com/selenium/testpage
+2025-09-10 16:31:03,719 - INFO - Zoomed in the browser view.
+2025-09-10 16:31:07,908 - ERROR - Failed to set value: XPath cannot be empty for set_value action
+2025-09-10 16:31:12,110 - ERROR - Failed to set value: XPath cannot be empty for set_value action
+2025-09-10 16:31:16,976 - INFO - Set value 'test' to element: //*[@id="contactus"]/div[5]/div/label/textarea
+2025-09-10 16:31:20,902 - INFO - Reloaded the current browser window successfully.
+2025-09-10 16:31:58,336 - INFO - Opened URL: https://automationintesting.com/selenium/testpage
+2025-09-10 16:32:03,160 - INFO - Opened URL: https://automationintesting.com/selenium/testpage
+2025-09-10 16:37:05,215 - INFO - Opened URL: https://automationintesting.com/selenium/testpage
+2025-09-10 16:37:10,253 - INFO - Opened URL: https://automationintesting.com/selenium/testpage
+2025-09-10 16:37:15,000 - INFO - Zoomed in the browser view.
+2025-09-10 16:37:19,186 - ERROR - Failed to set value: XPath cannot be empty for set_value action
+2025-09-10 16:37:23,392 - ERROR - Failed to set value: XPath cannot be empty for set_value action
+2025-09-10 16:37:28,314 - INFO - Set value 'test' to element: //*[@id="contactus"]/div[5]/div/label/textarea
+2025-09-10 16:37:31,488 - ERROR - Failed to reload the current browser window: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff750b4e795+22117]
+	(No symbol) [0x0x7ff750a9ee10]
+	(No symbol) [0x0x7ff75086cdb0]
+	(No symbol) [0x0x7ff7508ad573]
+	(No symbol) [0x0x7ff7508da6b2]
+	(No symbol) [0x0x7ff750885c1b]
+	(No symbol) [0x0x7ff7508d72a9]
+	(No symbol) [0x0x7ff7508d69ba]
+	(No symbol) [0x0x7ff750842c75]
+	(No symbol) [0x0x7ff7509a907d]
+	(No symbol) [0x0x7ff7509b5fe8]
+	GetHandleVerifier [0x0x7ff750c2f287+942423]
+	GetHandleVerifier [0x0x7ff750c38231+979201]
+	(No symbol) [0x0x7ff750aac3c1]
+	(No symbol) [0x0x7ff7508417a7]
+	GetHandleVerifier [0x0x7ff750d8a6f8+2364872]
+	BaseThreadInitThunk [0x0x7ffbecd5e8d7+23]
+	RtlUserThreadStart [0x0x7ffbee2fc34c+44]
+

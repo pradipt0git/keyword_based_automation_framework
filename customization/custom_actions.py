@@ -163,3 +163,37 @@ def check_n_goto_next_page_get_and_store_acc_no(driver, xpath=None, value=None, 
         reporting.log_error(error_message)
         print(error_message)
         return False, error_message
+    
+def zoomin(driver, xpath=None, value=None, fieldname=None, pagename=None, teststep=None, testname=None):
+    """Custom action: press ctrl + at browser level."""
+    try:
+        import pyautogui
+        pyautogui.keyDown('ctrl')
+        pyautogui.press('+')
+
+        log_message = "Zoomed in the browser view."
+        reporting.log_info(log_message)
+        print(log_message)
+        return True, log_message
+    except Exception as e:
+        error_message = f"Failed to zoom in the browser view: {str(e)}"
+        reporting.log_error(error_message)
+        print(error_message)
+        return False, error_message
+
+def zoomout(driver, xpath=None, value=None, fieldname=None, pagename=None, teststep=None, testname=None):
+    """Custom action: press ctrl - at browser level."""
+    try:
+        import pyautogui
+        pyautogui.keyDown('ctrl')
+        pyautogui.press('-')
+
+        log_message = "Zoomed out the browser view."
+        reporting.log_info(log_message)
+        print(log_message)
+        return True, log_message
+    except Exception as e:
+        error_message = f"Failed to zoom out the browser view: {str(e)}"
+        reporting.log_error(error_message)
+        print(error_message)
+        return False, error_message

@@ -1,0 +1,30 @@
+[Step Execution @ 2025-09-10 16:24:30]
+  TestCase   : TC01
+  Dataset    : 1
+  Screen     : Landing
+  Field      : app_url
+  ExplicitWaitTime : 1
+  Action     : OpenUrl
+  Xpath      : 
+  Data       : https://automationintesting.com/selenium/testpage
+  TestCaseDescription : 5
+  Validation         : 55
+  ExpectedValidation : 555
+  Status     : pass
+  Message    : (True, None)
+------------------------------------------------------------
+[Step Execution @ 2025-09-10 16:24:35]
+  TestCase   : TC01
+  Dataset    : 1
+  Screen     : Dashboard
+  Field      : app_url
+  ExplicitWaitTime : 1
+  Action     : OpenUrl
+  Xpath      : 
+  Data       : https://automationintesting.com/selenium/testpage
+  TestCaseDescription : None
+  Validation         : None
+  ExpectedValidation : None
+  Status     : pass
+  Message    : (True, None)
+------------------------------------------------------------
