@@ -164,13 +164,50 @@ def check_n_goto_next_page_get_and_store_acc_no(driver, xpath=None, value=None, 
         print(error_message)
         return False, error_message
     
+def get_n_store_data(driver, xpath=None, value=None, fieldname=None, pagename=None, teststep=None, testname=None):
+    """Custom action: Get text/value from an element using xpath and store/log it with the given fieldname (with $$ prefix)."""
+    try:
+        if not xpath:
+            error_message = "No xpath provided for get_n_store_data."
+            reporting.log_error(error_message)
+            print(error_message)
+            return False, error_message
+        if not fieldname or not fieldname.startswith('$$'):
+            error_message = "Fieldname must be provided and start with '$$' for get_n_store_data."
+            reporting.log_error(error_message)
+            print(error_message)
+            return False, error_message
+        # Use SeleniumActions to get value
+        actions = SeleniumActions(reporting, driver)
+        success, result = actions.get_value(xpath)
+        if success:
+            log_message = f"get_n_store_data: Value for {fieldname} is '{result}'"
+            reporting.log_info(log_message)
+            print(log_message)
+            # Store in global_dict for global access
+            global_dict[fieldname] = result
+            # Optionally, store in reporting.values_dict or similar if needed
+            if hasattr(reporting, 'values_dict'):
+                reporting.values_dict[fieldname] = result
+            return True, result
+        else:
+            error_message = f"get_n_store_data failed for {fieldname}: {result}"
+            reporting.log_error(error_message)
+            print(error_message)
+            return False, error_message
+    except Exception as e:
+        error_message = f"Exception in get_n_store_data: {str(e)}"
+        reporting.log_error(error_message)
+        print(error_message)
+        return False, error_message
+
 def zoomin(driver, xpath=None, value=None, fieldname=None, pagename=None, teststep=None, testname=None):
     """Custom action: press ctrl + at browser level."""
     try:
         import pyautogui
         pyautogui.keyDown('ctrl')
         pyautogui.press('+')
-
+        pyautogui.keyUp('ctrl')
         log_message = "Zoomed in the browser view."
         reporting.log_info(log_message)
         print(log_message)
@@ -187,7 +224,7 @@ def zoomout(driver, xpath=None, value=None, fieldname=None, pagename=None, tests
         import pyautogui
         pyautogui.keyDown('ctrl')
         pyautogui.press('-')
-
+        pyautogui.keyUp('ctrl')
         log_message = "Zoomed out the browser view."
         reporting.log_info(log_message)
         print(log_message)

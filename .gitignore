@@ -1,0 +1,53 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+*.manifest
+*.spec
+
+# VS Code
+.vscode/
+
+# Jupyter Notebooks
+.ipynb_checkpoints
+
+# Environment
+.env
+.venv/
+venv/
+ENV/
+env/
+
+# Logs
+Logs/
+*.log
+
+# Reports
+Reports/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Test output
+htmlcov/
+.coverage
+.tox/
+.nox/
+.cache/
+pytest_cache/
+
+# Misc
+*.sqlite3
+*.db
+
+# Ignore Excel temp files
+~$*.xlsx
+
+# Ignore captured xpaths
+captured_xpaths/

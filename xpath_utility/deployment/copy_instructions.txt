@@ -1,0 +1,13 @@
+Copy the following folders and files into the deployment folder before sharing:
+captured_xpaths
+config
+drivers
+Logs
+modules
+capture_xpath_config.json
+requirements.txt
+
+Do NOT include .venv if you want users to run setup themselves. If you want to ship with .venv, run 'start_app.bat' first, then copy .venv into deployment.
+
+ - deployment/ (this folder)
+Make sure msedgedriver.exe is present in drivers/.
