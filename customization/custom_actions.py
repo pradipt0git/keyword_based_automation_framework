@@ -234,3 +234,23 @@ def zoomout(driver, xpath=None, value=None, fieldname=None, pagename=None, tests
         reporting.log_error(error_message)
         print(error_message)
         return False, error_message
+    
+
+def press_downarrow_then_tab(driver, xpath=None, value=None, fieldname=None, pagename=None, teststep=None, testname=None):
+    """function to press down arrow then tab key"""
+    try:
+        #not using pyautogui, use selenium and get xpath, get the element then sendkey down arrow and tab one by one
+        from selenium.webdriver.common.keys import Keys
+        element = driver.find_element("xpath", xpath)
+        element.send_keys(Keys.ARROW_DOWN)
+        element.send_keys(Keys.TAB)
+        time.sleep(1)  # Wait for a second
+        log_message = "Pressed down arrow and tab key."
+        reporting.log_info(log_message)
+        print(log_message)
+        return True, log_message
+    except Exception as e:
+        error_message = f"Failed to press down arrow and tab key: {str(e)}"
+        reporting.log_error(error_message)
+        print(error_message)
+        return False, error_message
