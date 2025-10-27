@@ -18,6 +18,21 @@ import os
 from modules.automation_interface import AutomationActionsInterface
 
 class PlaywrightActions(AutomationActionsInterface):
+    def _find_element(self, selector):
+        """
+        Find an element using Playwright. Returns the element handle or None if not found.
+        """
+        try:
+            element = self.page.query_selector(selector)
+            if element:
+                self.reporting.log_info(f"Element found: {selector}")
+                return element
+            else:
+                self.reporting.log_info(f"Element not found: {selector}")
+                return None
+        except Exception as e:
+            self.reporting.log_error(f"Error finding element {selector}: {str(e)}")
+            return None
     def __init__(self, reporting: RobustReporting, driver=None, browser_type='msedge', headless=False):
         self.reporting = reporting
         self.playwright = sync_playwright().start()

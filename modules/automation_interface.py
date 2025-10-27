@@ -5,6 +5,9 @@ from abc import ABC, abstractmethod
 
 class AutomationActionsInterface(ABC):
     @abstractmethod
+    def _find_element(self, selector):
+        pass
+    @abstractmethod
     def open_url(self, url):
         pass
 
