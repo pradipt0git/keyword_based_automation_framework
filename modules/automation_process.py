@@ -1,7 +1,7 @@
 # automation_process.py
 
 import time
-from modules.selenium_actions import SeleniumActions
+from modules.middleware import get_framework_class
 from modules.reporting_v2 import RobustReporting
 import datetime
 import os
@@ -11,7 +11,7 @@ sys.path.append(os.path.join(os.path.dirname(os.path.dirname(__file__))))
 from customization import custom_actions as ca  # Now import directly as ca
 
     
-def process_step(testcasename, screen, field, action, xpath, data, driver, reporting: RobustReporting, actions: SeleniumActions, dataset_number=None, get_pass_screenshot=False, testcase_description='', validation='', expected_validation='', wait_time_before_exec=0):
+def process_step(testcasename, screen, field, action, xpath, data, driver, reporting: RobustReporting, actions=None, dataset_number=None, get_pass_screenshot=False, testcase_description='', validation='', expected_validation='', wait_time_before_exec=0):
     """
     Process a single automation step.
     Calls the appropriate SeleniumActions method based on the action.
@@ -26,6 +26,9 @@ def process_step(testcasename, screen, field, action, xpath, data, driver, repor
     action_lower = str(action).strip().lower() if action else ''
     result = None
     try:
+        # Dynamically get the correct actions class if not provided
+        if actions is None:
+            actions = get_framework_class()
         # Wait before execution if specified
         if wait_time_before_exec and wait_time_before_exec > 0:
             try:
@@ -40,7 +43,7 @@ def process_step(testcasename, screen, field, action, xpath, data, driver, repor
                 custom_function = getattr(ca, action_name, None)
                 if custom_function:
                     success, message = custom_function(
-                        driver, xpath, data, field, None, testcasename
+                        driver, actions, xpath, data, field, None, testcasename
                     )
                     if not success:
                         status = 'fail'

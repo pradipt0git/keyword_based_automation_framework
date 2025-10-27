@@ -7,7 +7,7 @@ import pandas as pd
 import re
 from modules.automation_process import process_step
 from modules.reporting_v2 import RobustReporting
-from modules.selenium_actions import SeleniumActions
+from modules.middleware import get_framework_class
 import datetime
 import shutil
 import sys
@@ -258,43 +258,7 @@ def process_testcase_rows(testcase, sheet, row_num, driver, reporting, actions, 
     except Exception as e:
         reporting.log_error(f"Error in process_testcase_rows for testcase '{testcase}': {e}")
 
-def initiatedriver(browser='edge', headless=True):
-    try:
-        from selenium import webdriver
-        from selenium.webdriver.chrome.service import Service as ChromeService
-        from selenium.webdriver.edge.service import Service as EdgeService
-        from selenium.webdriver.chrome.options import Options as ChromeOptions
-        from selenium.webdriver.edge.options import Options as EdgeOptions
-        driver = None
-        if browser == 'chrome':
-            chrome_options = ChromeOptions()
-            chrome_options.add_argument('--start-maximized')
-            chrome_options.add_argument('--no-sandbox')
-            chrome_options.add_argument('--disable-gpu')
-            chrome_options.add_argument('--disable-dev-shm-usage')
-            chrome_options.add_experimental_option('excludeSwitches', ['enable-logging'])
-            if headless:
-                chrome_options.add_argument('--headless=new')
-            driver = webdriver.Chrome(service=ChromeService(), options=chrome_options)
-        elif browser == 'edge':
-            edge_options = EdgeOptions()
-            edge_options.add_argument('--start-maximized')
-            edge_options.add_argument('--no-sandbox')
-            edge_options.add_argument('--disable-gpu')
-            edge_options.add_argument('--disable-dev-shm-usage')
-            edge_options.add_experimental_option('excludeSwitches', ['enable-logging'])
-            if headless:
-                edge_options.add_argument('--headless=new')
-            #take driver file msedgedriver.exe from driver folder inside project and use that
-            driver_path = os.path.join(os.path.dirname(os.path.dirname(__file__)), 'drivers', 'msedgedriver.exe')
 
-            driver = webdriver.Edge(service=EdgeService(executable_path=driver_path), options=edge_options)
-        else:
-            raise ValueError('Unsupported browser')
-        return driver
-    except Exception as e:
-        RobustReporting().log_error(f"Error in initiatedriver: {e}")
-        raise
 
 # Example usage (for testing):
 if __name__ == "__main__":                    
@@ -318,11 +282,11 @@ if __name__ == "__main__":
                     print(f"    Row {row_num}")
                     browser = 'chrome'  # or 'edge'
                     try:
-                        driver = initiatedriver(browser)
-                        actions = SeleniumActions(reporting, driver)
+                        actions = get_framework_class()
+                        #actions = actions_class(reporting, None)
                         print(f"TestCase: {testcase}")
-                        process_testcase_rows(testcase, sheet, row_num, driver, reporting, actions, dataset_counter)
-                        driver.quit()
+                        process_testcase_rows(testcase, sheet, row_num, actions.driver, reporting, actions, dataset_counter)
+                        actions.driver.quit()
                     except Exception as e:
                         reporting.log_error(f"Driver or step error for testcase '{testcase}', row {row_num}: {e}")
                     dataset_counter += 1

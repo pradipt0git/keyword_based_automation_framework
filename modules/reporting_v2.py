@@ -3,7 +3,6 @@ from datetime import datetime
 import os
 import shutil
 import openpyxl
-from selenium import webdriver
 from tempfile import NamedTemporaryFile
 from string import Template
 

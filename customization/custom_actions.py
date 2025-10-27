@@ -1,41 +1,50 @@
 from modules.globals import global_dict
 from modules.selenium_actions import SeleniumActions
-import os
 from modules.reporting_v2 import RobustReporting
 import time
 
 reporting = RobustReporting()
 
-def switch_to_browser_tab(driver, xpath=None, value=None, fieldname=None, pagename=None, teststep=None, testname=None):
+def switch_to_browser_tab(driver, actions, xpath=None, value=None, fieldname=None, pagename=None, teststep=None, testname=None):
     """Switch to a specific browser tab based on the provided value."""
     try:
+        # actions = SeleniumActions(reporting, driver)
         tab_index = int(value) if value is not None else 0
-        driver.switch_to.window(driver.window_handles[tab_index])
-        log_message = f"Switched to browser tab: {tab_index}"
-        reporting.log_info(log_message)
-        print(log_message)
-        return True, log_message
+        success, msg = actions.switch_to_tab(tab_index)
+        if success:
+            reporting.log_info(msg)
+            print(msg)
+            return True, msg
+        else:
+            reporting.log_error(msg)
+            print(msg)
+            return False, msg
     except Exception as e:
         error_message = f"Failed to switch to browser tab: {str(e)}"
         reporting.log_error(error_message)
         print(error_message)
         return False, error_message
 
-def reload_current_window(driver, xpath=None, value=None, fieldname=None, pagename=None, teststep=None, testname=None):
+def reload_current_window(driver, actions, xpath=None, value=None, fieldname=None, pagename=None, teststep=None, testname=None):
     """Reload the current browser window."""
     try:
-        driver.refresh()  # Refresh the current window
-        log_message = "Reloaded the current browser window successfully."
-        reporting.log_info(log_message)
-        print(log_message)
-        return True, log_message
+        #actions = SeleniumActions(reporting, driver)
+        success, msg = actions.reload_window()
+        if success:
+            reporting.log_info(msg)
+            print(msg)
+            return True, msg
+        else:
+            reporting.log_error(msg)
+            print(msg)
+            return False, msg
     except Exception as e:
         error_message = f"Failed to reload the current browser window: {str(e)}"
         reporting.log_error(error_message)
         print(error_message)
         return False, error_message
     
-def compare_text(driver, xpath=None, value=None, fieldname=None, pagename=None, teststep=None, testname=None):
+def compare_text(driver, actions, xpath=None, value=None, fieldname=None, pagename=None, teststep=None, testname=None):
     """Custom action: Check if data from datasheet (value) matches data present in web element (xpath)."""
     try:
         if not xpath:
@@ -44,7 +53,7 @@ def compare_text(driver, xpath=None, value=None, fieldname=None, pagename=None, 
             print(error_message)
             return False, error_message
         # Use SeleniumActions to get value
-        actions = SeleniumActions(reporting, driver)
+        #actions = SeleniumActions(reporting, driver)
         success, web_val = actions.get_value(xpath)
         expected_val = str(value).strip() if value is not None else ''
         if success and str(web_val).strip() == expected_val:
@@ -63,7 +72,7 @@ def compare_text(driver, xpath=None, value=None, fieldname=None, pagename=None, 
         print(error_message)
         return False, error_message
     
-def get_and_store_text(driver, xpath=None, value=None, fieldname=None, pagename=None, teststep=None, testname=None):
+def get_and_store_text(driver, actions, xpath=None, value=None, fieldname=None, pagename=None, teststep=None, testname=None):
     """Custom action: Get text/value from an element using xpath and store/log it with the given fieldname (with $$ prefix)."""
     try:
         if not xpath:
@@ -77,7 +86,7 @@ def get_and_store_text(driver, xpath=None, value=None, fieldname=None, pagename=
             print(error_message)
             return False, error_message
         # Use SeleniumActions to get value
-        actions = SeleniumActions(reporting, driver)
+        #actions = SeleniumActions(reporting, driver)
         success, result = actions.get_value(xpath)
         if success:
             log_message = f"get_text: Value for {fieldname} is '{result}'"
@@ -100,7 +109,7 @@ def get_and_store_text(driver, xpath=None, value=None, fieldname=None, pagename=
         print(error_message)
         return False, error_message
     
-def check_n_goto_next_page_get_and_store_acc_no(driver, xpath=None, value=None, fieldname=None, pagename=None, teststep=None, testname=None):
+def check_n_goto_next_page_get_and_store_acc_no(driver, actions, xpath=None, value=None, fieldname=None, pagename=None, teststep=None, testname=None):
     """Custom action: Check if xpath present in the page, not found then click on next page icon of table to go to next pagination and check again until it find or pagination ends (next page not clickable), if finally not found then mark as failed."""
     try:
         if not xpath:
@@ -110,8 +119,8 @@ def check_n_goto_next_page_get_and_store_acc_no(driver, xpath=None, value=None, 
             return False, error_message
         
         #in inner recursive function check xpath and continue to next page if not found, if found return xpath of the parent td element
-        def check_and_navigate(driver, xpath, max_pages=10):
-            actions = SeleniumActions(reporting, driver)
+        def check_and_navigate(driver, actions, xpath, max_pages=10):
+            #actions = SeleniumActions(reporting, driver)
             for page in range(max_pages):
                 #when _find_element returns None, then continue to next page                
                 element = actions._find_element(xpath)
@@ -127,7 +136,7 @@ def check_n_goto_next_page_get_and_store_acc_no(driver, xpath=None, value=None, 
                     break
             return False, None
         
-        success, element = check_and_navigate(driver, xpath)
+        success, element = check_and_navigate(driver, actions, xpath)
         if success and element:
             #without getting xpath get the parent td element directly
             parent_td_element = element.find_element("xpath", "./ancestor::td")
@@ -164,7 +173,7 @@ def check_n_goto_next_page_get_and_store_acc_no(driver, xpath=None, value=None, 
         print(error_message)
         return False, error_message
     
-def get_n_store_data(driver, xpath=None, value=None, fieldname=None, pagename=None, teststep=None, testname=None):
+def get_n_store_data(driver, actions, xpath=None, value=None, fieldname=None, pagename=None, teststep=None, testname=None):
     """Custom action: Get text/value from an element using xpath and store/log it with the given fieldname (with $$ prefix)."""
     try:
         if not xpath:
@@ -178,7 +187,7 @@ def get_n_store_data(driver, xpath=None, value=None, fieldname=None, pagename=No
             print(error_message)
             return False, error_message
         # Use SeleniumActions to get value
-        actions = SeleniumActions(reporting, driver)
+        #actions = SeleniumActions(reporting, driver)
         success, result = actions.get_value(xpath)
         if success:
             log_message = f"get_n_store_data: Value for {fieldname} is '{result}'"
@@ -201,7 +210,7 @@ def get_n_store_data(driver, xpath=None, value=None, fieldname=None, pagename=No
         print(error_message)
         return False, error_message
 
-def zoomin(driver, xpath=None, value=None, fieldname=None, pagename=None, teststep=None, testname=None):
+def zoomin(driver, actions, xpath=None, value=None, fieldname=None, pagename=None, teststep=None, testname=None):
     """Custom action: press ctrl + at browser level."""
     try:
         import pyautogui
@@ -218,7 +227,7 @@ def zoomin(driver, xpath=None, value=None, fieldname=None, pagename=None, testst
         print(error_message)
         return False, error_message
 
-def zoomout(driver, xpath=None, value=None, fieldname=None, pagename=None, teststep=None, testname=None):
+def zoomout(driver, actions, xpath=None, value=None, fieldname=None, pagename=None, teststep=None, testname=None):
     """Custom action: press ctrl - at browser level."""
     try:
         import pyautogui
@@ -236,19 +245,17 @@ def zoomout(driver, xpath=None, value=None, fieldname=None, pagename=None, tests
         return False, error_message
     
 
-def press_downarrow_then_tab(driver, xpath=None, value=None, fieldname=None, pagename=None, teststep=None, testname=None):
+def press_downarrow_then_tab(driver, actions, xpath=None, value=None, fieldname=None, pagename=None, teststep=None, testname=None):
     """function to press down arrow then tab key"""
     try:
-        #not using pyautogui, use selenium and get xpath, get the element then sendkey down arrow and tab one by one
-        from selenium.webdriver.common.keys import Keys
-        element = driver.find_element("xpath", xpath)
-        element.send_keys(Keys.ARROW_DOWN)
-        element.send_keys(Keys.TAB)
-        time.sleep(1)  # Wait for a second
-        log_message = "Pressed down arrow and tab key."
-        reporting.log_info(log_message)
-        print(log_message)
-        return True, log_message
+        #actions = SeleniumActions(reporting, driver)
+        success, msg = actions.send_downarrow_then_tab(xpath)
+        if success:
+            print(msg)
+            return True, msg
+        else:
+            print(msg)
+            return False, msg
     except Exception as e:
         error_message = f"Failed to press down arrow and tab key: {str(e)}"
         reporting.log_error(error_message)

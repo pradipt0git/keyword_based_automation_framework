@@ -7,9 +7,9 @@ Entry point for the automation framework. This script starts the execution by ca
 import os
 import datetime
 import pandas as pd
-from modules.excel_data_reader import get_testcase_to_datarefs_dict, process_testcase_rows, initiatedriver, EXCEL_FILE, CONFIG_FOLDER, step_results
+from modules.excel_data_reader import get_testcase_to_datarefs_dict, process_testcase_rows, EXCEL_FILE, CONFIG_FOLDER, step_results
 from modules.reporting_v2 import RobustReporting
-from modules.selenium_actions import SeleniumActions
+from modules.middleware import get_framework_class
 
 def main():
     # Create timestamped report folder
@@ -46,11 +46,12 @@ def main():
                 except Exception as e:
                     print(f"[WARN] Could not determine headless mode for {sheet} row {row_num}: {e}")
                 browser = 'edge'  # Use Edge as the default browser
-                driver = initiatedriver(browser, headless=headless)
-                actions = SeleniumActions(reporting, driver)
+                actions = get_framework_class()                
+                #driver = actions_class.initiatedriver(browser, headless=headless)
+                #actions = actions_class(reporting, actions_class.driver)
                 print(f"TestCase: {testcase}")
-                process_testcase_rows(testcase, sheet, row_num, driver, reporting, actions, dataset_counter)
-                driver.quit()
+                process_testcase_rows(testcase, sheet, row_num, actions.driver, reporting, actions, dataset_counter)
+                actions.quit()
                 dataset_counter += 1
     # Write report to Excel
     report_df = pd.DataFrame(step_results)

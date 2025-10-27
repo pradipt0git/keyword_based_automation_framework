@@ -8,25 +8,115 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.common.exceptions import *
 from modules.reporting_v2 import RobustReporting
+from modules.automation_interface import AutomationActionsInterface
 import time
 import os
 import shutil
 
-class SeleniumActions:
+
     
-    def __init__(self, reporting: RobustReporting, driver: webdriver = None):
+class SeleniumActions(AutomationActionsInterface):
+    driver = None
+
+    def initiatedriver(self, browser='edge', headless=True):
+        try:
+            from selenium import webdriver
+            from selenium.webdriver.chrome.service import Service as ChromeService
+            from selenium.webdriver.edge.service import Service as EdgeService
+            from selenium.webdriver.chrome.options import Options as ChromeOptions
+            from selenium.webdriver.edge.options import Options as EdgeOptions
+            
+            if browser == 'chrome':
+                chrome_options = ChromeOptions()
+                chrome_options.add_argument('--start-maximized')
+                chrome_options.add_argument('--no-sandbox')
+                chrome_options.add_argument('--disable-gpu')
+                chrome_options.add_argument('--disable-dev-shm-usage')
+                chrome_options.add_experimental_option('excludeSwitches', ['enable-logging'])
+                if headless:
+                    chrome_options.add_argument('--headless=new')
+                driver = webdriver.Chrome(service=ChromeService(), options=chrome_options)
+            elif browser == 'edge':
+                edge_options = EdgeOptions()
+                edge_options.add_argument('--start-maximized')
+                edge_options.add_argument('--no-sandbox')
+                edge_options.add_argument('--disable-gpu')
+                edge_options.add_argument('--disable-dev-shm-usage')
+                edge_options.add_experimental_option('excludeSwitches', ['enable-logging'])
+                if headless:
+                    edge_options.add_argument('--headless=new')
+                #take driver file msedgedriver.exe from driver folder inside project and use that
+                driver_path = os.path.join(os.path.dirname(os.path.dirname(__file__)), 'drivers', 'msedgedriver.exe')
+
+                driver = webdriver.Edge(service=EdgeService(executable_path=driver_path), options=edge_options)
+            else:
+                raise ValueError('Unsupported browser')
+            return driver
+        except Exception as e:
+            RobustReporting().log_error(f"Error in initiatedriver: {e}")
+            raise
+    def send_downarrow_then_tab(self, xpath):
+        """Find element by xpath and send down arrow then tab key."""
+        try:
+            from selenium.webdriver.common.keys import Keys
+            element = self._find_element(xpath)
+            if not element:
+                error_message = f"Element not found for xpath: {xpath}"
+                self.reporting.log_error(error_message)
+                return False, error_message
+            element.send_keys(Keys.ARROW_DOWN)
+            element.send_keys(Keys.TAB)
+            time.sleep(1)
+            log_message = "Pressed down arrow and tab key."
+            self.reporting.log_info(log_message)
+            return True, log_message
+        except Exception as e:
+            error_message = f"Failed to press down arrow and tab key: {str(e)}"
+            self.reporting.log_error(error_message)
+            return False, error_message
+    def switch_to_tab(self, tab_index):
+        """Switch to a specific browser tab by index."""
+        try:
+            handles = self.driver.window_handles
+            if tab_index < 0 or tab_index >= len(handles):
+                error_message = f"Tab index {tab_index} out of range. Available tabs: {len(handles)}"
+                self.reporting.log_error(error_message)
+                return False, error_message
+            self.driver.switch_to.window(handles[tab_index])
+            log_message = f"Switched to browser tab: {tab_index}"
+            self.reporting.log_info(log_message)
+            return True, log_message
+        except Exception as e:
+            error_message = f"Failed to switch to browser tab: {str(e)}"
+            self.reporting.log_error(error_message)
+            return False, error_message
+
+    def reload_window(self):
+        """Reload the current browser window."""
+        try:
+            self.driver.refresh()
+            log_message = "Reloaded the current browser window successfully."
+            self.reporting.log_info(log_message)
+            return True, log_message
+        except Exception as e:
+            error_message = f"Failed to reload the current browser window: {str(e)}"
+            self.reporting.log_error(error_message)
+            return False, error_message
+    
+    def __init__(self, reporting: RobustReporting):
         """Initialize the SeleniumActions class."""
         self.reporting = reporting
-        if(driver is not None):
-            self.driver = driver
-        else:
+        if(self.driver is None):           
             self._init_driver()  # Initialize the WebDriver
         os.makedirs('Reports', exist_ok=True)  # Ensure the Reports directory exists
 
+    
+        
     def _init_driver(self):
         """Initialize WebDriver."""
         try:
-            self.driver = webdriver.Chrome()  # Use Chrome WebDriver
+            #self.driver = webdriver.Chrome()  # Use Chrome WebDriver
+            self.driver = self.initiatedriver(browser='edge', headless=False)
             self.driver.maximize_window()  # Maximize the browser window
         except Exception as e:
             self.reporting.log_error(
