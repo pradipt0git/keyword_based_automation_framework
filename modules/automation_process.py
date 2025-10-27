@@ -54,6 +54,23 @@ def process_step(testcasename, screen, field, action, xpath, data, driver, repor
             except Exception as e:
                 status = 'fail'
                 error_message = f"Error calling custom function '{action_name}': {str(e)}"
+        # Dynamically call custom component if action starts with 'component-'
+        elif action and action.startswith("component-"):
+            from customization import custom_component as cc
+            component_name = action.replace("component-", "")
+            try:
+                component_function = getattr(cc, component_name, None)
+                if component_function:
+                    # You may need to adjust arguments based on your custom component function signature
+                    result = component_function(testcasename, actions, driver, reporting, screen, field, xpath, data)
+                    status = 'pass'
+                    error_message = ''
+                else:
+                    status = 'fail'
+                    error_message = f"Component function '{component_name}' not found in custom_component.py"
+            except Exception as e:
+                status = 'fail'
+                error_message = f"Error calling component function '{component_name}': {str(e)}"
         else:
             # Map new action names to logic
             if action_lower == 'openurl':

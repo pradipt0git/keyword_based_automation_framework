@@ -1,5 +1,5 @@
 # Add initiatedriver function for Playwright compatibility
-def initiatedriver(browser='chromium', headless=True):
+def initiatedriver(browser='msedge', headless=True):
     from playwright.sync_api import sync_playwright
     playwright = sync_playwright().start()
     browser_obj = getattr(playwright, browser).launch(headless=headless)
@@ -18,7 +18,7 @@ import os
 from modules.automation_interface import AutomationActionsInterface
 
 class PlaywrightActions(AutomationActionsInterface):
-    def __init__(self, reporting: RobustReporting, driver=None, browser_type='edge', headless=False):
+    def __init__(self, reporting: RobustReporting, driver=None, browser_type='msedge', headless=False):
         self.reporting = reporting
         self.playwright = sync_playwright().start()
         self.browser = self.playwright.chromium.launch(headless=headless)
